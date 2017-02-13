@@ -18,4 +18,4 @@ google-analytics: UA-69060-5
 simple_search: http://google.com/search
 markdown: kramdown
 highlighter: rouge
-permalink: /blog/:year/:month/:day/:title/
+permalink: /cloudblog/:year/:month/:day/:title/

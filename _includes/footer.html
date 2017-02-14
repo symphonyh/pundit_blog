@@ -2,30 +2,29 @@
   <div class="container">
     <div class="row biography">
       <div class="col-sm-4">
-        <h2>who am i</h2>
+        <h2>学会解决问题</h2>
         <p>{{ site.biography }}</p>
       </div>
       <div class="col-sm-4">
-        <h2>what is this</h2>
+        <h2>不断学习</h2>
         <p>{{ site.description }}</p>
       </div>
       <div class="col-sm-4">
-        <h2>where am i</h2>
-          {% if site.email %}
+        <h2>关注你在做的</h2>
+          {% if site.email %}<p>当你全身心投入一件事的时候，你就会处于一个开心的状态。。</p>
           <div>
             <a href="mailto:{{ site.email }}">
-              <span class="username">{{ site.email }}</span>
-            </a>
-          </div>
+             {{ site.email }}
+         </a>
           {% endif %}
-          {% if site.github_username %}
-          <div>
+         <!--  {% if site.github_username %}
+          
             <a href="https://github.com/{{ site.github_username }}">
-              <span class="username">github//{{ site.github_username }}</span>
-            </a>
+              github//{{ site.github_username }}
+            </a> -->
           </div>
           {% endif %}
-          {% if site.twitter_username %}
+          <!-- {% if site.twitter_username %}
           <div>
             <a href="https://twitter.com/{{ site.twitter_username }}">
               <span class="username">twitter//{{ site.twitter_username }}</span>
@@ -45,7 +44,7 @@
               <span class="username">facebook//{{ site.facebook_username }}</span>
             </a>
           </div>
-          {% endif %}
+          {% endif %} -->
       </div>
     </div>
     {% if site.colophon %}

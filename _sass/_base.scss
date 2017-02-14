@@ -15,7 +15,45 @@ body {
 
   a, a:hover {
     color: $alt-color;
+    text-decoration:none
   }
+
+  a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+a:hover:after {
+  width: 100%;
+  background: $alt-color;
+}
+a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+a:hover:after {
+  width: 100%;
+  background: $alt-color;
+}
 
   p {
     line-height: $base-line-height;
@@ -38,6 +76,7 @@ body {
 
   h1 {
     font-weight: 600;
+    font-size: 1.35em
   }
 
   h2 {

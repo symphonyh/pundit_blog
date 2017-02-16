@@ -11,17 +11,18 @@
       </div>
       <div class="col-sm-4">
         <h2>关注你在做的</h2>
-          {% if site.email %}<p>当你全身心投入一件事的时候，你就会处于一个开心的状态。。</p>
+          {% if site.email %}<p>当你全身心投入一件事的时候，你就会处于一个开心的状态。当我们处于这种状态，你就不大会关心别人对你怎么看，不大会被不大重要的事情干扰。</p>
           <div>
-            <a href="mailto:{{ site.email }}">
+            <a href="mailto:{{ site.email }}">Email:
              {{ site.email }}
          </a>
+         </div>
           {% endif %}
-         <!--  {% if site.github_username %}
-          
+           {% if site.github_username %}
+          <duv>
             <a href="https://github.com/{{ site.github_username }}">
-              github//{{ site.github_username }}
-            </a> -->
+              Github:{{ site.github_username }}
+            </a> 
           </div>
           {% endif %}
           <!-- {% if site.twitter_username %}

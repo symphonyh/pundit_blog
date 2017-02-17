@@ -4,7 +4,7 @@ title: 这是测试页面
 date: 2017-01-13
 comments: true
 external-url:
-categories: Mathematics
+categories: test_pages
 ---
 
 

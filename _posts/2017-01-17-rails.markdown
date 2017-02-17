@@ -1,0 +1,8 @@
+---
+layout: post
+title: Rils routes
+date: 2017-01-17
+comments: true
+external-url:
+categories: Ruby&Rails
+---

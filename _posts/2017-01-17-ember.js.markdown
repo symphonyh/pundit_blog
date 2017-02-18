@@ -1,6 +1,6 @@
 ---
 layout: post
-title: start
+title: 中国似乎在缓解美中贸易摩擦
 date: 2017-01-17
 comments: true
 external-url:
@@ -14,3 +14,9 @@ this is test
 ```ruby
 push "hello word!"
 ```
+
+FT社评：在美国商务部长人选罗斯获得确认前，中国似乎在缓解美中贸易摩擦。避免在贸易上与美国开战是明智的。
+
+向世界在线传递知识，用科技革新课堂，旧金山新兴文理大学Minerva的新式通识教育之路通向何方？
+
+```html

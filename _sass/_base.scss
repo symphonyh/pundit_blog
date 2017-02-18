@@ -44,7 +44,6 @@ a:hover:after {
 
   p {
     line-height: $base-line-height;
-
     }
 
   article > :first-child {
@@ -60,7 +59,7 @@ a:hover:after {
     }
 
     min-height: 2em + $base-line-height;
-  }
+   }
 
   h1 {
     font-weight: 600;
@@ -113,6 +112,10 @@ article {
   code {
     font-family: $mono-font-family;
   }
+
+  p {
+      font-family: $chinese-font-family;
+      }
 }
 
 blockquote {

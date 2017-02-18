@@ -6,3 +6,11 @@ comments: true
 external-url:
 categories: Ember.js
 ---
+
+
+this is test
+
+
+```ruby
+push "hello word!"
+```

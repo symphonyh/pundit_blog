@@ -1,5 +1,5 @@
 # Site settings
-title: "Do what you love<br>做你想做的事情"
+title: "Do what you love"
 author: "Cloudhan"
 description: "学习让我们保持年轻，梦想让我们充满活力。我们运用大脑，进行运作的时候，我们就不大会想不开心心的事情，我们会变得更开心和满足。"
 keywords: "Ruby, Ruby on Rails, Ember.js, CSS, Javascript, jQuery, software Engineering, Ruby Programming,"
@@ -9,7 +9,6 @@ colophon: "© MMXV — MMXVI by Cloudhan.<br>Content available under <a href='ht
 baseurl: ""
 url: "www.clouhan.me"
 
-qq_username: 328695398
 github_username: symphonyh
 linkedin_username: 
 facebook_username: 

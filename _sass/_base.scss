@@ -13,6 +13,10 @@ body {
   font-size: $base-font-size;
   color: $text-color;
 
+  .chinese {
+      font-family: $chinese-font-family;
+    }
+
   a, a:hover {
     color: $alt-color;
     text-decoration:none
@@ -40,7 +44,8 @@ a:hover:after {
 
   p {
     line-height: $base-line-height;
-  }
+
+    }
 
   article > :first-child {
     &:first-letter {
@@ -59,8 +64,7 @@ a:hover:after {
 
   h1 {
     font-weight: 600;
-    font-size: 1.35em
-  }
+         }
 
   h2 {
     margin-top: 1em;
@@ -189,7 +193,7 @@ footer {
   }
 
   h2 {
-    font-size: 1.2em;
+    font-size: 1.0em;
     font-variant: small-caps;
     text-transform: lowercase;
     font-weight: bold;

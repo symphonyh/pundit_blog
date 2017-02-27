@@ -15,7 +15,7 @@ facebook_username:
 google-analytics:
 email: hxy@cloudhan.me 
 
-simple_search: http://baidu.com/search
+simple_search: http://baidu.com/
 markdown: kramdown
 kramdown:
   input: GFM 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BINGO游戏实现
+title: Bingo
 date: 2017-01-22
 comments: true
 external-url:

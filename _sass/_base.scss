@@ -27,7 +27,7 @@ body {
   position: relative;
   padding-bottom: 3px;
 }
-a:after {
+ a:after {
   content: '';
   display: block;
   margin: auto;
@@ -247,6 +247,9 @@ table {
   border-collapse: separate;
   background-color: $background-color;
   border-left: 2.5pt solid $alt-color;
+  font-family: $chinese-font-family;
+  font-size: 0.875em;
+
 
   td, th {
     display: table-cell;

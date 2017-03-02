@@ -4,7 +4,7 @@ title: How using haml
 date: 2017-01-17
 comments: true
 external-url:
-categories: html&css
+categories: ruby
 ---
 
 
@@ -27,7 +27,7 @@ haml 是一种简洁优美的模板语言，主要智能用来替代基于`ruby`
 | 9. | -# | haml注释 |
 | 10. | \\ | haml标签，前面加单行或多行注释，后面加关闭标签 |
 
-> `tag`,`E`可以替换为html标签 `<p>,<a>,<ul>,<li>,<stong>,<title>...`
+>      `tag`,`E`可以替换为html标签 `<p>,<a>,<ul>,<li>,<stong>,<title>...`
 
 　
 2.haml 范例
@@ -57,25 +57,36 @@ to HTML：
 　　
 ```
 ### 二、语法 (on rails)
-1.`%` 百分号符号是一行的开始，紧接着一个元素的名字，它会创建一个这样的形式：`<element></element>`,  默认的元素是`div`;
+1.**%** 百分号符号是一行的开始，紧接着一个元素的名字，它会创建一个这样的形式：**<element></element>**,  默认的元素是**div**;
 
 `%strong test `   to HTML：`<strong>test</strong>`
 
  `strong= item.title`    to ERB：`<strong><%= item.title %></strong>`
+<br>
   
-2.`#` =>`id`
+2.**#** 代替 **id**
 
 `#id= item.title`         to ERB:    `<div id="id"><%= item.title %></div>`  
+<br>
 
-3.`.` => `class`
+3.**"."** 代替 **class**
 
-`%strong.code#message Hello, World!`  to ERB:  `<strong><class=code id="message">Hello, World!<strong>` 
+`%strong.code#message Hello, World!`  to ERB: 
 
-4.`=` => `<%= %>` 相当于插入ruby代码,并输出结果
+ `<strong><class=code id="message">Hello, World!<strong>`
+
+ >      3,4,5标题中"" 是为了方便读者看清，语句实际使用中并不需要;
+
+<br>
+4.**"="** 代替 **<%= %>** 相当于插入ruby代码,并输出结果;
 
 `.my-class= item.title`     to ERB: `<div class="my-class"><%= item.title %></div>`
+<br>
 
-5.`-` =>  `<%  %>` 相当于执行ruby代码,但不输出结果
+`%p= Time.now` to HTML:`<p>Sat Aug 06 15:06:09 +0100 2011</p>`
+<br>
+
+5.**"-"** 代替 **<%  %>**相当于执行ruby代码,但不输出结果;
 
 ```
   - if @opportunities.any?
@@ -92,28 +103,30 @@ to ERB:
   <%= render "shared/empty" %>
 <%end%>
 ```
-
-6.`#{}` 插入ruby代码,并计算结果
+<br>
+6.**#{}** 表示插入ruby代码,并计算结果;
 
 `%script(type="text/javascript" src="javascripts/script_#{2 + 7}")` to HTML:
 
 `<script type="text/javascript" src="javascripts/script_9"></script>`
 
-常见的a标签和span标签:
+
+>     常见的a标签和span标签:
 
 ```
 %a(title=@title){:href => @link.href} Stuff
 
 %span(class="widget_#{@widget.number}")
 ```
-
-7.`{}` 添加ruby hash 属性或 html 复杂代码,hash属性和值之间用 `{:属性1=> 值1,:属性2=> 值2 }`表示
+<br>
+7.**{}** 添加的ruby hash 属性或 html 复杂代码,hash属性和值之间用 **{:属性1=> 值1,:属性2=> 值2 }**表示;
 
 `%strong{:class=>"code",:id=>"message"} Hello, World!` to ERB: 
 
 `<strong><class="code" id="message">Hello, World!<strong>` 
 
-img标签hash:
+<br>
+8.**img**标签hash
 
 `%img{ :src => "/path/to/image", :alt => "Description of image" }` or
 
@@ -123,31 +136,30 @@ to HTML：
 
 `<img src="/path/to/image" alt="Description of image">`
 
+<br>
+9.HTML5 DOCTYPE
 
-8.HTML5 DOCTYPE
 
-`!!!5`  to HTML: 
+`!!!5`  to HTML: `<!DOCTYPE html>`
 
-`<!DOCTYPE html>`
 
-```
-%meta{ :charset => "utf-8" } 
-%link{ :rel => "stylesheet", :href => "/css/master.css" }
-```
-to HTML
+`%meta{ :charset => "utf-8" }` to HTML:`<meta charset="utf-8"> `
 
-```html
-<meta charset="utf-8"> 
-<link rel="stylesheet" href="/css/master.css">
-```
+<br>
 
-`%script{ :src => "/js/site.js" }` to HTML
+`%link{ :rel => "stylesheet", :href => "/css/master.css" }` to HTML:
+
+`<link rel="stylesheet" href="/css/master.css">`
+
+<br>
+
+`%script{ :src => "/js/site.js" }` to HTML:
 
 `<script src="/js/site.js"></script>`
+<br>
+10.注释语句
 
-9.注释
-
-- `/` HTML 注释,行注释和块注释
+- **/** 表示注释,分为行注释和块注释;
 
 ```
 / A forward slash at the start of a line wraps that line in a comment  
@@ -173,14 +185,14 @@ to HTML
   </blockquote> 
 -->
 ```
-
-- /[ ]条件注释
+<br>
+- **/[ ]**表示条件注释;
 
 `/[if IE] %link { :rel => "stylesheet", :href => "/css/ie.css" }` to HTML:
 
 `<!--[if IE]> <link href="/css/ie.css" rel="stylesheet"> <![endif]-->`
-
-- haml self 注释
+<br>
+- **-#**表示haml自带注释;
 
 ```
 %p The line below won't appear in the HTML 
@@ -217,7 +229,6 @@ Gemfile中添加:
 ### 参考
 
 >1、[HTML代码简写法：Emmet和Haml](http://www.ruanyifeng.com/blog/2013/06/emmet_and_haml.html)；
-
->2、[An Introduction to Haml](https://www.sitepoint.com/an-introduction-to-haml/)
+ 2、[An Introduction to Haml](https://www.sitepoint.com/an-introduction-to-haml/)
 
 

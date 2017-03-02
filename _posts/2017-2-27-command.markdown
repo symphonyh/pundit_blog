@@ -1,0 +1,50 @@
+---
+layout: post
+title: shortcut keys&command line 
+date: 2017-01-20
+comments: true
+external-url:
+categories: ruby
+---
+
+### sublime text3 keys
+---
+
+`Ctrl+D` 选中光标所占的文本，继续操作则会选中下一个相同的文本;
+
+`Alt+F3` 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑;
+
+`Ctrl+L`选中整行，继续操作则继续选择下一行，效果和Shift+↓ 效果一样;
+
+`Ctrl+Shift+L` 先选中多行，再按下快捷键，会在每行行尾插入光标，即可同时编辑这些行;
+
+`Ctrl+Enter` 在下一行插入新行,即使光标不在行尾，也能快速向下插入一行;
+
+`Ctrl+Shift+Enter` 在上一行插入新行,即使光标不在行首，也能快速向上插入一行;
+
+`Ctrl+Shift+D` 复制光标所在整行，插入到下一行;
+
+`Ctrl+Shift+K` 删除整行;
+
+`Ctrl+/` 注释单行;
+
+`Ctrl+Shift+/` 注释多行;
+
+`Ctrl+F` 打开底部搜索框，查找关键字;
+
+`Ctrl+shift+F` 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找。
+
+
+
+### Js console command
+---
+
+`console.log();`: Firebug内置一个console对象，log(obj)提供显示信息的方法;
+
+`console.log("%o",obj);`:%o占位符，可以用来查看一个对象内部情况;
+
+`console.dir(obj);`:可以显示一个对象所有的属性和方法;
+
+`console.trace();`:用来追踪函数的调用轨迹。
+
+>[摘自:Firebug控制台详解](http://www.ruanyifeng.com/blog/2011/03/firebug_console_tutorial.html)

@@ -15,10 +15,11 @@ categories: javascript
 <head>
 	<title>Make Your Own Bingo Card</title>
 	<link rel="stylesheet" href="script01.css">
-	<script src="script10.js"></script>
+	<script src="script11.js"></script>
+	<meta name="viewport" content="height=800, width=560" />
 </head>
 <body>
-<h1>Create A Bingo Card</h1>
+<h1>Web 2.0 Bingo</h1>
 <table>
 	<tr>
 		<th>B</th>
@@ -63,15 +64,58 @@ categories: javascript
 		<td id="square23">&nbsp;</td>
 	</tr>
 </table>
-<p><a href="script10.html" id="reload">Click here</a> to create a new card</p>
+<p><a href="script11.html" id="reload">Click here</a> to create a new card</p>
 </body>
 </html>
+
 ```
 ### JS 脚本
 
 ```javascript
+var buzzwords = new Array ("Aggregate",	
+	"Ajax",
+	"API",
+	"Bandwidth",
+	"Beta",
+	"Bleeding edge",
+	"Convergence",
+	"Design pattern",
+	"Disruptive",
+	"DRM",
+	"Enterprise",
+	"Facilitate",
+	"Folksonomy",
+	"Framework",
+	"Impact",
+	"Innovate",
+	"Long tail",
+	"Mashup",
+	"Microformats",
+	"Mobile",
+	"Monetize",
+	"Open social",
+	"Paradigm",
+	"Podcast",
+	"Proactive",
+	"Rails",
+	"Scalable",
+	"Social bookmarks",
+	"Social graph",
+	"Social software",
+	"Spam",
+	"Synergy",
+	"Tagging",
+	"Tipping point",
+	"Truthiness",
+	"User-generated",
+	"Vlog",
+	"Webinar",
+	"Wiki",
+	"Workflow"
+);
+
+var usedWords = new Array(buzzwords.length);
 window.onload = initAll;
-var usedNums = new Array(76);
 
 function initAll() {
 	if (document.getElementById) {
@@ -90,29 +134,21 @@ function newCard() {
 }
 
 function setSquare(thisSquare) {
-	var currSquare = "square" + thisSquare;
-	var colPlace = new Array(0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4);
-	var colBasis = colPlace[thisSquare] * 15;
-	var newNum;
-
 	do {
-		newNum = colBasis + getNewNum() + 1;
+		var randomWord = Math.floor(Math.random() * buzzwords.length);
 	}
-	while (usedNums[newNum]);
+	while (usedWords[randomWord]);
 
-	usedNums[newNum] = true;
-	document.getElementById(currSquare).innerHTML = newNum;
+	usedWords[randomWord] = true;
+	var currSquare = "square" + thisSquare;
+	document.getElementById(currSquare).innerHTML = buzzwords[randomWord];
 	document.getElementById(currSquare).className = "";
 	document.getElementById(currSquare).onmousedown = toggleColor;
 }
 
-function getNewNum() {
-	return Math.floor(Math.random() * 15);
-}
-
 function anotherCard() {
-	for (var i=1; i<usedNums.length; i++) {
-		usedNums[i] = false;
+	for (var i=0; i<buzzwords.length; i++) {
+		usedWords[i] = false;
 	}
 
 	newCard();
@@ -162,5 +198,42 @@ function checkWin() {
 			}
 		}
 	}
+}
+```
+### CSS file
+
+```css
+body {
+	background-color: white;
+	color: black;
+	font-size: 20px;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1, th {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 10px;
+	border: 2px #666 solid;
+	text-align: center;
+	width: 20%;
+}
+
+#free, .pickedBG {
+	background-color: #f66;
+}
+
+.winningBG {
+	background-image: url(images/redFlash.gif);
 }
 ```

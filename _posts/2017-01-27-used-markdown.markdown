@@ -1,10 +1,10 @@
 ---
 layout: post
-title: used markdown 
+title: Using markdown 
 date: 2017-01-27
 comments: true
 external-url:
-categories: ruby
+categories: template-language
 ---
 
 ### used markdown 

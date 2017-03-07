@@ -1,6 +1,6 @@
 ---
 layout: post
-title: install discourse on ucloud
+title: Install Giscourse on Ucloud
 date: 2017-03-02
 comments: true
 external-url:
@@ -156,9 +156,7 @@ exit
 按照提示输入邮箱和密码，exit退出容器。
 
 
->最后特别提示下：管理员邮箱，也就是用rake admin:create 创建的邮箱一般用于设置论坛；DISCOURSE_SMTP_USER_NAME 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；DISCOURSE_DEVELOPER_EMAILS开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同，开始时我真被搅的一头雾水，后来得到learnce.com 陈总指点才明白，这里再次感谢了！
-
-本文也许有用词不准确或者没考虑到的地方还请指正，再次感谢各位热心朋友！
+>最后特别提示下：管理员邮箱，也就是用rake admin:create 创建的邮箱一般用于设置论坛；DISCOURSE_SMTP_USER_NAME 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；DISCOURSE_DEVELOPER_EMAILS开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。
 
 ### 参考
 

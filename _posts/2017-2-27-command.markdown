@@ -1,6 +1,6 @@
 ---
 layout: post
-title: shortcut keys&command line 
+title: shortcut keys 
 date: 2017-01-20
 comments: true
 external-url:
@@ -48,3 +48,25 @@ categories: ruby
 `console.trace();`:用来追踪函数的调用轨迹。
 
 >[摘自:Firebug控制台详解](http://www.ruanyifeng.com/blog/2011/03/firebug_console_tutorial.html)
+
+
+
+
+### Brackets keys
+---
+
+`Ctrl+Shift+H`: 可以呼出与关闭文件树
+
+`Ctrl + E`:          快速预览/编辑 css样式/javascript函数/取色选择
+
+`Ctrl + +/-`:       放大缩小编辑区字体大小
+
+`Ctrl + 0`:          重置编辑区字体大小 
+
+`Ctrl + Alt + P`:  打开即时预览功能
+
+`Ctrl + / `:         行注释
+
+`Ctrl + Alt + /`:  块注释
+
+>      注：css代码、html代码注释时只能使用块注释快捷键

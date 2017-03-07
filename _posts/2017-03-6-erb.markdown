@@ -1,0 +1,75 @@
+---
+layout: post
+title: Using erb
+date: 2017-03-06
+comments: true
+external-url:
+categories: template-language
+---
+
+### Using erb
+`erb`的特点是除了能用简洁直观的语法生成HTML文件，也能够嵌入 Ruby 代码。
+
+**标签**
+
+&sect;&nbsp;1&nbsp;执行 Ruby code 且在 HTML 中插入输出結果时使用`<%= Ruby code... %>`;整个`<%=  %>`被取代为code执行的结果;
+
+```html
+ <b><%= "sarah" %></b>
+ <h1><%= @user.name %></h1>
+ <a href="<%= @link %>">click me</a>
+ <%= rand(3) %>
+```
+
+>`<%= rand(n) %>`随机生成 0 到 n-1 之间的随机数
+
+```
+<%= rand(3) %>
+输出结果可能会是 0 、 1 或 2 。
+```
+&sect;&nbsp;2&nbsp;只执行 Ruby code 但不输出结果时使用：`<% Ruby code... %>`
+
+- 循环
+```
+<% @users.each do |user| %>
+  ....
+<% end %>
+```
+- 条件判断
+```
+<% if @user.weight > 50 %>
+  ...
+<% else %>
+  ...
+<% end %>
+```
+- 任何不需要印出的情況
+```
+<% user = @users.first %>
+<%= user.name %>
+```
+
+
+&sect;&nbsp;3&nbsp;要将 Ruby code  使用注释时可以使用 `#` 符号`<%# Comment... %>`
+
+&sect;&nbsp;4&nbsp;禁止自动转义使用`<%% ... %>`;
+>简单说就是照**原样**输出内容。原因是HTML中输入`<`，`>`...和保留字会让HTML误认为是标签（`<h>,``<a>`...引起混乱），因此HTML会自动把这些符号转义为实体（类似于`&gt;`,`&lt;`的东东），这个语法可以强制不进行转义。
+
+对比看下就明白了：
+
+```
+ <%= "<b>haha</b>" %> 
+ # &lt;b&gt;haha&lt;/b&gt;
+```
+
+```
+ <%%= "<b>haha</b>" %> 
+ # <b>haha</b>
+```
+>有时会看到标签`<%-`or`-%>`,意思是忽略后面的空格和换行符, 使输出更紧凑；不过要设置`trim mode`。[参考：ruby-china讨论帖](https://ruby-china.org/topics/13042)
+
+
+
+
+
+

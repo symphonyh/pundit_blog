@@ -1,0 +1,811 @@
+---
+layout: post
+title: How using Slim 
+date: 2017-03-06
+comments: true
+external-url:
+categories: template-language
+---
+
+## slim 模版语言
+
+>`Slim` 是一种模板语言，它的目的是减少标记语言语法的基础标签，而又不会变得难以理解。起初，它只是一种练习，去尝试可以从标准HTML模板中移除标记标签（“<”符号, “>”符号, “< />”关闭标签等等）。随着功能的可扩展性和语法的灵活性增强，越来越多的人对`Slim`产生了兴趣。
+
+
+### 特征列表...
+&sect;&nbsp;**优雅的语法**
+
++ 语法简洁，不使用结束标签（使用缩进代替）
+
++ 支持带有关闭标`HTML语法模式
+
++ 可配置的快捷标签(例如默认配置中：`#` 对应转换为` <div id="..."> `和 `. `对应转换为 `<div class="...">`)
+
+
+&sect;&nbsp;**安全性**
+
++ 自动默认HTML 转义
+
++ 支持Rails的html_safe?方法
+
+
+&sect;&nbsp;**高度可配置**
+
+通过插件配置实现功能扩展
+
++ 更少的逻辑与`Mustache`模版引擎相似
+
++ 允许包含插件
+
++ 多语言支持
+
+>注：关于`Mustache`
+   我们之所以称之为“logic-less”是因为`Mustache`摒弃了类似if else 以及for loop 逻辑语句，取而代之的  是只有标签，仅有几条简单语法规则的模板规范。它的语法十分简单：
+    {% raw %} 
+       {{x}}            输出属性x的值，x的值中的HTML代码将被转义。
+       {{{x}}}          同样是输出属性x的值，但是不转义其中的HTML代码。
+       {{#x}}和{{x}}    迭代x中的所有条目。
+       {{>x}}           将x作为模板片段进行渲染，等同于ERB中的`<%= erb :x %>`，模板文件的查找路径为`views/.mustache`
+    {% endraw %} 
+   这些就是所有你需要的了，还可以在[Mustache](http://mustache.github.io/mustache.5.html)的文档里找到更多详情。
+
+&sect;&nbsp;**高性能**
+
++ 运行效率可以媲美`ERB/Erubis`
+
++ 在`Rails`中支持流媒体
+
++ 支持所有主流框架(Rails, Sinatra, ...)
+
++ 标签和属性全`Unicode`支持
+
++ 类似于 `Markdown` and `Textile`的嵌入式引擎
+
+### 链接
+[项目主页](http://slim-lang.com/)&nbsp;&nbsp;&nbsp;&nbsp;[源代码](http://github.com/slim-template/slim/)&nbsp;&nbsp;&nbsp;&nbsp;[问题及解决](http://github.com/slim-template/slim/issues/)
+API 文档
+[最新Gem](http://rubydoc.info/gems/slim/frames)&nbsp;&nbsp;&nbsp;&nbsp;[GitHub分支](http://rubydoc.info/github/slim-template/slim/master/frames https://www.omniref.com/github/slim-template/slim)
+
+
+### 简介
+**Slim是什么？**
+
+`Slim `是一个快速，轻量级的模板引擎，支持`Rails 3`和`Rails 4`版本。它在几乎所有主要ruby实现中都经历过严格测试。我们使用`travis-ci`连续集成测试。
+
+`Slim`语法核心的主导思想是："使用最简洁的模板完成工作”。
+>原文是：What's the minimum required to make this work.
+
+随着越来越多的人将他们的知识贡献给`Slim`，`Haml`和`Jade`模板语言的语法也随之影响和补充进来，这些语法得到了`Slim`开发团队的欢迎，因为在他们看来，美好的产品通常来自于使用者的眼中。
+
+
+`Slim`使用了`Temple`模板引擎进行分析和编译，并且也集成到`Tilt`，因此可以同时应用在`Sinatra`或者`Rack`框架下。
+
+`Temple`的结构非常灵活而且允许扩展，分析和编译过程中不会有猴子补丁。使用了`logic less`插件和多语言插件，提供` I18n`支持。如果你喜欢用`Slim`的语法建立你的`HTML`文本，又不想在你的模板里书写`Ruby`语句，那就在`logic-less`模式下使用`Slim`吧。
+
+
+**为什么使用**`Slim`
+
++ `Slim`允许你写最小的模板，且易于维护，并完美确保是你想得到的HTML 和 XML 格式文档。
+
++ 极具美感的slim语法使得书写模板也更富乐趣。就像一个未经预约的替换者，一旦你将它运用在所有的主流框架里，你会发现其实很容易开始。
+
++ `Slim`的结构非常灵活，允许你进行语法的扩展和编写插件。
+
+是的，`Slim`非常快速！`Slim`从研发开始，就考虑到了性能的问题。每次提交` http://travis-ci.org/slim-template/slim `都要进行性能基准测试。不相信这些数据吗？可它确实就是这样的，试试用`rake task`您就可以验证它的性能了！
+
+在我们看来，`Slim`具有的特征和语法绝对值得您尝试。我们可以确保`Slim`不给您的应用程序性能带来负面影响。
+
+**如何开始**
+
+命令行安装Slim的gem包：
+`gem install slim`
+
+使用`Slim`只需要在你的`Gemfile`文件里加上`gem 'slim'`或者需要写入`require 'slim'`。就是这麽简单，现在可以使用它了。你可以开始`slim`之旅了。
+ 
+**语法范例**
+
+这是一个例子来演示什么是`Slim`,它看起来就像这样：
+
+```slim
+
+doctype html
+html
+  head
+    title = full_title(yield(:title))
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    header.navbar
+      .logo
+        = link_to "sample app", 'root_path', id: "logo"
+        nav
+          ul.navbar-right
+            li
+              = link_to "Home",   'root_path'
+            li
+              = link_to "Help",   'help_path'
+            li
+              = link_to "Log in", 'login_path'
+    .main
+      = yield
+ ```
+>     缩进很重要，但你可以自行选择喜欢的缩进深度。例如，你想先缩进两个空格，然后是五个，这都可以。而嵌套标记仅仅需要缩进一个空格，其余的就是出于美观。
+
+来看看`haml`的写法：
+
+```halm
+!!!
+%html
+  %head
+    %title= full_title(yield(:title))
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header.navbar
+      .logo
+        = link_to "sample app", 'root_path', id: "logo"
+        %nav
+          %ul.navbar-right
+            %li= link_to "Home",   'root_path'
+            %li= link_to "Help",   'help_path'
+            %li= link_to "Log in", 'login_path'
+    .main
+      = yield
+```
+
+HTML Output:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Codecamp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class="navbar>
+      <div class="log">
+          <%= link_to "sample app", root_path, id: "logo" %>
+          <nav>
+             <ul class="nav-right">
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Help", help_path %></li>
+                <li><%= link_to "Log in", login_user %></li>
+             </ul>
+          </nav>
+       </div>
+   </header>
+<div class="man">
+   <%= yield %>
+</div>
+</body>
+</html>
+```
+两者同样的html页面效果：
+
+![html页面效果](/image/boss-leve-slim-application-layout-welcome-600x.png)
+
+
+
+### HTML 标签
+
+&sect;&nbsp;**Doctype 标签**
+
+[Doctype](http://baike.baidu.com/link?url=7GKRTKIQp4IYRVZidKfFYx7JrQNtoXXUQrRRBlpks5hW0EEHqmcxa4kl3JKkon5gSI8rChYOyMBksT5tMZBjgq)标签是一种特殊的标签，可以使用一个非常简单的方法来生成复杂类型文档。
+>注：一个文档类型标记是一种标准通用标记语言的文档类型声明，它的目的是要告诉标准通用标记语言解析器，它应该使用什么样的文档类型定义（DTD）来解析文档。——百度
+
+HTML <!DOCTYPE> 声明的书写方法有2种：
+
+```slim
+doctype html
+html
+  head
+
+或者这样:
+
+doctype 5
+html
+  head
+```
+
+&sect;&nbsp;**id快捷标签**`#`和**class快捷标签**`.`
+
+```slim
+#logo
+h1.header
+.evil-wrapper
+  h2#author-name
+  ul.books
+```
+HTML Output
+
+```html
+<div id="logo"></div>
+<h1 class="header"></h1>
+<div class="evil-wrapper">
+  <h2 id="author-name"></h2>
+  <ul class="books"></ul>
+</div>
+```
+另一种写法也可以，不过我喜欢上面的更加简洁的写法。
+
+```slim
+div id='logo'
+h1 class='header'
+div class='evil-wrapper'
+  h2 id='author-name'
+  ul class='books'
+```
+&sect;&nbsp;**内联标签（Inline Tags）**
+
+`:`可以让多个标签书写在同一行，用`:`作为分隔符显得更紧凑。下面slim的两种写法输出html相同。
+Slim：
+```
+ul
+  li.first
+    a href="/a" A link
+  li
+    a href="/b" B link
+```
+或者这样:
+
+```
+ul
+  li.first: a href="/a" A link
+  li: a href="/b" B link
+```
+
+HTML Output:
+
+```
+<ul>
+  <li class="link">
+    <a href="/a">A link</a>
+  </li>
+  <li>
+    <a href="/b">B link</a>
+  </li>
+</ul>
+```
+&sect;&nbsp;**Text内容**
+文本输出正如你期望的容易，只需添加到标签后面。
+```
+h1#welcome-header Your funky welcome message goes here!
+```
+HTML Output:
+
+```
+<h1 id="welcome-header">
+  Your funky welcome message goes here!
+</h1>
+```
+
+
+&sect;&nbsp;**属性(Attributes)**
+
+```slim
+a href="http://slim-lang.com" title='Slim Homepage' Goto the Slim homepage
+ 
+img alt="James Bond posing together with M" src="image.png" height="90" width="90"/
+```
+HTML Output:
+```html
+http://slim-lang.com" title="Slim Homepage">Goto the Slim homepage
+ 
+<img alt="James Bond posing together with M" height="90" src="image.png" width="90" />
+```
+
+如果你注意到`img`尾随 ,在`slim`语法中你可以明确地通过附加一个`/`关闭标签。
+
+```slim
+img src="image.png"/
+```
+> 请注意，这通常是不必要的因为W3C标准的HTML标签（IMG，BR，……）自动关闭。
+
+
+&sect;&nbsp;**属性合并**
+如果有多个选择器和标签ID，可以更为简洁书写方式是用`.`连接，这些选择器可以自动一空格隔开。
+Slim:
+
+```
+h2#big-header.agent-header.tagline Funky headline
+ 
+h3.small-header.agent#007.tagline Small funky headline
+```
+HTML Output:
+
+```html
+ <h2 class="agent-header tagline" id="big-header">
+   Funky headline
+ </h2>
+ <h3 class="small-header agent tagline" id="007">
+   Small funky headline
+ </h3>
+```
+按照您的偏好这样书写也是可以的。
+
+```
+a.menu class="highlight" href="http://slim-lang.com/" Slim-lang.com
+```
+HTML Outpu：
+
+```
+<a class="menu highlight" href="http://slim-lang.com/">Slim-lang.com</a>
+```
+您也可以把属性值当作一个数组来表示，数组元素也可以使用`:symbol`符号或`"string"`字符串的样式书写。这些是需要了解的技巧，但并不推荐每次都使用，除非确实能让您觉得更方便。
+Slim:
+```
+h2 class=["agent-header","tagline"] Funky headline
+h3 class=:agent,:double_o_seven,:tagline Small funky headline
+```
+HTML Output:
+```
+<h2 class="agent-header tagline">
+  Funky headline
+</h2>
+<h3 class="agent double_o_seven tagline">
+  Small funky headline
+</h3>
+```
+
+&sect;&nbsp;**hash 属性** `*`
+
+对于hash的对象使用`*`和calss类选择器连接，用`=>`直观的表示hash的`键/值`对,外面用｛｝包围。
+```
+.card*{'data-url'=>place_path(place), 'data-id'=>place.id} = place.name
+```
+HTML Output:
+```
+<div class="card" data-id="1234" data-url="/place/1234">Slim's house</div>
+```
+
+您也可以使用方法或者实例变量返回hash值，如下所示：
+
+```
+.card *method_which_returns_hash = place.name
+.card *@hash_instance_variable = place.name
+```
+
+&sect;&nbsp;**Attributes wrapper** 
+如果你感觉分隔符能使语法更具有可读性，你可以使用这些符号`{...}, (...), [...]`包围属性内容。
+```
+body
+  h1(id="logo") = page_logo
+  h2[id="tagline" class="small tagline"] = page_tagline
+```
+如果包围的属性内容很长，可以写成多行：
+```
+h2[id="tagline"
+   class="small tagline"] = page_tagline
+```
+对照着看一个示例：
+Slim:
+```
+a{href="http://slim-lang.com" title='Home page'} Goto the home page
+ 
+a{href="http://slim-lang.com/about.html" title='About page'
+  class='link' id='about'} Goto the about page
+ 
+h2[id="big-header" class="agent-header tagline"] Funky headline
+ 
+h3(id="small-header"
+   class="agent 007 tagline") Some other funky headline
+```
+HTML Output:
+
+```
+ <a href="http://slim-lang.com" title="Home page">Goto the home page</a>
+ 
+ <a class="link" href="http://slim-lang.com/about.html" id="about" title="About page">Goto the about page</a>
+ 
+ <h2 class="agent-header tagline" id="big-header">
+   Funky headline
+ </h2>
+ 
+ <h3 class="agent 007 tagline" id="small-header">
+   Some other funky headline
+ </h3>
+```
+继续，这个能看懂吗？
+Slim
+```
+ul
+  li.long-link: a{ href="http://slim-lang.com" title='Home page' } Goto the home page
+  li.long-link.class.with-id: a[ href="http://slim-lang.com/about.html" title='About page'
+                                 class='link' id='about' ] Goto the about page
+ 
+  li.c-link: a(href="/c") C link
+  li: a[href="/d"] D link
+```
+HTML Output:
+
+```html
+<ul>
+  <li class="long-link">
+    http://slim-lang.com" title="Home page">Goto the home page
+  </li>
+  <li class="long-link class with-id">
+    http://slim-lang.com/about.html" id="about" title="About page">Goto the about page
+  </li>
+  <li class="c-link">
+    <a href="/c">C link</a>
+  </li>
+  <li>
+    <a href="/d">D link</a>
+  </li>
+</ul>
+```
+
+&sect;&nbsp;**属性插值**
+
+```
+a href="http://slim-lang.com" title='Slim Homepage' Goto the Slim homepage
+```
+在包围的属性里可以使用文本插值：
+```
+a href="http://#{url}" Goto the #{url}
+```
+属性值默认是转义的，如果你想在属性里关闭转义可以使用`==`。
+```
+a href=="&amp;"
+```
+可以使用反斜杠`\`接续属性的书写
+```
+a data-title="help" data-content="extremely long help text that goes on\
+  and one and one and then starts over...."
+```
+```
+ul
+  li id="agent_#{agent.id}" class=agent.role
+    a href=(path_to_agent agent) =agent.name
+```
+
+&sect;&nbsp;**布尔类型属性(Boolean attributes)** 
+
+```
+input type="text" disabled=false
+input type="text" disabled=true
+input type="text" disabled=nil
+```
+
+&sect;&nbsp;**Ruby 属性(Ruby attributes)**
+
+书写ruby代码直接在属性后用`=`。如果代码内容包含空格，要使用`(...)`包围这部分。你也可以使用`{...}`直接写哈希和用`[...]`写数组。
+```
+body
+  table
+    - for user in users
+      td id="user_#{user.id}" class=user.role
+        a href=user_action(user, :edit) Edit #{user.name}
+        a href=(path_to_user user) = user.name
+```
+对于属性值默认转义，可以使用`==`关闭属性值里的内容转义。
+
+```
+a href==action_path(:start)
+```
+你也可以行尾尾随反斜杠`\`接续下一行的描述语句。
+
+### Line 标记
+
+&sect;&nbsp;**文本**`|` 
+`|`管道符号告诉`Slim`只需要显示这行内容，不需要做任何处理。下面每一行缩进大于`|`管道符号的都将复制过去。
+```
+body
+  p
+    |
+      This is a test of the text block.
+```
+
+上面代码的HTML解析结果是：
+```
+<body><p>This is a test of the text block.</p></body>
+```
+如果保持多行文本首端在同一条直线上，在`|`后面，文本左边缘要增加一个空格。任何多出的空格也将被复制。
+```
+body
+  p
+    | This line is on the left margin.
+       This line will have one space in front of it.
+         This line will have two spaces in front of it.
+           And so on...
+```
+你甚至也可以嵌入HTML语句到文本行，这行中文本插值的内容，后面还会提到。
+
+```
+- articles.each do |a|
+  | <tr><td>#{a.name}</td><td>#{a.description}</td></tr>
+```
+
+&sect;&nbsp;**Inline html**`<`
+
+你可以在`Slim`中直接使用`HTML`标签，它允许你在一个更像`HTML`风格的块标签里书写你的模板甚至混合使用`HTML`和`Slim`标签；也就是说slim见到`<`就知道你要混合书写HTML语法风格的语句了。
+
+```html
+<html>
+  head
+    title Example
+  <body>
+    - if articles.empty?
+    - else
+      table
+        - articles.each do |a|
+          <tr><td>#{a.name}</td><td>#{a.description}</td></tr>
+  </body>
+</html>
+```
+**输出Output =** 
+
+这个`=`告诉`Slim`它是`Ruby`调用产生到缓存的输出。如果你的`Ruby`代码使用多行，在断行结尾要追加`\`，如果你的行尾是`,`号，（由于某个方法的调用）就不需要再追加`\` 。
+
+```
+= javascript_include_tag \
+   "jquery",
+   "application"
+   ```
+回顾下范例中的slim代码片段：
+
+```slim
+doctype html
+html
+  head
+    title = full_title(yield(:title))
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+```
+ > 输出行尾带着`=>`标记，除了它还要`=>`前后各追加一个空格； 
+   输出行首带着`=`标记，还要在`=`后追加一个空格。
+
+看一个更加具体的例子：
+ERB
+
+```erb
+<%= form_for @agent do |f| %>
+ 
+  <%= f.label      :name %>
+  <%= f.text_field :name %>
+ 
+  <%= f.label      :number %>
+  <%= f.text_field :number %>
+ 
+  <%= f.label      :licence_to_kill %>
+  <%= f.check_box  :licence_to_kill %>
+ 
+  <%= f.label      :gambler %>
+  <%= f.check_box  :gambler %>
+ 
+  <%= f.label      :womanizer %>
+  <%= f.check_box  :womanizer %>
+ 
+  <%= f.submit %>
+ 
+<% end %>
+```
+Slim
+
+```
+= form_for @agent do |f|
+ 
+  = f.label      :name
+  = f.text_field :name
+ 
+  = f.label      :number
+  = f.text_field :number
+ 
+  = f.label      :licence_to_kill
+  = f.check_box  :licence_to_kill
+ 
+  = f.label      :gambler
+  = f.check_box  :gambler
+ 
+  = f.label      :womanizer
+  = f.check_box  :womanizer
+ 
+  = f.submit
+```
+HTML Output:
+
+```
+<form action="/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+ 
+  <input type="hidden" name="authenticity_token" value="+P2I801EkEVBlsMgDo9g9/XgwwQfCBd1eoOBkFmgAHE4bxYi9HGUjEjsNwNMnEadV2tbDtYvQhFb4s/SNMXYtw==" />
+ 
+  <label for="agent_name">Name</label>
+  <input type="text" name="agent[name]" id="agent_name" />
+ 
+  <label for="agent_number">Number</label>
+  <input type="text" name="agent[number]" id="agent_number" />
+ 
+  <label for="agent_licence_to_kill">Licence to kill</label>
+  <input name="agent[licence_to_kill]" type="hidden" value="0" />
+  <input type="checkbox" value="1" name="agent[licence_to_kill]" id="agent_licence_to_kill" />
+ 
+  <label for="agent_gambler">Gambler</label>
+  <input name="agent[gambler]" type="hidden" value="0" />
+  <input type="checkbox" value="1" name="agent[gambler]" id="agent_gambler" />
+ 
+  <label for="agent_womanizer">Womanizer</label>
+  <input name="agent[womanizer]" type="hidden" value="0" />
+  <input type="checkbox" value="1" name="agent[womanizer]" id="agent_womanizer" />
+ 
+  <input type="submit" name="commit" value="Save Agent" />
+ 
+</form>
+```
+现在对Slim的指导思想有些感悟了吧？*使用最简洁的模板完成工作!*
+
+这是 ERB snippet …
+
+```
+<%= render "shared/agents", collection: @agents %>
+… becomes this in Slim:
+```
+对应Slim
+```
+= render "shared/agents", collection: @agents
+```
+看一个具体例子：
+ERB
+```
+ <h2>Agents</h2>
+<ul>
+  <% @agents.each do |agent| %>
+    <li class='agent'>
+      <div>Name: <%=            agent.name %></div>
+      <div>Number: <%=          agent.number %></div>
+      <div>Licence to kill: <%= agent.licence_to_kill %></div>
+    </li>
+  <% end %>
+</ul>
+```
+Slim
+
+```
+h2 Agents
+ul
+  - @agents.each do |agent|
+    li.agent
+      div
+        | Name: 
+        = agent.name
+      div
+        | Number: 
+        = agent.number
+      div
+        | Licence to kill: 
+        = agent.licence_to_kill
+```
+你也可以通过插值实现更紧凑的模式；
+
+Slim
+```
+h2 Agents
+ul
+  - @agents.each do |agent|
+    li.agent
+      div Name:            #{agent.name}
+      div Number:          #{agent.number}
+      div Licence to kill: #{agent.licence_to_kill}
+```
+&sect;&nbsp;**文本插值（Text Interpolation）**
+
+Slim
+```
+h2 Welcome Mr. #{misix_agent.surname}! I expect you to die!
+ 
+h2 Welcome Mr. \#{misix_agent.surname}! I expect you to die!
+```
+HTML Output:
+
+```
+<h2>
+  Welcome Mr. Bond! I expect you to die!
+</h2>
+ 
+ <h2>
+   Welcome Mr. \#{misix_agent.surname}! I expect you to die!
+ </h2>
+```
+>注:`\` 用来阻止插值转义
+
+
+&sect;&nbsp;**无 HTML 转义输出(Output without HTML escaping)**`==`
+ `==`等同于`=`，但没有使用escape_html转义方法。
+
+>注：
+>1. HTML中<，>，&等有特殊含义（<，>，用于链接签，&用于转义），不能直接使用。这些符号是不能显示在我们最终看到的网页里的，就需要定义它的转义字符串。当解释程序遇到这类字符串时就把它解释为真实的字符。[ 参见博客：HTML编码转义](http://blog.csdn.net/xusongsong520/article/details/7913455)
+例如：
+
+| 显示 | 说明 | 转义实体 | 转义编号 |
+|--------|--------|------|-------|
+|  <    | 小于号|  `&lt;`  | `&#60;`|
+|  >    |  大于号| `&gt;`|  `&#62;` |
+|  & |  & 符号| `&amp;`| `&#38;` |
+|空格|不断行空格|`&nbsp;`| `&#160;` |
+
+&sect;&nbsp;**控制语句Control code**`-` 
+
+
+这个`-`表示当前行是代码行。例如循环和条件分支语句，原语句中`end`不再写入模板。语句块通过缩进来定义、表示。如果你的`Ruby`语句需要书写成多行，在转折行尾要添加一个 `\` 。如果你书写的行尾带一个`，`号（由于某个方法的调用等情况）你就不需要在行尾追加`\`标记了。
+```slim
+body
+  - if articles.empty?
+    | No inventory
+```
+Slim
+```
+- if current_user.role == "admin"
+  p#admintxt | Welcome back my master!
+  = link_to "Edit Profile", edit_user_path(:current)
+  = link_to "Logout",       logout_path
+- elsif current_user
+  = link_to "Edit Profile", edit_user_path(:current)
+  = link_to "Logout",       logout_path
+- else
+  = link_to "Register",     new_user_path
+  = link_to "Login",        login_path
+```
+ERB 
+```
+<% if current_user.role == "admin" %>
+  <p id="admintxt">Welcome back my master!</p>
+  <%= link_to "Edit Profile", edit_user_path(:current) %>
+  <%= link_to "Logout",       logout_path %>
+<% elsif current_user %>
+  <%= link_to "Edit Profile", edit_user_path(:current) %>
+  <%= link_to "Logout",       logout_path %>
+<% else %>
+  <%= link_to "Register",     new_user_path %>
+  <%= link_to "Login",        login_path %>
+<% end %>
+```
+>如果你想输出代码没有HTML转义的地方，就用两个等号`= =`。
+
+### 注释
+
+&sect;&nbsp;**代码注释标记**` 
+
+使`/` 表示代码注释,其注释的内容不会显示在最终渲染文本里。使`/!` 进行代码注释！对于HTML语句进行注释。
+
+```slim
+body
+  p
+    / This line won't get displayed.
+      Neither does this line.
+    /! This will get displayed as html comments.
+    ...
+```
+The parsed result of the above:
+这里是上面代码的解析结果：
+
+`<body><p><!--This will get displayed as html comments.--></p></body>`
+
+
+&sect;&nbsp;**HTML 注释标记**`/！`
+
+使用正斜杠`/` 紧接着一个感叹号`！`表示HTML注释标识` (<!-- ... -->)`,举例同上。
+
+&sect;&nbsp;**IE 条件注释标记**`/[...]`
+
+```slim
+/[if IE]
+    p Get a better browser.
+```
+HTML Output:
+```html
+<!--[if IE]><p>Get a better browser.</p><![endif]-->
+```
+### 定制Slim
+这部分内容一般用到的不多，有需要可以参考[5]
+
+### 翻译参考：
+1、[Slim:README.md](https://github.com/slim-template/slim/)
+2、[Mustache](http://mustache.github.io/)
+3、[Mustache.5](http://mustache.github.io/mustache.5.html)
+4、[Ruby Templating With Slim](https://code.tutsplus.com/categories/ruby)
+5、[Ruby Templating With Slim: Part 2](https://code.tutsplus.com/articles/ruby-templating-with-slim-part-2--cms-26094)

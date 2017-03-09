@@ -9,8 +9,6 @@ categories: template-language
 
 ### used markdown 
 
-
- 
 1.<a>标题</a>
    在Markdown当中设置标题，有两种方式：
    - 通过在文字下方添加“=”和“-”，他们分别表示一级标题二级标题。
@@ -35,7 +33,7 @@ categories: template-language
 6.<a>有序列表</a>
 使用数字后面跟上句号。**记得还要有空格**
 
-7.<a>链接 Links</a>
+7.<a>链接 (Links)</a>
    Markdown中有两种方式，实现链接，分别为内联方式和引用方式。
    - 内联方式：`This is an [example link](http://example.com/).`
    - 引用方式：
@@ -48,7 +46,7 @@ categories: template-language
    [3]: http://search.msn.com/    "MSN Search"
 ```
 
-8.<a>图片 Images</a>
+8.<a>图片(Images)</a>
    图片的处理方式和链接的处理方式，非常的类似。
    - 内联方式：`![alt text](/path/to/img.jpg "Title")`
    - 引用方式：
@@ -65,7 +63,7 @@ categories: template-language
 >      不是单引号而是左上角的ESC下面~中的"`"）
    - 大片文字需要实现代码框。使用Tab和四个空格。
 
-10.<a>脚注 footnote</a>
+10.<a>脚注(footnote)</a>
 
 ```
 hello[^hello]

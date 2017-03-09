@@ -9,31 +9,31 @@ categories: template-language
 
 ### used markdown 
 
-1.<a>标题</a>
+1.<a>标题</a><br>
    在Markdown当中设置标题，有两种方式：
    - 通过在文字下方添加“=”和“-”，他们分别表示一级标题二级标题。
    - 在文字开头加上 “#”，通过“#”数量表示几级标题。
    >     共有1~6级标题，1级标题字体最大
 
-2.<a>块注释（blockquote）</a>
+2.<a>块注释（blockquote）</a><br>
    通过在文字开头添加“>”表示块注释。
 >      当>和文字之间添加五个blank时，块注释的文字会有变化。
 
 
-3.<a>斜体</a>
+3.<a>斜体</a><br>
 将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来
 
-4.<a>粗体</a>
+4.<a>粗体</a><br>
 将需要设置为斜体的文字两端使用2个“*”或者“_”夹起来
 
-5.<a>无序列表</a>
+5.<a>无序列表</a><br>
 在文字开头添加(\*, +, or -)实现无序列表。但是要注意在(\*, +, and -)和文字之间需要添加空格。
 >       建议：一个文档中只是用一种无序列表的表示方式
 
-6.<a>有序列表</a>
+6.<a>有序列表</a><br>
 使用数字后面跟上句号。**记得还要有空格**
 
-7.<a>链接 (Links)</a>
+7.<a>链接 (Links)</a><br>
    Markdown中有两种方式，实现链接，分别为内联方式和引用方式。
    - 内联方式：`This is an [example link](http://example.com/).`
    - 引用方式：
@@ -46,7 +46,7 @@ categories: template-language
    [3]: http://search.msn.com/    "MSN Search"
 ```
 
-8.<a>图片(Images)</a>
+8.<a>图片(Images)</a><br>
    图片的处理方式和链接的处理方式，非常的类似。
    - 内联方式：`![alt text](/path/to/img.jpg "Title")`
    - 引用方式：
@@ -57,13 +57,13 @@ categories: template-language
     [id]: /path/to/img.jpg "Title"
 ```
 
-9.<a>代码块</a>
+9.<a>代码块</a><br>
     实现方式有两种：
    - 简单文字出现一个代码框。使用`<blockquote>`。
 >      不是单引号而是左上角的ESC下面~中的"`"）
    - 大片文字需要实现代码框。使用Tab和四个空格。
 
-10.<a>脚注(footnote)</a>
+10.<a>脚注(footnote)</a><br>
 
 ```
 hello[^hello]
@@ -73,7 +73,7 @@ hello[^hello]
 
 ```
 
-11.<a>下划线</a>
+11.<a>下划线</a><br>
 在**空白行**下方添加三条“-”横线。
 >      前面讲过在文字下方添加“-”，实现的2级标题
 
@@ -82,8 +82,130 @@ HTML 以 `<!-- , --> `的闭包定义注释（支持跨行），不在正文中�
 
 `<!-- This text will not appear in the browser window. --> `
 
+
+
+<br>
+<hr>
+<br>
+
+### **范例**
+
+>重点可以看下图片引用和表格对齐方式的用法。
+
+```
+# Fat Free CRM [![TravisCI][travis-img-url]][travis-ci-url]  [![Code Climate](https://codeclimate.com/github/fatfreecrm/fat_free_crm.png)](https://codeclimate.com/github/fatfreecrm/fat_free_crm)
+
+[travis-img-url]: https://secure.travis-ci.org/fatfreecrm/fat_free_crm.png?branch=master
+[travis-ci-url]: http://travis-ci.org/fatfreecrm/fat_free_crm
+
+### An open source, Ruby on Rails [customer relationship management][crm-wiki] platform (CRM).
+
+[crm-wiki]: http://en.wikipedia.org/wiki/Customer_relationship_management
+
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_create.png" target="_blank" title="Create Contacts">
+        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_create_t.png" alt="Create Contacts">
+      </a>
+      <br />
+      <em>Contacts</em>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_opportunity.png" target="_blank" title="Manage Opportunities">
+        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_opportunity_t.png" alt="Manage Opportunities">
+      </a>
+      <br />
+      <em>Opportunities</em>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/account_edit.png" target="_blank" title="Edit Accounts">
+        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/account_edit_t.png" alt="Edit Accounts">
+      </a>
+      <br />
+      <em>Accounts</em>
+    </td>
+    <td align="center">
+      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/task_create.png" target="_blank" title="Create Tasks">
+        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/task_create_t.png" alt="Create Tasks">
+      </a>
+      <br />
+      <em>Tasks</em>
+    </td>
+  </tr>
+</table>
+
+Pull requests and bug reports are always welcome!
+
+Visit our website at http://www.fatfreecrm.com/
+
+## Rails 4 support
+
+The master branch is now on Rails 4.2. However, there is a [Rails 3.2 branch](https://github.com/fatfreecrm/fat_free_crm/tree/rails3) available if you still need to use it. Please note that subsequent gem releases will focus on Rails 4 (v0.14.0+ as yet unreleased).
+
+
+
+## System Requirements
+
+* Ruby 2 (2.2 recommended)
+  * Ruby 1.9.3 is no longer compatible (final gem release tag v0.13.6)
+  * Ruby v1.8.7 was supported until v0.11.4 (see https://github.com/fatfreecrm/fat_free_crm/tree/ruby1.8)
+* MySQL v4.1.1 or later (v5+ is recommended), SQLite v3.4 or later, or Postgres 8.4.8 or later.
+* ImageMagick (optional, only needed if you would like to use avatars)
+
+(Ruby on Rails and other gem dependencies will be installed automatically by Bundler.)
+
+
+## Installation
+
+Please view one of the following installation guides:
+
+### [Setup Linux or Mac OS](http://guides.fatfreecrm.com/Setup-Linux-or-Mac-OS.html)
+
+Installing Fat Free CRM on Linux or Mac OS X
+
+
+
+## Upgrading from previous versions of Fat Free CRM
+
+Please read the [Release Notes](https://github.com/fatfreecrm/fat_free_crm/blob/master/CHANGELOG) document for more detailed information on upgrading from previous versions.
+
+
+## Resources
+
+|||
+|-----------------------------------:|:--------------------------|
+|                 **Home Page**: | http://www.fatfreecrm.com |
+|                    **Guides**: | http://guides.fatfreecrm.com |
+|               **Online Demo**: | http://demo.fatfreecrm.com |
+|       **Github Project Page**: | http://github.com/fatfreecrm/fat_free_crm |
+| **Feature Requests and Bugs**: | http://support.fatfreecrm.com/ |
+|                  **RDoc API**: | http://api.fatfreecrm.com |
+|                  **Ruby gem**: | https://rubygems.org/gems/fat_free_crm |
+|    **Twitter Commit Updates**: | http://twitter.com/fatfreecrm |
+|       **User's Google Group**: | http://groups.google.com/group/fat-free-crm-users |
+|  **Developer's Google Group**: | http://groups.google.com/group/fat-free-crm-dev |
+|               **IRC Channel**: | [#fatfreecrm](http://webchat.freenode.net/) on irc.freenode.net |
+
+
+
+
+
+## Main contributors
+
+* [Michael Dvorkin (@michaeldv)](https://github.com/michaeldv) - Founding creator
+* [Steve Kenworthy (@steveyken)](https://github.com/steveyken) - Maintainer
+* [Nathan Broadbent (@ndbroadbent)](https://github.com/ndbroadbent)
+
+
+```
+![页面效果展示](/image/markdown1.jpg)
+<br>
+![页面效果展示](/image/markdown2.jpg)
 <hr style="margin: 45px">
-### <a>参考</a>
+### <a>参考</a><br>
 
 >1、[Markdown 语法说明](http://wowubuntu.com/markdown/)；
- 2、[本文转自互联网](http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml).
+ 2、[本文转自互联网360doc](http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml).
+

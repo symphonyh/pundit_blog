@@ -17,7 +17,7 @@ categories: template-language
 
 + 语法简洁，不使用结束标签（使用缩进代替）
 
-+ 支持带有关闭标`HTML语法模式
++ 支持带有关闭标HTML语法模式
 
 + 可配置的快捷标签(例如默认配置中：`#` 对应转换为` <div id="..."> `和 `. `对应转换为 `<div class="...">`)
 
@@ -493,6 +493,7 @@ a href==action_path(:start)
 ### Line 标记
 
 &sect;&nbsp;**文本**`|` 
+
 `|`管道符号告诉`Slim`只需要显示这行内容，不需要做任何处理。下面每一行缩进大于`|`管道符号的都将复制过去。
 ```
 body
@@ -802,10 +803,10 @@ HTML Output:
 ```
 ### 定制Slim
 这部分内容一般用到的不多，有需要可以参考[5]
-
+<hr>
 ### 翻译参考：
-1、[Slim:README.md](https://github.com/slim-template/slim/)
-2、[Mustache](http://mustache.github.io/)
-3、[Mustache.5](http://mustache.github.io/mustache.5.html)
-4、[Ruby Templating With Slim](https://code.tutsplus.com/categories/ruby)
+1、[Slim:README.md](https://github.com/slim-template/slim/)<br>
+2、[Mustache](http://mustache.github.io/)<br>
+3、[Mustache.5](http://mustache.github.io/mustache.5.html)<br>
+4、[Ruby Templating With Slim](https://code.tutsplus.com/categories/ruby)<br>
 5、[Ruby Templating With Slim: Part 2](https://code.tutsplus.com/articles/ruby-templating-with-slim-part-2--cms-26094)

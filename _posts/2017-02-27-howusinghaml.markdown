@@ -25,7 +25,7 @@ haml 是一种简洁优美的模板语言，主要智能用来替代基于`ruby`
 | 7. | %E %N | 代表N是E的子元素。N如果写在第二行，需要缩进**‘二格’** |
 | 8. | \| | haml标签，多行连接符 |
 | 9. | -# | haml注释 |
-| 10. | \\ | haml标签，前面加单行或多行注释，后面加关闭标签 |
+| 10. | \/ | haml标签，前面加单行或多行注释，后面加关闭标签 |
 
 >      `tag`,`E`可以替换为html标签 `<p>,<a>,<ul>,<li>,<stong>,<title>...`
 
@@ -209,7 +209,7 @@ to HTML：
 <p>The line above won't appear in the HTML, nor will the lines underneath</p>
 ```
 
-### 三、安装Installing Haml
+### 三、安装 Installing Haml
 
 `gem install haml` or
 

@@ -43,14 +43,13 @@ categories: template-language
   ...
 <% end %>
 ```
-- 任何不需要印出的情況
+- 任何不需要输出的情況
+
 ```
 <% user = @users.first %>
 <%= user.name %>
 ```
-
-
-&sect;&nbsp;3&nbsp;要将 Ruby code  使用注释时可以使用 `#` 符号`<%# Comment... %>`
+&sect;&nbsp;3&nbsp;使用注释时可以使用 `#` 符号`<%# Comment... %>`
 
 &sect;&nbsp;4&nbsp;禁止自动转义使用`<%% ... %>`;
 >简单说就是照**原样**输出内容。原因是HTML中输入`<`，`>`...和保留字会让HTML误认为是标签（`<h>,``<a>`...引起混乱），因此HTML会自动把这些符号转义为实体（类似于`&gt;`,`&lt;`的东东），这个语法可以强制不进行转义。

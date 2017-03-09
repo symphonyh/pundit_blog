@@ -221,7 +221,7 @@ h1.header
   h2#author-name
   ul.books
 ```
-HTML Output
+HTML Output:
 
 ```html
 <div id="logo"></div>
@@ -331,7 +331,7 @@ HTML Output:
 ```
 a.menu class="highlight" href="http://slim-lang.com/" Slim-lang.com
 ```
-HTML Outpu：
+HTML Output：
 
 ```
 <a class="menu highlight" href="http://slim-lang.com/">Slim-lang.com</a>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: shortcut keys 
+title: shortcut 
 date: 2017-01-20
 comments: true
 external-url:
@@ -70,3 +70,77 @@ categories: ruby
 `Ctrl + Alt + /`:  块注释
 
 >      注：css代码、html代码注释时只能使用块注释快捷键
+
+
+### using rvm
+---
+
+```bash
+
+/bin/bash --login
+rvm gemset use bloggem
+
+rvm use 2.3.3
+rvm list
+
+rvm gemset create  XXX
+rvm gemset list
+rvm use 2.3.3@rails5
+rvm gemset delete xxx
+
+```
+
+### git command list
+---
+`git clone git@github.com:symphonyh/forum.rb.git`
+
+`git init`
+
+`git status`
+
+`git add .`
+
+`git commit -m "XXX"`
+
+`git push -u origin master`
+
+`git push heroku master`
+
+
+
+### ubuntu 
+---
+`which rails` 
+
+`pwd`
+
+`sudo mount -t vboxsf sarah /mnt/share` 
+
+`apt-get update`: 更新源;
+
+`apt-get upgrade`: 更新已安装的包;
+
+`apt-get dist-upgrade` :升级系统;
+
+`apt-get clean`: 清理无用的包;
+
+`apt-get autoclean`: 清理无用的包;
+
+`apt-get check`: 检查是否有损坏的依赖
+
+
+### gem
+---
+`gem install [gemname]`
+
+`gem install [gemname] --version=[ver]`
+
+`gem update [gemname]`
+
+`gem install -v=4.2.5 rails --no-rdoc --no-ri`
+
+`gem sources -l`
+
+`gem list`
+
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: git commline
+title: Git Commline
 date: 2017-03-12
 comments: true
 external-url:

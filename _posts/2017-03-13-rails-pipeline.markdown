@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: Rails Pipeline 
+title: Assets Pipeline 
 date: 2017-03-13
 comments: true
 external-url:

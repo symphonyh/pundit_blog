@@ -1,6 +1,6 @@
 ---
 layout: post
-title: shortcut 
+title: Shortcut Keys
 date: 2017-01-20
 comments: true
 external-url:
@@ -75,20 +75,22 @@ categories: ruby
 ### using rvm
 ---
 
-```bash
 
-/bin/bash --login
-rvm gemset use bloggem
+`/bin/bash --login`
 
-rvm use 2.3.3
-rvm list
+`rvm gemset use bloggem`
 
-rvm gemset create  XXX
-rvm gemset list
-rvm use 2.3.3@rails5
-rvm gemset delete xxx
+`rvm list`
 
-```
+`rvm use 2.3.3`
+
+`rvm gemset list`
+
+`rvm gemset create  railsapp`
+
+`rvm use 2.3.3@railsapp`
+
+`rvm gemset delete railsapp`
 
 ### git command list
 ---
@@ -144,3 +146,40 @@ rvm gemset delete xxx
 `gem list`
 
 
+### heroku
+
+`heroku create hello0127` ,也可以在heroku web上建立新的app
+
+`git push heroku master`
+
+`heroku run rake db:migrate`
+
+`heroku apps:rename hello0127`
+
+`heroku hello0127`
+
+`heroku open`
+
+`heroku logs --tail`
+
+`heroku run rails console`
+
+ rails项目中 `Gemfile`:
+
+```ruby
+ gem 'pg'
+ gem 'rails_12factor', group: :production
+
+ group :development, :test do
+   gem 'sqlite3'
+   # ....
+ end
+ ```
+
+ `database.yml`:
+
+ ```ruby
+ production:
+   adapter: postgresql
+   encoding: unicode
+ ```

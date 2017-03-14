@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install Giscourse on Ucloud
+title: Install Discourse on Ucloud
 date: 2017-03-02
 comments: true
 external-url:

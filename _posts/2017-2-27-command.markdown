@@ -32,7 +32,13 @@ categories: ruby
 
 `Ctrl+F` 打开底部搜索框，查找关键字;
 
-`Ctrl+shift+F` 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找。
+`Ctrl+shift+F` 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找;
+
+`Ctrl+P` 文件切换;
+
+`Ctrl+Alt+P` 项目切换;
+
+`Ctrl+R` 跳转标记。
 
 
 

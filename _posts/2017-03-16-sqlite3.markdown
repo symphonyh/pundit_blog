@@ -1,0 +1,73 @@
+---
+layout: post
+title: Sqlite3 commline
+date: 2017-03-16
+comments: true
+external-url:
+categories: ruby
+---
+
+
+### sqlite3的基本命令
+
+
+1. 进入命令环境：`sqlite3`
+
+2. 命令行帮助：`.help`
+
+3. 退出命令行环境：`.quit` /`.exit`
+
+<hr>
+4. 创建一个新的数据库：`sqlite3 dbname.db`
+
+2. 打开一个已存在的数据库： `sqlite3 已存在的文件名`
+
+3. 导入SQL语句集：`.read` 数据文件
+
+7. 列出数据表：`.tables`
+
+5. 显示数据库的结构： `.schema`
+
+6. 显示数据表结构：`.schema 表名`
+
+7. 导出数据表的内容：` .dump 表名`
+
+6. 设置导出目标：`.output 文件名/output stdout（终端）`
+
+<hr>
+
+1. 设置分隔符：`.separetor 分隔符(:/,/;...)`
+
+2. 设置显示模式：`.mode list/column`
+
+3. 显示标题栏：`.headers on`
+
+4. 设置列显示宽度：`.width w1,w2,w3,…`
+
+6. 当前显示格式：`.show`
+
+<hr>
+1. 创建表：`CREATE TABLE 表名`
+
+2. 删除表：`DROP TABLE  表名`
+
+3. 修改表：`ALTER TABLE ` 
+
+   - 改表名: `ALTER TABLE  旧表名 RENAME TO 新表名`
+
+   - 增加列：`ALTER TABLE  表名 ADD COLUMN 列名  数据类型 限定`
+
+4. 插入数据：`INSERT INTO 表（列…) VALUES (值…)`
+
+5. 修改数据：`UPDATE 表 SET 列=‘新值’[ WHILE 条件语句]`
+
+6. 删除数据：`DELETE FROM 表 [WHERE 条件语句]` 
+
+7. 查询数据：`SELECT 列… FROM 表`
+
+7. 查询数据,限制返回数量: `SELECT 列… FROM 表 LIMIT 数量 OFFSET 位置`
+
+8. 排序  `ORDER BY 列 ASC（DESC）`
+
+### 参考：
+blog:[http://blog.sina.com.cn/s/blog_5d6a5f300101ge1a.html](http://blog.sina.com.cn/s/blog_5d6a5f300101ge1a.html)

@@ -15,13 +15,13 @@ resources :events
 
 ```
 
-<img src="/image/routes.jpg" width = "720" alt="Rails RESTful 标准路由" /> 
+<img src="/image/routes.jpg" width = "710" alt="Rails RESTful 标准路由" /> 
 
 
 
 rails 在默认情况下，会为每一个 RESTful 路由建立7个动作，并且生成对应 Helper:相对路径的`_path`,绝对路径的`_url`。加了HTTP动词的路由简化成单数和复数两类,`event`。
 
-复数形式：:`events` 
+复数形式:`events` 
 
 `events_paht => /events` 
 
@@ -48,7 +48,7 @@ Helper名称都是`event_path`需要用参数`@event`的实例变量传递要sho
 <hr>
 
 ```
-resource :session, only: [create, :destroy]
+resource :session, only: [:create, :destroy]
 
 ```
 单数资源路由最常用的例子就是session

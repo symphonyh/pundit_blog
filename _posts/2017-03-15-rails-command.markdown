@@ -1,13 +1,13 @@
 ---
 layout: post
-title: rails commline
+title: 常用的 Rails 命令
 date: 2017-03-15
 comments: true
 external-url:
 categories: rails
 ---
 
-rails常用的命令汇总：
+Rails常用的命令汇总：
 
 1、rails new
 
@@ -84,18 +84,39 @@ rails常用的命令汇总：
 `rake routes`
 
 
+&sect;&nbsp;`rake db:migrate`失效的一个解决办法，通常是因为已经建立了一个空的migration
+
+```
+rake db:drop:all
+rake db:create:all
+rake db:migrate
+```
+
+
 8、bundle 
 
 `bundle outdated` 这个指令就会列出有新版本可以升级的gems;
 
-`bundle exec rake db:migrate` 在rake存在多个版本时，可以不使用默认版本的rake，
+`bundle exec rake db:migrate` 在rake存在多个版本时，可以不使用默认版本的rake
 
 而调用项目中`Gemfile.lock`约定的rake版本进行数据库迁移; 
 
+<hr>
 
-附：
+9、thin
 
---ruby 对象元素和 DB元素 的映射关系--
+`gem install thin`: 安装thin;
+
+`thin start`:启动thin;
+
+>加`-d`是让他能在后台运行，不加，我们停止thin的时候可以直接使用 `ctrl + c`;
+追加 “-e production”表示在生产环境下运行，追加"-p 3003"指定端口;
+
+`thin stop`: 停止thin
+
+<hr> 
+
+>附：rails对象元素和 DB的映射关系:
 
 |--------------------|-----------------|
 |ruby              |关系型数据库        |
@@ -103,12 +124,14 @@ rails常用的命令汇总：
 |  对象 object              |行 row |   
  |属性 attribute  |   列 column|
 
---rails命名惯例--
+>rails命名惯例:
 
 |--------------------|-----------|------------|
 |rails| 单词 |命名惯例|
 | 数据库表   table      |复数单词       | 蛇形命名     |
 | Model类  |单数单词 | 驼峰命名|
+
+<hr>
 
 ### 参考：
 

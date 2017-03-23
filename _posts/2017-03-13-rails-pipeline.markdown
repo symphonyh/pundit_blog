@@ -123,7 +123,37 @@ erb：
 ```
    alert("<%= image_path("foo/icon.png")%>");
 ```
-  
+
+5、 加深理解
+例如，这些文件：
+
+```
+   app/assets/javascripts/home.js
+   lib/assets/javascripts/moovinator.js
+   vendor/assets/javascripts/slider.js
+   vendor/assets/somepackage/phonebox.js
+```
+可这样引用：
+
+```
+   //= require home
+   //= require moovinator
+   //= require slider
+   //= require phonebox
+```
+子目录中的资源也能够被访问到:`app/assets/javascripts/sub/something.js`
+
+可以如此的引用：` //= require sub/something`
+
+可以通过 控制台 命令来查看搜索路径:
+```
+rails c
+
+2.3.3:001> Rails.application.config.assets.paths
+
+``` 
+
+<hr>
 
 ### 参考：
 1、[http://gogojimmy.net/2012/07/03/understand-assets-pipline/](http://gogojimmy.net/2012/07/03/understand-assets-pipline/)

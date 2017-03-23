@@ -41,18 +41,28 @@ categories: ruby
 `Ctrl+R` 跳转标记。
 
 <hr>
+### better coffeescript 
+---
 
 `alt+shift+t` - Run a Cake task
+
 `alt+shift+r` - Run some CoffeeScript (prints output to a panel on the bottom)
+
 `alt+shift+s` - Run a syntax check
+
 `alt+shift+c` - Compile a file
+
 `alt+shift+d` - Display compiled JavaScript
+
 `alt+shift+l` - Display lexer tokens
+
 `alt+shift+n` - Display parser nodes
+
 `alt+shift+w` - Toggle watch mode
+
 `alt+shift+p` - Toggle output panel
 
->
+
 ### Js console command
 ---
 
@@ -164,6 +174,7 @@ categories: ruby
 
 
 ### heroku
+---
 
 `heroku create hello0127` ,也可以在heroku web上建立新的app
 
@@ -200,3 +211,27 @@ categories: ruby
    adapter: postgresql
    encoding: unicode
  ```
+
+### rbenv install ruby
+---
+
+- 安装ruby
+
+`rbenv install --list`:   列出所有 ruby 版本;
+`rbenv install 1.9.3-p392`:      安装 1.9.3-p392;
+
+- 列出版本
+
+`rbenv versions`:                列出安装的版本;
+`rbenv version`:                 列出正在使用的版本;
+
+- 设置版本
+
+`rbenv global 1.9.3-p392`       默认使用 1.9.3-p392;
+`rbenv shell 1.9.3-p392`        当前的 shell 使用 1.9.3-p392, 会设置一个 `RBENV_VERSION` 环境变量;
+
+- 其他
+
+`rbenv rehash`                  每当切换 ruby 版本和执行 bundle install 之后必须执行这个命令;
+`rbenv which irb`               列出 irb 这个命令的完整路径;
+`rbenv whence irb`              列出包含 irb 这个命令的版本;

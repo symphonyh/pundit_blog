@@ -294,7 +294,7 @@ img alt="James Bond posing together with M" src="image.png" height="90" width="9
 ```
 HTML Output:
 ```html
-http://slim-lang.com" title="Slim Homepage">Goto the Slim homepage
+<a http://slim-lang.com" title="Slim Homepage">Goto the Slim homepage
  
 <img alt="James Bond posing together with M" height="90" src="image.png" width="90" />
 ```

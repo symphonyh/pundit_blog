@@ -294,7 +294,7 @@ img alt="James Bond posing together with M" src="image.png" height="90" width="9
 ```
 HTML Output:
 ```html
-<a http://slim-lang.com" title="Slim Homepage">Goto the Slim homepage
+<a http://slim-lang.com" title="Slim Homepage">Goto the Slim homepage </a>
  
 <img alt="James Bond posing together with M" height="90" src="image.png" width="90" />
 ```
@@ -377,6 +377,20 @@ body
   h1(id="logo") = page_logo
   h2[id="tagline" class="small tagline"] = page_tagline
 ```
+
+HTML Output:
+
+```
+<body>
+  <h1 id = "logo">
+  <%= page_logo %>
+  </h1>
+  <h2 id="tagline" class="small tagline">
+  <%= page_tagline %>
+  </h2>
+</body>
+```
+
 如果包围的属性内容很长，可以写成多行：
 ```
 h2[id="tagline"
@@ -400,7 +414,7 @@ HTML Output:
 ```
  <a href="http://slim-lang.com" title="Home page">Goto the home page</a>
  
- <a class="link" href="http://slim-lang.com/about.html" id="about" title="About page">Goto the about page</a>
+ <a class="link" href="http://slim-lang.com/about.html" id="about" title="About page" > Goto the about page </a>
  
  <h2 class="agent-header tagline" id="big-header">
    Funky headline
@@ -426,10 +440,10 @@ HTML Output:
 ```html
 <ul>
   <li class="long-link">
-    http://slim-lang.com" title="Home page">Goto the home page
+    <a http://slim-lang.com" title="Home page">Goto the home page </a>
   </li>
   <li class="long-link class with-id">
-    http://slim-lang.com/about.html" id="about" title="About page">Goto the about page
+    <a http://slim-lang.com/about.html" id="about" title="About page">Goto the about page </a>
   </li>
   <li class="c-link">
     <a href="/c">C link</a>

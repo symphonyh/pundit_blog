@@ -21,3 +21,4 @@ kramdown:
   input: GFM 
   syntax_highlighter: rouge
 permalink: /cloudblog/:year/:month/:day/:title/
+

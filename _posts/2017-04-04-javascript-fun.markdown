@@ -81,7 +81,7 @@ return x+y;
 }(3,4)); 
 ``` 
  
-&sect;&nbsp; 书写方式3：使用void
+&sect;&nbsp; 书写方式3：使用 `void/!/+ `代替函数外层括号,避免全局变量
 ```
 void function(x) {
 x = x-1;
@@ -89,7 +89,7 @@ alert(x);
 }(9);
 ```
 5、闭包
-闭包说白了就是函数的嵌套，内层的函数可以使用外层函数的所有变量，即使外层函数已经执行完毕；（涉及Javascript作用域链）
+闭包说白了就是函数的嵌套，闭包就是实现外层函数中的变量不释放，即使外层函数已经执行完毕；（涉及Javascript作用域链）
 
 ```
 function checkClosure(){
@@ -148,7 +148,8 @@ for(var i = 0 , len = lists.length ; i < len ; i++){
 ```
 >说明：你会发现当鼠标移过每一个`<li>`;元素时，总是弹出`4`，而不是我们期待的元素下标。这是为什么呢？**最终值！**当mouseover事件调用监听函数时，首先在匿名函数`(function(){ alert(i); })`内部查找是否定义了 `i`，结果是没有定义；因此它会向上查找，查找结果是已经定义了，并且`i`的值是`4`（循环后的i值）；所以，最终每次弹出的都是`4`。
 
-      修改后的代码如下：
+修改后的代码如下：
+
 ```js
 var lists = document.getElementsByTagName('li');
 for(var i = 0 , len = lists.length ; i < len ; i++){
@@ -192,7 +193,8 @@ $(document).ready(function(){ //.. });
 
 
 推荐写法：
-$(function(){ });
+$(function(){ $('#js').css('color','red');
+});
  ```
 > 注意:网页中的DOM结构绘制完后就执行;(可能DOM元素相关的东西并没有加载完),这里和`window.onload = function(){};` 不同，`jquery（）`可以写多个，并不要求网页所有内容加载完毕执行！
 

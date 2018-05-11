@@ -9,7 +9,7 @@ categories: Ember.js
 
  nvm 安装和使用
 
-`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash`
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash`
 <br>
 
 
@@ -25,20 +25,25 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
+查看已安装的版本:
 `nvm ls`
 
+查看node的已知版本:
+`nvm ls-remote`
+
+安装最新版:
 `nvm install stable`
 
-`nvm install 7.7.3`
+安装长期支持板:
+`nvm install 8.11.1`
 
-`nvm use 7`
+切换node的版本:
+`nvm use 8.11.1`
 
-`nvm alias default 7.7.3`
+查看当前版本:
+`node --version`
 
-`npm install -g bower`
+指定默认版本:
+`nvm alias default 8.11.1`
 
-`npm install -g ember-cli`
 
-`bower install <package>`
-
-`coffee -c test.coffee`

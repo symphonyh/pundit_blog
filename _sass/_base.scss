@@ -12,7 +12,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   color: $text-color;
-
+ 
   .chinese {
       font-family: $chinese-font-family;
     }
@@ -51,7 +51,7 @@ a:hover:after {
       color: $alt-color-darker;
       display: inline-block;
       float: left;
-      font-size: 3.2em;
+      font-size: 2.2em;
       line-height: 0.7em;
       font-style: normal;
       font-weight: bold;
@@ -63,6 +63,7 @@ a:hover:after {
 
   h1 {
     font-weight: 600;
+    font-size: 2em;
          }
 
   h2 {
@@ -227,7 +228,7 @@ sup > .footnote {
   font-style: normal;
 }
 
-.github_icon {
+/* .github_icon {
   margin-left: 18em;
   > a {
     color: $icon-color;
@@ -235,7 +236,7 @@ sup > .footnote {
     a:hover:after {
      width: 0;
     }
-}
+} */
 
 table {
   margin: 0 auto;

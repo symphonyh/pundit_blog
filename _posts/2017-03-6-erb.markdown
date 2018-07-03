@@ -65,7 +65,8 @@ categories: template-language
  <%%= "<b>haha</b>" %> 
  # <b>haha</b>
 ```
->有时会看到标签`<%-`or`-%>`,意思是忽略后面的空格和换行符, 使输出更紧凑；不过要设置`trim mode`。[参考：ruby-china讨论帖](https://ruby-china.org/topics/13042)
+>有时会看到标签`<%-`or`-%>` or `<%=`or`-%>` or
+`<%=-`or`%>`,意思是忽略前面和后面的空格和换行符（`-`号在前就忽略前面的，在后就忽略后面的，在两端就忽略前后的的空格和换行符）, 使输出更紧凑；不过要设置`trim mode`。[参考：ruby-china讨论帖](https://ruby-china.org/topics/13042)
 
 
 

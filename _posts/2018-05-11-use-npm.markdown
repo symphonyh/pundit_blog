@@ -27,6 +27,6 @@ Update到最新版本:
 `npm config set registry http://registry.npm.taobao.org/`
 
  
-- 换成原来的
+- 换成初始的镜像：
 
 `npm config set registry https://registry.npmjs.org/`

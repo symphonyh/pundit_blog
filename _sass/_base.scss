@@ -147,7 +147,7 @@ blockquote {
   border: 1px solid $bg-color-darker;
   margin-top: 16px;
   padding: 16px;
-  border-radius: 4px;
+  border-radius: 20px;
   
 }
 
@@ -170,7 +170,6 @@ blockquote {
   > svg {
     width: 14em;
     height: 4em;
-    margin-top: 2em;
     margin-bottom: 2em;
   }
 }

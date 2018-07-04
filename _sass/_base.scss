@@ -34,7 +34,7 @@ body {
   height: 2px;
   width: 0px;
   background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+  transition: width .5s ease;
 }
 a:hover:after {
   width: 100%;

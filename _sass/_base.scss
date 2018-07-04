@@ -17,7 +17,7 @@ body {
       font-family: $chinese-font-family;
     }
 
-  a, a:hover, a:link,a:visited,a:focus {
+  a, a:hover, a:link, a:visited, a:focus, a:active {
     color: $alt-color;
     text-decoration:none
   }

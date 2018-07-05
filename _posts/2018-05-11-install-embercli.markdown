@@ -8,11 +8,9 @@ categories: Ember.js
 ---
 
 - Install Ember:
-
 `npm install -g ember-cli`
 
 - version:
-
 `ember -v`
 
 `ember new project_name`

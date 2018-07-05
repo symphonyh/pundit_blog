@@ -13,11 +13,22 @@ body {
   font-size: $base-font-size;
   color: $text-color;
  
+  .navbar {
+    
+    margin-right: 2em;
+  > a {
+    color: $icon-color !important;
+    }
+    a:hover:after {
+     width: 0;
+    }
+  }
+
   .chinese {
       font-family: $chinese-font-family;
     }
 
-  a, a:hover, a:link, a:visited, a:focus, a:active {
+  a, a:hover, a:link, a:visited, a:focus {
     color: $alt-color;
     text-decoration:none
   }
@@ -65,6 +76,7 @@ a:hover:after {
     font-weight: 500;
     font-size: 2em;
     margin-top: 30px;
+    text-shadow: 2px 2px 2px $icon-color;
          }
 
   h2 {

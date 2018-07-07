@@ -7,7 +7,7 @@ external-url:
 categories: Ember.js
 ---
 
-## Ucloud 云主机 discourse 安装部署
+### Ucloud 云主机 discourse 安装部署
 > 说起对ember.js的兴趣，我是从discourse 开始的。看了很多开源系统，对ember.js+rails的discourse很有感觉:功能比较完善，灵活、可配置性非常好，部署方便，瀑布流的主题布局模式也很符合未来论坛的趋势，于是在 ucloud 上租用了云主机，成功安装了discourse 的论坛系统，期间遇到一些小困难，在中文论坛版主和很多热心朋友的的指点下都克服了，这里表示特别感谢！这篇记录最早发表于discourse 中文论坛，是整理给各位想使用discourse的朋友做些参考。
 
 [作者博客链接: cloudhan.me](http://www.cloudhan.me)

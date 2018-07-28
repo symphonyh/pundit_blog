@@ -175,6 +175,7 @@ Liquid使得你可以通过`if`或`unless`（`elsif`和`else`为可选）编写�
 **`Case`**
 如果你需要更多的条件判断，你可以使用case语句:
 
+~~~
 {% raw %}
      {% case condition %}
          {% when 1 %}
@@ -186,6 +187,7 @@ Liquid使得你可以通过`if`或`unless`（`elsif`和`else`为可选）编写�
      {% endcase %}
 
 {% endraw %}
+~~~
 
 **`cycle`**
 我们常常需要在不同的颜色或类似的任务间轮流切换。Liquid对于这样的操作有内置支持，通过使用cycle标签。

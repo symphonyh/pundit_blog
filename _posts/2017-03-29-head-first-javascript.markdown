@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 1.快速导览
+title: 快速导览
 date: 2018-07-18
 comments: true
 external-url:

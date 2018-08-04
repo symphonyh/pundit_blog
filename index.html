@@ -3,9 +3,10 @@ layout: default
 ---
 <div class="container main">
   <div class="row">
-     <div style="text-align: right;" class="navbar">
+     <div class="navbar">
         <a class="fa fa-tree" href="https://www.cloudhan.me" target="_blank"></a>
         <a class="fa fa-github" href="https://github.com/symphonyh/symphonyh.github.io" target="_blank"></a>
+         <a class="fa fa-bookmark-o" href="https://mubu.com/list" target="_blank"></a>
      </div>
     <header>
       <div><center><h1 class="chinese">{{ site.title }}</h1></center></div>
@@ -56,10 +57,11 @@ layout: default
       {% assign categories = site.categories | sort %}
       {% for category in categories %}
       <h3>On {{ category | first }}</h3>
-            <p>{% for posts in category %} {% for post in posts %} 
+            <p>{% for posts in category %} {% for post in posts %}
             <a class="chinese" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% if forloop.last == false %},&nbsp;&nbsp;{% endif %}
         {% endfor %} {% endfor %}  </p>
       {% endfor %}
           </div>
   </div>
 </div>
+<!--{{forloop.index}}.&nbsp;style="text-align: right;" -->

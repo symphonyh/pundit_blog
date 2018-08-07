@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How using haml
+title: 使用 haml 模板语言
 date: 2017-01-17
 comments: true
 external-url:

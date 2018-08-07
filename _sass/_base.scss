@@ -12,6 +12,9 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   color: $text-color;
+
+  text-align: justify;
+
  
   .navbar {
     
@@ -61,7 +64,7 @@ body {
    }
 
   h1 {
-    font-weight: 800;
+    font-weight: 600;
     font-size: 2em;
     margin-top: 5px;
     text-shadow: 2px 2px 2px $icon-color;
@@ -187,8 +190,8 @@ footer {
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: $small-font-size;
-
   color: $alt-text-color;
+  word-break: break-all;
 
   .biography {
     margin-top: 2em;

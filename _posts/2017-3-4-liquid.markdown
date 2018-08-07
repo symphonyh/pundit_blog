@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid for Designers
+title: Liquid 语法说明
 date: 2017-03-04
 comments: true
 external-url:

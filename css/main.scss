@@ -6,7 +6,7 @@
 // Our variables 
 $base-font-family:   'PT Serif', Georgia, Times, 'Times New Roman', serif;
 $chinese-font-family: Helvetica, Tahoma, Arial, "YaHei Consolas Hybrid", "Microsoft YaHei", "微软雅黑",  sans-serif;
-$base-font-size:   11.5pt;
+$base-font-size:   10.5pt;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.2;
 
@@ -18,7 +18,7 @@ $alt-color:        hsl(0, 70%, 46%);
 $alt-color-darker: darken($alt-color, 6%);
 $icon-color:       #c0bcbf;
 $article-bg-color: hsl(0, 0, 98%);
-$background-color: darken($article-bg-color, 6%);
+$background-color: darken($article-bg-color, 3%);
 $bg-color-darker:  darken($article-bg-color, 15%);
 $alt-text-color:   darken($article-bg-color, 40%);
 

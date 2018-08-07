@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How using Slim 
+title: 使用 Slim 模板语言
 date: 2017-03-06
 comments: true
 external-url:

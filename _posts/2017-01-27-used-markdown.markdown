@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Markdown 
+title: 简明 Markdown 语法
 date: 2017-01-27
 comments: true
 external-url:

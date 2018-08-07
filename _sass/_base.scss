@@ -29,7 +29,7 @@ body {
       font-family: $chinese-font-family;
     }
 
-  a, a:link {
+  a, a:link, a:visited {
     color: $alt-color;
     text-decoration: none;
   }

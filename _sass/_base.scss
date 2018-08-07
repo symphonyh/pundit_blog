@@ -20,8 +20,8 @@ body {
     color: $icon-color !important;
     font-size: 0.85em;
     }
-    a:hover:after {
-     width: 0;
+    a:hover {
+     background-color: #FAFAFA!important;
     }
   }
 
@@ -29,31 +29,17 @@ body {
       font-family: $chinese-font-family;
     }
 
-  a, a:hover, a:link, a:visited, a:focus {
+  a {
     color: $alt-color;
-    text-decoration:none
   }
 
-  a {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 3px;
-}
- a:after {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 2px;
-  width: 0px;
-  background: transparent;
-  transition: width .5s ease;
-}
-a:hover:after {
-  width: 100%;
-  background: $alt-color;
-}
+  a:hover {
+      color: $alt-color;
+      background-color: #FBF2EF;
+      text-decoration : none
+  }
 
-
+ 
   p {
     line-height: $base-line-height;
     }

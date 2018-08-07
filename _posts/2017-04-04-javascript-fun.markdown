@@ -4,7 +4,7 @@ title: js Function
 date: 2017-04-04
 comments: true
 external-url:
-categories: javascript
+categories: Javascript
 ---
 
 ### JavaScript中的函数定义

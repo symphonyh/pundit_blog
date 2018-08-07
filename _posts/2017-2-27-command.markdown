@@ -4,7 +4,7 @@ title: Shortcut Keys
 date: 2017-01-20
 comments: true
 external-url:
-categories: ruby
+categories: Ruby
 ---
 
 ### sublime text3 keys

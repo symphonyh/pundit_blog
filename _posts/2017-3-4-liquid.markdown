@@ -4,7 +4,7 @@ title: Liquid for Designers
 date: 2017-03-04
 comments: true
 external-url:
-categories: template-language
+categories: Template-language
 ---
 
 Liquid for Designers

@@ -4,7 +4,7 @@ title: How using haml
 date: 2017-01-17
 comments: true
 external-url:
-categories: template-language
+categories: Template-language
 ---
 
 

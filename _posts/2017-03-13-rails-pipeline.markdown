@@ -4,7 +4,7 @@ title: Assets Pipeline
 date: 2017-03-13
 comments: true
 external-url:
-categories: rails
+categories: Rails
 ---
 
 

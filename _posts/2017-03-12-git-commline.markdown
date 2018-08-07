@@ -4,7 +4,7 @@ title: Git Commline
 date: 2017-03-12
 comments: true
 external-url:
-categories: ruby
+categories: Ruby
 ---
 git 经常用到的一些命令汇总.
 <hr>

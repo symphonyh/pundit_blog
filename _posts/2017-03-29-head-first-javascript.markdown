@@ -4,7 +4,7 @@ title: 快速导览
 date: 2018-07-18
 comments: true
 external-url:
-categories: javascript
+categories: Javascript
 ---
 
 ## 快速导览

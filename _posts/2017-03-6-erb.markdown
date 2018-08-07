@@ -4,10 +4,9 @@ title: Using erb
 date: 2017-03-06
 comments: true
 external-url:
-categories: template-language
+categories: Template-language
 ---
 
-### Using erb
 `erb`的特点是除了能用简洁直观的语法生成HTML文件，也能够嵌入 Ruby 代码。
 
 **标签**

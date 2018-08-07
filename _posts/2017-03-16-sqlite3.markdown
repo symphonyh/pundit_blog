@@ -4,7 +4,7 @@ title: Sqlite3 commline
 date: 2017-03-16
 comments: true
 external-url:
-categories: ruby
+categories: Ruby
 ---
 
 

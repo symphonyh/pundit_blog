@@ -4,7 +4,7 @@ title: Bingo
 date: 2017-01-22
 comments: true
 external-url:
-categories: javascript
+categories: Javascript
 ---
 
 ### Bingo source code

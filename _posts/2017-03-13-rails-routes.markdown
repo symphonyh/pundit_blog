@@ -4,7 +4,7 @@ title: Rails Routes
 date: 2017-03-13
 comments: true
 external-url:
-categories: rails
+categories: Rails
 ---
 
 Rails 路由会通过你配置的路由规则将发送来的 URL 分发到对应的 action 中。它同时会生成 paths 和 urls 来避免你在视图中使用硬编码。

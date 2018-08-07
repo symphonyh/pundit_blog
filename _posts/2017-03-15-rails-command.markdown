@@ -4,7 +4,7 @@ title: 常用的 Rails 命令
 date: 2017-03-15
 comments: true
 external-url:
-categories: rails
+categories: Rails
 ---
 
 Rails常用的命令汇总：

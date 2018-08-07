@@ -4,10 +4,10 @@ title: Using Markdown
 date: 2017-01-27
 comments: true
 external-url:
-categories: template-language
+categories: Template-language
 ---
 
-### used markdown 
+Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
 
 1.<a>标题</a><br>
    在Markdown当中设置标题，有两种方式：

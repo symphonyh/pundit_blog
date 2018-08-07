@@ -29,12 +29,12 @@ body {
       font-family: $chinese-font-family;
     }
 
-  a {
+  a, a:visited {
     color: $alt-color;
     text-decoration: none;
   }
 
-  a:visited, a:hover {
+   a:hover {
       color: $alt-color;
       background-color: #FBF2EF;
       text-decoration: none

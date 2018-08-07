@@ -21,7 +21,7 @@ body {
     font-size: 0.85em;
     }
     a:hover {
-     background-color: #FAFAFA!important;
+     background-color: $article-bg-color!important;
     }
   }
 
@@ -33,13 +33,13 @@ body {
     color: $alt-color;
   }
 
-  a:hover {
+  a:visited, a:hover, a:active {
       color: $alt-color;
       background-color: #FBF2EF;
       text-decoration : none
   }
 
- 
+     
   p {
     line-height: $base-line-height;
     }

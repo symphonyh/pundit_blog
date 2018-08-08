@@ -1,0 +1,150 @@
+---
+layout: post
+title: 常用命令笔记
+date: 2017-01-20
+comments: true
+external-url:
+categories: Ruby
+---
+
+rvm,git,rbenv,gem 得都是学习`rails`中常用的工具，这些命令行语句做个笔记备查。
+
+### using rvm
+---
+
+
+`/bin/bash --login`
+
+`rvm gemset use bloggem`
+
+`rvm list`
+
+`rvm use 2.3.3`
+
+`rvm gemset list`
+
+`rvm gemset create  railsapp`
+
+`rvm use 2.3.3@railsapp`
+
+`rvm gemset delete railsapp`
+
+### git command list
+---
+`git clone git@github.com:symphonyh/forum.rb.git`
+
+`git init`
+
+`git status`
+
+`git add .`
+
+`git commit -m "XXX"`
+
+`git push -u origin master`
+
+`git push heroku master`
+
+
+
+### ubuntu 
+---
+`which rails` 
+
+`pwd`
+
+`sudo mount -t vboxsf sarah /mnt/share` 
+
+`apt-get update`: 更新源;
+
+`apt-get upgrade`: 更新已安装的包;
+
+`apt-get dist-upgrade` :升级系统;
+
+`apt-get clean`: 清理无用的包;
+
+`apt-get autoclean`: 清理无用的包;
+
+`apt-get check`: 检查是否有损坏的依赖
+
+
+### gem
+---
+`gem install [gemname]`
+
+`gem install [gemname] --version=[ver]`
+
+`gem update [gemname]`
+
+`gem install -v=4.2.5 rails --no-rdoc --no-ri`
+
+`gem sources -l`
+
+`gem list`
+
+
+### heroku
+---
+
+`heroku create hello0127` ,也可以在heroku web上建立新的app
+
+`git push heroku master`
+
+`heroku run rake db:migrate`
+
+`heroku apps:rename hello0127`
+
+`heroku hello0127`
+
+`heroku open`
+
+`heroku logs --tail`
+
+`heroku run rails console`
+
+
+
+### rbenv
+---
+
+- 安装ruby
+
+`rbenv install --list`:   列出所有 ruby 版本;
+`rbenv install 1.9.3-p392`:      安装 1.9.3-p392;
+
+- 列出版本
+
+`rbenv versions`:                列出安装的版本;
+`rbenv version`:                 列出正在使用的版本;
+
+- 设置版本
+
+`rbenv global 1.9.3-p392`       默认使用 1.9.3-p392;
+`rbenv shell 1.9.3-p392`        当前的 shell 使用 1.9.3-p392, 会设置一个 `RBENV_VERSION` 环境变量;
+
+- 其他
+
+`rbenv rehash`                  每当切换 ruby 版本和执行 bundle install 之后必须执行这个命令;
+`rbenv which irb`               列出 irb 这个命令的完整路径;
+`rbenv whence irb`              列出包含 irb 这个命令的版本;
+
+---
+ rails项目中 `Gemfile`:
+
+```ruby
+ gem 'pg'
+ gem 'rails_12factor', group: :production
+
+ group :development, :test do
+   gem 'sqlite3'
+   # ....
+ end
+ ```
+
+ `database.yml`:
+
+ ```ruby
+ production:
+   adapter: postgresql
+   encoding: unicode
+ ```

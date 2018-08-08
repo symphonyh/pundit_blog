@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Install Ember.js
+title: 安装 Ember
 date: 2018-05-11
 comments: true
 external-url:

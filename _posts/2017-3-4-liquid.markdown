@@ -7,9 +7,9 @@ external-url:
 categories: Template-language
 ---
 
-Liquid for Designers
+Liquid是在`jekyll`主题中默认的模板引擎，在页面编辑时，可以像`ruby`程序开发语言一样处理变量、逻辑。
 
-[转自blog](http://blog.csdn.net/dont27/article/details/38097581)
+
 
 在Liquid中有两种类型的标记：`Output`和 `Tag`
 
@@ -315,3 +315,8 @@ Liquid使得你可以通过`if`或`unless`（`elsif`和`else`为可选）编写�
      </select>
 
 {% endraw %}
+
+---
+
+> [英文文档参考:https://github.com/Shopify/liquid/wiki/Liquid-for-Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers); <br>
+  [CSDN blog的翻译:http://blog.csdn.net/dont27/article/details/38097581](http://blog.csdn.net/dont27/article/details/38097581)

@@ -7,12 +7,10 @@ external-url:
 categories: Ember.js
 ---
 
-Update到最新版本:
-
-`npm install npm@latest -g`
-
-<br>
-
+&sect;&nbsp;Update**到最新版本:**
+~~~
+npm install npm@latest -g
+~~~
 
 &sect;&nbsp;**替换npm淘宝镜像的方法**
 

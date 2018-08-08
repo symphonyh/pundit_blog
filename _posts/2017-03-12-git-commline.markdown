@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git Commline
+title: Git 常用命令
 date: 2017-03-12
 comments: true
 external-url:

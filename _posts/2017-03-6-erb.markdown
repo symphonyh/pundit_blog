@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  erb 语法说明
+title:  Erb 语法说明
 date: 2017-03-06
 comments: true
 external-url:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 在 Ucloud 上部署 discourse 
+title: 在 Ucloud 上部署 Discourse 
 date: 2017-03-02
 comments: true
 external-url:
@@ -18,7 +18,7 @@ categories: Ember.js
 ### 2. 安装docker
 网上有不少安装docker的教程和文章，大多都是几年前的文章，作者写的都很认真，不过已经完全不适用了，自己也走了弯路所以建议安装docker 按照安装手册里面的[官方文档](https://docs.docker.com/engine/installation/linux/ubuntu/)。ubuntu的不同版本（12.04/14.04/15.10）略有区别，手册里也说的比较清晰，针对14.04版本，没遇到什么问题，需要命令权限的命令前加`sudo`过程如下：
 
->     现在是`2016年2月份`，如果您看到这篇文章在1年以后，注意不要被我误导了，看看最新官方文档比较好。
+> 现在是`2016年2月份`，如果您看到这篇文章在1年以后，注意不要被我误导了，看看最新官方文档比较好。
 
 （1）首先检查linux内核版本，ubuntu14.04 内核版本,内核版本要求`3.10`以上；
 
@@ -77,7 +77,7 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
 cd /var/discourse
 cp samples/standalone.yml containers/app.yml
 ```
->      说明：
+> 说明：
 
        * 首先是创建一个目录`/var/discourse`；
 
@@ -153,8 +153,8 @@ exit
 按照提示输入邮箱和密码，exit退出容器。
 
 
->最后特别提示下：管理员邮箱，也就是用rake admin:create 创建的邮箱一般用于设置论坛；DISCOURSE_SMTP_USER_NAME 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；DISCOURSE_DEVELOPER_EMAILS开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。
+ 最后特别提示下：管理员邮箱，也就是用`rake admin:create` 创建的邮箱一般用于设置论坛；`DISCOURSE_SMTP_USER_NAME` 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；`DISCOURSE_DEVELOPER_EMAILS`开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。
 
 ### 参考
 
->1、[Get Docker for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/)；
+> 1、[Get Docker for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/)；

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 常用的 Rails 命令
+title:  Rails 命令汇总
 date: 2017-03-15
 comments: true
 external-url:

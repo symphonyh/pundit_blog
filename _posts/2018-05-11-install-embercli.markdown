@@ -7,10 +7,17 @@ external-url:
 categories: Ember.js
 ---
 
-- Install Ember:
-`npm install -g ember-cli`
+- install Ember:
+~~~
+npm install -g ember-cli
+~~~
 
 - version:
-`ember -v`
+~~~
+ember -v
+~~~
 
-`ember new project_name`
+- 新项目
+~~~
+ember new project_name
+~~~

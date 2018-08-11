@@ -7,24 +7,30 @@ external-url:
 categories: Ember.js
 ---
 
-&sect;&nbsp;Update**到最新版本:**
+- Update 更新到最新版本:
 ~~~
 npm install npm@latest -g
 ~~~
 
-&sect;&nbsp;**替换npm淘宝镜像的方法**
+替换npm淘宝镜像：
 
 - 得到原本的镜像地址:
 
-`npm get registry`
+~~~
+npm get registry
+~~~
 
  >https://registry.npmjs.org/
 
 - 设成淘宝的镜像地址:
 
-`npm config set registry http://registry.npm.taobao.org/`
+~~~
+npm config set registry http://registry.npm.taobao.org/
+~~~
 
  
 - 换成初始的镜像：
 
-`npm config set registry https://registry.npmjs.org/`
+~~~
+npm config set registry https://registry.npmjs.org/
+~~~

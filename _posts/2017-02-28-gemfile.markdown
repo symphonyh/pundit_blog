@@ -1,0 +1,31 @@
+---
+layout: post
+title: rails-Gemfile 
+date: 2017-01-20
+comments: true
+external-url:
+categories: Rails
+---
+
+
+
+
+ rails项目中 `Gemfile`文件设置笔记:
+
+```ruby
+ gem 'pg'
+ gem 'rails_12factor', group: :production
+
+ group :development, :test do
+   gem 'sqlite3'
+   # ....
+ end
+ ```
+
+ `database.yml`:
+
+ ```ruby
+ production:
+   adapter: postgresql
+   encoding: unicode
+ ```

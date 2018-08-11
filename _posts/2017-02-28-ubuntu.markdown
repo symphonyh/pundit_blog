@@ -1,0 +1,30 @@
+---
+layout: post
+title: Using-Ubuntu
+date: 2017-01-20
+comments: true
+external-url:
+categories: Ruby
+---
+
+### Using ubuntu 
+---
+`which rails` 查找路径;
+
+`pwd` 当前目录;
+
+`sudo su` :切换到管理员;
+
+`sudo mount -t vboxsf sarah /mnt/share` 
+
+`apt-get update`: 更新源;
+
+`apt-get upgrade`: 更新已安装的包;
+
+`apt-get dist-upgrade` :升级系统;
+
+`apt-get clean`: 清理无用的包;
+
+`apt-get autoclean`: 清理无用的包;
+
+`apt-get check`: 检查是否有损坏的依赖

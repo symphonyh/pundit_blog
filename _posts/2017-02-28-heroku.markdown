@@ -1,0 +1,28 @@
+---
+layout: post
+title: Using-heroku
+date: 2017-01-20
+comments: true
+external-url:
+categories: Ruby
+---
+
+### Using heroku
+---
+
+`heroku create hello0127` ;
+>也可以在heroku web上建立新的app
+
+`git push heroku master`
+
+`heroku run rake db:migrate`
+
+`heroku apps:rename hello0127`
+
+`heroku hello0127`
+
+`heroku open`
+
+`heroku logs --tail`
+
+`heroku run rails console`

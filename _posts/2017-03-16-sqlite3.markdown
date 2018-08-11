@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sqlite3 命令行笔记
+title: Sqlite3 基础命令
 date: 2017-03-16
 comments: true
 external-url:

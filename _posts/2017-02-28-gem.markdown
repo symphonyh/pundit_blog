@@ -1,0 +1,23 @@
+
+---
+layout: post
+title: Using gem 
+date: 2017-01-20
+comments: true
+external-url:
+categories: Ruby
+---
+
+### gem command list
+---
+`gem install [gemname]`
+
+`gem install [gemname] --version=[ver]`
+
+`gem update [gemname]`
+
+`gem install -v=4.2.5 rails --no-rdoc --no-ri`
+
+`gem sources -l`
+
+`gem list`

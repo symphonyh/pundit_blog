@@ -1,0 +1,26 @@
+---
+layout: post
+title: Using-Git 
+date: 2017-01-20
+comments: true
+external-url:
+categories: Ruby
+---
+
+### git command list
+---
+`git clone git@github.com:symphonyh/forum.rb.git`
+
+`git init`
+
+`git status`
+
+`git add .`
+
+`git commit -m "XXX"`
+
+`git push origin master`
+
+`git push origin gh-pages`
+
+`git push heroku master`

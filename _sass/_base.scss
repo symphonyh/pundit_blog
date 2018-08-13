@@ -117,16 +117,13 @@ article {
     border-radius: 5px;
   }
 
-/*     pre {
-    font-family: $mono-font-family;
-  } */
-
   code {
     font-family: $mono-font-family;
   }
 
   > p,ul,li {
       font-family: $chinese-font-family;
+      margin-bottom: 2em;
       }
 }
 

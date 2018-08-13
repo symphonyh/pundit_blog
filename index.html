@@ -28,9 +28,9 @@ layout: default
       <div class="col-md-8 offset-md-1">
         {% assign categories = site.categories | sort %}
         {% for category in categories %}
-        <h3 style="font-size: 1.2em !important;">On {{ category | first }}</h3>
-            <p>{% for posts in category %} {% for post in posts %}{% if post.title != null %}{{forloop.index}}.&nbsp;
-            <a class="chinese" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% endif %}
+        <h3 style="font-size: 1.2em !important;">{{ category | first }}</h3>
+            <p style="margin-bottom: 2em;">{% for posts in category %} {% for post in posts %}{% if post.title != null %}{{forloop.index}}.
+            <a class="chinese" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% endif %}{% if forloop.last == false %},&nbsp;&nbsp;{% endif %}
         {% endfor %}{% endfor %}</p>
       {% endfor %}
     </div>

@@ -5,7 +5,7 @@ title: Using gem
 date: 2017-01-20
 comments: true
 external-url:
-categories: Ruby
+categories: Rails
 ---
 
 ### gem command list

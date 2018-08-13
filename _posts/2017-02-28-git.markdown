@@ -4,7 +4,7 @@ title: Using-Git
 date: 2017-01-20
 comments: true
 external-url:
-categories: Ruby
+categories: Rails
 ---
 
 ### git command list

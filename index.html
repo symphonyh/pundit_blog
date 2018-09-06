@@ -30,7 +30,7 @@ layout: default
         {% for category in categories %}
         <h3 style="font-size: 1.2em !important;">{{ category | first }}</h3>
             <p style="margin-bottom: 2em;">{% for posts in category %} {% for post in posts %}{% if post.title != null %}{{forloop.index}}.
-            <a class="chinese" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% endif %}{% if forloop.last == false %},&nbsp;&nbsp;{% endif %}
+            <a class="chinese" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>{% endif %}{% if forloop.last == false %},&nbsp;{% endif %}
         {% endfor %}{% endfor %}</p>
       {% endfor %}
     </div>

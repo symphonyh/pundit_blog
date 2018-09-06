@@ -7,11 +7,10 @@ external-url:
 categories: Template-language
 ---
 
-Liquid是在`jekyll`主题中默认的模板引擎，在页面编辑时，可以像`ruby`程序开发语言一样处理变量、逻辑。
+Liquid 是一门开源的模板语言，由 `Shopify` 创造并用 `Ruby` 实现。`Jekyll` 将 `Liquid`作为自身的模版语言，并且添加了许多对象`object`、标记`tag`和过滤器`filter`。这些新增内容包括代表内容页面的对象、用于在页面中引入内容片段的标记`tag`，以及用于操作字符串和 `URL` 的过滤器。
 
 
-
-在Liquid中有两种类型的标记：`Output`和 `Tag`
+在`Liquid`中有两种类型的标记：`Output`和 `Tag`
 
 `Output`标记（有些可能解析文本）被包含在：\{\{ 两个配对的花括号中 \}\}类似：<%=variable>
 
@@ -318,5 +317,6 @@ Liquid使得你可以通过`if`或`unless`（`elsif`和`else`为可选）编写�
 
 ---
 
-> [英文文档参考:https://github.com/Shopify/liquid/wiki/Liquid-for-Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers); <br>
+> [中文官网：https://liquid.bootcss.com/basics/variations/](https://liquid.bootcss.com/basics/variations/);<br>
+  [英文文档参考:https://github.com/Shopify/liquid/wiki/Liquid-for-Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers); <br>
   [CSDN blog的翻译:http://blog.csdn.net/dont27/article/details/38097581](http://blog.csdn.net/dont27/article/details/38097581)

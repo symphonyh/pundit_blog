@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 简明 Markdown 语法
+title:  Markdown 语法整理
 date: 2017-01-27
 comments: true
 external-url:
@@ -55,6 +55,8 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
     ![alt text][id]
 
     [id]: /path/to/img.jpg "Title"
+
+    <div align=center><img width = '150' height ='150' src ="https://tse2-mm.cn.bing.net/th?id=OIP.rF3VYN1CRvtyWBPU0I7kyQDMEy&p=0&pid=1.1"/></div>
 ```
 
 9.<a>代码块</a><br>
@@ -82,7 +84,146 @@ HTML 以 `<!-- , --> `的闭包定义注释（支持跨行），不在正文中�
 
 `<!-- This text will not appear in the browser window. --> `
 
+13.<a>关于字体</a> 
 
+  字体颜色：
+
+~~~
+浅红色文字：<font color="#dd0000">浅红色文字：</font><br /> 
+
+深红色文字：<font color="#660000">深红色文字</font><br /> 
+
+浅绿色文字：<font color="#00dd00">浅绿色文字</font><br /> 
+
+深绿色文字：<font color="#006600">深绿色文字</font><br /> 
+
+浅蓝色文字：<font color="#0000dd">浅蓝色文字</font><br /> 
+
+深蓝色文字：<font color="#000066">深蓝色文字</font><br /> 
+
+浅黄色文字：<font color="#dddd00">浅黄色文字</font><br /> 
+
+深黄色文字：<font color="#666600">深黄色文字</font><br /> 
+
+浅青色文字：<font color="#00dddd">浅青色文字</font><br /> 
+
+深青色文字：<font color="#006666">深青色文字</font><br /> 
+
+浅紫色文字：<font color="#dd00dd">浅紫色文字</font><br /> 
+
+深紫色文字：<font color="#660066">深紫色文字</font><br /> 
+
+~~~
+深紫色文字：<font color="#660066">深紫色文字</font><br /> 
+深红色文字：<font color="#660000">深红色文字</font><br /> 
+
+字体大小：
+
+~~~
+size为1：<font size="1">size为1</font><br /> 
+size为2：<font size="2">size为2</font><br /> 
+size为3：<font size="3">size为3</font><br /> 
+~~~
+size为1：<font size="1">size为1</font><br />
+size为2：<font size="2">size为2</font><br /> 
+size为3：<font size="3">size为3</font><br /> 
+
+字体背景颜色：
+
+~~~
+<table><tr><td bgcolor=#FF00FF>背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
+<table><tr><td bgcolor=#FF83FA>背景色的设置是按照十六进制颜色值：#FF83FA</td></tr></table>
+<table><tr><td bgcolor=#D1EEEE>背景色的设置是按照十六进制颜色值：#D1EEEE</td></tr></table>
+<table><tr><td bgcolor=#C0FF3E>背景色的设置是按照十六进制颜色值：#C0FF3E</td></tr></table>
+~~~
+
+文字居中：
+
+~~~
+<center>Hello</center>
+~~~
+<center>Hello</center>
+文字左对齐：
+
+~~~
+<p align="left">Hello</p>
+~~~
+<p align="left">Hello</p>
+
+使用字体：
+
+~~~
+<font face="黑体">我是黑体字</font>
+<font face="微软雅黑">我是微软雅黑</font>
+<font face="STCAIYUN">我是华文彩云</font>
+~~~
+
+
+14.<a>关于音频、视频</a> 
+ 
+插入音频：
+
+~~~
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      </audio>
+~~~
+
+
+---
+
+<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
+      </audio>
+
+
+<br>
+插入视频：
+
+第一种方式：
+~~~
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+~~~
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+
+---
+第二种方式，自动播放：
+~~~
+<iframe width="560" height="315" src="http://tv.sohu.com/upload/static/share/share_play.html#90268916_9365222_0_9001_0" frameborder="0" allowfullscreen></iframe>
+~~~
+
+第三种方式：
+~~~
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      </video>
+~~~
+
+
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      </video>
+
+
+15.<a>跳转链接</a>
+
+~~~
+<a href="http://askunix.top/" target="_blank">跳到自己博客列表</a>
+
+跳到自己博客列表：<a href="http://askunix.top/" target="_blank">http://askunix.top/</a>
+~~~
 
 <br>
 <hr>

@@ -7,118 +7,141 @@ external-url:
 categories: Template-language
 ---
 
-Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。
 
-1.<a>标题</a><br>
-   在Markdown当中设置标题，有两种方式：
-   - 通过在文字下方添加“=”和“-”，他们分别表示一级标题二级标题。
-   - 在文字开头加上 “#”，通过“#”数量表示几级标题。
-   >     共有1~6级标题，1级标题字体最大
+### &sect;&nbsp;标题
 
-2.<a>块注释（blockquote）</a><br>
-   通过在文字开头添加“>”表示块注释。
->      当>和文字之间添加五个blank时，块注释的文字会有变化。
+   在`Markdown`当中设置标题，有两种方式：
+
+   - 通过在文字下方添加`=`和`-`，他们分别表示一级标题二级标题。
+
+   - 在文字开头加上 `#`，通过`#`数量表示几级标题。
+
+   >     共有1~6级标题，1级标题字体最大。
+
+### &sect;&nbsp;块注释（blockquote）
+
+   通过在文字开头添加`>`表示块注释。
+
+>     当`>`和文字之间添加五个空格时，块注释的文字会有变化。
 
 
-3.<a>斜体</a><br>
-将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来
 
-4.<a>粗体</a><br>
-将需要设置为斜体的文字两端使用2个“*”或者“_”夹起来
+### &sect;&nbsp;无序列表
 
-5.<a>无序列表</a><br>
 在文字开头添加(\*, +, or -)实现无序列表。但是要注意在(\*, +, and -)和文字之间需要添加空格。
->       建议：一个文档中只是用一种无序列表的表示方式
 
-6.<a>有序列表</a><br>
+>     建议：一个文档中只是用一种无序列表的表示方式
+
+## &sect;&nbsp;有序列表
+
 使用数字后面跟上句号。**记得还要有空格**
 
-7.<a>链接 (Links)</a><br>
+### &sect;&nbsp;链接 (Links)
+
    Markdown中有两种方式，实现链接，分别为内联方式和引用方式。
+
    - 内联方式：`This is an [example link](http://example.com/).`
+
    - 引用方式：
 
-```
+
    I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  
 
    [1]: http://google.com/        "Google" 
    [2]: http://search.yahoo.com/  "Yahoo Search" 
    [3]: http://search.msn.com/    "MSN Search"
-```
 
-8.<a>图片(Images)</a><br>
-   图片的处理方式和链接的处理方式，非常的类似。
+~~~
+   I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  
+
+   [1]: http://google.com/        "Google" 
+   [2]: http://search.yahoo.com/  "Yahoo Search" 
+   [3]: http://search.msn.com/    "MSN Search"
+~~~
+
+   - 链接跳转:
+
+~~~
+<a href="https://cloudhan.me"  target="_blank">跳到自己博客列表</a>
+
+跳到自己博客列表：<a href="https://cloudhan.me" target="_blank">cloudhan</a>
+~~~
+
+
+### &sect;&nbsp; 图片(Images)
+
+图片的处理方式和链接的处理方式，非常的类似。
+
    - 内联方式：`![alt text](/path/to/img.jpg "Title")`
+
    - 引用方式：
 
 ```
-    ![alt text][id]
+![alt text][id]
 
-    [id]: /path/to/img.jpg "Title"
+[id]: /path/to/img.jpg "Title"
 
-    <div align=center><img width = '150' height ='150' src ="https://tse2-mm.cn.bing.net/th?id=OIP.rF3VYN1CRvtyWBPU0I7kyQDMEy&p=0&pid=1.1"/></div>
 ```
+- html的处理方式：
 
-9.<a>代码块</a><br>
-    实现方式有两种：
-   - 简单文字出现一个代码框。使用`<blockquote>`。
+~~~
+<img src="/assets/bella.jpg" alt="Het meisje met de parel" width="400px" height="200px" style="margin:0"> 
+
+<div align=center><img width = '150' height ='150' src ="https://tse2-mm.cn.bing.net/th?id=OIP.rF3VYN1CRvtyWBPU0I7kyQDMEy&p=0&pid=1.1"/></div>
+~~~
+
+### &sect;&nbsp;代码块（code/pre）
+
+实现方式有两种：
+- 简单文字出现一个代码框(code)。使用`<blockquote>`。
 >      不是单引号而是左上角的ESC下面~中的"`"）
-   - 大片文字需要实现代码框。使用Tab和四个空格。
 
-10.<a>脚注(footnote)</a><br>
+- 大片文字需要实现代码框(pre)，使用Tab和四个空格，或者`~~~`包围代码。
 
-```
-hello[^hello]
+
+### &sect;&nbsp;脚注(footnote)
+
+~~~
+hello[^1]
 ...
 
-[^hello]: hi
+[^1]: 这是一个注解。
 
-```
+~~~
 
-11.<a>下划线</a><br>
-在**空白行**下方添加三条“-”横线。
+### &sect;&nbsp;下划线
+
+在**空白行**下方添加`---`横线。
+
 >      前面讲过在文字下方添加“-”，实现的2级标题
 
-12.<a>注释</a>
+
+### &sect;&nbsp;注释 
+
 HTML 以 `<!-- , --> `的闭包定义注释（支持跨行），不在正文中显示。Markdown 沿用 HTML Comment 注释格式：
 
 `<!-- This text will not appear in the browser window. --> `
 
-13.<a>关于字体</a> 
 
-  字体颜色：
+### &sect;&nbsp;关于字体 
+
+*斜体*:将需要设置为斜体的文字两端使用1个`*`或者`_`夹起来
+
+**粗体**:将需要设置为斜体的文字两端使用2个`*`或者`_`夹起来
+
+字体颜色：
 
 ~~~
 浅红色文字：<font color="#dd0000">浅红色文字：</font><br /> 
 
-深红色文字：<font color="#660000">深红色文字</font><br /> 
-
-浅绿色文字：<font color="#00dd00">浅绿色文字</font><br /> 
-
-深绿色文字：<font color="#006600">深绿色文字</font><br /> 
-
-浅蓝色文字：<font color="#0000dd">浅蓝色文字</font><br /> 
-
-深蓝色文字：<font color="#000066">深蓝色文字</font><br /> 
-
-浅黄色文字：<font color="#dddd00">浅黄色文字</font><br /> 
-
-深黄色文字：<font color="#666600">深黄色文字</font><br /> 
-
-浅青色文字：<font color="#00dddd">浅青色文字</font><br /> 
-
-深青色文字：<font color="#006666">深青色文字</font><br /> 
-
-浅紫色文字：<font color="#dd00dd">浅紫色文字</font><br /> 
-
-深紫色文字：<font color="#660066">深紫色文字</font><br /> 
+深红色文字：<font color="#bd4147">深红色文字</font><br /> 
 
 ~~~
-深紫色文字：<font color="#660066">深紫色文字</font><br /> 
-深红色文字：<font color="#660000">深红色文字</font><br /> 
+
+文字颜色：<font color="#bd4147">当前文本文字</font> 
 
 字体大小：
-
 ~~~
 size为1：<font size="1">size为1</font><br /> 
 size为2：<font size="2">size为2</font><br /> 
@@ -137,20 +160,21 @@ size为3：<font size="3">size为3</font><br />
 <table><tr><td bgcolor=#C0FF3E>背景色的设置是按照十六进制颜色值：#C0FF3E</td></tr></table>
 ~~~
 
+<table><tr><td bgcolor=#FF00FF>背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
+
 文字居中：
 
 ~~~
 <center>Hello</center>
 ~~~
-<center>Hello</center>
+
 文字左对齐：
 
 ~~~
 <p align="left">Hello</p>
 ~~~
-<p align="left">Hello</p>
 
-使用字体：
+使用常用字体：
 
 ~~~
 <font face="黑体">我是黑体字</font>
@@ -158,29 +182,29 @@ size为3：<font size="3">size为3</font><br />
 <font face="STCAIYUN">我是华文彩云</font>
 ~~~
 
+---
 
-14.<a>关于音频、视频</a> 
+### &sect;&nbsp;插入音频
  
-插入音频：
 
 ~~~
 <audio id="audio" controls="" preload="none">
-      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
-      </audio>
+  <source id="mp3" src="http://music.163.com/song/media/outer/url?id=562598065.mp3">
+</audio>
 ~~~
 
 
 ---
 
 <audio id="audio" controls="" preload="none">
-      <source id="mp3" src="http://oht4nlntk.bkt.clouddn.com/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3">
-      </audio>
+  <source id="mp3" src="http://music.163.com/song/media/outer/url?id=562598065.mp3">
+</audio>
 
 
-<br>
-插入视频：
+### &sect;&nbsp;插入视频
 
-第一种方式：
+- 第一种方式：
+
 ~~~
 <iframe 
     width="800" 
@@ -199,12 +223,15 @@ size为3：<font size="3">size为3</font><br />
 </iframe>
 
 ---
-第二种方式，自动播放：
+- 第二种方式，自动播放：
+
 ~~~
 <iframe width="560" height="315" src="http://tv.sohu.com/upload/static/share/share_play.html#90268916_9365222_0_9001_0" frameborder="0" allowfullscreen></iframe>
 ~~~
 
-第三种方式：
+---
+- 第三种方式：
+
 ~~~
 <video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
       <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
@@ -216,20 +243,10 @@ size为3：<font size="3">size为3</font><br />
       <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
       </video>
 
-
-15.<a>跳转链接</a>
-
-~~~
-<a href="http://askunix.top/" target="_blank">跳到自己博客列表</a>
-
-跳到自己博客列表：<a href="http://askunix.top/" target="_blank">http://askunix.top/</a>
-~~~
-
-<br>
-<hr>
+---
 <br>
 
-### **范例**
+### 范例
 
 >重点可以看下图片引用和表格对齐方式的用法。
 

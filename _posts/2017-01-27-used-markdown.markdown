@@ -151,16 +151,26 @@ size为1：<font size="1">size为1</font><br />
 size为2：<font size="2">size为2</font><br /> 
 size为3：<font size="3">size为3</font><br /> 
 
+>字体大小为1-7,7号最大，3号为浏览器默认大小。
+
 字体背景颜色：
 
 ~~~
-<table><tr><td bgcolor=#FF00FF>背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
-<table><tr><td bgcolor=#FF83FA>背景色的设置是按照十六进制颜色值：#FF83FA</td></tr></table>
-<table><tr><td bgcolor=#D1EEEE>背景色的设置是按照十六进制颜色值：#D1EEEE</td></tr></table>
-<table><tr><td bgcolor=#C0FF3E>背景色的设置是按照十六进制颜色值：#C0FF3E</td></tr></table>
+<table><tr><td bgcolor="#FF00FF">背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
+<table><tr><td bgcolor="#FF83FA">背景色的设置是按照十六进制颜色值：#FF83FA</td></tr></table>
+<table><tr><td bgcolor="#D1EEEE">背景色的设置是按照十六进制颜色值：#D1EEEE</td></tr></table>
+<table><tr><td bgcolor="#C0FF3E">背景色的设置是按照十六进制颜色值：#C0FF3E</td></tr></table>
 ~~~
 
-<table><tr><td bgcolor=#FF00FF>背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
+<table>
+  <tr>
+    <td bgcolor="#C0FF3E">
+背景色的设置是按照十六进制颜色值：#C0FF3E
+    </td>
+  </tr>
+</table>
+
+>测试了下，除了表格可以用，其他标签不起作用，不建议使用这个属性。
 
 文字居中：
 

@@ -1,0 +1,134 @@
+---
+layout: post
+title: Word 快捷键整理
+date: 2018-09-26
+comments: true
+external-url:
+categories: Office 
+---
+
+### word 常用的快捷键
+
+---
+
+
+`Ctrl + C`
+
+`Ctrl + V`
+
+`Ctrl + X`
+
+`Ctrl + A`
+
+`Ctrl + Shift + C`  复制格式
+
+`Ctrl + Shift + V`  粘贴格式
+
+
+`Ctrl + 1`          一倍行距
+
+`Ctrl + 2 `         二倍行距
+
+`Ctrl + 5`          1.5倍行距
+
+`Ctrl + 0 `         段前加一行间距
+
+`Ctrl + Q `         清除段落格式
+
+
+
+`Ctrl + Y`         重复上一次操作
+
+`F4 `              重复上一次操作
+
+`Ctrl + Z `        撤销上一次造作
+
+
+
+`Ctrl + H `        替换
+
+`Ctrl + F`         查找
+
+
+`Ctrl + L `        左对齐
+
+`Ctrl + R`         右对齐
+
+`Ctrl + E `        居中
+
+`Ctrl + Shift + J` 分散对齐
+
+`Ctrl + U`         
+
+`Ctrl + I`
+
+`Ctrl + B`
+
+`Ctrl + T `       创建悬挂缩进
+
+`Ctrl + K `       创建超链接
+
+`Shift + F3`       切换大小写
+
+`Ctrl + Shift + Home ` 
+
+`Ctrl + Shift + End`
+
+`Ctrl + Shift + >`   增大字号
+
+`Ctrl + Shift + <`   缩小字号
+
+`Ctrl + Shift + W`   只给字词加下划线，不给空格加
+
+`Ctrl + Shift + N `  应用正文样式
+
+`Alt + Ctrl + 1 `    应用标题1样式
+
+`Alt + Ctrl + 2`     应用标题2样式
+
+`Alt + Ctrl + 3`     应用标题3样式
+
+
+
+`Ctrl + Enter `     插入分页符
+
+`Shift + Enter `    插入换行符
+>注解：回车相当于另起一个段落，换行符只换行 还在同一个段落里就像HTML里 p标签和br的区别
+
+<br>
+
+
+`Ctrl + N`          创建于当前或最近使用的文档类型相同的新文档
+
+`Ctrl + W`          关闭文档 会提示保存更改
+
+`Ctrl + O `         打开
+
+`Ctrl + P `         打印
+
+`Ctrl + S `         保存
+
+`Ctrl + F10`        窗口最大化
+
+`Ctrl + F12 `       显示打开对话框
+
+`F12`              显示另存为对话框
+
+
+`Alt + Ctrl + M`    批注
+
+`Alt + Ctrl + F`    脚注
+
+`Alt + Ctrl + D`    尾注
+
+
+`Ctrl + = `         下标
+
+`Ctrl + Shift + + ` 上标
+
+
+
+
+
+
+

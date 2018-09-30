@@ -194,6 +194,17 @@ size为3：<font size="3">size为3</font><br />
 
 ---
 
+### &sect;&nbsp;表格
+
+| 左对齐标题 | 右对齐标题 | 居中对齐标题 |
+| :------| ------: | :------: |
+| 短文本 | 中等文本 | 稍微长一点的文本 |
+| 稍微长一点的文本 | 短文本 | 中等文本 |
+
+>注：对齐方式书写要求是`:`要和`-`相邻，与`|` 之间有空格.
+
+---
+
 ### &sect;&nbsp;插入音频
  
 
@@ -213,7 +224,7 @@ size为3：<font size="3">size为3</font><br />
 
 ### &sect;&nbsp;插入视频
 
-- 第一种方式：
+<!--- 第一种方式：-->
 
 ~~~
 <iframe 
@@ -224,6 +235,7 @@ size为3：<font size="3">size为3</font><br />
     allowfullscreen>
 </iframe>
 ~~~
+
 <iframe 
     width="800" 
     height="450" 
@@ -233,6 +245,8 @@ size为3：<font size="3">size为3</font><br />
 </iframe>
 
 ---
+
+<!--
 - 第二种方式，自动播放：
 
 ~~~
@@ -254,126 +268,15 @@ size为3：<font size="3">size为3</font><br />
       </video>
 
 ---
+-->
+
 <br>
 
-### 范例
-
->重点可以看下图片引用和表格对齐方式的用法。
-
-```
-# Fat Free CRM [![TravisCI][travis-img-url]][travis-ci-url]  [![Code Climate](https://codeclimate.com/github/fatfreecrm/fat_free_crm.png)](https://codeclimate.com/github/fatfreecrm/fat_free_crm)
-
-[travis-img-url]: https://secure.travis-ci.org/fatfreecrm/fat_free_crm.png?branch=master
-[travis-ci-url]: http://travis-ci.org/fatfreecrm/fat_free_crm
-
-### An open source, Ruby on Rails [customer relationship management][crm-wiki] platform (CRM).
-
-[crm-wiki]: http://en.wikipedia.org/wiki/Customer_relationship_management
 
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_create.png" target="_blank" title="Create Contacts">
-        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_create_t.png" alt="Create Contacts">
-      </a>
-      <br />
-      <em>Contacts</em>
-    </td>
-    <td align="center">
-      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_opportunity.png" target="_blank" title="Manage Opportunities">
-        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/contact_opportunity_t.png" alt="Manage Opportunities">
-      </a>
-      <br />
-      <em>Opportunities</em>
-    </td>
-    <td align="center">
-      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/account_edit.png" target="_blank" title="Edit Accounts">
-        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/account_edit_t.png" alt="Edit Accounts">
-      </a>
-      <br />
-      <em>Accounts</em>
-    </td>
-    <td align="center">
-      <a href="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/task_create.png" target="_blank" title="Create Tasks">
-        <img src="https://github.com/fatfreecrm/fatfreecrm.github.com/raw/master/images/task_create_t.png" alt="Create Tasks">
-      </a>
-      <br />
-      <em>Tasks</em>
-    </td>
-  </tr>
-</table>
-
-Pull requests and bug reports are always welcome!
-
-Visit our website at http://www.fatfreecrm.com/
-
-## Rails 4 support
-
-The master branch is now on Rails 4.2. However, there is a [Rails 3.2 branch](https://github.com/fatfreecrm/fat_free_crm/tree/rails3) available if you still need to use it. Please note that subsequent gem releases will focus on Rails 4 (v0.14.0+ as yet unreleased).
-
-
-
-## System Requirements
-
-* Ruby 2 (2.2 recommended)
-  * Ruby 1.9.3 is no longer compatible (final gem release tag v0.13.6)
-  * Ruby v1.8.7 was supported until v0.11.4 (see https://github.com/fatfreecrm/fat_free_crm/tree/ruby1.8)
-* MySQL v4.1.1 or later (v5+ is recommended), SQLite v3.4 or later, or Postgres 8.4.8 or later.
-* ImageMagick (optional, only needed if you would like to use avatars)
-
-(Ruby on Rails and other gem dependencies will be installed automatically by Bundler.)
-
-
-## Installation
-
-Please view one of the following installation guides:
-
-### [Setup Linux or Mac OS](http://guides.fatfreecrm.com/Setup-Linux-or-Mac-OS.html)
-
-Installing Fat Free CRM on Linux or Mac OS X
-
-
-
-## Upgrading from previous versions of Fat Free CRM
-
-Please read the [Release Notes](https://github.com/fatfreecrm/fat_free_crm/blob/master/CHANGELOG) document for more detailed information on upgrading from previous versions.
-
-
-## Resources
-
-|||
-|-----------------------------------:|:--------------------------|
-|                 **Home Page**: | http://www.fatfreecrm.com |
-|                    **Guides**: | http://guides.fatfreecrm.com |
-|               **Online Demo**: | http://demo.fatfreecrm.com |
-|       **Github Project Page**: | http://github.com/fatfreecrm/fat_free_crm |
-| **Feature Requests and Bugs**: | http://support.fatfreecrm.com/ |
-|                  **RDoc API**: | http://api.fatfreecrm.com |
-|                  **Ruby gem**: | https://rubygems.org/gems/fat_free_crm |
-|    **Twitter Commit Updates**: | http://twitter.com/fatfreecrm |
-|       **User's Google Group**: | http://groups.google.com/group/fat-free-crm-users |
-|  **Developer's Google Group**: | http://groups.google.com/group/fat-free-crm-dev |
-|               **IRC Channel**: | [#fatfreecrm](http://webchat.freenode.net/) on irc.freenode.net |
-
-
-
-
-
-## Main contributors
-
-* [Michael Dvorkin (@michaeldv)](https://github.com/michaeldv) - Founding creator
-* [Steve Kenworthy (@steveyken)](https://github.com/steveyken) - Maintainer
-* [Nathan Broadbent (@ndbroadbent)](https://github.com/ndbroadbent)
-
-
-```
-![页面效果展示](/image/markdown1.jpg)
-<br>
-![页面效果展示](/image/markdown2.jpg)
-<hr style="margin: 45px">
 ### <a>参考</a><br>
 
 >1、[Markdown 语法说明](http://wowubuntu.com/markdown/)；
- 2、[本文转自互联网360doc](http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml).
+>2、[本文转自互联网360doc](http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml);
+>3、[Markdown插入表格语法](https://www.jianshu.com/p/2df05f279331)
 

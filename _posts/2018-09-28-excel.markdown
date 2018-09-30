@@ -7,7 +7,6 @@ external-url:
 categories: Office 
 ---
 
-### excel 常用的快捷键
 
 ---
 
@@ -50,6 +49,17 @@ F2 进入编辑单元格
 alt + Enter 强制换行 
 
 Shift+F2  批注
+
+Shift+F3  插入函数
+
+Shift+F8  不用一直按住 Ctrl 实现不连续选择单元格
+
+F5  显示定位窗口
+
+F9  计算所有工作表
+
+Shift+F9 计算当前工作表
+
 ~~~
 
 
@@ -135,7 +145,7 @@ Shift+F2  批注
 
 `Ctrl+shift+5`  %
 
-`Ctrl+shift+1`  常规
+`Ctrl+shift+1`  两位小数位，使用千位分隔符且负数用负号（-）表示
 
 `Ctrl+shift+3`  日期
 
@@ -155,5 +165,8 @@ Shift+F2  批注
 `Ctrl + \` 一键找不同
 
 `Alt + F1` 一键插入图表
+
+`Ctrl + E` 快速拆分  bella1.62 => bella   1.62
+
 
 >参考：[Excel精英培训:10个小技巧](http://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913229&idx=1&sn=56d5f7ff1ec32265e226eb9a07e7b8b0&chksm=bd5072f98a27fbef12834fe883837fcc813751f1307e8ed627f82f708456fdbae93c9deff212&mpshare=1&scene=1&srcid=0929GJ32GU7SZ51wPF98TToM#rd)

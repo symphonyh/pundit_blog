@@ -8,8 +8,6 @@ categories: Ruby
 ---
 
 
-### Pages Test 测试
-
 
 ## 1、标题
 ---
@@ -133,3 +131,24 @@ adcdefghijklmnopqrstuvwxyz 人生的最大幸福
 ---
 
 <p>Hold fast to dreams人生的最大幸福莫过于四件事</p>
+
+
+## 10、  符号 
+
+&sect;&nbsp;四叶草符号：
+
+❈　✠　✢　✣　✤　✥　ஐ　❃　※
+
+✢&nbsp; adcdefghijklmnopqrstuvwxyz 人生的最大幸福 
+
+✣ adcdefghijklmnopqrstuvwxyz 人生的最大幸福
+
+ஐ adcdefghijklmnopqrstuvwxyz 人生的最大幸福
+
+&sect;&nbsp;`|`：
+
+
+|&nbsp; adcdefghijklmnopqrstuvwxyz 人生的最大幸福
+
+>这是表格效果，这里默认是居中显示。
+

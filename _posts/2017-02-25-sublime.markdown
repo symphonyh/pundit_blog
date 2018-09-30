@@ -7,7 +7,7 @@ external-url:
 categories: Ruby
 ---
 
-### sublime text 3 快捷键汇总
+
 ---
 
 `Ctrl+D` 选中光标所占的文本，继续操作则会选中下一个相同的文本;

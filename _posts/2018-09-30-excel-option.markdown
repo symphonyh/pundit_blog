@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Excel 常用函数
-date: 2018-09-29
+title: Excel 使用技巧
+date: 2018-09-30
 comments: true
 external-url:
 categories: Office 
 ---
 
-### excel 常用函数
 
+
+---

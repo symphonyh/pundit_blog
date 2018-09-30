@@ -275,3 +275,9 @@ table {
   }
 }
 
+@media (max-width: 30em) {
+    .cloud-tie-wrapper {
+        display: none;
+    }
+}
+

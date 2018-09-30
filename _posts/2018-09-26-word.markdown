@@ -7,8 +7,23 @@ external-url:
 categories: Office 
 ---
 
+
 ---
 
+<iframe 
+    width="800" 
+    height="480" 
+    src="//player.bilibili.com/player.html?aid=8859100&cid=14616564&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+</iframe>
+
+
+---
+
+<br>
+<br>
+常用快捷键：
+
+---
 
 `Ctrl + C`
 

@@ -36,7 +36,7 @@ Ctrl+F 查找
 
 Ctrl+H 替换
 
-Ctrl+Shift+L 高级条件筛选
+Ctrl+Shift+L 条件筛选
 
 Alt+Enter 单元格内换行
 

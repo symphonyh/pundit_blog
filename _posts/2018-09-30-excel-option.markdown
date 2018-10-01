@@ -153,4 +153,7 @@ categories: Office
 
 >参考：[Excel精英培训:最常用的30个Excel函数公式](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913414&idx=1&sn=0f1ce55dff1142a2b986e54b681d48fc&chksm=bd5073b28a27faa4139587922a762b36456e28090dcbdb38950d9291301c45a104605717de4c&mpshare=1&scene=1&srcid=1001UaMS65oAt9nhYDfS22WS#rd)
 
+
+>参考[Excel双向查找的9种方法！（附送日常工作的20个Excel小技巧）](https://mp.weixin.qq.com/s?__biz=MjM5NTk5NDk0Mg%3D%3D&idx=5&mid=2651539731&sn=824bf439219d1c03ded7e4d2226bcae1)
+
 ---

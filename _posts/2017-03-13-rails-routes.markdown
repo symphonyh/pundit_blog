@@ -14,8 +14,18 @@ Rails 路由会通过你配置的路由规则将发送来的 URL 分发到对应
 resources :events
 
 ```
-
+<!--
 <img src="/image/routes.jpg" width = "710" alt="Rails RESTful 标准路由" /> 
+-->
+
+默认情况下，rails 会为每一个 RESTful 路由建立 7 个`action`:
+
+| Helper| GET | POST | PATCH | DELETE |
+| :------ | :------ | :------ | :------ | :------ |
+| event_path(@event) | /events/:id   `show` |      | /events/:id `update`| /events/:id `destroy` |
+| events_path | /events`index` | /events `create` |   |      |
+| edit_event_path(@event) | /events/:id/edit `edit` |   |   |   |
+| new_event_path | /events/new `new` |  |   |   |
 
 
 
@@ -29,7 +39,7 @@ rails 在默认情况下，会为每一个 RESTful 路由建立7个动作，并�
 
 单数形式:`event`
 
-`event_path(@event) => /events/l`
+`event_path(@event) => /events/:id`
 
 对应不同的HTTP动词：
 
@@ -41,7 +51,7 @@ Helper名称都是`event_path`需要用参数`@event`的实例变量传递要sho
 
 对于GET动词还有两个action，区分的办法是在前面加前缀 `edit` 和 `new` ：
 
- `edit_event_path(@event) => /events/l/edit`
+ `edit_event_path(@event) => /events/:id/edit`
 和
  `new_event_path  => /events/new`
 

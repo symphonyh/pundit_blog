@@ -85,12 +85,15 @@ categories: Office
 
 ※ step1：`Ctrl + F3`在弹了的窗口中输入名称`getsh`, 在引用位置输入公式：
 
-=MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&T(NOW())
+~~~
+引用位置 = MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&T(NOW())
+~~~
 
 ※ step2：在单元格输入公式并下拉即可生成工作表的目录。
 
-=IFERROR(HYPERLINK("#"&INDEX(getsh,ROW(A2))&"!a1",INDEX(getsh,ROW(A2))),"")
-
+~~~
+公式 = IFERROR(HYPERLINK("#"&INDEX(getsh,ROW(A2))&"!a1",INDEX(getsh,ROW(A2))),"")
+~~~
 
 >这里的名称用的是`getsh`，公式都是在目录页输入的
 

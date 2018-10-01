@@ -7,7 +7,6 @@ external-url:
 categories: Office 
 ---
 
----
 
 ※ IFERROR()
 
@@ -101,6 +100,15 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 举例：公式 = SUMPRODUCT((C2:C13="bella")*D2:D13)
 >bella累计领取了多少工资?
 
+<br>
+下面这段视频将的比较清楚
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=18916278&cid=30854176&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
 ---
 
 ※ COUNTIF()
@@ -123,7 +131,7 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 举例：公式 = COUNTA(A2:A7)
 
->计算单元格区域 A2 到 A7 中非空单元格的个数。
+>计算单元格区域 A2 到 A7 中非空**单元格的个数**。
 
 ---
 
@@ -131,7 +139,7 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 举例：公式 = COUNT(A2:A7)
 
->计算单元格区域 A2 到 A7 中包含数字的单元格的个数。
+>计算单元格区域 A2 到 A7 中包含数字的**单元格的个数**。
 
 ---
 

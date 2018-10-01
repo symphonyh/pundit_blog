@@ -9,7 +9,7 @@ categories: Template-language
 
 Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。
 
-### &sect;&nbsp;标题
+## &sect;&nbsp;标题
 
    在`Markdown`当中设置标题，有两种方式：
 
@@ -19,7 +19,7 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 
    >     共有1~6级标题，1级标题字体最大。
 
-### &sect;&nbsp;块注释（blockquote）
+## &sect;&nbsp;块注释（blockquote）
 
    通过在文字开头添加`>`表示块注释。
 
@@ -27,7 +27,7 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 
 
 
-### &sect;&nbsp;无序列表
+## &sect;&nbsp;无序列表
 
 在文字开头添加(\*, +, or -)实现无序列表。但是要注意在(\*, +, and -)和文字之间需要添加空格。
 
@@ -37,7 +37,7 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 
 使用数字后面跟上句号。**记得还要有空格**
 
-### &sect;&nbsp;链接 (Links)
+## &sect;&nbsp;链接 (Links)
 
    Markdown中有两种方式，实现链接，分别为内联方式和引用方式。
 
@@ -69,7 +69,7 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 ~~~
 
 
-### &sect;&nbsp; 图片(Images)
+## &sect;&nbsp; 图片(Images)
 
 图片的处理方式和链接的处理方式，非常的类似。
 
@@ -91,7 +91,7 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 <div align=center><img width = '150' height ='150' src ="https://tse2-mm.cn.bing.net/th?id=OIP.rF3VYN1CRvtyWBPU0I7kyQDMEy&p=0&pid=1.1"/></div>
 ~~~
 
-### &sect;&nbsp;代码块（code/pre）
+## &sect;&nbsp;代码块（code/pre）
 
 实现方式有两种：
 - 简单文字出现一个代码框(code)。使用`<blockquote>`。
@@ -100,7 +100,7 @@ Markdown是一种可以使用普通文本编辑器编写的标记语言，通过
 - 大片文字需要实现代码框(pre)，使用Tab和四个空格，或者`~~~`包围代码。
 
 
-### &sect;&nbsp;脚注(footnote)
+## &sect;&nbsp;脚注(footnote)
 
 ~~~
 hello[^1]
@@ -110,27 +110,27 @@ hello[^1]
 
 ~~~
 
-### &sect;&nbsp;下划线
+## &sect;&nbsp;下划线
 
 在**空白行**下方添加`---`横线。
 
 >      前面讲过在文字下方添加“-”，实现的2级标题
 
 
-### &sect;&nbsp;注释 
+## &sect;&nbsp;注释 
 
 HTML 以 `<!-- , --> `的闭包定义注释（支持跨行），不在正文中显示。Markdown 沿用 HTML Comment 注释格式：
 
 `<!-- This text will not appear in the browser window. --> `
 
 
-### &sect;&nbsp;关于字体 
+## &sect;&nbsp;关于字体 
 
 *斜体*:将需要设置为斜体的文字两端使用1个`*`或者`_`夹起来
 
 **粗体**:将需要设置为斜体的文字两端使用2个`*`或者`_`夹起来
 
-字体颜色：
+- 字体颜色：
 
 ~~~
 浅红色文字：<font color="#dd0000">浅红色文字：</font><br /> 
@@ -141,7 +141,7 @@ HTML 以 `<!-- , --> `的闭包定义注释（支持跨行），不在正文中�
 
 文字颜色：<font color="#bd4147">当前文本文字</font> 
 
-字体大小：
+- 字体大小：
 ~~~
 size为1：<font size="1">size为1</font><br /> 
 size为2：<font size="2">size为2</font><br /> 
@@ -153,7 +153,7 @@ size为3：<font size="3">size为3</font><br />
 
 >字体大小为1-7,7号最大，3号为浏览器默认大小。
 
-字体背景颜色：
+- 字体背景颜色：
 
 ~~~
 <table><tr><td bgcolor="#FF00FF">背景色的设置是按照十六进制颜色值：#7FFFD4</td></tr></table>
@@ -172,19 +172,19 @@ size为3：<font size="3">size为3</font><br />
 
 >测试了下，除了表格可以用，其他标签不起作用，不建议使用这个属性。
 
-文字居中：
+- 文字居中：
 
 ~~~
 <center>Hello</center>
 ~~~
 
-文字左对齐：
+- 文字左对齐：
 
 ~~~
 <p align="left">Hello</p>
 ~~~
 
-使用常用字体：
+- 使用常用字体：
 
 ~~~
 <font face="黑体">我是黑体字</font>
@@ -194,18 +194,29 @@ size为3：<font size="3">size为3</font><br />
 
 ---
 
-### &sect;&nbsp;表格
+## &sect;&nbsp;表格
+
+~~~
+| 左对齐标题 | 右对齐标题 | 居中对齐标题 |
+| :------| ------: | :------: |
+| 短文本 | 中等文本 | 稍微长一点的文本 |
+| 稍微长一点的文本 | 短文本 | 中等文本 |
+~~~
+
+>注：对齐方式书写要求是`:`要和`-`相邻，与`|` 之间有空格。
+
+页面效果：
 
 | 左对齐标题 | 右对齐标题 | 居中对齐标题 |
 | :------| ------: | :------: |
 | 短文本 | 中等文本 | 稍微长一点的文本 |
 | 稍微长一点的文本 | 短文本 | 中等文本 |
 
->注：对齐方式书写要求是`:`要和`-`相邻，与`|` 之间有空格.
+
 
 ---
 
-### &sect;&nbsp;插入音频
+## &sect;&nbsp;插入音频
  
 
 ~~~
@@ -222,7 +233,7 @@ size为3：<font size="3">size为3</font><br />
 </audio>
 
 
-### &sect;&nbsp;插入视频
+## &sect;&nbsp;插入视频
 
 <!--- 第一种方式：-->
 

@@ -8,8 +8,8 @@ categories: Office
 ---
 
 
----
 
+## Excel 
 
 1、抖动文档窗口，其他打开文档自动退到任务栏，只留下当前文档窗口；
 
@@ -20,7 +20,7 @@ Ctrl+A 全选
 
 Ctrl+Z 撤销
 
-Ctrl+Y 回复上一次操作 或F4 重复上一次操作，可以是同一个单元格多个操作动作的重复
+Ctrl+Y 回复上一次操作 或 F4 重复上一次操作，可以是同一个单元格多个操作动作的重复
 
 Ctrl+X 剪切
 
@@ -64,6 +64,7 @@ Shift+F9 计算当前工作表
 
 ~~~
 
+>F4 还有一个有用的功能就是 在输入公式的区域时，可以把相对引用变为绝对引用（行和列自动加上$符号）。
 
 
 3、双击左键
@@ -172,3 +173,45 @@ Shift+F9 计算当前工作表
 
 
 >参考：[Excel精英培训:10个小技巧](http://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913229&idx=1&sn=56d5f7ff1ec32265e226eb9a07e7b8b0&chksm=bd5072f98a27fbef12834fe883837fcc813751f1307e8ed627f82f708456fdbae93c9deff212&mpshare=1&scene=1&srcid=0929GJ32GU7SZ51wPF98TToM#rd)
+
+---
+
+- 高手使用excel
+
+
+※ 删除多个没用的excel工作表
+
+高手：先删除一个，选取另一个工作表按F4键可以直接删除
+
+※ 选取表格某些列
+
+高手：选取第一行，按shift键不松双击下边线
+
+※ 删除空行
+
+高手：**选取列** - `ctrl+G`定位 - 定位条件:空值 - 删除
+>慎用：空格单元的行也会删除
+
+※ 设置单元格格式
+
+高手：打开格式下拉框，一键搞定
+
+
+※ 插入5个空行
+
+高手：向下选取5行 - 插入 
+
+
+※ 删除值，留下公式
+
+高手：选取表格 - `Ctrl+G`定位 常量 - 删除
+
+※ 输入大写金额
+
+高手：在搜狗输入法中选输入字母V，然后再输入数字
+
+<br>
+
+>参考：[Excel精英培训:高手和菜鸟操作表格，都有什么区别？](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913456&idx=1&sn=1ed1765fdd5ebf4a1eda4242ffba09aa&chksm=bd5073848a27fa92c461df688069cecda2add8ccc57d1ee1f87eefa73e6573e092a0d879771f&mpshare=1&scene=1&srcid=0930JpNX1LzPPrEGFjGCmPO5#rd)
+
+---

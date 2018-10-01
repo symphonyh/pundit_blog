@@ -13,7 +13,7 @@ categories: Office
 
 1、统计不重复项的个数
 
-公式 = =SUMPRODUCT(1/COUNTIF(B2:B81,B2:B81))
+公式 =SUMPRODUCT(1/COUNTIF(B2:B81,B2:B81))
 >统计合同名称中不重复的单位数量，也就是实际合同总数量
 >SUMPRODUCT参数为一个数组时不做乘积，而是求和。
 
@@ -22,6 +22,10 @@ categories: Office
 2、排名
 
 公式 = SUMPRODUCT((D2<$D$2:$D$8)*1)
+
+公式 = RANK(A2,($A$2:$A$4,$C$2:$C$4))
+
+>在（）中用逗号连接多个区域
 
 ---
 
@@ -62,14 +66,38 @@ categories: Office
 
 ※ 关键词匹配
 
-公式= FIND ("股份",$A1)
+公式 = FIND ("股份",$A1)
 
 <br>
 >注意：规则通过管理进行设置，格式要自行定义
 
 
 ---
-6、最常用的30个Excel函数
+6、如何同时显示日期和星期？
+
+
+自定义格式:  `yyyy-y-d aaaa` 
+
+
+---
+
+7、自动生成报表目录并添加超链接
+
+※ step1：`Ctrl + F3`在弹了的窗口中输入名称`getsh`, 在引用位置输入公式：
+
+=MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&T(NOW())
+
+※ step2：在单元格输入公式并下拉即可生成工作表的目录。
+
+=IFERROR(HYPERLINK("#"&INDEX(getsh,ROW(A2))&"!a1",INDEX(getsh,ROW(A2))),"")
+
+
+>这里的名称用的是`getsh`，公式都是在目录页输入的
+
+---
+
+
+8、最常用的30个Excel函数
 
 函数列表
 

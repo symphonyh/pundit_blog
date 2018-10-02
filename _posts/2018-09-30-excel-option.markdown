@@ -21,7 +21,7 @@ categories: Office
 
 2、排名
 
-公式 = SUMPRODUCT((D2<$D$2:$D$8)*1)
+公式 = SUMPRODUCT((D2<$D$2:$D$8)*1)+1
 
 公式 = RANK(A2,($A$2:$A$4,$C$2:$C$4))
 

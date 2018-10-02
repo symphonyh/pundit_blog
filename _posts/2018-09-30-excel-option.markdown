@@ -23,6 +23,11 @@ categories: Office
 
 公式 = SUMPRODUCT((D2<$D$2:$D$8)*1)+1
 
+或
+
+公式 = RANK(A2,($A$2:$A$4）
+
+
 公式 = RANK(A2,($A$2:$A$4,$C$2:$C$4))
 
 >在（）中用逗号连接多个区域
@@ -71,13 +76,11 @@ categories: Office
 <br>
 >注意：规则通过管理进行设置，格式要自行定义
 
-
 ---
+
 6、如何同时显示日期和星期？
 
-
 自定义格式:  `yyyy-y-d aaaa` 
-
 
 ---
 
@@ -99,8 +102,46 @@ categories: Office
 
 ---
 
+8、数据验证和条件格式结合使用突出显示目标数据
 
-8、最常用的30个Excel函数
+※ step1：在H6设置数据验证列表
+
+※ step2：需要突出显示的数据，设置条件格式 公式 = $A3=$H$6
+
+类似的还可以：
+
+~~~
+公式 =A1<>""
+公式 =AND($C3="女"，YEAR($D3)>1980)
+~~~
+
+>参考：[Excel技巧精选](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666972091&idx=1&sn=a177d23a8d9f23f3ca13e60cae88b177&mpshare=1&scene=1&srcid=1002iFIJEWTOx7xBPLyZuH8g#rd)                                    
+
+
+9、不改变数据源实现二级联动下拉菜单
+
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=11712829&cid=19348975&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+<br>
+提示：
+
+※ 主要公式 = OFFSET(B$1,MATCH(G1,A:A,)-1,,COUNTIF(A:A,G1))
+
+※ 数据-删除重复项
+
+※ 取消合并单元格快速填充： F5 定位 - 选空值 - 输入第一个空单元格的取值公式（例如：=A2）- Ctrl + Enter
+
+※ excel中合并单元格快速拉序号，输入公式 =MAX($A$1:A1)+1
+
+>参考：[百度链接：取消合并单元格实现快速填充](https://jingyan.baidu.com/article/a681b0de7b0c3b3b18434632.html)
+
+---
+
+10、最常用的30个Excel函数
 
 函数列表
 
@@ -185,6 +226,6 @@ categories: Office
 >参考：[Excel精英培训:最常用的30个Excel函数公式](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913414&idx=1&sn=0f1ce55dff1142a2b986e54b681d48fc&chksm=bd5073b28a27faa4139587922a762b36456e28090dcbdb38950d9291301c45a104605717de4c&mpshare=1&scene=1&srcid=1001UaMS65oAt9nhYDfS22WS#rd)
 
 
->参考[Excel双向查找的9种方法,附送日常工作的20个Excel小技巧）](https://mp.weixin.qq.com/s?__biz=MjM5NTk5NDk0Mg%3D%3D&idx=5&mid=2651539731&sn=824bf439219d1c03ded7e4d2226bcae1)
+>参考：[Excel双向查找的9种方法,附送日常工作的20个Excel小技巧](https://mp.weixin.qq.com/s?__biz=MjM5NTk5NDk0Mg%3D%3D&idx=5&mid=2651539731&sn=824bf439219d1c03ded7e4d2226bcae1)
 
 ---

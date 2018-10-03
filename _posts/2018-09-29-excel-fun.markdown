@@ -297,3 +297,7 @@ indirect函数的引用的两中形式:加引号，一种不加引号。
 
 
 ---
+
+
+
+>参考：[Excel精英培训:最常用的30个Excel函数公式](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913414&idx=1&sn=0f1ce55dff1142a2b986e54b681d48fc&chksm=bd5073b28a27faa4139587922a762b36456e28090dcbdb38950d9291301c45a104605717de4c&mpshare=1&scene=1&srcid=1001UaMS65oAt9nhYDfS22WS#rd)

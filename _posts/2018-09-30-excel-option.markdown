@@ -36,7 +36,7 @@ categories: Office
 
 3、实现自动编号，档筛选和隐藏时重新自动编号
 
-=subtotal(103,B$2:B2) 
+公式 = SUBTOTAL(103,B$2:B2) 
 
 ---
 

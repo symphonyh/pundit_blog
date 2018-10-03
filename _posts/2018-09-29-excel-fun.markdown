@@ -63,7 +63,13 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 ※ SUMIF()
 
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=8860752&cid=14619324&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
+<br>
 举例：公式 = SUMIF(A2:A5,">160000",B2:B5)
 
 >第一个参数是筛选条件的范围，这里是财产价值列; 第二个参数是条件; 第三个参数是求和的区域，这里是佣金列;
@@ -178,6 +184,13 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 >参考：[HLOOKUP函数的3个应用示例](http://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666980301&idx=1&sn=b980f9c318bf3cdce85ea9d9a462e144&chksm=8b43c955bc344043e965f333033d87a69012691b599c3450093855289cea8635ba7c6745fc12&mpshare=1&scene=1&srcid=1003ZXO1eB8qDXWcFgDI5ULw#rd)
 
 ---
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=11713070&cid=19349441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+<br>
 
 ※ INDEX()
 

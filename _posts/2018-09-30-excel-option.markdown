@@ -76,6 +76,9 @@ categories: Office
 <br>
 >注意：规则通过管理进行设置，格式要自行定义
 
+
+
+
 ---
 
 6、如何同时显示日期和星期？
@@ -140,8 +143,22 @@ categories: Office
 >参考：[百度链接：取消合并单元格实现快速填充](https://jingyan.baidu.com/article/a681b0de7b0c3b3b18434632.html)
 
 ---
+10、一个关键字查找筛选对应的多行数据 `index+small+if` 万金油函数
 
-10、最常用的30个Excel函数
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=8160452&cid=13420534&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+<br>
+
+=INDEX(A:A,SMALL(IF(B$2:B$17=G$1,ROW($2:$17),99),ROW(A1)))
+
+=INDEX(C:C,<font color="#DC143C">SMALL(</font><font color="#6495ED">IF(B$2:B$17=G$1,<font color="#DAA520">ROW($2:$17)</font>,999)</font>,<font color="#DC143C">ROW(A1))</font>)
+
+>[点击下载示例文件，   提取码`6w1q` ](https://pan.baidu.com/s/1ZXNePGwH7nrOhNkD-c--9A)
+
+11、最常用的30个Excel函数
 
 函数列表
 

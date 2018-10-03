@@ -223,6 +223,10 @@ F2 TAB 组合使用
 
 高手：在搜狗输入法中选输入字母V，然后再输入数字
 
+※ 输入身份证号码（数字文本）
+
+高手：先输入英文状态下的单引号`'`
+
 <br>
 
 >参考：[Excel精英培训:高手和菜鸟操作表格，都有什么区别？](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913456&idx=1&sn=1ed1765fdd5ebf4a1eda4242ffba09aa&chksm=bd5073848a27fa92c461df688069cecda2add8ccc57d1ee1f87eefa73e6573e092a0d879771f&mpshare=1&scene=1&srcid=0930JpNX1LzPPrEGFjGCmPO5#rd)

@@ -34,7 +34,13 @@ categories: Office
 
 ---
 
-3、SUMPRODUCT多条件求和的案例讲解
+3、实现自动编号，档筛选和隐藏时重新自动编号
+
+=subtotal(103,B$2:B2) 
+
+---
+
+4、SUMPRODUCT多条件求和的案例讲解
 
 
 <div class="cloud-tie-wrapper">
@@ -45,7 +51,7 @@ categories: Office
 
 
 ---
-4、高级筛选的条件区域格式
+5、高级筛选的条件区域格式
 
 | 范围 | 名称 | 数量 |
 | ------: | :------: | ------:|
@@ -55,7 +61,7 @@ categories: Office
 
 ---
 
-5、条件格式的公式应用
+6、条件格式的公式应用
 
 ※ 实现整行记录标识
 
@@ -81,13 +87,13 @@ categories: Office
 
 ---
 
-6、如何同时显示日期和星期？
+7、如何同时显示日期和星期？
 
 自定义格式:  `yyyy-y-d aaaa` 
 
 ---
 
-7、自动生成报表目录并添加超链接
+8、自动生成报表目录并添加超链接
 
 ※ step1：`Ctrl + F3`在弹了的窗口中输入名称`getsh`, 在引用位置输入公式：
 
@@ -105,7 +111,7 @@ categories: Office
 
 ---
 
-8、数据验证和条件格式结合使用突出显示目标数据
+9、数据验证和条件格式结合使用突出显示目标数据
 
 ※ step1：在H6设置数据验证列表
 
@@ -121,7 +127,7 @@ categories: Office
 >参考：[Excel技巧精选](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666972091&idx=1&sn=a177d23a8d9f23f3ca13e60cae88b177&mpshare=1&scene=1&srcid=1002iFIJEWTOx7xBPLyZuH8g#rd)                                    
 
 
-9、不改变数据源实现二级联动下拉菜单
+10、不改变数据源实现二级联动下拉菜单
 
 
 <div class="cloud-tie-wrapper">
@@ -143,7 +149,7 @@ categories: Office
 >参考：[百度链接：取消合并单元格实现快速填充](https://jingyan.baidu.com/article/a681b0de7b0c3b3b18434632.html)
 
 ---
-10、一个关键字查找筛选对应的多行数据 `index+small+if` 万金油函数
+11、一个关键字查找筛选对应的多行数据 `index+small+if` 万金油函数
 
 <div class="cloud-tie-wrapper">
 <iframe width="800" 
@@ -158,7 +164,7 @@ categories: Office
 
 >[点击下载示例文件，   提取码`6w1q` ](https://pan.baidu.com/s/1ZXNePGwH7nrOhNkD-c--9A)
 
-11、最常用的30个Excel函数
+12、最常用的30个Excel函数
 
 函数列表
 

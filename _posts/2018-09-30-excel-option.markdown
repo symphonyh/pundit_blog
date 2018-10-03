@@ -146,7 +146,10 @@ categories: Office
 
 ※ excel中合并单元格快速拉序号，输入公式 =MAX($A$1:A1)+1
 
+
 >参考：[百度链接：取消合并单元格实现快速填充](https://jingyan.baidu.com/article/a681b0de7b0c3b3b18434632.html)
+
+>本文内容的 13 合并单元格的取消和每行填充相同内容 提供了另一种解决方案！
 
 ---
 11、一个关键字查找筛选对应的多行数据 `index+small+if` 万金油函数
@@ -166,6 +169,7 @@ categories: Office
 
 >扩展：[Excel双向查找的9种方法](https://mp.weixin.qq.com/s?__biz=MjM5NTk5NDk0Mg%3D%3D&idx=5&mid=2651539731&sn=824bf439219d1c03ded7e4d2226bcae1)
 
+---
 
 12、报价表文件，不等行的合并单元格对应数据快速求和
 
@@ -183,4 +187,10 @@ categories: Office
 
 ---
 
+13、合并单元格的取消和每行填充相同内容
 
+公式 = LOOKUP（"座", $D$3:D3)
+
+>主要为VLOOKUP查找扫清道路，去掉合并单元格
+
+---

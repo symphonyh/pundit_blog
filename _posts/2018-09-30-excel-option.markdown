@@ -51,6 +51,7 @@ categories: Office
 
 
 ---
+
 5、高级筛选的条件区域格式
 
 | 范围 | 名称 | 数量 |
@@ -81,9 +82,6 @@ categories: Office
 
 <br>
 >注意：规则通过管理进行设置，格式要自行定义
-
-
-
 
 ---
 
@@ -126,6 +124,7 @@ categories: Office
 
 >参考：[Excel技巧精选](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666972091&idx=1&sn=a177d23a8d9f23f3ca13e60cae88b177&mpshare=1&scene=1&srcid=1002iFIJEWTOx7xBPLyZuH8g#rd)                                    
 
+---
 
 10、不改变数据源实现二级联动下拉菜单
 
@@ -152,6 +151,7 @@ categories: Office
 >本文内容的 13 合并单元格的取消和每行填充相同内容 提供了另一种解决方案！
 
 ---
+
 11、一个关键字查找筛选对应的多行数据 `INDEX+SMALL+IF` 万金油函数
 
 <div class="cloud-tie-wrapper">
@@ -241,7 +241,7 @@ categories: Office
 
 ※ step1：设置数据源区域。就是把手机名称和型号整理成如下图格式备用，存放的位置随意;
 
-※ step2：批量定义名称。选取手机名称和型号区域后，公式选项卡 - 定义的名称组 - 根据所选内容创建），选取窗口上的“首行”复选框;
+※ step2：批量定义名称。选取手机名称和型号区域后，公式选项卡 - 定义的名称组 - **根据所选内容创建**，选取窗口上的“首行”复选框;
 
 ※ step3：设置数据有效性。选取型号列，打开数据有效性窗口，在来源中输入=indirect(D5)
 
@@ -276,11 +276,9 @@ categories: Office
 
 
 
-
+>16-17参考：[Excel表格的精选39个技巧](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912144&idx=1&sn=70b9a4c5bd63b39bc3bcf005de563cfb&chksm=bd5076a48a27ffb2b73c90e199f81c437dfa487ce8af72bf9e9da2443e129cf072283214faff&mpshare=1&scene=1&srcid=1004HRwvrMVtPcTKG7CjGG9v#rd)
 
 ---
-
->16-17参考：[Excel表格的精选39个技巧](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912144&idx=1&sn=70b9a4c5bd63b39bc3bcf005de563cfb&chksm=bd5076a48a27ffb2b73c90e199f81c437dfa487ce8af72bf9e9da2443e129cf072283214faff&mpshare=1&scene=1&srcid=1004HRwvrMVtPcTKG7CjGG9v#rd)
 
 18、Mlookup函数来了
 
@@ -320,6 +318,7 @@ categories: Office
 
 >18 参考：[Mlookup函数来了](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912073&idx=1&sn=deca355c82a286defed9f17bce4f2c05&chksm=bd50757d8a27fc6b8bc512f697d48677bfd6b2f70fe434e0cc7f416f3c5c36794fcc9ea2b457&mpshare=1&scene=1&srcid=1004rjYRGah9meoYlPJyBn5U#rd)
 
+---
 
 19、获取文件路径
 
@@ -334,6 +333,35 @@ categories: Office
 
 选取批注 - 右键“设置批注格式” - **颜色** - 填充效果 - 图片 -选择图片
 
+---
+
+
+21、利用批注完成快速合并两列文字
+
+先插入一批注，然后复制多列数据，再选取批注按ctrl+v粘贴，然后再复制批注文字粘贴到表格中即可。
+
+>注意：很多同学粘贴批注无效，是因为要点选批注边缘来选取批注，不要让批注进入文字编辑状态。
 
 
 ---
+
+22、每页打印标题行
+
+如果想在打印时每一页都显示标题，页面布局 - 打印标题 - 首端标题行：选取要显示的行
+
+---
+
+23、同时修改多个工作表
+
+按shift或ctrl键选取多个工作表，然后在一个表中输入内容或修改格式，所有选中的表都会同步输入或修改。这样就不必逐个表修改了。
+
+---
+
+24、恢复未保存文件
+
+打开路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Excel\ ，在文件夹内会找到的未保存文件所在的文件夹
+
+
+---
+
+

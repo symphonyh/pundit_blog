@@ -167,7 +167,21 @@ F2 TAB 组合使用
 
 ---
 
-15、Excel精英培训 
+15、把所有网络线全部去掉
+
+按Ctrl + Shift + -  删除 
+
+16、万元显示
+
+在一个空单元格输入10000（建议设置数字格式和边框） - 复制它 - 选择性粘贴 - 运算：除
+
+17、合并多个单元格内容
+
+把列宽调整成能容易合并后字符，然后选取合并的区域 - 开始 - 填充 - 内容重排
+
+>要把这一列拉得足够宽！
+
+18、Excel精英培训 
 
 `Ctrl+Q` 调用快速分析界面
 
@@ -189,7 +203,7 @@ F2 TAB 组合使用
 
 ---
 
-- 高手使用excel
+高手使用excel
 
 
 ※ 删除多个没用的excel工作表
@@ -210,9 +224,9 @@ F2 TAB 组合使用
 高手：打开格式下拉框，一键搞定
 
 
-※ 插入5个空行
+※ 插入N个空行
 
-高手：向下选取5行 - 插入 
+高手：左手按住SHIFT 选中行，鼠标变为双横线向下拖动几行就会插入几行
 
 
 ※ 删除值，留下公式
@@ -227,8 +241,22 @@ F2 TAB 组合使用
 
 高手：先输入英文状态下的单引号`'`
 
+※ 公式转数值
+
+高手：选取公式所在的列，按右键不松拖动到一边，别松键再拖回来，点上面的仅复制数值
+
+※ 把表格转移到另一个工作表中
+
+高手：按alt键不松，可以把表格拖到另一个表格中
+
+
+
+
 <br>
 
 >参考：[Excel精英培训:高手和菜鸟操作表格，都有什么区别？](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913456&idx=1&sn=1ed1765fdd5ebf4a1eda4242ffba09aa&chksm=bd5073848a27fa92c461df688069cecda2add8ccc57d1ee1f87eefa73e6573e092a0d879771f&mpshare=1&scene=1&srcid=0930JpNX1LzPPrEGFjGCmPO5#rd)
+
+
+>参考：[Excel表格的精选39个技巧](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912144&idx=1&sn=70b9a4c5bd63b39bc3bcf005de563cfb&chksm=bd5076a48a27ffb2b73c90e199f81c437dfa487ce8af72bf9e9da2443e129cf072283214faff&mpshare=1&scene=1&srcid=1004HRwvrMVtPcTKG7CjGG9v#rd)
 
 ---

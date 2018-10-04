@@ -312,7 +312,7 @@ HYPERLINK参数1：文件夹的路径; HYPERLINK参数2：单元格里显示的�
 
 A1单元格，输入公式：=HYPERLINK("C:\Documents and Settings\Administrator\桌面\hyperlink函数资料.doc","hyperlink函数资料")
 
-　　意思是单击A1单元格，将打开桌面的“hyperlink函数资料”这个doc文档。
+意思是单击A1单元格，将打开桌面的“hyperlink函数资料”这个doc文档。
 
 >参数：文件夹的路径，包括文件名和扩展名
 
@@ -338,10 +338,11 @@ A1单元格，输入公式：=HYPERLINK("C:\Documents and Settings\Administrator
 
 - 链接到当前工作薄中其他工作表的指定位置或区域 
 
-　　比如A1单元格输入：= HYPERLINK("#sheet2!B8","跳到SHEET2工作表B8") 
+比如A1单元格输入：= HYPERLINK("#sheet2!B8","跳到SHEET2工作表B8") 
 
-　　另外，假如区域定义了名称，如定义名称X=sheet2!A10:B15，则以下公式或跳转到X区域的并选定该区域：= Hyperlink("#X","跳到区域名称X") 
-　　等同于= Hyperlink("#sheet2!A10:B15","跳到A10:B15") 
+另外，假如区域定义了名称，如定义名称X=sheet2!A10:B15，则以下公式或跳转到X区域的并选定该区域：= HYPERLINK("#X","跳到区域名称X") 
+
+等同于= HYPERLINK("#sheet2!A10:B15","跳到A10:B15") 
 
 
 - 打开工作簿

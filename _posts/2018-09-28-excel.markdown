@@ -254,6 +254,18 @@ F2 TAB 组合使用
 高手：按住SHIFT + x（右上角关闭）
 
 
+※  自定义快捷方式
+
+选择 格式刷、合并居中 等通过右键添加进入快速访问工具栏，按ALT 后会显示 数字，ALT + 数字就是对应快捷方式了。
+
+ALT + 4 合并后居中
+
+ALT + 5 格式刷
+
+
+
+
+
 <br>
 
 >参考：[Excel精英培训:高手和菜鸟操作表格，都有什么区别？](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913456&idx=1&sn=1ed1765fdd5ebf4a1eda4242ffba09aa&chksm=bd5073848a27fa92c461df688069cecda2add8ccc57d1ee1f87eefa73e6573e092a0d879771f&mpshare=1&scene=1&srcid=0930JpNX1LzPPrEGFjGCmPO5#rd)
@@ -262,3 +274,5 @@ F2 TAB 组合使用
 >参考：[Excel表格的精选39个技巧](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912144&idx=1&sn=70b9a4c5bd63b39bc3bcf005de563cfb&chksm=bd5076a48a27ffb2b73c90e199f81c437dfa487ce8af72bf9e9da2443e129cf072283214faff&mpshare=1&scene=1&srcid=1004HRwvrMVtPcTKG7CjGG9v#rd)
 
 ---
+
+

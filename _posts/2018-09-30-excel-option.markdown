@@ -368,4 +368,38 @@ categories: Office
 
 ---
 
+25、选择性粘贴的计算（把所有数据进行计算）
+
+常用的把财务数据转为万元版
+
+※ step1： 在一个单元格输入1000,并且复制这个单元格 Ctrl + C
+
+
+※ step2：选择数据区域全部数据
+
+
+※ step3：选择性粘贴，选 `除` 确定即可。
+
+
+---
+
+26、高亮显示选中行
+
+※ step1：条件格式设置公式：=OR(CELL("row")=ROW())
+
+※ step2：VBA 工作表选择 Worksheet SelectionChange 加入代码
+
+~~~
+
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+ActiveSheet.Calculate
+End Sub
+
+~~~
+
+>条件格式设置时，范围要设置整个数据区域
+
+
+---
+
 

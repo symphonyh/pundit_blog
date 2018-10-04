@@ -209,7 +209,18 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 >匹配条件,精确查找它的数值就是“0”，模糊查找它的数值就是“1”。通常情况下，我们都是选择的精确查找。
 
+
+**vlookup 查找值不在首列的解决办法**
+
+例如:在B列查找D2对应值,取A列值
+
+公式 =INDEX(A:A,MATCH(D2,B:B,0))
+
+
+
 >参考：[VLOOKUP函数怎么使用？看完这篇就知道了~](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666979365&idx=1&sn=a9bb112020cc9b7aad4ff141c5f120f0&chksm=8b43cabdbc3443ab7e531a0a8809314f63ae8d478c80d490cf2f1e56ca759e5d5b237db5acae&mpshare=1&scene=1&srcid=1003MBREakC71AxdA8UvT98U#rd)
+
+
 
 ※ HLOOKUP()
 
@@ -225,6 +236,8 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
         src="//player.bilibili.com/player.html?aid=11713070&cid=19349441&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 <br>
+
+---
 
 ※ INDEX()
 
@@ -265,7 +278,7 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 ※ INDIRECT()
 
-indirect函数的引用的两中形式:加引号，一种不加引号。
+INDIRECT函数的引用的两中形式:加引号，一种不加引号。
 
 =INDIRECT("A1") 文本引用——即引用A1单元格所在的文本(B2)。
 

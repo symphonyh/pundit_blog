@@ -17,6 +17,10 @@ categories: Office
 >统计合同名称中不重复的单位数量，也就是实际合同总数量
 >SUMPRODUCT参数为一个数组时不做乘积，而是求和。
 
+如果是多列不重复：
+
+公式 =SUMPRODUCT(1/COUNTIF(A2:A81,A2:a81,B2:B81,B2:B81))
+
 ---
 
 2、排名

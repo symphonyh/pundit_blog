@@ -154,6 +154,8 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 ※ COUNTIF()
 
+单条件统计数量
+
 举例：公式 = COUNTIF(A1:A10,">=5") 
 
 举例：公式 =  COUNTIF(A1:A10,"刘*")
@@ -161,6 +163,8 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 
 ※ COUNTIFS()
+
+多条件统计数量
 
 举例：公式 = COUNTIFS(B2:B5,"=是",C2:C5,"=是")
 
@@ -298,6 +302,59 @@ indirect函数的引用的两中形式:加引号，一种不加引号。
 
 ---
 
+※  HYPERLINK()
+
+参数说明：
+
+HYPERLINK参数1：文件夹的路径; HYPERLINK参数2：单元格里显示的文字内容
+
+- 打开文件 
+
+A1单元格，输入公式：=HYPERLINK("C:\Documents and Settings\Administrator\桌面\hyperlink函数资料.doc","hyperlink函数资料")
+
+　　意思是单击A1单元格，将打开桌面的“hyperlink函数资料”这个doc文档。
+
+>参数：文件夹的路径，包括文件名和扩展名
 
 
+- 打开文件夹 
+
+A1单元格，输入公式：=HYPERLINK("C:\Documents and Settings\Administrator\桌面","excel论坛")
+　　意思是，当单击A1单元格用hyperlink函数就直接打开桌面的“excel论坛”文件夹。
+
+
+- 打开网站 =HYPERLINK("//www.excelwm.net","完美论坛")
+
+>参数：网站地址，记得一定前面一定要加`//`
+
+- 链接到工作表指定位置
+
+链接当前工作表的指定位置，点击跳转到当前工作表指定的单元格。
+
+比如A1单元格，输入公式：=HYPERLINK("#B8","跳转到B8")
+
+意思是单击A1单元格，将跳转到B8单元格。
+
+
+- 链接到当前工作薄中其他工作表的指定位置或区域 
+
+　　比如A1单元格输入：= HYPERLINK("#sheet2!B8","跳到SHEET2工作表B8") 
+
+　　另外，假如区域定义了名称，如定义名称X=sheet2!A10:B15，则以下公式或跳转到X区域的并选定该区域：= Hyperlink("#X","跳到区域名称X") 
+　　等同于= Hyperlink("#sheet2!A10:B15","跳到A10:B15") 
+
+
+- 打开工作簿
+
+同目录下的文件：=HYPERLINK("book2.xls#sheet2!a1"，"到BOOK2中Sheet2!A1") 
+
+不同目录下：=HYPERLINK("C:\My Documents\XLS\book2.xls#sheet2!a1"，"到BOOK2中Sheet2!A1") 
+
+参考：[百度文库说明文档](https://wenku.baidu.com/view/df6a40d680eb6294dd886c78.htmlf)
+
+---
+
+
+
+<br>
 >参考：[Excel精英培训:最常用的30个Excel函数公式](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913414&idx=1&sn=0f1ce55dff1142a2b986e54b681d48fc&chksm=bd5073b28a27faa4139587922a762b36456e28090dcbdb38950d9291301c45a104605717de4c&mpshare=1&scene=1&srcid=1001UaMS65oAt9nhYDfS22WS#rd)

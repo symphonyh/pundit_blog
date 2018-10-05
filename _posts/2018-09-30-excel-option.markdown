@@ -68,7 +68,15 @@ categories: Office
 | ------: | :------: | ------:|
 | >=0.02| 用友网络 | >1000 |
 | <=0.05 | 财务部| <2018-09-30 |
+<br>
 
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=11712994&cid=19349313&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+<br>
 
 ---
 
@@ -90,9 +98,10 @@ categories: Office
 
 公式 = FIND ("股份",$A1)
 
-<br>
 >注意：规则通过管理进行设置，格式要自行定义
+
 >参考：[为什么你的表格数据枯燥无味？原来是不会使用这个功能](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666980346&idx=1&sn=3be2c1df3d6f7a92eb57cafee5f0805d&chksm=8b43c962bc344074bd45ac8f3b983b6d9398e3c538e06027041accc8f25f3086aee7089ec279&scene=0#rd)
+
 ---
 
 ## 7、如何同时显示日期和星期？
@@ -101,6 +110,7 @@ categories: Office
 
 ---
 <br>
+
 ## 8、自动生成报表目录并添加超链接
 
 ※ step1：`Ctrl + F3`在弹了的窗口中输入名称`getsh`, 在引用位置输入公式：
@@ -115,7 +125,7 @@ categories: Office
 公式 = IFERROR(HYPERLINK("#"&INDEX(getsh,ROW(A2))&"!a1",INDEX(getsh,ROW(A2))),"")
 ~~~
 
->这里的名称用的是`getsh`，公式都是在目录页输入的
+>注意：这里的名称用的是`getsh`，公式都是在目录页输入的
 
 ---
 <br>

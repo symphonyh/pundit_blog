@@ -22,6 +22,7 @@ categories: Office
 公式 =SUMPRODUCT(1/COUNTIF(A2:A81,A2:a81,B2:B81,B2:B81))
 
 ---
+<br>
 
 ## 2、排名
 
@@ -37,12 +38,15 @@ categories: Office
 >在（）中用逗号连接多个区域
 
 ---
+<br>
 
 ## 3、实现自动编号，档筛选和隐藏时重新自动编号
 
 公式 = SUBTOTAL(103,B$2:B2) 
 
 ---
+
+<br>
 
 ## 4、SUMPRODUCT多条件求和的案例讲解
 
@@ -55,6 +59,8 @@ categories: Office
 
 
 ---
+
+<br>
 
 ## 5、高级筛选的条件区域格式
 
@@ -86,7 +92,7 @@ categories: Office
 
 <br>
 >注意：规则通过管理进行设置，格式要自行定义
-
+>参考：[为什么你的表格数据枯燥无味？原来是不会使用这个功能](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666980346&idx=1&sn=3be2c1df3d6f7a92eb57cafee5f0805d&chksm=8b43c962bc344074bd45ac8f3b983b6d9398e3c538e06027041accc8f25f3086aee7089ec279&scene=0#rd)
 ---
 
 ## 7、如何同时显示日期和星期？
@@ -94,7 +100,7 @@ categories: Office
 自定义格式:  `yyyy-y-d aaaa` 
 
 ---
-
+<br>
 ## 8、自动生成报表目录并添加超链接
 
 ※ step1：`Ctrl + F3`在弹了的窗口中输入名称`getsh`, 在引用位置输入公式：
@@ -112,7 +118,7 @@ categories: Office
 >这里的名称用的是`getsh`，公式都是在目录页输入的
 
 ---
-
+<br>
 ## 9、数据验证和条件格式结合使用突出显示目标数据
 
 ※ step1：在H6设置数据验证列表
@@ -129,7 +135,7 @@ categories: Office
 >参考：[Excel技巧精选](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666972091&idx=1&sn=a177d23a8d9f23f3ca13e60cae88b177&mpshare=1&scene=1&srcid=1002iFIJEWTOx7xBPLyZuH8g#rd)                                    
 
 ---
-
+<br>
 ## 10、不改变数据源实现二级联动下拉菜单
 
 
@@ -155,7 +161,7 @@ categories: Office
 >本文内容的 13 合并单元格的取消和每行填充相同内容 提供了另一种解决方案！
 
 ---
-
+<br>
 ## 11、一个关键字查找筛选对应的多行数据 `INDEX+SMALL+IF` 万金油函数
 
 <div class="cloud-tie-wrapper">
@@ -174,7 +180,7 @@ categories: Office
 >扩展：[Excel双向查找的9种方法](https://mp.weixin.qq.com/s?__biz=MjM5NTk5NDk0Mg%3D%3D&idx=5&mid=2651539731&sn=824bf439219d1c03ded7e4d2226bcae1)
 
 ---
-
+<br>
 ## 12、报价表文件，不等行的合并单元格对应数据快速求和
 
 ※ step1：选中求和列
@@ -190,7 +196,7 @@ categories: Office
 >NC报价表涉及并发数和单价不适合
 
 ---
-
+<br>
 ## 13、合并单元格的取消和每行填充相同内容
 
 公式 = LOOKUP（"座", $D$3:D3)
@@ -198,7 +204,7 @@ categories: Office
 >主要为VLOOKUP查找扫清道路，去掉合并单元格
 
 ---
-
+<br>
 ## 14、当数字变 E+ , 一个？让它现原形！
 
 `Ctrl + 1 `设置单元格格式 - 自定义 - 输入数字 `0 `
@@ -214,7 +220,7 @@ categories: Office
 - 当#的个数大于整数位时，不补。
 
 ---
-
+<br>
 ## 15、按单元格颜色求和
 
 ※ step1：定义名称，为提取颜色值做准备
@@ -240,7 +246,7 @@ categories: Office
 =SUMIF(C:C,E2,B:B)
 
 ---
-
+<br>
 ## 16、制作二级联动下拉
 
 ※ step1：设置数据源区域。就是把手机名称和型号整理成如下图格式备用，存放的位置随意;
@@ -251,7 +257,7 @@ categories: Office
 
 
 ---
-
+<br>
 ## 17、实现自动到期提醒
 
 要求：离到期日30天内行填充红色，60天内填充黄色。要求可以修改G2:G3的期间，提醒色会自动更新
@@ -283,7 +289,7 @@ categories: Office
 >16-17参考：[Excel表格的精选39个技巧](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912144&idx=1&sn=70b9a4c5bd63b39bc3bcf005de563cfb&chksm=bd5076a48a27ffb2b73c90e199f81c437dfa487ce8af72bf9e9da2443e129cf072283214faff&mpshare=1&scene=1&srcid=1004HRwvrMVtPcTKG7CjGG9v#rd)
 
 ---
-
+<br>
 ## 18、Mlookup函数来了
 
 =Mlookup(查找内容，查找区域,返回值所在的列数,第N个)
@@ -323,14 +329,14 @@ categories: Office
 >18 参考：[Mlookup函数来了](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652912073&idx=1&sn=deca355c82a286defed9f17bce4f2c05&chksm=bd50757d8a27fc6b8bc512f697d48677bfd6b2f70fe434e0cc7f416f3c5c36794fcc9ea2b457&mpshare=1&scene=1&srcid=1004rjYRGah9meoYlPJyBn5U#rd)
 
 ---
-
+<br>
 ## 19、获取文件路径
 
 文件-信息-打开文档位置
 
 
 ---
-
+<br>
 ## 20、通过批注添加图片
 
 在制作产品介绍表或员工信息表时，常需要添加产品图片和员工照片，这时用批注插入图片是最好的选择。
@@ -339,7 +345,7 @@ categories: Office
 
 ---
 
-
+<br>
 ## 21、利用批注完成快速合并两列文字
 
 先插入一批注，然后复制多列数据，再选取批注按ctrl+v粘贴，然后再复制批注文字粘贴到表格中即可。
@@ -348,26 +354,26 @@ categories: Office
 
 
 ---
-
+<br>
 ## 22、每页打印标题行
 
 如果想在打印时每一页都显示标题，页面布局 - 打印标题 - 首端标题行：选取要显示的行
 
 ---
-
+<br>
 ## 23、同时修改多个工作表
 
 按shift或ctrl键选取多个工作表，然后在一个表中输入内容或修改格式，所有选中的表都会同步输入或修改。这样就不必逐个表修改了。
 
 ---
-
+<br>
 ## 24、恢复未保存文件
 
 打开路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Excel\ ，在文件夹内会找到的未保存文件所在的文件夹
 
 
 ---
-
+<br>
 ## 25、选择性粘贴的计算（把所有数据进行计算）
 
 常用的把财务数据转为万元版
@@ -382,7 +388,7 @@ categories: Office
 
 
 ---
-
+<br>
 ## 26、高亮显示选中行
 
 ※ step1：条件格式设置公式：=OR(CELL("row")=ROW())
@@ -401,7 +407,7 @@ End Sub
 
 
 ---
-
+<br>
 
 ## 27、对齐的多种方式
 

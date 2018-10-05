@@ -68,6 +68,8 @@ categories: Office
 | ------: | :------: | ------:|
 | >=0.02| 用友网络 | >1000 |
 | <=0.05 | 财务部| <2018-09-30 |
+
+
 <br>
 
 <div class="cloud-tie-wrapper">
@@ -86,9 +88,9 @@ categories: Office
 
 公式 = $A1="北京无线电测量研究所"
 
-※ 实现间隔行标识
+※ **实现间隔行标识**
 
-公式 = (MOD(ROW(),2)=1)
+**公式 = (MOD(ROW(),2)=1)**
 
 ※ 满足多条件的数据突出显示
 
@@ -448,7 +450,20 @@ End Sub
 
 当单元格较少(一个格能容下)，两端对齐默认为左对齐样式。如果需要换行，它和自动换行的区别是，两端对齐是每一行文字都会两端顶格显示。
 
+---
 
+## 28、切片器快速制作动态图表视频
 
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        src="//player.bilibili.com/player.html?aid=11711273&cid=19346828&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+<br>
+
+>注意：切片的样式修改，需要先复制。
+>[参考：透视表的常见错误](http://excel880.com/blog/archives/870)
+
+---
 
 

@@ -367,10 +367,9 @@ categories: Office
 
 ---
 <br>
-## 24、恢复未保存文件
+## 24、显示公式部分计算结果
 
-打开路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Excel\ ，在文件夹内会找到的未保存文件所在的文件夹
-
+选取公式中的要显示的部分表达式，按`F9`
 
 ---
 <br>

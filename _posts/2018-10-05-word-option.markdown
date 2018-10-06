@@ -204,3 +204,22 @@ Word共支持4种分节符，分别是下一页、连续、奇数页和偶数页
 >这块一直比较糊涂，百度貌似回答是对的，还没测试出来。
 
 ---
+
+## 13、word里居然那可以使用计算公式
+
+选中表格 右上角会多一个 布局菜单，选fx公式，
+
+SUM(LEFT) 向左求和
+
+SUM(ABOVE) 向上求和
+
+SUM(RIGHT) 向右求和
+
+SUM（C4:D4）
+
+数字变动后，`F9` 或右键选更新域 会自动更新求和结果
+
+>参考：[官方文档](https://support.office.com/zh-cn/article/%e5%9c%a8-word-%e6%88%96-outlook-%e8%a1%a8%e6%a0%bc%e4%b8%ad%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8f-cbd0596e-ea8a-485e-a35d-b2cb2c4f3e27?NS=WINWORD&Version=16&SysLcid=2052&UiLcid=2052&AppVer=ZWD160&HelpId=225&ui=zh-CN&rs=zh-CN&ad=CN#__toc281293382)
+
+---
+

@@ -81,6 +81,8 @@ Using Word
 
 `Ctrl + K `       创建超链接
 
+>如果想一次性取消文档中的全部超链接，可先按 `Ctrl + A` 键选中整个文档，然后按 `Ctrl + Shift + F9`键即可。
+
 `Shift + F3`       切换大小写
 
 `Ctrl + Shift + Home ` 

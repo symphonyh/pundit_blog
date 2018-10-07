@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notepad2 快捷键
-date: 2018-10-5
+date: 2018-10-06
 comments: true
 external-url:
 categories: Office

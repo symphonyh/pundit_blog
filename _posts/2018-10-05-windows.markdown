@@ -1,13 +1,13 @@
-
 ---
 layout: post
-title: WIn
-date: 2018-10-5
+title: winOS
+date: 2018-10-05
 comments: true
 external-url:
 categories: Office
 ---
 
+Windows
 
 `Win + R`:  运行
 

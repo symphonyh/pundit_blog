@@ -38,10 +38,14 @@ categories: Ruby
 
 `Ctrl+Alt+P` 项目切换;
 
-`Ctrl+R` 跳转标记。
+`Ctrl+R` 跳转标记;
 
+删除空行操作：
 
+`CTRL+H`打开`replace`功能，勾选上左侧的`regular expression`，并填写 
 
+find what 栏: `\s+$`  （正则表达式,前后不要有空格）
 
+replace with 栏: 这行留空） 
 
 

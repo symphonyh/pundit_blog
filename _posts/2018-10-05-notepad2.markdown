@@ -1,0 +1,36 @@
+---
+layout: post
+title: Notepad2 快捷键
+date: 2018-10-5
+comments: true
+external-url:
+categories: Office
+---
+
+
+Notepad2
+
+
+Alt+Z/U：删除首/尾字符
+
+Ctrl+W：切换自动换行
+
+Ctrl+Shift+↑：行上移
+
+Alt+M：修改行（可用于批量为行首/行尾添加字符）
+
+Ctrl+D：复制行
+
+Ctrl + Shift + D：删除行
+
+`Alt+R` ：删除空行
+
+Ctrl+F5：插入时间
+
+Alt+X：插入HTML标记
+
+Ctrl+Shift+Q：CSS注释
+
+F9：选择编码
+
+Alt+T：切换置顶

@@ -10,7 +10,6 @@ categories: Office
 using Word
 
 
-
 ## 1、标尺的使用
 
 word文档中的上标尺左侧，有三个滑块：一个倒三角、一个正三角、一个正方形。分别代表：首行缩进、悬挂缩进、左缩进。
@@ -240,4 +239,38 @@ SUM（C4:D4）
 >参考：[官方文档](https://support.office.com/zh-cn/article/%e5%9c%a8-word-%e6%88%96-outlook-%e8%a1%a8%e6%a0%bc%e4%b8%ad%e4%bd%bf%e7%94%a8%e5%85%ac%e5%bc%8f-cbd0596e-ea8a-485e-a35d-b2cb2c4f3e27?NS=WINWORD&Version=16&SysLcid=2052&UiLcid=2052&AppVer=ZWD160&HelpId=225&ui=zh-CN&rs=zh-CN&ad=CN#__toc281293382)
 
 ---
+
+## 14、自定义宽度绘制表格
+
++-----+-----+------+-------+ `Enter`
+
+`TAB` 增加表格
+
+`Ctrl + Shift + Enter`  拆分表格
+
+---
+
+## 15、根据文字颜色替换
+
+`Ctrl + H` 可以根据字体颜色 查找替换,^g 可以批量替换图片，可以替换标题1;
+
+
+
+---
+
+## 16、以前不知道的技巧
+
+※ 精确比较两个文档内容，审阅-比较 
+
+※ 删除文档信息：文件-检查-删除信息，即可
+
+※ rand(A,B) 随机生成文档
+
+※ PDF 另存时可加书签
+
+※ 接受修订可不再显示批注
+
+※ 文档可以限制修改 
+
+>非常好的教程参考：[微软office全能赛冠军教你Word 该怎样学](https://www.bilibili.com/video/av31649985)
 

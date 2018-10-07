@@ -1,0 +1,21 @@
+
+---
+layout: post
+title: WIn
+date: 2018-10-5
+comments: true
+external-url:
+categories: Office
+---
+
+
+`Win + R`:  运行
+
+`Win + E`:  资源管理器
+
+`Win + D`:  返回桌面
+
+`Win + L`:  锁屏
+
+`Win + 数字键`: 数字是任务栏图标的排列顺序
+

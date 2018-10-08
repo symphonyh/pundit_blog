@@ -334,4 +334,6 @@ AVERAGE(b2:d2)
 
 >实用举例：[Word排版中的最实用技巧！](https://mp.weixin.qq.com/s?__biz=MzI1NDQxMDA1OA==&mid=2247490474&idx=2&sn=849794f583b3a2df843bdcc5555ad2fe&chksm=e9c4f78fdeb37e9999fd335de4cbe1d5a323cb0754899eb28e664cc6bfd31598785e33b35eb2&mpshare=1&scene=1&srcid=1008i9eH6k9eiWObG0qzNN01#rd)
 
+原文：[Word - 论文必备技巧 - 样式定义/导航窗格/多级列表/自定义目录](https://www.jianshu.com/p/78b9bcb9a455)
+
 ---

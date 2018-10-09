@@ -432,6 +432,30 @@ A1单元格，输入公式：=HYPERLINK("C:\Documents and Settings\Administrator
 
 ---
 
+## ※  去空格函数TRIM()  SUBSTITUTE() CLEAN()
+
+`=TRIM(A2)`
+
+>此方法只能删除字符串首尾的空格，而不能删除字符串中间的空格！故此方法适用于删除字符串首尾的空格
+
+`=SUBSTITUTE(A2," ","")`
+
+>注意函数中间的英文双引号中间是一个空格符号，而左边的双引号是空白的，意思就是将A2单元格的字符串中的空格去掉
+SUBSTITUTE函数法可以删除字符串中所有的空格
+
+`=CLEAN(B2)`
+
+B2 的内容 =CHAR(9)&"Monthly report"&CHAR(10)
+
+>用于删除文本中不能打印的字符例如：
+
+char(9)   水平制表符
+
+char(10) 换行
+
+char(13) 回车
+
+---
 
 
 <br>

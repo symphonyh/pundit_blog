@@ -196,14 +196,17 @@ F2 TAB 组合使用
 
 `Ctrl+T` 插入超级表格
 
->参考：[Excel精英培训:你会用 Ctrl + T 键吗？](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913125&idx=1&sn=eca7ed59ff07ef2c6db3293e4eca7f34&chksm=bd5071518a27f847d4aad4a143ab90bf0847515d67b0718d684998cda1a9cccb3d977edd02a0&mpshare=1&scene=1&srcid=0929ZeUX2z0N4cPyme5nUCIt#rd)
+>参考1：[Excel精英培训:你会用 Ctrl + T 键吗？](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913125&idx=1&sn=eca7ed59ff07ef2c6db3293e4eca7f34&chksm=bd5071518a27f847d4aad4a143ab90bf0847515d67b0718d684998cda1a9cccb3d977edd02a0&mpshare=1&scene=1&srcid=0929ZeUX2z0N4cPyme5nUCIt#rd)
+
+>参考2：[Excel操作之SuperStar-超级表中表](https://baijiahao.baidu.com/s?id=1583845550341122501&wfr=spider&for=pc)
 
 `Ctrl + \` 一键找不同
 
 `Alt + F1` 一键插入图表
 
 `Ctrl + E` 快速拆分  bella1.62 => bella   1.62
-
+ 
+>具体使用在[这里](https://symphonyh.github.io/cloudblog/2018/09/30/excel-option/)有详细介绍
 
 >参考：[Excel精英培训:10个小技巧](http://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913229&idx=1&sn=56d5f7ff1ec32265e226eb9a07e7b8b0&chksm=bd5072f98a27fbef12834fe883837fcc813751f1307e8ed627f82f708456fdbae93c9deff212&mpshare=1&scene=1&srcid=0929GJ32GU7SZ51wPF98TToM#rd)
 

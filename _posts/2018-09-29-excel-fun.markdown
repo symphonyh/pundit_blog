@@ -337,6 +337,7 @@ LOOKUP函数使用1作为查询值，在由负数、0和错误值构成的数组
 
 举例：公式 = =OFFSET(C3,4,2,4,3)就是以C3为基点，向下偏移4行，向右偏移2列，新引用的行数是4行，新引用的列数是3列，最终得到对E7:G10单元格区域的引用。
 
+参考：[大家认识非常好用的OFFSET函数](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666980399&idx=1&sn=d0f60ea4ca1582fb319ace3a826a0bd9&chksm=8b43ceb7bc3447a14a2f51e88dbc8ef7b6ba4d19c4e42a05121a09429a6c5a830335aa8aa9e8&scene=0#rd)
 
 ---
 <br>

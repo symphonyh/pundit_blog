@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel VBA
+title: Excel VBA 
 date: 2018-10-08
 comments: true
 external-url:
@@ -10,4 +10,24 @@ categories: Office
 
 Excel VBA
 
+## 显示隐藏菜单 编辑栏和页签
+~~~
+Sub visible()
+Application.DisplayFormulaBar = True '显示编辑栏
+ActiveWindow.DisplayWorkbookTabs = True '显示工作表标签栏
+Application.DisplayFullScreen = False '把所有的菜单显示
+End Sub
+~~~
 
+~~~
+Sub hidden()
+Application.DisplayFormulaBar = False '隐藏编辑栏
+ActiveWindow.DisplayWorkbookTabs = False '隐藏工作表标签栏
+Application.DisplayFullScreen = True '把所有的菜单都隐藏
+End Sub
+~~~
+
+>还需要调整，要执行二次，不知道什么原因?
+
+
+---

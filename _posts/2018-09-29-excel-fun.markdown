@@ -283,6 +283,10 @@ LOOKUP函数使用1作为查询值，在由负数、0和错误值构成的数组
 
 >参考：[VLOOKUP函数怎么使用？看完这篇就知道了~](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666979365&idx=1&sn=a9bb112020cc9b7aad4ff141c5f120f0&chksm=8b43cabdbc3443ab7e531a0a8809314f63ae8d478c80d490cf2f1e56ca759e5d5b237db5acae&mpshare=1&scene=1&srcid=1003MBREakC71AxdA8UvT98U#rd)
 
+>参考:[十大Vlookup常见错误！](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666972142&idx=1&sn=590c235993fe0c4b630d872184e3e5d6&scene=21#wechat_redirect)
+
+>参考:[7个Vlookup进阶案例详解](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666980431&idx=1&sn=4239fd67194f941f4487d6ab7e1c230f&chksm=8b43ced7bc3447c1dbd1409c6de626f816f8d369837b06b98f57454d4f7b8c4b0f1c6336a14d&mpshare=1&scene=1&srcid=1013YhP0XdNnt8N4NYkeNgEC#rd)
+
 ---
 <br>
 

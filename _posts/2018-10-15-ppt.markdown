@@ -1,12 +1,13 @@
+---
 layout: post
 title: PPT 操作技巧 
 date: 2018-10-15
 comments: true
 external-url:
 categories: Office 
---
+---
 
-PPT
+Power point
 
 1、快速分离文本框
 

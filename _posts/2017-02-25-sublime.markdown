@@ -49,3 +49,4 @@ find what 栏: `\s+$`  （正则表达式,前后不要有空格）
 replace with 栏: 这行留空） 
 
 
+>参考：[正则表达式的教程笔记](http://www.yyyweb.com/5141.html)

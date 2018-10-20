@@ -222,6 +222,10 @@ Word共支持4种分节符，分别是下一页、连续、奇数页和偶数页
 
 >这块一直比较糊涂，百度貌似回答是对的，还没测试出来。
 
+>这篇文章提供了一种解决方案[你真的会用Word排版论文吗？](https://mp.weixin.qq.com/s?__biz=MzI1NDQxMDA1OA==&mid=2247490749&idx=2&sn=b46be52cc8c3707f3ef8c089664609eb&chksm=e9c4f098deb3798e6f0fc5456db53abcdcb14e00c4793fe41544f99bd803fa8a86cb5fb61780&mpshare=1&scene=1&srcid=#rd)
+
+
+
 ---
 
 ## 13、word里居然那可以使用计算公式

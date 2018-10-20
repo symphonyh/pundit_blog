@@ -44,7 +44,6 @@ Excel
 
 公式 =SUBTOTAL(103,B$2:B2) 
 
-excel中有合并单元格时，公式 =MAX($A$1:A1)+1
 
 ---
 
@@ -676,4 +675,12 @@ F5 定位常量 和 数字 再统一修改字体
 >[关于图表制作的常用技巧，看这一篇足够了！](https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&mid=2666980487&idx=1&sn=657fe45edca5cf91b69c0a869575892a&chksm=8b43ce1fbc344709a5bff6e60d3868b4be8b310a2b25b4577509dd4ee416a424122603a0b649&mpshare=1&scene=1&srcid=#rd)
 
 ---
+
+## 39、选择性粘贴实现行列转换
+
+复制后，`Ctrl+Alt+v`打开选择性粘贴界面里面有 `转置` 选项
+
+
+---
+
 

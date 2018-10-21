@@ -139,12 +139,14 @@ Using Word
 
 `Alt + Ctrl + D`    尾注
 
+`Alt + Ctrl + V`    选择性粘贴
+
 
 `Ctrl + = `         下标
 
 `Ctrl + Shift + + ` 上标
 
-`Alt + Shift + 上下箭头` 上下移动选中文字
+`Alt + Shift + 上下箭头` 上下移动选中文字,对于表格则是合并、拆分表格
 
 `Alt + Shift + T` 生成时间
 

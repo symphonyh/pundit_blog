@@ -137,7 +137,7 @@ adcdefghijklmnopqrstuvwxyz 人生的最大幸福
 
 &sect;&nbsp;四叶草符号：
 
-❈　✠　✢　✣　✤　✥　ஐ　❃　※
+❈　✠　✢　✣　✤　✥　ஐ　❃　※ 【】
 
 ✢&nbsp; adcdefghijklmnopqrstuvwxyz 人生的最大幸福 
 

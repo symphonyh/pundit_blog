@@ -53,7 +53,7 @@ ctrl+shift+h 代码对齐
 
 
 >参考：[正则表达式的教程笔记](http://www.yyyweb.com/5141.html)
-
+>参考：[提高Sublime Text开发效率的简单配置](http://www.yyyweb.com/3736.html)
 
 ---
 

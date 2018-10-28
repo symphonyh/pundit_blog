@@ -92,10 +92,6 @@ Using Word
 
 `Ctrl + Shift + End`
 
-`Ctrl + Shift + >`   增大字号
-
-`Ctrl + Shift + <`   缩小字号
-
 `Ctrl + Shift + W`   只给字词加下划线，不给空格加
 
 `Ctrl + Shift + N `  应用正文样式
@@ -159,6 +155,12 @@ Using Word
 
 `Ctrl+F1` 隐藏选项卡 双击`开始`效果一样
 
+
+`Ctrl + F3` 连续剪切
+
+`Ctrl + Shift + F3` 一次性粘贴
+
+`Ctrl + [`，`Ctrl + ]` 放大缩小字体
 
 ---
 

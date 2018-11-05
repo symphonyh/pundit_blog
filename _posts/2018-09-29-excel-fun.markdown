@@ -123,6 +123,47 @@ IF(B16>60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22
 
 [官网参考链接](https://support.office.com/zh-cn/article/sumifs-%E5%87%BD%E6%95%B0-c9e748f5-7ea7-455d-9406-611cebce642b)
 
+## ※ Sumifs函数5个经典公式
+
+Sumifs函数是工作中最常用的多条件求和函数，今天兰色分享它最常用的5个公式，其中几个公式还是有难度的哦，可能你是第一次看到。
+
+1、多条件（并列）求和
+
+要求统计公司1的人事部工资总和
+
+=Sumifs(D:D,A:A,"公司1",B:B,"人事部”）
+
+2、 多条件（或者）求和
+
+要求统计公司1人事部，以及公司2财务的工资之和
+
+=SUM(SUMIFS(D:D,A:A,{"公司1";"公司2"},B:B,{"人事部";"财务部"}))
+
+3、按时间段求和
+
+要求统计2016-1-3~2016-1-4日 产品E的销量
+
+=SUMIFS(C:C,A:A,">="&F2,A:A,"<="&F3,B:B,F4)
+
+4、模糊条件求和
+
+要求计算A列产品中包含“电视”并且B列地区为郑州的数量之和
+
+公式：C11
+=SUMIFS(C2:C7,A2:A7,A11&"*",B2:B7,B11)
+说明：在sumifs中可以使用通配符 *
+
+5、多表多条件求和
+
+1~5号的车辆销售明细表
+ 
+要求在汇总表中对各个车型进行汇总
+
+=SUMPRODUCT(SUMIFS(INDIRECT(ROW(1:5)&"!c:c"),INDIRECT(ROW(1:5)&"!a:a"),A2,INDIRECT(ROW(1:5)&"!b:b"),B2))
+
+
+>[原文参考：Sumifs函数5个经典公式，最后一个90%的人都不会！](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913993&idx=3&sn=9fbbdfe3b2856120cd026b50855e45b2&chksm=bd500dfd8a2784ebf590f8675cb380d48c7935c9eb17f5f4434663545f60f65b0588f37c31e3&mpshare=1&scene=1&srcid=1105zne9jwj98nRfiYq1zbBM#rd)
+
 ---
 <br>
 ## ※ SUMPRODUCT() 实现多条件求和

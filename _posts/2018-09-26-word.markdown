@@ -53,7 +53,7 @@ Using Word
 
 `Ctrl + Q `         清除段落格式
 
-`Ctrl + Shift + N`  清楚格式
+`Ctrl + Shift + N`  清除格式
 
 
 `Ctrl + Y`         重复上一次操作

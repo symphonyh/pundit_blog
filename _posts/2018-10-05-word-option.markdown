@@ -397,6 +397,29 @@ AVERAGE(b2:d2)
 
 ---
 
+## 20、vba实现定义所有图片大小
+
+~~~
+Sub setpicsize() '设置图片尺寸
+
+Dim n '图片个数
+
+On Error Resume Next '忽略错误
+
+For n = 1 To ActiveDocument.InlineShapes.Count 'InlineShapes 类型 图片
+
+ActiveDocument.InlineShapes(n).Height = 7.39 * 28.35 '设置图片高度为 5cm （1cm等于28.35px）
+
+ActiveDocument.InlineShapes(n).Width = 9.86 * 28.35 '设置图片宽度 6.3cm
+
+Next n
+
+End Sub
+
+
+~~~
+
+
 
 
 ##  实用的小技巧

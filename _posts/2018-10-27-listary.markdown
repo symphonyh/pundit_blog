@@ -28,3 +28,8 @@ Listary 是 Windows 上的一款革命性的搜索和应用启动软件。
 
 
 >[知乎：Listary官方文档中文版](https://zhuanlan.zhihu.com/p/24897629)
+
+新发现：
+
+oneNote 有一个很实用的技巧，能够提取图片中的文字 
+选取图片 右键 `选复制图片中的文字`

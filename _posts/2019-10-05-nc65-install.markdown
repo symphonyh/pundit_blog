@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nc65安装与配置 
+title: yonyou nc65安装与配置 
 date: 2019-10-05
 comments: true
 external-url:
@@ -181,7 +181,11 @@ home/bin/sysconfig 文件打开UAP配置工具
 
 4.5 uclient 登录NC 
 
-添加：`http://127.0.0.1:8080` 
+uclient官网下载地址：`http://cdn.yonyoucloud.com/pro/uclient/uclients/2.0.0-build_201904031420_Windows/UClient.exe`
+
+其他版本：`http://uclient.yonyou.com/`
+
+打开uclient 添加：`http://127.0.0.1:8080` 
 
 以超级管理员 `root / super` 登录 进入系统管理 密码都是：`123456a@`
 

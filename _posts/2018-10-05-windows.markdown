@@ -56,3 +56,24 @@ Windows
 
 俗话说最好的留在最后，自从升级 Windows7 后，想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 `Ctrl + Shift + Esc` 让我泪流满面啊......
 
+
+
+---
+
+`Win + R`运行里常用的指令：
+
+compmgmt.msc---计算机管理
+
+`calc`--启动计算器
+
+`cmd.exe`--CMD命令提示符
+
+`notepad`--打开记事本
+
+`services.msc`--本地服务设置
+
+`ncpa.cpl`--打开网络连接设置
+
+`control.exe /name Microsoft.NetworkAndSharingCenter`--打开网络和共享中心
+
+`regedit`--打开注册表

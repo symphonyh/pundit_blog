@@ -1,0 +1,67 @@
+---
+layout: post
+title: Oracle commands 
+date: 2019-10-05
+comments: true
+external-url:
+categories: Oracle 
+---
+
+### Oracle 常用的命令行语句
+
+1.1 进入SQLPlus
+```
+sqlplus /nolog
+```
+
+>注：`sqlplus  /nolog`是另外的用法了，`nolog`表示不进行登录，仅仅是进入`sqlplus`软件而已
+
+<br>
+
+1.2 连接数据库
+```
+conn /as sysdba
+```
+
+>注：`sqlplus / as sysdba`是一种简化写法，其实是省略了用户名和密码，完整的写法是 `sqlplus  sys/password  as  sysdba`
+
+<br>
+
+1.3 给用户授权
+```
+grant connect,dba to nc65；
+```
+<br>
+
+1.4  显示当前用户
+
+`show user`
+<br>
+
+1.5 修改当前用户口令
+
+`passw`
+<br>
+
+1.6 清理屏幕和退出程序
+
+`clear screen` 
+
+`exit` 
+
+<br>
+
+1.7 spool将屏幕显示及查询结果输入到指定文本文件中
+```
+spool d:\1.txt
+
+select * from emp;
+
+spool off
+```
+<br>
+1.8 执行和编辑指定位置的SQL脚本
+
+`start d:\test.sql`
+
+`@ d:\test.sql`

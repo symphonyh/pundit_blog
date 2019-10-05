@@ -1,0 +1,223 @@
+---
+layout: post
+title: Nc65安装与配置 
+date: 2019-10-05
+comments: true
+external-url:
+categories: yonyouNC 
+---
+
+### 1、安装数据库
+
+数据库下载地址
+
+1.1 Oracle 下载
+
+`https://www.oracle.com/technetwork/cn/database/database10g/downloads/index.html`
+
+登录
+
+`hxy@cloudhan.me`   
+
+`Symphonyh721201`
+
+>注意2个压缩包需要解压到同一文件夹里
+
+1.2 百度网盘下载
+
+链接：`https://pan.baidu.com/s/1sUtye1VvwY5xvWgHyJ8xmQ `
+提取码：`06ud` 
+
+1.3 安装过程 
+
+- 双击：`setup`
+
+- 选择：`创建和配置数据库`
+
+- 选择：`桌面类`
+
+- 路径选择：`C盘默认路径`
+
+- 数据库版本：`企业版/标准版`
+
+- 全局数据库名称：`orcl`
+
+- 管理员口令：`Hxyufida721201`
+
+1.4 结束前进入口令管理：
+
+- 设置数据库管理员密码： 
+
+`SYSTEM:` `Hxyufida721201`
+
+ `SYS:` `Hxyufida721201`
+
+- 输入数据库管理工具OEM网址: `https://localhost:1158/em`
+
+用`SYSTEM`登录，选服务器-用户设置 `SCOTT`用户
+
+密码：tiger，设置"未锁定" 
+
+>这里可以创建NC用户/授权，后面还会用命令创建。
+
+---
+
+### 2、安装NC软件
+
+`setup.bat` 开始安装;
+
+模块全选;
+
+目录可以选其他盘,实际上NC 65代码可以放在任何目录下;
+
+不配置数据库，选完成。
+
+---
+
+### 3、创建表空间及给用户授权
+
+进入应用程序开发`SQL Plus`
+
+进入CMD：
+
+```
+sqlplus /nolog
+
+conn /as sysdba
+
+```
+
+3.1 创建表空间
+```
+CREATE TABLESPACE NNC_DATA01 DATAFILE 'C:\ORADATA\NNC_data01.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K;
+
+CREATE TABLESPACE NNC_INDEX01 DATAFILE 'C:\ORADATA\nnc_index01.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 128K;
+
+
+CREATE TABLESPACE NNC_DATA02 DATAFILE 'C:\ORADATA\NNC_data02.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K;
+
+CREATE TABLESPACE NNC_INDEX02 DATAFILE 'C:\ORADATA\nnc_index02.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 128K;
+
+
+CREATE TABLESPACE NNC_DATA03 DATAFILE 'C:\ORADATA\NNC_data03.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K;
+
+CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 128K;
+```
+
+
+3.2 创建用户`nc65`
+```
+create user nc65 identified by nc65 default tablespace NNC_DATA01 temporary tablespace temp;
+```
+
+3.3 给用户授权
+```
+grant connect,dba to nc65；
+```
+
+---
+
+### 4、配置UAP平台
+
+home/bin/sysconfig 文件打开UAP配置工具
+
+4.1 配置服务器信息：
+
+登录IP地址:`127.0.0.1` , 端口号:`8080` 
+
+>`ipconfig` 命令获取本机地址
+
+
+<img src="/image/nc1.png" alt="nc1" width="800px" height="420px" style="margin:0">
+
+
+
+4.2 配置数据源
+
+单击读取按钮
+
+- 类型选择 ORACLE11g
+
+- 数据源名称 nc65
+
+- **数据源ODBC：** orcl
+
+- 数据源标识 65 
+
+- **数据库端口:** 1521 
+
+- 用户名 nc65 , 密码 nc65
+
+<img src="/image/nc2.png" alt="nc2" width="800px" height="420px" style="margin:0">
+
+4.3 配置安全日志数据源 
+
+- 读取 
+- 测试 
+- **初始化数据源** 
+
+<img src="/image/nc3.png" alt="nc3" width="800px" height="420px" style="margin:0">
+
+4.4 测试NC能否正常启用 (nc安装完毕根目录下会有两个批处理程序)
+
+- startup 启动服务
+
+- stop    停止服务
+
+
+4.5 uclient 登录NC 
+
+添加：`http://127.0.0.1:8080` 
+
+以超级管理员 `root / super` 登录 进入系统管理 密码都是：`123456a@`
+
+>`root` 首次登录时可以设置密码，初始密码为空，本次安装不知道root密码，用super登录修改root密码。
+
+---
+
+4.6 创建集团账套 
+
+集团管理员登录
+
+- 创建集团
+
+- 数据源 nc65
+
+- 增加集团管理员 名称 密码 失效日期
+
+- 集团账套待安装模块 
+
+- 重启中间件 startup 
+
+---
+
+### 5、导入备份dmp文件
+
+5.1 普通导入  (OK)
+
+DOS:
+`imp nc65/nc65@orcl file=D:\NC65_install\ncdata\NCV65DEMO.dmp fromuser=NC65USER touser=nc65 log=D:\NC65_install\ncdata\NCV65DEMO.log`
+
+>注意目录是我放NC代码的位置，演示数据用户是`NC65USER`
+
+5.2 数据泵方式导入（没测试）
+
+`sqlplus /nolog`
+
+`conn /as sysdba`
+
+SQL:
+
+`create or replace directory  dmpdata as 'D:\NC65_install\ncdata';`
+
+DOS:
+
+`impdp nc65/nc65@orcl directory=dmpdata dumpfile=NCV65DEMO.dmp logfile=NCV65DEMO.log schemas=NC65USER`
+
+>把DMP文件放到数据库的dpdump文件夹下可以不指定文件目录（D:\app\Administrator\admin\orcl\dpdump文件夹下）
+
+---
+
+### 6、建立一个账套
+
+以`root`进入系统管理，新建一个演示系统，就看到演示数据了。 

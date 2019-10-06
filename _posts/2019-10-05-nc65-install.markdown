@@ -265,7 +265,7 @@ nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁�
  
 7.2 生成license
 
-运行nc63kg.exe(先装java)，将NC65new.txt内容打开复制替换原有的“支持代码自定义”内容，选择上一步生成的`hardkey.req`文件，点生成license;
+运行nc63kg.exe(先装java)，将NC65new.txt内容打开复制替换原有的"支持代码自定义"内容，选择上一步生成的`hardkey.req`文件，点生成license;
 
 <img src="/image/license2.png" alt="license2" width="800px" height="420px" style="margin:0">
  
@@ -277,9 +277,10 @@ nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁�
 
 ---
 
-8. sqldeveloper
+8、sql developer
 
-oracle自带的sqldeveloper对JDK版本要求1.5-1.6，NC65的JDK是1.7不陪配，而且总是闪退，各种不好用。建议替换这个版本的`ver:18.2.0.183.1748-x64` Oracle数据库管理工具(含JDK1.8)
+Oracle自带的sql developer对JDK版本要求1.5-1.6，NC65的JDK是1.7不陪配，而且总是闪退，各种不好用。
+建议替换这个版本的`ver:18.2.0.183.1748-x64` Oracle数据库管理工具(含JDK1.8)
 
 下载链接：`https://pan.baidu.com/s/1I9367BzAJTQsF-bMP0KTAw` 
 提取码：`inz8` 

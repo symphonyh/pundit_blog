@@ -7,7 +7,7 @@ external-url:
 categories: yonyouNC 
 ---
 
-NC是大型的企业管理软件，能够灵活的适配各类业务场景，为企业快速搭建信息化平台。这里是NC65的安装配置的详细介绍和资源下载链接，目的是帮助大家在学习NC的过程中，方便顾问搭建本地环境。文档对安装配置细节做了详细的记录，并且增加了演示数据导入和`license`授权，请不要作为商业用途。参考视频为:
+NC是大型的企业管理软件，能够灵活的适配各类业务场景，为企业快速搭建信息化平台。这里是NC65的安装配置的详细介绍和资源下载链接,是自己搭建本地环境的过程实录。文档对安装配置细节做了详细的记录，并且增加了演示数据导入和破解`license`授权的方法，请不要作为商业用途。参考视频为:
 
 `https://edu.51cto.com/course/15660.html`
 
@@ -277,7 +277,9 @@ nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁�
 
 ---
 
-8. sqldeveloper（ver:18.2.0.183.1748-x64） Oracle数据库管理工具(含JDK1.8)
+8. sqldeveloper
+
+oracle自带的sqldeveloper对JDK版本要求1.5-1.6，NC65的JDK是1.7不陪配，而且总是闪退，各种不好用。建议替换这个版本的`ver:18.2.0.183.1748-x64` Oracle数据库管理工具(含JDK1.8)
 
 下载链接：`https://pan.baidu.com/s/1I9367BzAJTQsF-bMP0KTAw` 
 提取码：`inz8` 

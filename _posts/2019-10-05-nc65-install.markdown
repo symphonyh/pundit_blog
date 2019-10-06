@@ -11,6 +11,9 @@ NC是大型的企业管理软件，能够灵活的适配各类业务场景，为
 
 `https://edu.51cto.com/course/15660.html`
 
+
+---
+
 ### 1、安装数据库
 
 数据库下载地址
@@ -181,7 +184,10 @@ home/bin/sysconfig 文件打开UAP配置工具
 
 4.5 uclient 登录NC 
 
-uclient官网下载地址：`http://cdn.yonyoucloud.com/pro/uclient/uclients/2.0.0-build_201904031420_Windows/UClient.exe`
+uclient官网下载地址：
+```
+http://cdn.yonyoucloud.com/pro/uclient/uclients/2.0.0-build_201904031420_Windows/UClient.exe
+```
 
 其他版本：`http://uclient.yonyou.com/`
 

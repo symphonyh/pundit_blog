@@ -13,44 +13,80 @@ categories: Oracle
 ```
 sqlplus /nolog
 ```
+>注：`nolog`表示不进行登录，仅仅是进入`sqlplus`软件而已;
 
->注：`sqlplus  /nolog`是另外的用法了，`nolog`表示不进行登录，仅仅是进入`sqlplus`软件而已
-
-<br>
-
-1.2 连接数据库
+---
+1.2 以超级管理员进入
 ```
 conn /as sysdba
 ```
-
+>conn[ect] 
 >注：`sqlplus / as sysdba`是一种简化写法，其实是省略了用户名和密码，完整的写法是 `sqlplus  sys/password  as  sysdba`
 
-<br>
-
+---
 1.3 给用户授权
 ```
 grant connect,dba to nc65；
 ```
+---
+1.4 普通用户：scott
+
+解锁用户：`alter user scott/hr account unlock;`
+>使用普通用户前先解锁;
+
+设置密码：`alter user scott/hr identified by tiger/lion;`
+ 
+普通用户：scott
+密码：tiger
+
+以普通用户进入
+`sqlplus scott/tiger;`
+
+1.4.1 查询scott用户下的所有对象，使用tab表，tab表每个用户都有
+
+`select * from tab;`
+
+1.4.2 查看表结构
+
+`desc dept;`
+
+1.4.3  显示当前用户
+
+`show user;`
+
+1.4.4 `passw` 修改当前用户口令
+
+>`passw[ord]` scott;
+
+>如果要想修改其它用户的密码，需要用sys/system登录
+
 <br>
 
-1.4  显示当前用户
+1.4.5 `/` 执行上一条SQL语句
 
-`show user`
-<br>
+1.4.6 清理屏幕
 
-1.5 修改当前用户口令
+`clear screen;`
 
-`passw`
-<br>
+`host cls;`
 
-1.6 清理屏幕和退出程序
-
-`clear screen` 
+1.4.7 退出程序
 
 `exit` 
 
-<br>
+---
+1.5 打开notepad编辑SQL语句
 
+`ed a.sql`
+
+---
+1.6 执行和编辑指定位置的SQL脚本
+
+`start d:\test.sql`
+
+`@ d:\test.sql`
+
+---
 1.7 spool将屏幕显示及查询结果输入到指定文本文件中
 ```
 spool d:\1.txt
@@ -59,9 +95,9 @@ select * from emp;
 
 spool off
 ```
-<br>
-1.8 执行和编辑指定位置的SQL脚本
+---
+参考：
 
-`start d:\test.sql`
+>https://blog.csdn.net/lovecuidong/article/details/87939386
 
-`@ d:\test.sql`
+>魔乐科技李兴华老师oracle学习笔记:https://wenku.baidu.com/view/beef43b065ce050876321398.html

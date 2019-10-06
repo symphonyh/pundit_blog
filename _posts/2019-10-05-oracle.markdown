@@ -40,7 +40,8 @@ grant connect,dba to nc65；
 密码：tiger
 
 以普通用户进入
-`sqlplus scott/tiger;`
+
+DOS:`sqlplus scott/tiger`
 
 1.4.1 查询scott用户下的所有对象，使用tab表，tab表每个用户都有
 

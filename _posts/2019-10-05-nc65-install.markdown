@@ -277,4 +277,9 @@ nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁�
 
 ---
 
-Ok! 恭喜您,到目前为止，您应该可以无限制的使用NC系统了!
+8. sqldeveloper（ver:18.2.0.183.1748-x64） Oracle数据库管理工具(含JDK1.8)
+
+下载链接：`https://pan.baidu.com/s/1I9367BzAJTQsF-bMP0KTAw` 
+提取码：`inz8` 
+
+Ok! 恭喜您,到目前为止，您可以无限制的使用NC65和Oracle数据库了!

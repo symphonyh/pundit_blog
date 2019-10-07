@@ -269,17 +269,19 @@ nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁�
 
 <img src="/image/license2.png" alt="license2" width="800px" height="420px" style="margin:0">
  
+ >注:nc63kg.exe和谐程序和65通用
+
 7.3 读取授权
 
-运行sysConfig.bat，出现配置界面，点licenset读取授权,OK!
+运行sysconfig.bat，出现配置界面，点licenset读取授权,OK!
 
 <img src="/image/license3.png" alt="license3" width="800px" height="420px" style="margin:0">
 
 ---
 
-8、sql developer
+8、Sql Developer
 
-Oracle自带的sql developer对JDK版本要求1.5-1.6，NC65的JDK是1.7不陪配，而且总是闪退，各种不好用。
+Oracle自带的Sql Developer对JDK版本要求1.5-1.6，NC65的JDK是1.7不匹配，而且总是闪退，各种不好用。
 建议替换这个版本的`ver:18.2.0.183.1748-x64` Oracle数据库管理工具(含JDK1.8)
 
 下载链接：`https://pan.baidu.com/s/1I9367BzAJTQsF-bMP0KTAw` 

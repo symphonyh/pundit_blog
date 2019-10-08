@@ -10,6 +10,8 @@ categories: Oracle
 
 |快捷键	|含义|
 |:-------------|:------------|
+|`tab`||
+|Ctrl + `|任务栏呼出和收起|
 |Tab|自动路径补全|
 |Ctrl+T|建立新页签|
 |Ctrl+W|关闭页签|
@@ -21,5 +23,10 @@ categories: Oracle
 |Ctrl+1|快速切换到第1个页签|
 |Ctrl+n|快速切换到第n个页签( n值无上限)|
 |Alt + enter|切换到全屏状态|
-|Ctr+r|历史命令搜索|
 |Win+Alt+P|开启工具选项视窗|
+|`shell`||
+|Ctr+r|历史命令搜索|
+|Ctrl + Alt + u| 返回上一级目录|
+|Shift + mouse|选择复制文本，按住shift单机鼠标，双击全选|
+|Right click / Ctrl + Shift + v| 粘贴文本|
+|End, Home, Ctrl| 移动光标|

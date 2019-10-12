@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Oracle PLSQL语法使用入门 
+title: Oracle PLSQL语法使用入门
 date: 2019-10-12
 comments: true
 external-url:
 categories: Oracle 
 ---
 
-PL/SQL（procedure Language/SQL）是Oracle对sql语言的过程化扩展，指在原有的增删查改的基础上，对SQL命令语言中增加了过程处理语句（如分支，循环等），使SQL语言具有过程处理能力;
+PL/SQL（procedure Language/SQL）是Oracle对sql语言的过程化扩展，对SQL命令语言中增加了过程处理语句（如分支，循环等），使SQL语言具有过程处理能力;
 
 PLSQL是sql的扩展，操作oracle数据库效率最高，一般通过PLSQL实现简单的处理业务，再通过程序接口调用;是学习存储过程，存储函数，触发器三大数据库对象的重要基础。
 
@@ -389,7 +389,7 @@ commit;
 end;
 ```
 
->参考：
+参考：
 
 >https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%7B%22nid%22%3A%22news_9863883009459455687%22%7D
 

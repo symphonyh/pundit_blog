@@ -107,8 +107,25 @@ select * from emp;
 spool off
 ```
 ---
+
+1.8 注释
+
+使用--符号，设置单行注释: `-- select * from emp;`
+
+使用/* */符号，设置多行注释:
+
+```
+    /*
+        select * from emp;
+    */
+```
+---
 参考：
 
 >https://blog.csdn.net/lovecuidong/article/details/87939386
 
->魔乐科技李兴华老师oracle学习笔记:https://wenku.baidu.com/view/beef43b065ce050876321398.html
+>[魔乐科技李兴华老师oracle学习笔记] https://wenku.baidu.com/view/beef43b065ce050876321398.html
+
+>[Oracle中表空间 表 查询 函数] https://www.cnblogs.com/liuxuelin/p/10004161.html
+
+>[Oracle中视图 序列 同义词 索引] https://www.cnblogs.com/liuxuelin/p/10004137.html

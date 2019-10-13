@@ -12,86 +12,63 @@ PL/SQL（procedure Language/SQL）是Oracle对sql语言的过程化扩展，对S
 PLSQL是sql的扩展，操作oracle数据库效率最高，一般通过PLSQL实现简单的处理业务，再通过程序接口调用;是学习存储过程，存储函数，触发器三大数据库对象的重要基础。
 
 
-### 一、PL/SQL基础语法
+语法格式：
+
+```
+  [DECLARE   
+     --声明变量 
+     ] 
+  BEGIN 
+     --代码逻辑   
+  [EXCEPTION 
+    --异常处理 
+    ] 
+  END;
+
+```
+### PL/SQL基础语法
 
 1、基本变量类型
 
-`DECLARE` 部分：定义基本变量
+1.1 `DECLARE`：定义基本变量
 
 类型：char,varchar2,date,number,boolean,long
 
-定义语法：变量名 数据类型（长度）
+定义语法：变量名 类型（长度）
 
-举个完整例子：统计每年员工的入职人数
+   
+1.2 变量赋值
 
-```
-DECLARE
+1.2.1 变量名:=值;
 
- 每年员工入职人数
+1.2.2 从数据库表中得到数据并赋值给变量,查询结果只能是一行记录，且得到的字段个数要和变量个数相同，一一对应;
 
-pcount NUMBER := 0;
+`select 字段1,字段2,... into 变量名1,变量名2,... from t_account where id=1;`
+      
+1.2.3 记录型变量的赋值取值,记录型变量的赋值,同上也只能返回一行记录;
 
- 年份
+`select * into v_account from t_account`    
 
-pyear VARCHAR2(4);
+>记录型变量的取值,通过'.'加字段名形式获取每一个字段的值
 
- 员工总人数
+`v_account.usenum`    
+    
+1.3 输出语句：
 
-pnum NUMBER := 0;
-
- 定义游标
-
-CURSOR cemp IS SELECT to_char(hiredate,'YYYY') AS hireyear,COUNT(*) FROM emp GROUP BY to_char(hiredate,'YYYY');
-
-BEGIN
-
- 打开游标
-
-OPEN cemp;
-
-遍历
-
-LOOP
-
-FETCH cemp INTO pyear,pcount;
-
- 循环开始立即检测数据
-
-EXIT WHEN cemp%NOTFOUND;
-
- 打印每年员工入职人数
-
-dbms_output.put_line(pyear || ' -> ' || pcount);
-
- 统计总人数
-
-pnum := pnum + pcount;
-
-END LOOP;
-
-dbms_output.put_line('员工总人数:' || pnum);
-
- 关闭游标
-
-CLOSE cemp;
-
-END;
-```
-
----
+`DBMS_OUTPUT.PUT_LINE(...);`  
 
 2、引用型变量和记录型变量
 
-- 引用型变量
+ 2.1 引用型变量
 
-my_name emp.ename%type;
+`my_name emp.ename%type;`
 
 表示my_name这个变量的类型是引用emp这个表的ename列的类型
 
 
-- 记录型变量
+ 2.1记录型变量
 
-emp_rec emp%rowtype
+`emp_rec emp%rowtype;`
 
 emp_rec相当于一个数组，存的类型是一条记录中的类型，打印某一列的时候，直接用emp_rec.列名即可
 
@@ -101,19 +78,22 @@ emp_rec相当于一个数组，存的类型是一条记录中的类型，打印�
 IF语句的3种形式
 
 ```
-（1）if 条件 then 语句1；
+if 条件 then 语句1；
 
 语句2；
 
 end if；
+```
 
-（2）if 条件 then 语句序列1：
+```
+if 条件 then 语句序列1：
 
 else 语句序列2；
 
 end if;
-
-（3）if 条件 then 语句；
+```
+```
+if 条件 then 语句；
 
 elsif 语句 then 语句；
 
@@ -124,273 +104,139 @@ end if；
 
 4、循环语句的使用
 
-（1）while循环
+4.1 无条件循环 
 
+```
+loop 
+  --循环语句  
+  exit when 循环停止条件;        //停止循环, exit;可直接停止循环
+end loop;
+ 
+```
+4.2条件循环
 
-（2）loop循环
+```
+while 条件 
+loop
+...
+end loop;
+```        
+4.3for循环
 
-
-（3）for循环
-
+```
+for 变量  in 起始值..终止值 
+loop 
+   
+end loop;
+```
 ---
 
-### 二、光标
+### 游标
 
-1、光标的语法
+1、游标的语法
 
-游标（光标）：就是一个结果集（在plsql语句中来使用光标来代表一个集合）
+游标：就是一个结果集（在plsql语句中来使用光标来代表一个集合）
 
 光标的语法：CURSOR 光标名[(参数名 数据类型[,参数名 数据类型]...)] IS SELECT 语句;
 
-例如 ：cursor c1 is select ename from emp;
+例如 ：`cursor c1 is select ename from emp;`
 
-打开光标： open c1; （打开光标执行查询）
+打开光标：` open c1;` （打开光标执行查询）
 
-关闭光标: close c1; （关闭游标释放资源）
-
-
-取一行光标的值： fetch c1 into pename; （取一行到变量中）
-
-光标中fetch的作用：
-
-(1）把当前指针指向的记录返回
-
-(2）将指针指向下一条记录
-
-光标的属性：%found %notfound
+关闭光标: `close c1; `（关闭游标释放资源）
 
 
-2、光标的属性和光标数的限制
+取一行光标的值： `fetch c1 into pename;` （取一行到变量中）
 
-（1）光标的属性
+```
+ open  游标名称                             //开启游标，
+    loop 
+        fetch  游标名称  into  变量           //获取游标结果集中的下一个值
+        exit   when   游标名称%notfound     //没有下一个值则跳出循环
+    end loop; 
+close  游标名称                            //结束游标
+```
 
-%found %notfound
-
-%isopen:判断光标是否打开 true/false
-
-%rowcount:影响的行数
-
-（2）光标数的限制：默认情况下，oracle数据库只允许在同一个会话中，打开300个光标
-
-
-修改光标数的限制：alter system set open_cursors=400 scope=both;
-
-scope的取值：both,memory,spfile(数据库需要重启)
+>游标中fetch的作用：把当前指针指向的记录返回;将指针指向下一条记录;
 
 ---
 
-### 三、例外
+### 异常
 
-例外是程序设计语言提供的一种功能，用来增强程序的健壮性和容错性;
+异常是程序设计语言提供的一种功能，用来增强程序的健壮性和容错性;
 
-系统例外
+```
+exception
+    when 异常类型1 then 处理语句
+    when 异常类型1 then 处理语句
 
-No_data_found (没有找到数据)
+```
+    
+>常见的异常类型：
 
-Too_many_rows (select...into 语句匹配多个行)
-
-Zero_Divide （被零除）
-
-Value_error（算术或转换错误）
-
-Timeout_on_resource (在等待资源是发生超时,这个是自定义的例外)
+|异常类型	|含义|
+|:-------------|:------------|
+|No_data_found | 使用select into未返回行 |
+|Too_many_rows | 执行select into时，结果集超过一行 |
+|Zero_Divide |被零除|
+|Value_error |算术或转换错误 |
+|Timeout_on_resource  |在等待资源是发生超时,这个是自定义的例外 |
 
 ---
 
-### 四、CODE案例
-
-1、统计每年员工的入职人数
+### 示例代码:统计每年员工的入职人数
 
 ```
 DECLARE
 
- 每年员工入职人数
-
+定义每年员工入职人数
 pcount NUMBER := 0;
 
- 年份
-
+定义年份
 pyear VARCHAR2(4);
 
- 员工总人数
-
+定义员工总人数
 pnum NUMBER := 0;
 
- 定义游标
-
-CURSOR cemp IS SELECT to_char(hiredate,'YYYY') AS hireyear,COUNT(*) FROM emp GROUP BY to_char(hiredate,'YYYY');
+定义游标
+CURSOR cemp IS SELECT to_char(hiredate,'YYYY') AS hireyear,COUNT(*) 
+FROM emp 
+GROUP BY to_char(hiredate,'YYYY');
 
 BEGIN
 
- 打开游标
-
+打开游标
 OPEN cemp;
 
-遍历
-
+循环遍历
 LOOP
-
 FETCH cemp INTO pyear,pcount;
 
- 循环开始立即检测数据
-
+开始立即检测数据,取值为空退出循环
 EXIT WHEN cemp%NOTFOUND;
 
- 打印每年员工入职人数
-
+输出每年员工入职人数
 dbms_output.put_line(pyear || ' -> ' || pcount);
 
- 统计总人数
-
+统计总人数
 pnum := pnum + pcount;
 
 END LOOP;
 
 dbms_output.put_line('员工总人数:' || pnum);
 
- 关闭游标
-
+关闭游标
 CLOSE cemp;
 
 END;
+
 ```
 ---
-
-2、员工涨工资问题
-
-涨工资问题，从最低工资的员工开始涨起，没人涨10%，工资总额不能超过50000，返回涨工资的人数和涨后的工资总额
-
-```
-declare
-
-cursor cemp is select empno,sal from emp order by sal;
-
-p_no emp.empno%type;
-
-p_sal emp.sal%type;
-
-countemp number:=0;涨工资人数
-
-totalsal emp.sal%type;
-
-begin
-
-获取初始工资总额
-
-select sum(sal) into totalsal from emp;
-
-open cemp;
-
-判断当前工资总额是否大于5W
-
-if totalsal<50000 then
-
-loop
-
-fetch cemp into p_no,p_sal;
-
-exit when cemp%notfound;
-
-获取当前员工涨工资后的工资总额
-
-如果工资总额超过5W直接退出循环
-
-exit when (totalsal+p_sal*0.1)>50000;
-
-update emp set sal=sal*1.1 where empno=p_no;
-
-涨工资人数加1
-
-countemp:=countemp+1;
-
-end loop;
-
-end if;
-
-close cemp;
-
-commit;
-
-dbms_output.put_line('共有'||countemp||'人涨工资，工资总额为：'||totalsal);
-
-end;
-```
----
-
-3、两张表的员工涨工资问题
-
-用PL/SQL语言编写一个程序，实现按部门分段（6000以上、3000~6000,3000元以下）统计各工资段的职工人数 以及各部门的工资总额 （工资总额中不包括奖金）
-
-```
-set serveroutput on
-
-declare
-
-cursor cdept is select deptno from dept;
-
-pdeptno dept.deptno%type;
-
-cursor cemp(dno number) is select sal from emp where deptno=dno;
-
-psal emp.sal%type;
-
-count1 number;
-
-count2 number;
-
-count3 number;
-
-salTotal number;
-
-begin
-
-open cdept;
-
-loop
-
-fetch cdept into pdeptno;
-
-exit when cdept%notfound;
-
-count1:=0;count2:=0;count3:=0;
-
-select sum(sal) into salTotal from emp where deptno=pdeptno;
-
-open cemp(pdeptno);
-
-loop
-
-fetch cemp into psal;
-
-exit when cemp%notfound;
-
-if psal <3000 then count1:=count1+1;
-
-elsif psal>=3000 and psal<6000 then count2:=count2+1;
-
-else count3:=count3+1;
-
-end if;
-
-end loop;
-
-close cemp;
-
-insert into msg values(pdeptno,count1,count2,count3,nvl(salTotal,0));
-
-end loop;
-
-close cdept;
-
-dbms_output.put_line('统计完成');
-
-commit;
-
-end;
-```
 
 参考：
 
->https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%7B%22nid%22%3A%22news_9863883009459455687%22%7D
+>[更多代码例子] https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%7B%22nid%22%3A%22news_9863883009459455687%22%7D
 
->https://www.bilibili.com/video/av24723987/?p=2&t=323
+>[极客学院的入门教学] https://www.bilibili.com/video/av24723987/?p=2&t=323
+
+>[PLSQL语法入门] https://www.cnblogs.com/liuxuelin/p/10004173.html

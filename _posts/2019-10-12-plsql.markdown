@@ -12,6 +12,9 @@ PL/SQL（procedure Language/SQL）是Oracle对sql语言的过程化扩展，对S
 PLSQL是sql的扩展，操作oracle数据库效率最高，一般通过PLSQL实现简单的处理业务，再通过程序接口调用;是学习存储过程，存储函数，触发器三大数据库对象的重要基础。
 
 
+
+### PL/SQL基础语法
+
 语法格式：
 
 ```
@@ -26,7 +29,6 @@ PLSQL是sql的扩展，操作oracle数据库效率最高，一般通过PLSQL实�
   END;
 
 ```
-### PL/SQL基础语法
 
 1、基本变量类型
 
@@ -235,7 +237,8 @@ END;
 
 参考：
 
->[更多代码例子] https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%7B%22nid%22%3A%22news_9863883009459455687%22%7D
+>[更多代码例子]
+https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%7B%22nid%22%3A%22news_9863883009459455687%22%7D
 
 >[极客学院的入门教学] https://www.bilibili.com/video/av24723987/?p=2&t=323
 

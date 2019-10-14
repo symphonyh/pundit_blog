@@ -120,6 +120,34 @@ spool off
     */
 ```
 ---
+
+1.9 Oracle instance 
+
+
+1.9.1 查看实例：
+
+`show parameter service_name;` 查看当前实例
+
+或
+
+`select name from v$database;`
+
+
+1.9.2 切换实例：
+
+sqlplus /@ORACLE_SID as sysdba; 其中ORACLE_SID为具体的实例名称，比如连接到orcl实例就执行命令：
+
+`sqlplus /@orcl as sysdba;`
+
+或
+
+`sqlplus /nolog;`
+
+`connect /@orcl as sysdba;`
+
+
+----
+
 参考：
 
 >https://blog.csdn.net/lovecuidong/article/details/87939386

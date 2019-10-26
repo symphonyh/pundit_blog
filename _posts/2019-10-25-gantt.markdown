@@ -1,0 +1,40 @@
+---
+layout: post
+title: Gantt chart
+date: 2019-10-25
+comments: true
+external-url:
+categories: yonyouNC 
+---
+
+Excel 条件格式 设置甘特图，公式终于弄明白了，记录下，效果如下图；
+
+空白 `=MOD(COLUMN(),2)=0`
+灰列 `=MOD(COLUMN(),2)`
+
+---
+
+计划 `=AND(NOT(ISBLANK($C11)),K$8>=$C11,K$8<=$D11)`
+
+实际 `=AND(NOT(ISBLANK($F11)),K$8>=$F11,K$8<=($F11+$H11-1))`
+
+超实际 `=AND(K$8>$F11,K$8<=$G11)`
+
+完成 `=AND($I11>0,K$8>=$F11,K$8<=($F11+INT(($G11-$F11)*$I11)))`
+
+超完成:
+这里是最难的部分，外层IF主要是解决实际跳开计划后，当完成度=0时，超实际部分的条件应该是K$8>$F11(日期>实际开始)，而不是后面的>=;
+
+
+```
+=IF($I11=0,AND(K$8>$F11,K$8<=($F11+INT(($G11-$F11)*$I11))),IF($F11-$D11<0,AND(K$8>$D11,K$8<=($F11+INT(($G11-$F11)*$I11))),AND(K$8>=$F11,K$8<=($F11+INT(($G11-$F11)*$I11)))))
+```
+
+---
+
+今天 `=K$8=TODAY()`
+
+周末 `=OR(WEEKDAY(K$8,3)=6,WEEKDAY(K$8,3)=5)`
+
+
+<img src="http://tva1.sinaimg.cn/large/007X8olVly1g8c152z7fpj310k0dugmo.jpg" alt="Het meisje met de parel" width="860px" height="400px" style="margin:0"> 

@@ -7,7 +7,15 @@ external-url:
 categories: yonyouNC 
 ---
 
-Excel 条件格式 设置甘特图，公式终于弄明白了，记录下，效果如下图；
+Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；
+
+`◆` 甘特图中的菱形块: 代表不需要时间的活动类似于 "获得批准";
+
+`▼  ▼` 横道图两端的倒实心三角: 代表自己是上级任务,下面直到出现▼之前横道图是自己的下级任务 ;
+
+ 连线代表是依存关系;
+
+ ---
 
 空白 `=MOD(COLUMN(),2)=0`
 灰列 `=MOD(COLUMN(),2)`
@@ -37,4 +45,4 @@ Excel 条件格式 设置甘特图，公式终于弄明白了，记录下，效�
 周末 `=OR(WEEKDAY(K$8,3)=6,WEEKDAY(K$8,3)=5)`
 
 
-<img src="http://tva1.sinaimg.cn/large/007X8olVly1g8c152z7fpj310k0dugmo.jpg" alt="Het meisje met de parel" width="860px" height="400px" style="margin:0"> 
+<img src="http://tva1.sinaimg.cn/large/007X8olVly1g8c152z7fpj310k0dugmo.jpg" alt="Het meisje met de parel" width="860px" height="305px" style="margin:0"> 

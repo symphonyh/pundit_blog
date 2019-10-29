@@ -45,4 +45,32 @@ Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；
 周末 `=OR(WEEKDAY(K$8,3)=6,WEEKDAY(K$8,3)=5)`
 
 
-<img src="http://tva1.sinaimg.cn/large/007X8olVly1g8c152z7fpj310k0dugmo.jpg" alt="Het meisje met de parel" width="860px" height="305px" style="margin:0"> 
+<br>
+
+
+
+做了两个不同版本，效果图1：
+
+<img src="/image/gantt1.png" alt="Het meisje met de parel" width="860px" height="315px" style="margin:0"> 
+
+
+
+
+>链接：https://pan.baidu.com/s/1dQN03C1HGfPj9Zs58XIzWw 
+提取码：yfl9 
+
+
+<br>
+
+---
+
+效果图2：
+
+<img src="/image/gantt2.png" alt="Het meisje met de parel" width="860px" height="315px" style="margin:0"> 
+
+
+
+
+
+>链接：https://pan.baidu.com/s/1x3xEzLICQfnkhCkw1PHDzA 
+提取码：b0pu 

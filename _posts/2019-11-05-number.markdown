@@ -1,0 +1,34 @@
+---
+layout: post
+title: WBS自动生成编号
+date: 2019-11-05
+comments: true
+external-url:
+categories: yonyouNC 
+---
+
+excel名称管理器中定义A列名称`prevWBS`,名称管理器中把A2单元引用为知改为`=Sheet1!$A1`；生成编号复制公式即可:
+
+1 2 3...
+
+```
+=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),TEXT(VALUE(prevWBS)+1,"#"),TEXT(VALUE(LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1))+1,"#")))
+```
+
+1.1 1.2 ...
+
+```
+=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),prevWBS&".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1)))&IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",1))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",2))-FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1)))+1)))
+```
+
+1.1.1  ...
+
+```
+=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),prevWBS&".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2)))&IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",2))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",3))-FIND("`",SUBSTITUTE(prevWBS,".","`",2))-1)))+1)))
+```
+
+1.1.1.1 ...
+
+```
+=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),prevWBS&".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3)))&IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",4))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",3))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",4))-FIND("`",SUBSTITUTE(prevWBS,".","`",3))-1)))+1)))
+```

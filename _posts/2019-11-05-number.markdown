@@ -7,7 +7,7 @@ external-url:
 categories: yonyouNC 
 ---
 
-excel名称管理器中定义A列名称`prevWBS`,名称管理器中把A2单元引用为知改为`=Sheet1!$A1`；生成编号复制公式即可:
+excel名称管理器中定义A列名称`prevWBS`,名称管理器中把A2单元引用改为`=Sheet1!$A1`；生成编号复制公式即可:
 
 1 2 3...
 
@@ -32,3 +32,8 @@ excel名称管理器中定义A列名称`prevWBS`,名称管理器中把A2单元�
 ```
 =IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),prevWBS&".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3)))&IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",4))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",3))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",4))-FIND("`",SUBSTITUTE(prevWBS,".","`",3))-1)))+1)))
 ```
+
+
+>自定义格式的学习帖子:
+
+http://club.excelhome.net/thread-1201604-1-1.html?jdfwkey=gjemq1

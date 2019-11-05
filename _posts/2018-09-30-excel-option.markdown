@@ -440,7 +440,15 @@ End Sub
 
 >文件保存格式为 .xlsm ;
 
->以上步骤完成之后，聚光灯效果已经实现了，但可能会出现无法将单个或多个单元格复制粘贴数据,解决办法就是将第VBA代码临时删除，然后保存，就可以复制粘贴单元格了。操作完复制粘贴数据行为后，恢复代码，聚光灯效果便可再次实现。
+>以上步骤完成之后，聚光灯效果已经实现了，但可能会出现无法将单个或多个单元格复制粘贴数据,解决办法就是:
+
+```
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+On Error Resume Next
+If Application.CutCopyMode = xlCopy Or Application.CutCopyMode = xlCut Then Exit Sub
+ActiveSheet.Calculate
+End Sub
+```
 
 
 纯VBA 实现方式：

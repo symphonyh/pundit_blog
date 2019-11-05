@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel VBA 
-date: 2018-10-08
+date: 2018-11-06
 comments: true
 external-url:
 categories: Office 
@@ -31,3 +31,12 @@ End Sub
 
 
 ---
+## Worksheet_SelectionChange 事件后无法使用复制粘贴问题
+
+```
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+On Error Resume Next
+If Application.CutCopyMode = xlCopy Or Application.CutCopyMode = xlCut Then Exit Sub
+ActiveSheet.Calculate
+End Sub
+```

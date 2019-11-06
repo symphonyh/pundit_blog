@@ -503,6 +503,29 @@ char(13) 回车
 
 ---
 
+## ※ 和区域名称配合动态引用位置
+
+
+`OFFSET(Lists!$C$1,1,0,MATCH(REPT("z",255),Lists!$C:$C),1)`
+
+`OFFSET(Lists!$C$1,1,0,MATCH(REPT("座",255),Lists!$C:$C),1)`
+
+函数的意思就移c1为参考，引用位置c1下移一行右移0列c2位置开始，到这一行的有文字单元格的结尾行c座；就是选中C2:c座的区域
+
+OFFSET(Lists!$C$1,1,0,MATCH(REPT("座",255),Lists!$C:$C),1)
+        
+参考系:Lists!$C$1  
+
+下移几个行 1
+右移几个行列 0
+
+MATCH返回C列最后一个有文字单元格行数
+
+选中1列即C列
+
+中文字符是要用“座”
+
+---
 
 <br>
 >参考：[Excel精英培训:最常用的30个Excel函数公式](https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&mid=2652913414&idx=1&sn=0f1ce55dff1142a2b986e54b681d48fc&chksm=bd5073b28a27faa4139587922a762b36456e28090dcbdb38950d9291301c45a104605717de4c&mpshare=1&scene=1&srcid=1001UaMS65oAt9nhYDfS22WS#rd)

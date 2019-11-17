@@ -46,7 +46,16 @@ Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；
 
 周末 `=OR(WEEKDAY(K$8,3)=6,WEEKDAY(K$8,3)=5)`
 
+---
 
+>思考：
+这是利用日期加步长计算的公式，如果计算结束日期改为开始日期+步长，这是模版里的用法，可以参考。
+
+`=AND($E9<=K$7,ROUNDDOWN(($F9-$E9+1)*$H9,0)+$E9-1>=K$7)`
+
+E 开始  F计算出的结束日期 H 完成率  K日历开始列
+
+--- 
 <br>
 
 
@@ -69,8 +78,22 @@ Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；
 <img src="/image/gantt2.png" alt="Het meisje met de parel" width="860px" height="315px" style="margin:0"> 
 
 
+---
+bilibili 专门做了视频详细的讲解和文件下载;
 
-下载链接：https://pan.baidu.com/s/1KSH632XVpERBKkgLkLtDLA 
-提取码：gz9e 
+<div class="cloud-tie-wrapper">
+<iframe width="800" 
+        height="480"
+        "//player.bilibili.com/player.html?aid=75927691&cid=129881202&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+
+---
+
+https://www.bilibili.com/video/av75927691/
+
+
+示例文档下载链接：https://pan.baidu.com/s/1gjyJxMcvUzXTo09C1vHOKQ 
+提取码：ncdd 
 
 

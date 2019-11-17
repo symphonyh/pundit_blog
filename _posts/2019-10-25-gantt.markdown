@@ -78,13 +78,12 @@ E 开始  F计算出的结束日期 H 完成率  K日历开始列
 <img src="/image/gantt2.png" alt="Het meisje met de parel" width="860px" height="315px" style="margin:0"> 
 
 
----
-bilibili 专门做了视频详细的讲解和文件下载;
+
 
 <div class="cloud-tie-wrapper">
 <iframe width="800" 
         height="480"
-        "//player.bilibili.com/player.html?aid=75927691&cid=129881202&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        src="//player.bilibili.com/player.html?aid=75927691&cid=129881202&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 

@@ -1,0 +1,34 @@
+I"�<ul>
+  <li>Update 更新到最新版本:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install npm@latest -g
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>替换npm淘宝镜像：</p>
+
+<ul>
+  <li>得到原本的镜像地址:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm get registry
+</code></pre></div></div>
+
+<blockquote>
+  <p>https://registry.npmjs.org/</p>
+</blockquote>
+
+<ul>
+  <li>设成淘宝的镜像地址:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set registry http://registry.npm.taobao.org/
+</code></pre></div></div>
+
+<ul>
+  <li>换成初始的镜像：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set registry https://registry.npmjs.org/
+</code></pre></div></div>
+:ET

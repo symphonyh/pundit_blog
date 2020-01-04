@@ -1,0 +1,322 @@
+I"\.<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。</p>
+
+<h2 id="标题">§ 标题</h2>
+
+<p>在<code class="highlighter-rouge">Markdown</code>当中设置标题，有两种方式：</p>
+
+<ul>
+  <li>
+    <p>通过在文字下方添加<code class="highlighter-rouge">=</code>和<code class="highlighter-rouge">-</code>，他们分别表示一级标题二级标题。</p>
+  </li>
+  <li>
+    <p>在文字开头加上 <code class="highlighter-rouge">#</code>，通过<code class="highlighter-rouge">#</code>数量表示几级标题。</p>
+  </li>
+</ul>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>共有1~6级标题，1级标题字体最大。
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="块注释blockquote">§ 块注释（blockquote）</h2>
+
+<p>通过在文字开头添加<code class="highlighter-rouge">&gt;</code>表示块注释。</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>当`&gt;`和文字之间添加五个空格时，块注释的文字会有变化。
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="无序列表">§ 无序列表</h2>
+
+<p>在文字开头添加(*, +, or -)实现无序列表。但是要注意在(*, +, and -)和文字之间需要添加空格。</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>建议：一个文档中只是用一种无序列表的表示方式
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="有序列表">§ 有序列表</h2>
+
+<p>使用数字后面跟上句号。<strong>记得还要有空格</strong></p>
+
+<h2 id="链接-links">§ 链接 (Links)</h2>
+
+<p>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。</p>
+
+<ul>
+  <li>
+    <p>内联方式：<code class="highlighter-rouge">This is an [example link](http://example.com/).</code></p>
+  </li>
+  <li>
+    <p>引用方式：</p>
+  </li>
+</ul>
+
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  
+
+   [1]: http://google.com/        "Google" 
+   [2]: http://search.yahoo.com/  "Yahoo Search" 
+   [3]: http://search.msn.com/    "MSN Search"
+</code></pre></div></div>
+
+<ul>
+  <li>链接跳转:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://cloudhan.me"  target="_blank"&gt;跳到自己博客列表&lt;/a&gt;
+
+跳到自己博客列表：&lt;a href="https://cloudhan.me" target="_blank"&gt;cloudhan&lt;/a&gt;
+</code></pre></div></div>
+
+<h2 id="-图片images">§  图片(Images)</h2>
+
+<p>图片的处理方式和链接的处理方式，非常的类似。</p>
+
+<ul>
+  <li>
+    <p>内联方式：<code class="highlighter-rouge">![alt text](/path/to/img.jpg "Title")</code></p>
+  </li>
+  <li>
+    <p>引用方式：</p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![alt text][id]
+
+[id]: /path/to/img.jpg "Title"
+
+</code></pre></div></div>
+<ul>
+  <li>html的处理方式：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/bella.jpg" alt="Het meisje met de parel" width="400px" height="200px" style="margin:0"&gt; 
+
+&lt;div align=center&gt;&lt;img width = '150' height ='150' src ="https://tse2-mm.cn.bing.net/th?id=OIP.rF3VYN1CRvtyWBPU0I7kyQDMEy&amp;p=0&amp;pid=1.1"/&gt;&lt;/div&gt;
+</code></pre></div></div>
+
+<h2 id="代码块codepre">§ 代码块（code/pre）</h2>
+
+<p>实现方式有两种：</p>
+<ul>
+  <li>简单文字出现一个代码框(code)。使用<code class="highlighter-rouge">&lt;blockquote&gt;</code>。
+    <blockquote>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 不是单引号而是左上角的ESC下面~中的"`"）
+</code></pre></div>      </div>
+    </blockquote>
+  </li>
+  <li>大片文字需要实现代码框(pre)，使用Tab和四个空格，或者<code class="highlighter-rouge">~~~</code>包围代码。</li>
+</ul>
+
+<h2 id="脚注footnote">§ 脚注(footnote)</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello[^1]
+...
+
+[^1]: 这是一个注解。
+
+</code></pre></div></div>
+
+<h2 id="下划线">§ 下划线</h2>
+
+<p>在<strong>空白行</strong>下方添加<code class="highlighter-rouge">---</code>横线。</p>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 前面讲过在文字下方添加“-”，实现的2级标题
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="注释">§ 注释</h2>
+
+<p>HTML 以 <code class="highlighter-rouge">&lt;!-- , --&gt; </code>的闭包定义注释（支持跨行），不在正文中显示。Markdown 沿用 HTML Comment 注释格式：</p>
+
+<p><code class="highlighter-rouge">&lt;!-- This text will not appear in the browser window. --&gt; </code></p>
+
+<h2 id="关于字体">§ 关于字体</h2>
+
+<p><em>斜体</em>:将需要设置为斜体的文字两端使用1个<code class="highlighter-rouge">*</code>或者<code class="highlighter-rouge">_</code>夹起来</p>
+
+<p><strong>粗体</strong>:将需要设置为斜体的文字两端使用2个<code class="highlighter-rouge">*</code>或者<code class="highlighter-rouge">_</code>夹起来</p>
+
+<ul>
+  <li>字体颜色：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>浅红色文字：&lt;font color="#dd0000"&gt;浅红色文字：&lt;/font&gt;&lt;br /&gt; 
+
+深红色文字：&lt;font color="#bd4147"&gt;深红色文字&lt;/font&gt;&lt;br /&gt; 
+
+</code></pre></div></div>
+
+<p>文字颜色：<font color="#bd4147">当前文本文字</font></p>
+
+<ul>
+  <li>字体大小：
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>size为1：&lt;font size="1"&gt;size为1&lt;/font&gt;&lt;br /&gt; 
+size为2：&lt;font size="2"&gt;size为2&lt;/font&gt;&lt;br /&gt; 
+size为3：&lt;font size="3"&gt;size为3&lt;/font&gt;&lt;br /&gt; 
+</code></pre></div>    </div>
+    <p>size为1：<font size="1">size为1</font><br />
+size为2：<font size="2">size为2</font><br /> 
+size为3：<font size="3">size为3</font><br /></p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>字体大小为1-7,7号最大，3号为浏览器默认大小。</p>
+</blockquote>
+
+<ul>
+  <li>字体背景颜色：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#FF00FF"&gt;背景色的设置是按照十六进制颜色值：#7FFFD4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#FF83FA"&gt;背景色的设置是按照十六进制颜色值：#FF83FA&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#D1EEEE"&gt;背景色的设置是按照十六进制颜色值：#D1EEEE&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#C0FF3E"&gt;背景色的设置是按照十六进制颜色值：#C0FF3E&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</code></pre></div></div>
+
+<table>
+  <tr>
+    <td bgcolor="#C0FF3E">
+背景色的设置是按照十六进制颜色值：#C0FF3E
+    </td>
+  </tr>
+</table>
+
+<blockquote>
+  <p>测试了下，除了表格可以用，其他标签不起作用，不建议使用这个属性。</p>
+</blockquote>
+
+<ul>
+  <li>文字居中：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;center&gt;Hello&lt;/center&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>文字左对齐：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p align="left"&gt;Hello&lt;/p&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>使用常用字体：</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;font face="黑体"&gt;我是黑体字&lt;/font&gt;
+&lt;font face="微软雅黑"&gt;我是微软雅黑&lt;/font&gt;
+&lt;font face="STCAIYUN"&gt;我是华文彩云&lt;/font&gt;
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="表格">§ 表格</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| 左对齐标题 | 右对齐标题 | 居中对齐标题 |
+| :------| ------: | :------: |
+| 短文本 | 中等文本 | 稍微长一点的文本 |
+| 稍微长一点的文本 | 短文本 | 中等文本 |
+</code></pre></div></div>
+
+<blockquote>
+  <p>注：对齐方式书写要求是<code class="highlighter-rouge">:</code>要和<code class="highlighter-rouge">-</code>相邻，与<code class="highlighter-rouge">|</code> 之间有空格。</p>
+</blockquote>
+
+<p>页面效果：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">左对齐标题</th>
+      <th style="text-align: right">右对齐标题</th>
+      <th style="text-align: center">居中对齐标题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">短文本</td>
+      <td style="text-align: right">中等文本</td>
+      <td style="text-align: center">稍微长一点的文本</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">稍微长一点的文本</td>
+      <td style="text-align: right">短文本</td>
+      <td style="text-align: center">中等文本</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="插入音频">§ 插入音频</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;audio id="audio" controls="" preload="none"&gt;
+  &lt;source id="mp3" src="http://music.163.com/song/media/outer/url?id=562598065.mp3"&gt;
+&lt;/audio&gt;
+</code></pre></div></div>
+
+<hr />
+
+<audio id="audio" controls="" preload="none">
+  <source id="mp3" src="http://music.163.com/song/media/outer/url?id=562598065.mp3" />
+</audio>
+
+<h2 id="插入视频">§ 插入视频</h2>
+
+<!--- 第一种方式：-->
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe 
+    width="800" 
+    height="450" 
+    src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__"
+    frameborder="0" 
+    allowfullscreen&gt;
+&lt;/iframe&gt;
+</code></pre></div></div>
+
+<iframe width="800" height="450" src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__" frameborder="0" allowfullscreen="">
+</iframe>
+
+<hr />
+
+<!--
+- 第二种方式，自动播放：
+
+~~~
+<iframe width="560" height="315" src="http://tv.sohu.com/upload/static/share/share_play.html#90268916_9365222_0_9001_0" frameborder="0" allowfullscreen></iframe>
+~~~
+
+---
+- 第三种方式：
+
+~~~
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      </video>
+~~~
+
+
+<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+      <source id="mp4" src="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.mp4" type="video/mp4">
+      </video>
+
+---
+-->
+
+<p><br /></p>
+
+<h3 id="参考"><a>参考</a><br /></h3>
+
+<blockquote>
+  <p>1、<a href="http://wowubuntu.com/markdown/">Markdown 语法说明</a>；
+2、<a href="http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml">本文转自互联网360doc</a>;
+3、<a href="https://www.jianshu.com/p/2df05f279331">Markdown插入表格语法</a></p>
+</blockquote>
+
+:ET

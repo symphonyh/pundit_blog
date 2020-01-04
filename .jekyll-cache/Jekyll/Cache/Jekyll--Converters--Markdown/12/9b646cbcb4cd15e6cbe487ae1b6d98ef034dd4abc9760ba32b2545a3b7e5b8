@@ -1,0 +1,131 @@
+I"�<p>SQL In Excel</p>
+
+<h2 id="excel-中正确使用sql的姿势">Excel 中正确使用SQL的姿势</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub DoSql_Execute1()
+    Dim cnn As Object, rst As Object
+    Dim Mypath As String, Str_cnn As String, Sql As String
+    Dim i As Long
+
+    Set cnn = CreateObject("adodb.connection")
+    '以上是第一步，后期绑定ADO
+
+    Mypath = ThisWorkbook.FullName
+
+    If Application.Version &lt; 12 Then
+        Str_cnn = "Provider=Microsoft.jet.OLEDB.4.0;Extended Properties=Excel 8.0;Data Source=" &amp; Mypath
+    Else
+        Str_cnn = "Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=Excel 12.0;Data Source=" &amp; Mypath
+    End If
+
+    cnn.Open Str_cnn
+    '以上是第二步，建立链接
+
+
+    Sql = "SELECT 姓名,成绩 FROM [Sheet1$] WHERE 成绩&gt;=80"
+    'Sql语句，查询Sheet1表成绩大于80……姓名和成绩的记录
+
+    Set rst = cnn.Execute(Sql)
+    'cnn.Execute()执行SQL语句，始终得到一个新的记录集rst
+    '以上是第三步，编写并使用SQL语句
+
+
+    [d:e].ClearContents
+    '清空[d:e]区域的值
+
+    For i = 0 To rst.Fields.Count - 1
+    '利用fields属性获取所有字段名，fields包含了当前记录有关的所有字段,fields.count得到字段的数量
+    '由于Fields.Count下标为0，又从0开始遍历，因此总数-1
+
+        Cells(1, i + 4) = rst.Fields(i).Name
+    Next
+
+    Range("d2").CopyFromRecordset rst
+    '使用单元格对象的CopyFromRecordset方法将rst内容复制到D2单元格为左上角的单元格区域
+    '以上是第四步，将SQL查询结果和字段名写入表格指定区域
+
+    cnn.Close
+    '关闭链接
+
+    Set cnn = Nothing
+    '释放内存
+
+End Sub
+
+</code></pre></div></div>
+
+<p><a href="链接：https://pan.baidu.com/s/1Zm4di93kNKhOs8HsLNk1Vg">示例文件下载地址</a>
+提取码：15qz</p>
+
+<hr />
+
+<h2 id="ado常用连接字符串">ADO常用连接字符串</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❈　 Access数据库
+
+没有密码保护的Access数据库
+
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=带路径的Access数据库名称;
+
+有密码保护的Access数据库
+
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=带路径的Access数据库完整名称;JetOLEDB:Database Password=密码;
+
+❈　 Text文件
+
+Provider=Microsoft.ACE.OLEDB.12.0; Data Source=文本文件路径&amp;'\';Extended Properties=’text;HDR=Yes;FMT=Delimied’;
+
+❈　 SQL Server数据库
+
+Provider =SQLOLEDB;Password=密码;User ID= 用户名; Data Source =SQL数据库服务器名称;Initial Catalog=数据库名称;
+
+❈　 Oracle 数据库
+
+Provider =madaora; PassWord=密码; User ID=用户名; Data Source =Oracle数据库服务器名称;
+
+❈　 FoxPro数据库
+
+Provide=Microsoft.ACE.OLEDB.12.0;User ID=用户名;Data Source=dbf文件路径;Extended Properties=dBASEIV;
+
+❈　 Excel工作簿
+
+03版本Excel
+
+Provider=Microsoft.jet.OLEDB.4.0;Extended Properties=’Excel 8.0;HDR=yes;IMEX=0’;Data Source=带路径的Excel工作簿完整名称
+
+07~16版本Excel
+
+Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=’Excel 12.0; HDR=yes;IMEX=0’;Data Source=带路径的Excel工作簿完整名称
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="测试链接是否成功">测试链接是否成功</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub test()
+    Dim cnn As Object
+    Set cnn = CreateObject("adodb.connection")
+    cnn.Open "provider=microsoft.ace.oledb.12.0;extended properties=excel 12.0;data source=" &amp; ThisWorkbook.FullName
+    If cnn.State = 1 Then
+        MsgBox "连接成功!" &amp; vbCrLf &amp; "ADO版本为：" &amp; cnn.Version &amp; vbCrLf &amp; "Connection对象提供者名称：" &amp; cnn.provider
+        cnn.Close
+        Set cnn = Nothing
+    Else
+        MsgBox "数据库连接失败"
+    End If
+End Sub
+
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>State属性返回Connection对象的状态；0是AdStateClosed，表示对象是关闭的；1是AdStateOpen，表示对象是打开的；2是AdStateConnecting，表示对象正在连接等。</p>
+</blockquote>
+
+<p>Version属性只读，返回Connection对象的版本号；Provider是Connection对象连接数据库提供程序者的名称，当Connection对象关闭时，该属性可读写；否则为只读。</p>
+
+<hr />
+
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzUzODI3ODk1Mw==&amp;mid=100000003&amp;idx=2&amp;sn=1bce514549a940fd0c68a5deecd99180&amp;chksm=7adb6c454dace553434f269529da28870d0047c3f890670dd97d0ebf1bc90cb5351cedd26799&amp;mpshare=1&amp;scene=1&amp;srcid=1012La8yRMpc60NXGwIuMr4f#rd">代码来自Excel VBA+ADO+SQL入门教程</a></p>
+:ET

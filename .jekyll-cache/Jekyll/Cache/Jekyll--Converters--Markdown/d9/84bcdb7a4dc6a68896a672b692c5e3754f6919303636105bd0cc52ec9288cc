@@ -1,0 +1,84 @@
+I"�<p>excel名称管理器中定义A列名称<code class="highlighter-rouge">prevWBS</code>,名称管理器中把A2单元引用改为<code class="highlighter-rouge">=Sheet1!$A1</code>；生成编号复制公式即可:</p>
+
+<p>1 2 3…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),TEXT(VALUE(prevWBS)+1,"#"),TEXT(VALUE(LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1))+1,"#")))
+</code></pre></div></div>
+
+<p>1.1 …</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",1))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",2))-FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1)))+1)))
+</code></pre></div></div>
+
+<p>1.1.1  …</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",2))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",3))-FIND("`",SUBSTITUTE(prevWBS,".","`",2))-1)))+1)))
+</code></pre></div></div>
+
+<p>1.1.1.1 …</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",4))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",3))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",4))-FIND("`",SUBSTITUTE(prevWBS,".","`",3))-1)))+1)))
+</code></pre></div></div>
+
+<hr />
+
+<p><br /></p>
+
+<p>这是另一个自动生成编号的公式，前一列写入编号级次，公式这一列可以生成正式的任务编号,级次可以无限；</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">级别</th>
+      <th style="text-align: center">生成编号</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">1.1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">1.1.1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">1.1.1.1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">2.1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(A2="","",IF(A2&gt;OFFSET(A2,-1,0,1,1),IF(OFFSET(B2,-1,0,1,1)="","1",OFFSET(B2,-1,0,1,1))&amp;REPT(".1",A2-MAX(OFFSET(A2,-1,0,1,1),1)),IF(ISERROR(FIND(".",OFFSET(B2,-1,0,1,1))),REPT("1.",A2-1)&amp;IFERROR(VALUE(OFFSET(B2,-1,0,1,1))+1,"1"),IF(A2=1,"",IFERROR(LEFT(OFFSET(B2,-1,0,1,1),FIND("^",SUBSTITUTE(OFFSET(B2,-1,0,1,1),".","^",A2-1))),""))&amp;VALUE(TRIM(MID(SUBSTITUTE(OFFSET(B2,-1,0,1,1),".",REPT(" ",LEN(OFFSET(B2,-1,0,1,1)))),(A2-1)*LEN(OFFSET(B2,-1,0,1,1))+1,LEN(OFFSET(B2,-1,0,1,1)))))+1)))
+</code></pre></div></div>
+
+<blockquote>
+  <p>自定义格式的学习帖子:</p>
+</blockquote>
+
+<p>http://club.excelhome.net/thread-1201604-1-1.html?jdfwkey=gjemq1</p>
+:ET

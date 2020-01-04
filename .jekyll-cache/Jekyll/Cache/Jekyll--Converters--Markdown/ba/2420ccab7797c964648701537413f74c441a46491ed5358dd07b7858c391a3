@@ -1,0 +1,282 @@
+I"�/<p>haml 是一种简洁优美的模板语言，主要智能用来替代基于<code class="highlighter-rouge">ruby</code>框架的模版系统，例如：替换<code class="highlighter-rouge">Ruby on Rails</code>的<code class="highlighter-rouge">erb</code>模版，可以大大缩减模板代码，减少冗余，提高可读性。并且Haml是一种完备的模板语言，没有牺牲当前模板语言的任何特性。Haml由<code class="highlighter-rouge">Hampton Catlin</code>发明并且开发了<code class="highlighter-rouge">Ruby on Rails</code>上的实现。</p>
+
+<h3 id="一概述">一、概述</h3>
+
+<p>1.常见语法规则</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right"> </th>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">序号</td>
+      <td style="text-align: left">haml</td>
+      <td style="text-align: left">html</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: right">1.</td>
+      <td style="text-align: left">!!!5</td>
+      <td style="text-align: left">&lt;!DOCTYPE html&gt;</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">2.</td>
+      <td style="text-align: left">%tag</td>
+      <td style="text-align: left">代表HTML标签</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">3.</td>
+      <td style="text-align: left">%tag#id</td>
+      <td style="text-align: left">代表id属性</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">4.</td>
+      <td style="text-align: left">%tag.class</td>
+      <td style="text-align: left">代表class属性</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">5.</td>
+      <td style="text-align: left">%tag(attr=”xxx”)</td>
+      <td style="text-align: left">代表某一个特定属性</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">6.</td>
+      <td style="text-align: left">%tag xxx</td>
+      <td style="text-align: left">代表插入标签的内容</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">7.</td>
+      <td style="text-align: left">%E %N</td>
+      <td style="text-align: left">代表N是E的子元素。N如果写在第二行，需要缩进<strong>‘二格’</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: right">8.</td>
+      <td style="text-align: left">|</td>
+      <td style="text-align: left">haml标签，多行连接符</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">9.</td>
+      <td style="text-align: left">-#</td>
+      <td style="text-align: left">haml注释</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">10.</td>
+      <td style="text-align: left">/</td>
+      <td style="text-align: left">haml标签，前面加单行或多行注释，后面加关闭标签</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> `tag`,`E`可以替换为html标签 `&lt;p&gt;,&lt;a&gt;,&lt;ul&gt;,&lt;li&gt;,&lt;stong&gt;,&lt;title&gt;...`
+</code></pre></div>  </div>
+</blockquote>
+
+<p>　
+2.haml 范例</p>
+
+<div class="language-haml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">!!! 5
+</span>　　%html{lang: 'en'}
+　　　　%head
+　　　　　　%title Haml Demo
+　　　　%body
+　　　　　　%h1 Hello World
+　　　　　　%a(href="http://wikipedia.org" title="Wikipedia") 维基百科
+</code></pre></div></div>
+<p>to HTML：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>　　<span class="cp">&lt;!DOCTYPE html&gt;</span>
+　　<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">'en'</span><span class="nt">&gt;</span>
+　　　　<span class="nt">&lt;head&gt;</span>
+　　　　　　<span class="nt">&lt;title&gt;</span>Haml Demo<span class="nt">&lt;/title&gt;</span>
+　　　　<span class="nt">&lt;/head&gt;</span>
+　　　　<span class="nt">&lt;body&gt;</span>
+　　　　　　<span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+　　　　　　<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'http://wikipedia.org'</span> <span class="na">title=</span><span class="s">'Wikipedia'</span><span class="nt">&gt;</span>维基百科<span class="nt">&lt;/a&gt;</span>
+　　　　<span class="nt">&lt;/body&gt;</span>
+　　<span class="nt">&lt;/html&gt;</span>
+　　
+</code></pre></div></div>
+<h3 id="二语法-on-rails">二、语法 (on rails)</h3>
+<p>1.<strong>%</strong> 百分号符号是一行的开始，紧接着一个元素的名字，它会创建一个这样的形式：<strong><element></element></strong>,  默认的元素是<strong>div</strong>;</p>
+
+<p><code class="highlighter-rouge">%strong test </code>   to HTML：<code class="highlighter-rouge">&lt;strong&gt;test&lt;/strong&gt;</code></p>
+
+<p><code class="highlighter-rouge">strong= item.title</code>    to ERB：<code class="highlighter-rouge">&lt;strong&gt;&lt;%= item.title %&gt;&lt;/strong&gt;</code>
+<br /></p>
+
+<p>2.<strong>#</strong> 代替 <strong>id</strong></p>
+
+<p><code class="highlighter-rouge">#id= item.title</code>         to ERB:    <code class="highlighter-rouge">&lt;div id="id"&gt;&lt;%= item.title %&gt;&lt;/div&gt;</code><br />
+<br /></p>
+
+<p>3.<strong>”.”</strong> 代替 <strong>class</strong></p>
+
+<p><code class="highlighter-rouge">%strong.code#message Hello, World!</code>  to ERB:</p>
+
+<p><code class="highlighter-rouge">&lt;strong&gt;&lt;class=code id="message"&gt;Hello, World!&lt;strong&gt;</code></p>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 3,4,5标题中"" 是为了方便读者看清，语句实际使用中并不需要;
+</code></pre></div>  </div>
+</blockquote>
+
+<p><br />
+4.<strong>”=”</strong> 代替 <strong>&lt;%= %&gt;</strong> 相当于插入ruby代码,并输出结果;</p>
+
+<p><code class="highlighter-rouge">.my-class= item.title</code>     to ERB: <code class="highlighter-rouge">&lt;div class="my-class"&gt;&lt;%= item.title %&gt;&lt;/div&gt;</code>
+<br /></p>
+
+<p><code class="highlighter-rouge">%p= Time.now</code> to HTML:<code class="highlighter-rouge">&lt;p&gt;Sat Aug 06 15:06:09 +0100 2011&lt;/p&gt;</code>
+<br /></p>
+
+<p>5.<strong>”-“</strong> 代替 <strong>&lt;%  %&gt;</strong>相当于执行ruby代码,但不输出结果;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - if @opportunities.any?
+    = render @opportunities
+  - else
+    = render "shared/empty"
+</code></pre></div></div>
+<p>to ERB:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%if @opportunities.any? %&gt;
+  &lt;%= render @opportunities %&gt;
+&lt;%else%&gt;
+  &lt;%= render "shared/empty" %&gt;
+&lt;%end%&gt;
+</code></pre></div></div>
+<p><br />
+6.<strong>#{}</strong> 表示插入ruby代码,并计算结果;</p>
+
+<p><code class="highlighter-rouge">%script(type="text/javascript" src="javascripts/script_#{2 + 7}")</code> to HTML:</p>
+
+<p><code class="highlighter-rouge">&lt;script type="text/javascript" src="javascripts/script_9"&gt;&lt;/script&gt;</code></p>
+
+<blockquote>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>常见的a标签和span标签:
+</code></pre></div>  </div>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%a(title=@title){:href =&gt; @link.href} Stuff
+
+%span(class="widget_#{@widget.number}")
+</code></pre></div></div>
+<p><br />
+7.<strong>{}</strong> 添加的ruby hash 属性或 html 复杂代码,hash属性和值之间用 <strong>{:属性1=&gt; 值1,:属性2=&gt; 值2 }</strong>表示;</p>
+
+<p><code class="highlighter-rouge">%strong{:class=&gt;"code",:id=&gt;"message"} Hello, World!</code> to ERB:</p>
+
+<p><code class="highlighter-rouge">&lt;strong&gt;&lt;class="code" id="message"&gt;Hello, World!&lt;strong&gt;</code></p>
+
+<p><br />
+8.<strong>img</strong>标签hash</p>
+
+<p><code class="highlighter-rouge">%img{ :src =&gt; "/path/to/image", :alt =&gt; "Description of image" }</code> or</p>
+
+<p><code class="highlighter-rouge">%img ( src="/path/to/image", alt="Description of image")</code></p>
+
+<p>to HTML：</p>
+
+<p><code class="highlighter-rouge">&lt;img src="/path/to/image" alt="Description of image"&gt;</code></p>
+
+<p><br />
+9.HTML5 DOCTYPE</p>
+
+<p><code class="highlighter-rouge">!!!5</code>  to HTML: <code class="highlighter-rouge"><span class="cp">&lt;!DOCTYPE html&gt;</span></code></p>
+
+<p><code class="highlighter-rouge">%meta{ :charset =&gt; "utf-8" }</code> to HTML:<code class="highlighter-rouge">&lt;meta charset="utf-8"&gt; </code></p>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">%link{ :rel =&gt; "stylesheet", :href =&gt; "/css/master.css" }</code> to HTML:</p>
+
+<p><code class="highlighter-rouge">&lt;link rel="stylesheet" href="/css/master.css"&gt;</code></p>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">%script{ :src =&gt; "/js/site.js" }</code> to HTML:</p>
+
+<p><code class="highlighter-rouge">&lt;script src="/js/site.js"&gt;&lt;/script&gt;</code>
+<br />
+10.注释语句</p>
+
+<ul>
+  <li><strong>/</strong> 表示注释,分为行注释和块注释;</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/ A forward slash at the start of a line wraps that line in a comment  
+%blockquote  
+  %p Roads? Where we're going we don't need roads
+  
+/  
+  A forward slash at the start of a nested block wraps the whole block in a comment  
+  %blockquote  
+    %p Roads? Where we're going we don't need roads
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Only this line will be wrapped in a comment --&gt;</span> 
+<span class="nt">&lt;blockquote&gt;</span> 
+  <span class="nt">&lt;p&gt;</span>Roads? Where we're going we don't need roads<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;/blockquote&gt;</span> 
+
+<span class="c">&lt;!-- 
+  Now the whole block will be commented out 
+  &lt;blockquote&gt; 
+    &lt;p&gt;Roads? Where we're going we don't need roads&lt;/p&gt; 
+  &lt;/blockquote&gt; 
+--&gt;</span>
+</code></pre></div></div>
+<p><br /></p>
+<ul>
+  <li><strong>/[ ]</strong>表示条件注释;</li>
+</ul>
+
+<p><code class="highlighter-rouge">/[if IE] %link { :rel =&gt; "stylesheet", :href =&gt; "/css/ie.css" }</code> to HTML:</p>
+
+<p><code class="highlighter-rouge">&lt;!--[if IE]&gt; &lt;link href="/css/ie.css" rel="stylesheet"&gt; &lt;![endif]--&gt;</code>
+<br /></p>
+<ul>
+  <li><strong>-#</strong>表示haml自带注释;</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%p The line below won't appear in the HTML 
+-# The rest of this line is a comment 
+%p The line above won't appear in the HTML, nor will the lines underneath 
+-# 
+  None of this nested text will appear 
+  in our rendered output either
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>The line below won't appear in the HTML<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;p&gt;</span>The line above won't appear in the HTML, nor will the lines underneath<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h3 id="三安装-installing-haml">三、安装 Installing Haml</h3>
+
+<p><code class="highlighter-rouge">gem install haml</code> or</p>
+
+<p>Gemfile中添加:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  gem 'haml'
+  gem "haml-rails"
+</code></pre></div></div>
+
+<p>安装后可以运行halm使用命令行：</p>
+
+<p><code class="highlighter-rouge">haml input.html.haml output.html</code></p>
+
+<hr style="margin: 60px" />
+
+<h3 id="参考">参考</h3>
+
+<blockquote>
+  <p>1、<a href="http://www.ruanyifeng.com/blog/2013/06/emmet_and_haml.html">HTML代码简写法：Emmet和Haml</a>；
+ 2、<a href="https://www.sitepoint.com/an-introduction-to-haml/">An Introduction to Haml</a></p>
+</blockquote>
+
+:ET

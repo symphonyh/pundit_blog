@@ -1,0 +1,91 @@
+I"?<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">快捷键</th>
+      <th style="text-align: left">含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">tab</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl + `</td>
+      <td style="text-align: left">任务栏呼出和收起</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Tab</td>
+      <td style="text-align: left">自动路径补全</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl+T</td>
+      <td style="text-align: left">建立新页签</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl+W</td>
+      <td style="text-align: left">关闭页签</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl+Tab</td>
+      <td style="text-align: left">切换页签</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Alt+F4</td>
+      <td style="text-align: left">关闭所有页签</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Alt+Shift+1</td>
+      <td style="text-align: left">开启cmd.exe</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Alt+Shift+2</td>
+      <td style="text-align: left">开启powershell.exe</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Alt+Shift+3</td>
+      <td style="text-align: left">开启powershell.exe (系统管理员权限)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl+1</td>
+      <td style="text-align: left">快速切换到第1个页签</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl+n</td>
+      <td style="text-align: left">快速切换到第n个页签( n值无上限)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Alt + enter</td>
+      <td style="text-align: left">切换到全屏状态</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Win+Alt+P</td>
+      <td style="text-align: left">开启工具选项视窗</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">shell</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctr+r</td>
+      <td style="text-align: left">历史命令搜索</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ctrl + Alt + u</td>
+      <td style="text-align: left">返回上一级目录</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Shift + mouse</td>
+      <td style="text-align: left">选择复制文本，按住shift单机鼠标，双击全选</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Right click / Ctrl + Shift + v</td>
+      <td style="text-align: left">粘贴文本</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">End, Home, Ctrl</td>
+      <td style="text-align: left">移动光标</td>
+    </tr>
+  </tbody>
+</table>
+:ET

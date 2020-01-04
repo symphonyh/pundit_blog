@@ -1,0 +1,193 @@
+I"Z<p>Everything CommonTools</p>
+
+<p>语法：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">符号</th>
+      <th style="text-align: left">解释</th>
+      <th style="text-align: left">举例</th>
+      <th style="text-align: left">解释</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">空格</td>
+      <td style="text-align: left">与</td>
+      <td style="text-align: left">li chao</td>
+      <td style="text-align: left">文件(夹)名中既含li又含chao</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">| </code></td>
+      <td style="text-align: left">或</td>
+      <td style="text-align: left">1.txt<code class="highlighter-rouge">|</code>2.txt</td>
+      <td style="text-align: left">文件名含1或2的txt文件</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">！</code></td>
+      <td style="text-align: left">非</td>
+      <td style="text-align: left">*.txt !b</td>
+      <td style="text-align: left">文件名不含b的txt文件</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">&lt; &gt;</code></td>
+      <td style="text-align: left">提高优先级,类似于数学的()</td>
+      <td style="text-align: left">file:&lt;1 <code class="highlighter-rouge">|</code> 2 &gt;</td>
+      <td style="text-align: left">文件名含1或2的文件(夹)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">""</code></td>
+      <td style="text-align: left">特殊字符串</td>
+      <td style="text-align: left">“foo bar”</td>
+      <td style="text-align: left">如果没有引号会认为是逻辑与</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p>通配符：</p>
+
+<p><code class="highlighter-rouge">* </code>匹配0-∞个任意字符</p>
+
+<p>例如：a*.txt 匹配形如”ab.txt” “abbb.txt”</p>
+
+<p><code class="highlighter-rouge">?</code> 匹配1个任意字符</p>
+
+<p>例如：a??.txt 匹配形如”abc.txt” “aaa.txt”</p>
+
+<hr />
+
+<p>修饰符：</p>
+
+<p><code class="highlighter-rouge">case:</code> 匹配大小写</p>
+
+<p><code class="highlighter-rouge">file:</code>只匹配文件</p>
+
+<p><code class="highlighter-rouge">folder:</code>只匹配文件夹</p>
+
+<p><code class="highlighter-rouge">path:</code>匹配路径和文件名</p>
+
+<p><code class="highlighter-rouge">regex:</code>正则表达式</p>
+
+<p><code class="highlighter-rouge">ww: wholeword:</code>全字匹配</p>
+
+<hr />
+
+<p>函数：</p>
+
+<p><code class="highlighter-rouge">dc:&lt;date&gt;</code> 搜索特定创建日期的目标</p>
+
+<p>例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> *.txt dc:lastyear 去年创建的txt文件
+ *.txt dc:2010-2012
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">dm:&lt;date&gt;</code>搜索特定修改日期的目标</p>
+
+<p><code class="highlighter-rouge">dupe:</code> 搜索重复目标</p>
+
+<p>例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dupe:text
+ dupe:!text
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">empty:</code> 搜索空文件夹</p>
+
+<p><code class="highlighter-rouge">ext:&lt;list&gt;</code> 搜索指定后缀的目标 用分号分隔</p>
+
+<p>例如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> file:&lt;ext:bmp;txt&gt; bmp和txt文件
+</code></pre></div></div>
+
+<blockquote>
+  <p>函数允许使用 <code class="highlighter-rouge">= &lt; &gt; !</code>逻辑符号</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+
+<p>正则表达式：</p>
+
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>找到所有c:\windows目录及其下任意子目录的txt文件</td>
+<td>c:\windows*.txt</td>
+</tr>
+<tr>
+<td>找出所有bmp和jpg文件</td>
+<td>*.bmp | *.jpg</td>
+</tr>
+<tr>
+<td>找出所有名为download文件夹下的所有avi文件</td>
+<td>download\ .avi</td>
+</tr>
+<tr>
+<td>找出所有名字中含.tx的文件夹</td>
+<td>folder:.tx</td>
+</tr>
+<tr>
+<td>搜索空txt文件</td>
+<td>*.txt file:size:0</td>
+</tr>
+<tr>
+<td>搜索所有大于1MB的常见图像文件</td>
+<td>&lt;<em>.bmp|</em>.jpg|<em>.png|</em>.tga&gt; size:&gt;1mb</td>
+</tr>
+<tr>
+<td>找到所有c:\windows目录下的txt文件</td>
+<td>regex:c:\windows\[^]*.txt</td>
+</tr>
+<tr>
+<td>列出所有c:\windows的N级子目录</td>
+<td>regex:c:\windows\[<sup>]*(\[</sup>]*){N}$</td>
+</tr>
+<tr>
+<td>列出所有c:\windows的N级子目录下的txt文件</td>
+<td>regex:c:\windows\[<sup>]*(\[</sup>]*){N}.txt$</td>
+</tr>
+<tr>
+<td>查找所有全字匹配1.txt的文件</td>
+<td>ww:1.txt</td>
+</tr>
+<tr>
+<td>查找wi开头的h文件和cpp文件</td>
+<td>file:&lt;wi<em>.h|wi</em>.cpp&gt; or wi* &lt;ext:h|cpp&gt;</td>
+</tr>
+<tr>
+<td>XXX第N集.rmvb”，XXX是电视剧名，N是数字</td>
+<td>regex:.*第[0-9]+集</td>
+</tr>
+<tr>
+<td>连续的RAR压缩包 XXXX.partN.rar，XXXX是压缩包名，N是数字</td>
+<td>regex:.*part[0-9]+.rar</td>
+</tr>
+<tr>
+<td>连续的ZIP压缩包 XXXX.zN</td>
+<td>regex:.*.z[0-9]+</td>
+</tr>
+<tr>
+<td>搜索所有纯中文目标</td>
+<td>regex:<sup>[</sup>0-9a-z]*$</td>
+</tr>
+<tr>
+<td>搜索带中文字符的目标</td>
+<td>regex:<sup>.*[</sup>!-~]+.*$</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<p><a href="https://www.jianshu.com/p/51534f6ecf48">节选自简书：Everything工具使用</a></p>
+:ET

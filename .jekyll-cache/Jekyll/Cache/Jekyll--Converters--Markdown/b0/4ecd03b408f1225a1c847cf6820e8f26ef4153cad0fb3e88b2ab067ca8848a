@@ -1,0 +1,151 @@
+I"�<p>Assets Pipeline 的功能主要由两个重要的组件提供：Sprockets 以及 Tilt。Sprockets 用来从你的 assets 路径中打包压缩你所有的 assets 后组合成一个文件，然后放到你目的地路径(public/assets)，而 Tilt 主要是一个样板引擎，用来让 Sprockets 可以去解析像是 SCSS、CoffeeScript 或是 ERB 等各种样板。</p>
+
+<p>Apppiple通常都是在 app/views/layouts/application.html 的视图中去包含<code class="highlighter-rouge">css</code> 或者<code class="highlighter-rouge">js</code> 文件，在生产环境中一般使用的语句为：</p>
+
+<div class="language-erb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="cp">&lt;%=</span> <span class="n">stylesheet_link_tag</span>    <span class="s2">"application"</span><span class="p">,</span> <span class="ss">:media</span> <span class="o">=&gt;</span> <span class="s2">"all"</span> <span class="cp">%&gt;</span>
+     <span class="cp">&lt;%=</span> <span class="n">javascript_include_tag</span> <span class="s2">"application"</span> <span class="cp">%&gt;</span>
+</code></pre></div></div>
+<p>较为完整的语句为：
+halm：</p>
+<pre><code class="language-halm">    = stylesheet_link_tag 'application', media: 'all', data: {turbolinks_track: true}
+    = javascript_include_tag 'application', data: {turbolinks_track: true}
+</code></pre>
+<p>erb：</p>
+<div class="language-erb highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="cp">&lt;%=</span> <span class="n">stylesheet_link_tag</span> <span class="s2">"application"</span><span class="p">,</span> <span class="ss">media: </span><span class="s2">"all"</span><span class="p">,</span> <span class="s2">"data-turbolinks-track"</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="cp">%&gt;</span>
+      <span class="cp">&lt;%=</span> <span class="n">javascript_include_tag</span> <span class="s2">"application"</span><span class="p">,</span> <span class="s2">"data-turbolinks-track"</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="cp">%&gt;</span>
+</code></pre></div></div>
+<p>你会在 html 原始码中看见有包含 <code class="highlighter-rouge">application.js</code> 和 <code class="highlighter-rouge">application.css</code> 的文件对应的位置在 app/assets/javascripts/application.js 和 app/assets/stylesheets/application.css；assets是合并文件后的抽象路径。</p>
+<blockquote>
+  <p>所谓合并文件就是app、lib和vendor 目录 assets文件夹下所有css文件合并成一个application.css文件，js同理。</p>
+</blockquote>
+
+<h3 id="basic-usage">Basic Usage</h3>
+
+<p>1、 <code class="highlighter-rouge">require_self</code> 表示包含本文件内的程序代码</p>
+
+<p>§ app/assets/stylesheets/application.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /*
+    *= require_self
+    */
+   .link {
+     color: #FF0000;
+   }
+</code></pre></div></div>
+<p>2、 <code class="highlighter-rouge">require</code> 其他文件 (免扩展名)</p>
+
+<p>§ app/assets/stylesheets/application.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /*
+    *= require ./link
+    *= require_self
+    */
+</code></pre></div></div>
+<blockquote>
+  <p><code class="highlighter-rouge">./</code>代表当前目录</p>
+</blockquote>
+
+<p>§ app/assets/stylesheets/link.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   .link {
+     color: ##FF0000;
+   }
+</code></pre></div></div>
+<p>3、<code class="highlighter-rouge">require</code> 目录内的文件</p>
+
+<p>§app/assets/stylesheets/application.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /*
+    *= require ./util/link
+    *= require_self
+    */
+</code></pre></div></div>
+<p>§app/assets/stylesheets/util/link.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   .link {
+     color: ##FF0000;
+   }
+</code></pre></div></div>
+<p>或用 <code class="highlighter-rouge">require_tree</code></p>
+
+<p>§app/assets/stylesheets/application.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /*
+    *= require_tree ./util
+    *= require_self
+    */
+</code></pre></div></div>
+<p>§app/assets/stylesheets/util/link.css</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   .link {
+     color: ##FF0000;
+   }
+</code></pre></div></div>
+<blockquote>
+  <p>一般不建议用 <code class="highlighter-rouge">require_tree .</code> ，但可以用 <code class="highlighter-rouge">require_tree ./xxx</code></p>
+</blockquote>
+
+<p>4、放置图片</p>
+
+<p>图片文件通常是放在 app/assets/images/ 下，举例说明下：假设有张图放在<code class="highlighter-rouge">app/assets/images/foo/icon.png</code></p>
+
+<ul>
+  <li>view 下读取</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   &lt;%= image_tag "foo/icon.png" %&gt;   =&gt; &lt;img src="/assets/foo/icon.png" /&gt;
+   &lt;%= image_path "foo/icon.png" %&gt;  =&gt; /assets/foo/icon.png
+</code></pre></div></div>
+<ul>
+  <li>css 读取</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   background: url("&lt;%= image_path("foo/icon.png")%&gt;");
+</code></pre></div></div>
+
+<ul>
+  <li>js 读取</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   alert("&lt;%= image_path("foo/icon.png")%&gt;");
+</code></pre></div></div>
+
+<p>5、 加深理解
+例如，这些文件：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   app/assets/javascripts/home.js
+   lib/assets/javascripts/moovinator.js
+   vendor/assets/javascripts/slider.js
+   vendor/assets/somepackage/phonebox.js
+</code></pre></div></div>
+<p>可这样引用：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   //= require home
+   //= require moovinator
+   //= require slider
+   //= require phonebox
+</code></pre></div></div>
+<p>子目录中的资源也能够被访问到:<code class="highlighter-rouge">app/assets/javascripts/sub/something.js</code></p>
+
+<p>可以如此的引用：<code class="highlighter-rouge"> //= require sub/something</code></p>
+
+<p>可以通过 控制台 命令来查看搜索路径:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rails c
+
+2.3.3:001&gt; Rails.application.config.assets.paths
+
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="参考">参考：</h3>
+<p>1、<a href="http://gogojimmy.net/2012/07/03/understand-assets-pipline/">http://gogojimmy.net/2012/07/03/understand-assets-pipline/</a></p>
+<blockquote>
+  <p>原文中有些错误，<code class="highlighter-rouge">require_tree .</code> 只会搜索<code class="highlighter-rouge">app/assets/</code>当前目录，不会去搜索lib和vendor。
+ 通常有<code class="highlighter-rouge">= require link</code>,appline 会在app、lib和vendor 去搜索link.css，找不到再去gems中和
+public下搜索;js 同理。</p>
+</blockquote>
+
+<p>2、<a href="https://github.com/sstephenson/sprockets">https://github.com/sstephenson/sprockets</a></p>
+
+:ET

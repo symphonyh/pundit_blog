@@ -1,0 +1,291 @@
+I"$'<p>Excel</p>
+
+<p>1、抖动文档窗口，其他打开文档自动退到任务栏，只留下当前文档窗口；</p>
+
+<p>2、要形成条件反射的快捷键</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+A 全选
+
+Ctrl+Z 撤销
+
+Ctrl+Y 回复上一次操作 或 F4 重复上一次操作，可以是同一个单元格多个操作动作的重复
+
+Ctrl+X 剪切
+
+Ctrl+C 复制
+
+Ctrl+V 粘贴
+
+Ctrl+B 加粗
+
+Ctrl+S 保存
+
+Ctrl+F 查找
+
+Ctrl+H 替换
+
+Ctrl+Shift+L 条件筛选
+
+Alt+Enter 单元格内换行
+
+Ctrl+； 快速输入当前日期 
+
+Ctrl+Shift+； 快速输入当前时间
+
+Ctrl+1 设置单元属性
+
+F2 进入编辑单元格
+
+alt + Enter 强制换行 
+
+Shift+F2  批注
+
+Shift+F3  插入函数
+
+Shift+F8  不用一直按住 Ctrl 实现不连续选择单元格
+
+F5  显示定位窗口
+
+F9  计算所有工作表
+
+Shift+F9 计算当前工作表
+
+Ctrl+'   快速复制上一单元格内容 
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>F4 还有一个有用的功能就是 在输入公式的区域时，可以把相对引用变为绝对引用（行和列自动加上$符号）。</p>
+</blockquote>
+
+<p>3、双击左键</p>
+
+<blockquote>
+  <p>双击行列边缘，得到最适合的行宽或列宽。当单元格中文字显示不完整或者有间空有效;</p>
+</blockquote>
+
+<blockquote>
+  <p>双击单元格右下角，自动向下填充;当你设置好了第一行单元格的函数，只需要把光标移动到单元格的右下角，等到它变成一个小加号时，双击，公式就会被应用到这一列剩下的所有单元格里。</p>
+</blockquote>
+
+<blockquote>
+  <p>双击单元格边框（上下左右 皆可），直接跳到当前表格区相应的最远单元格。</p>
+</blockquote>
+
+<p>4、Alt+= 快速求和</p>
+
+<p>5、快速跳转/选择单元格</p>
+
+<p><code class="highlighter-rouge">Ctrl+箭头</code> 快速移动到数据箭头方向区域的边缘。此处箭头指的是键盘上的四个方向键→↓←↑中的任何一个;</p>
+
+<p><code class="highlighter-rouge">Ctrl+Shift+箭头</code> 快速选中前单元格到箭头方向边缘的区域;</p>
+
+<p><code class="highlighter-rouge">Ctrl+Home</code> 移动到工作表的最左上角，一般是单元格A1;</p>
+
+<p><code class="highlighter-rouge">Ctrl+Shift+Home</code> 快速选中当前单元格到工作表最左上角的所有单元格;</p>
+
+<p><code class="highlighter-rouge">Ctrl+End </code>移动到工作表的最右下角;</p>
+
+<p><code class="highlighter-rouge">Ctrl+Shift+End</code> 快速选中当前单元格到工作表最右小角的所有单元格。</p>
+
+<blockquote>
+  <p>注：以上快捷键，看似很难操作，实际是有一定规律的;
+ Ctrl+箭头或者Home、End，主要是用于选中单元格;
+ 如果再按住Shift，将选中两个单元格之间的所有内容。</p>
+</blockquote>
+
+<hr />
+
+<p>6、增加/删除行或列</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift +  =</code> 快速增加或删除一行/列</p>
+
+<p><code class="highlighter-rouge">Ctrl + - </code>    快速删除一行/列</p>
+
+<p>7、 切换工作表</p>
+
+<p><code class="highlighter-rouge">Ctrl + PgDn</code>   切换到右边的工作表，</p>
+
+<p><code class="highlighter-rouge">Ctrl + PgUp</code>   切换回左边。</p>
+
+<p>8、特殊符号</p>
+
+<p><code class="highlighter-rouge">alt + 41420</code>  √ </p>
+
+<p><code class="highlighter-rouge">alt + 41409</code>  ×</p>
+
+<p>9、隐藏行列</p>
+
+<p><code class="highlighter-rouge">Ctrl + 9</code> 隐藏行</p>
+
+<p><code class="highlighter-rouge">CTRL+SHIFT+(</code> 取消隐藏行</p>
+
+<p><code class="highlighter-rouge">Ctrl + 0</code> 隐藏列</p>
+
+<p><code class="highlighter-rouge">CTRL+SHIFT+)</code> 取消隐藏列</p>
+
+<p>10、 跳过隐藏区域，选择显示区域</p>
+
+<p><code class="highlighter-rouge">alt + ；</code> 跳过隐藏区域，选择显示区域</p>
+
+<p>11、快速填充</p>
+
+<p><code class="highlighter-rouge">Ctrl + D</code>  向下填充</p>
+
+<p><code class="highlighter-rouge">Ctrl + R</code>  向右填充</p>
+
+<p>12、数字格式切换</p>
+
+<p><code class="highlighter-rouge">Ctrl+shift+4</code>  $</p>
+
+<p><code class="highlighter-rouge">Ctrl+shift+5</code>  %</p>
+
+<p><code class="highlighter-rouge">Ctrl+shift+1</code>  两位小数位，使用千位分隔符且负数用负号（-）表示</p>
+
+<p><code class="highlighter-rouge">Ctrl+shift+3</code>  日期</p>
+
+<hr />
+
+<p>13、shift交换列 移动的单元格</p>
+
+<p><code class="highlighter-rouge">shift</code> 真的可以交换</p>
+
+<blockquote>
+  <p>技巧是选中列（不是选中所有非空单元格），按住shift 变为十字星，移动到指定位置，待出现列标记后放手即可。</p>
+</blockquote>
+
+<p>选中单元格变为十字 按住shift 上线左右移动该单元格</p>
+
+<hr />
+<p>14、批量修改文件名</p>
+
+<p>F2 TAB 组合使用</p>
+
+<hr />
+
+<p>15、把所有网络线全部去掉</p>
+
+<p>按<code class="highlighter-rouge">Ctrl + Shift + -</code>  删除</p>
+
+<p>16、万元显示</p>
+
+<p>在一个空单元格输入10000（建议设置数字格式和边框） - 复制它 - 选择性粘贴 - 运算：除</p>
+
+<p>17、合并多个单元格内容</p>
+
+<p>把列宽调整成能容易合并后字符，然后选取合并的区域 - 开始 - 填充 - 内容重排</p>
+
+<blockquote>
+  <p>要把这一列拉得足够宽！</p>
+</blockquote>
+
+<p>18、Excel精英培训</p>
+
+<p><code class="highlighter-rouge">Ctrl+Q</code> 调用快速分析界面</p>
+
+<blockquote>
+  <p>参考：<a href="http://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913403&amp;idx=1&amp;sn=532639b3d9b4661d0b9fb160cea24bd0&amp;chksm=bd50724f8a27fb59d49fbed4970a792436ac706a1e89b169172e5b61224a6d7512329bca6813&amp;mpshare=1&amp;scene=1&amp;srcid=0929vkR6RLs3Ueq5ytZJEUJt#rd">Excel精英培训:你会用 Ctrl + Q 键吗？</a></p>
+</blockquote>
+
+<p><code class="highlighter-rouge">Ctrl+T</code> 插入超级表格</p>
+
+<blockquote>
+  <p>参考1：<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913125&amp;idx=1&amp;sn=eca7ed59ff07ef2c6db3293e4eca7f34&amp;chksm=bd5071518a27f847d4aad4a143ab90bf0847515d67b0718d684998cda1a9cccb3d977edd02a0&amp;mpshare=1&amp;scene=1&amp;srcid=0929ZeUX2z0N4cPyme5nUCIt#rd">Excel精英培训:你会用 Ctrl + T 键吗？</a></p>
+</blockquote>
+
+<blockquote>
+  <p>参考2：<a href="https://baijiahao.baidu.com/s?id=1583845550341122501&amp;wfr=spider&amp;for=pc">Excel操作之SuperStar-超级表中表</a></p>
+</blockquote>
+
+<p><code class="highlighter-rouge">Ctrl + \</code> 一键找不同</p>
+
+<p><code class="highlighter-rouge">Alt + F1</code> 一键插入图表</p>
+
+<p><code class="highlighter-rouge">Ctrl + E</code> 快速拆分  bella1.62 =&gt; bella   1.62</p>
+
+<blockquote>
+  <p>具体使用在<a href="https://symphonyh.github.io/cloudblog/2018/09/30/excel-option/">这里</a>有详细介绍</p>
+</blockquote>
+
+<blockquote>
+  <p>参考：<a href="http://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913229&amp;idx=1&amp;sn=56d5f7ff1ec32265e226eb9a07e7b8b0&amp;chksm=bd5072f98a27fbef12834fe883837fcc813751f1307e8ed627f82f708456fdbae93c9deff212&amp;mpshare=1&amp;scene=1&amp;srcid=0929GJ32GU7SZ51wPF98TToM#rd">Excel精英培训:10个小技巧</a></p>
+</blockquote>
+
+<hr />
+
+<p>高手使用excel</p>
+
+<p>※ 删除多个没用的excel工作表</p>
+
+<p>高手：先删除一个，选取另一个工作表按F4键可以直接删除</p>
+
+<p>※ 选取表格某些列</p>
+
+<p>高手：选取第一行，按shift键不松双击下边线</p>
+
+<p>※ 删除空行</p>
+
+<p>高手：<strong>选取列</strong> - <code class="highlighter-rouge">ctrl+G</code>定位 - 定位条件:空值 - 删除</p>
+<blockquote>
+  <p>慎用：空格单元的行也会删除</p>
+</blockquote>
+
+<p>※ 设置单元格格式</p>
+
+<p>高手：打开格式下拉框，一键搞定</p>
+
+<p>※ 插入N个空行</p>
+
+<p>高手：左手按住SHIFT 选中行，鼠标变为双横线向下拖动几行就会插入几行</p>
+
+<p>※ 删除值，留下公式</p>
+
+<p>高手：选取表格 - <code class="highlighter-rouge">Ctrl+G</code>定位 常量 - 删除</p>
+
+<p>※ 输入大写金额</p>
+
+<p>高手：在搜狗输入法中选输入字母V，然后再输入数字</p>
+
+<p>※ 输入身份证号码（数字文本）</p>
+
+<p>高手：先输入英文状态下的单引号<code class="highlighter-rouge">'</code></p>
+
+<p>※ 公式转数值</p>
+
+<p>高手：选取公式所在的列，按右键不松拖动到一边，别松键再拖回来，点上面的仅复制数值</p>
+
+<p>※ 把表格转移到另一个工作表中</p>
+
+<p>高手：按alt键不松，可以把表格拖到另一个表格中</p>
+
+<p>※ 关闭所有打开文件</p>
+
+<p>高手：按住SHIFT + x（右上角关闭）</p>
+
+<p>※  自定义快捷方式</p>
+
+<p>选择 格式刷、合并居中 等通过右键添加进入快速访问工具栏，按ALT 后会显示 数字，ALT + 数字就是对应快捷方式了。</p>
+
+<p>ALT + 4 合并后居中</p>
+
+<p>ALT + 5 格式刷</p>
+
+<p>※   一键选中所有非空单元格</p>
+
+<p>按<code class="highlighter-rouge">Ctrl + Shift + *</code></p>
+
+<p>按<code class="highlighter-rouge">Ctrl + Shift + -</code>  删除多有网格线</p>
+
+<hr />
+
+<p><br /></p>
+
+<blockquote>
+  <p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913456&amp;idx=1&amp;sn=1ed1765fdd5ebf4a1eda4242ffba09aa&amp;chksm=bd5073848a27fa92c461df688069cecda2add8ccc57d1ee1f87eefa73e6573e092a0d879771f&amp;mpshare=1&amp;scene=1&amp;srcid=0930JpNX1LzPPrEGFjGCmPO5#rd">Excel精英培训:高手和菜鸟操作表格，都有什么区别？</a></p>
+</blockquote>
+
+<blockquote>
+  <p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652912144&amp;idx=1&amp;sn=70b9a4c5bd63b39bc3bcf005de563cfb&amp;chksm=bd5076a48a27ffb2b73c90e199f81c437dfa487ce8af72bf9e9da2443e129cf072283214faff&amp;mpshare=1&amp;scene=1&amp;srcid=1004HRwvrMVtPcTKG7CjGG9v#rd">Excel表格的精选39个技巧</a></p>
+</blockquote>
+
+:ET

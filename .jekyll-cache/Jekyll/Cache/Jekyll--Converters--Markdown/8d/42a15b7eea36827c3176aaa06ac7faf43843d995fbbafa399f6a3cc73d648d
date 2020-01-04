@@ -1,0 +1,60 @@
+I"	<p>I’m done with this !</p>
+
+<p>计划= AND(M$5&gt;$D9,L$5&lt;=$E9)</p>
+
+<p>实际= AND(M$5&gt;$G9,L$5&lt;=$H9)</p>
+
+<p>超计划= AND(M$5&gt;IF($E9&lt;=$G9,$G9,$E9+1),L$5&lt;=$H9)</p>
+
+<p>完成= AND($J9&gt;0,M$5&gt;$G9,L$5&lt;=($G9+INT(($H9-$G9)*$J9)))</p>
+
+<p>超完成= AND(M$5&gt;IF($E9&lt;=$G9,$G9,$E9+1),$J9&gt;0,L$5&lt;=($G9+INT(($H9-$G9)*$J9)))</p>
+
+<hr />
+
+<h3 id="关于日历的公式">关于日历的公式：</h3>
+
+<p>1、定义可以切换周期</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>一个判断点的公式  
+
+=IF($H$4="周",$D$4+7*($H$3-1)+7*(Q7-1),IF($H$4="日",($D$4-WEEKDAY($D$4,2)+1)+($H$3-1)+Q7-1,IF($H$4="月",EDATE($D$4,($H$3-1)+Q7-1),EDATE
+($D$4,3*($H$3-1)+3*(Q7-1)))))
+</code></pre></div></div>
+
+<p>2、隐藏周六 周日的公式设计</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>二个判断点的公式：
+
+日历起始=
+
+=IF($H$3="周",$D$3+7*($I$3-1),IF($H$3="日",$D$3+($I$3-1),IF($H$3="月",EDATE($D$3,($I$3-1)),EDATE($D$3,3*($I$3-1)))))
+
+                              +7*(K6-1)                   +k6-1                           +k6-1               +3*(k6-1)
+</code></pre></div></div>
+
+<p>修改：固定第一个日期为项目开始日期那一周的周一：<code class="highlighter-rouge">$D$4-WEEKDAY($D$4,2)+1</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>日历结束=
+
+=IF($H$4="日",L5+1,IF($H$4="周",L5+7,IF($H$4="月",EDATE($D$4,M7-1),EDATE($D$4,3*(M7-1)))))
+
+</code></pre></div></div>
+<p>修改：判断第一个周五，跳过周六周日的日期：<code class="highlighter-rouge">IF(AND($F$4=TRUE,WEEKDAY(L$5,3)=4),L5+3,L5+1)</code></p>
+
+<blockquote>
+  <p>提醒:条件格式改变颜色提示，如果项目开始日期为周六或周日</p>
+</blockquote>
+
+<p>3、修订完成的公式：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>日历起点
+
+L$5=IF($H$4="周",$D$4+7*($H$3-1),IF($H$4="日",($D$4-WEEKDAY($D$4,2)+1)+($H$3-1),IF($H$4="月",EDATE($D$4,($H$3-1)),EDATE($D$4,3*($H$3-1)))))`
+
+日历结束
+
+M$5=IF($H$4="日",IF(AND($F$4=TRUE,WEEKDAY(L$5,3)=4),L5+3,L5+1),IF($H$4="周",L5+7,IF($H$4="月",EDATE($D$4,M7-1),EDATE($D$4,3*(M7-1)))))
+
+</code></pre></div></div>
+:ET

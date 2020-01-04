@@ -1,0 +1,41 @@
+I"�<p>Excel VBA</p>
+
+<h2 id="显示隐藏菜单-编辑栏和页签">显示隐藏菜单 编辑栏和页签</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub visible()
+'Application.DisplayFormulaBar = True '显示编辑栏
+ActiveWindow.DisplayHeadings = True   '隐藏行列标题
+ActiveWindow.DisplayWorkbookTabs = True '显示工作表标签栏
+Application.DisplayFullScreen = False '把所有的菜单显示
+End Sub
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub hidden()
+'Application.DisplayFormulaBar = False '隐藏编辑栏
+ActiveWindow.DisplayHeadings = False   '隐藏行列标题
+ActiveWindow.DisplayWorkbookTabs = False '隐藏工作表标签栏
+Application.DisplayFullScreen = True '把所有的菜单都隐藏
+End Sub
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ActiveWindow.DisplayGridlines = False                    '隐藏网格
+ActiveWindow.DisplayHeadings = False                   '隐藏行列标题
+ActiveWindow.DisplayWorkbookTabs = False           '隐藏工作表标签
+ActiveWindow.DisplayHorizontalScrollBar = False    '隐藏水平滚动条
+ActiveWindow.DisplayVerticalScrollBar = False        '隐藏垂直滚动条
+Application.DisplayFormulaBar = False '隐藏编辑栏
+</code></pre></div></div>
+
+<blockquote>
+  <p>还需要调整，编辑栏隐藏要执行二次，不知道什么原因?</p>
+</blockquote>
+
+<hr />
+<h2 id="worksheet_selectionchange-事件后无法使用复制粘贴问题">Worksheet_SelectionChange 事件后无法使用复制粘贴问题</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+On Error Resume Next
+If Application.CutCopyMode = xlCopy Or Application.CutCopyMode = xlCut Then Exit Sub
+ActiveSheet.Calculate
+End Sub
+</code></pre></div></div>
+:ET

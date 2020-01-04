@@ -1,0 +1,143 @@
+I"�<h2 id="1标题">1、标题</h2>
+<hr />
+
+<h1>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h1>
+
+<h2>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h2>
+
+<h3>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h3>
+
+<h4>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h4>
+
+<h5>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h5>
+
+<h6>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h6>
+
+<p><br /></p>
+
+<h2 id="2blockquote-标签">2、blockquote 标签</h2>
+<hr />
+
+<blockquote>adcdefghijklmnopqrstuvwxyz 人生的最大幸福</blockquote>
+
+<blockquote>
+  <p>adcdefghijklmnopqrstuvwxyz 人生的最大幸福</p>
+</blockquote>
+
+<p><br /></p>
+
+<h2 id="3pre-code-标签">3、pre code 标签</h2>
+<hr />
+
+<pre>
+resource :session, only: [:create, :destroy]	
+</pre>
+
+<p><code>adcdefghijklmnopqrstuvwxyz</code></p>
+
+<p><br /></p>
+
+<h2 id="4small-ornament-big-ornament">4、.small-ornament, .big-ornament<br /></h2>
+<hr />
+
+<div class="small-ornament">
+adcdefghijklmnopqrstuvwxyz 人生的最大幸福	
+</div>
+<p><br /></p>
+<div class="big-ornament">
+adcdefghijklmnopqrstuvwxyz 人生的最大幸福	
+</div>
+
+<p><br /></p>
+
+<h2 id="5-a-标签">5、 a 标签<br /></h2>
+<hr />
+
+<p><a>adcdefghijklmnopqrstuvwxyz 人生的最大幸福</a></p>
+
+<p><br /></p>
+
+<h2 id="6ul-li-标签">6、ul li 标签</h2>
+<hr />
+<ul>
+  <li>Hold fast to dreams</li>
+  <li>For if dreams die</li>
+  <li>人生的最大幸福莫过于四件事</li>
+  <li>That cannot fly.</li>
+  <li>Hold fast to dreams人生的最大幸福莫过于四件事</li>
+  <li>For when dreams go</li>
+  <li>Life is a barren field</li>
+  <li>睡自己的床; 吃父母做的饭; 和爱的人说情话; 和孩子做游戏。</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="7table-标签">7、table 标签</h2>
+<hr />
+<table>
+      <tr>
+         <th>City</th>
+         <th>Date</th>
+         <th>Temperature</th>
+         <th>Altitude</th>
+         <th>Population</th>
+         <th>Diner Rating</th>
+      </tr>
+      <tr>
+         <td>Walla Walla, WA</td>
+         <td>June 15th</td>
+         <td>75</td>
+         <td>1,204 ft</td>
+         <td>29,686</td>
+         <td>4/5</td>
+      </tr>
+      <tr>
+         <td>Magic City, ID</td>
+         <td>June 25th</td>
+         <td>74</td>
+         <td>5,312 ft</td>
+         <td>50</td>
+         <td>3/5</td>
+      </tr>
+   </table>
+
+<p><br /></p>
+
+<h2 id="8img-标签">8、img 标签<br /></h2>
+<hr />
+
+<p><img src="/image/routes.jpg" alt="Het meisje met de parel" width="200px" height="80px" style="margin:0" /></p>
+
+<p><br /></p>
+<h2 id="9p-标签">9、p 标签<br /></h2>
+<hr />
+
+<p>Hold fast to dreams人生的最大幸福莫过于四件事</p>
+
+<h2 id="10--符号">10、  符号</h2>
+
+<p>§ 四叶草符号：</p>
+
+<p>❈　✠　✢　✣　✤　✥　ஐ　❃　※ 【】</p>
+
+<p>✢  adcdefghijklmnopqrstuvwxyz 人生的最大幸福</p>
+
+<p>✣ adcdefghijklmnopqrstuvwxyz 人生的最大幸福</p>
+
+<p>ஐ adcdefghijklmnopqrstuvwxyz 人生的最大幸福</p>
+
+<p>§ <code class="highlighter-rouge">|</code>：</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>这是表格效果，这里默认是居中显示。</p>
+</blockquote>
+
+:ET

@@ -1,0 +1,22 @@
+I"�<h3 id="using-heroku">Using heroku</h3>
+<hr />
+
+<p><code class="highlighter-rouge">heroku create hello0127</code> ;</p>
+<blockquote>
+  <p>也可以在heroku web上建立新的app</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">git push heroku master</code></p>
+
+<p><code class="highlighter-rouge">heroku run rake db:migrate</code></p>
+
+<p><code class="highlighter-rouge">heroku apps:rename hello0127</code></p>
+
+<p><code class="highlighter-rouge">heroku hello0127</code></p>
+
+<p><code class="highlighter-rouge">heroku open</code></p>
+
+<p><code class="highlighter-rouge">heroku logs --tail</code></p>
+
+<p><code class="highlighter-rouge">heroku run rails console</code></p>
+:ET

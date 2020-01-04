@@ -1,0 +1,15 @@
+I"�<ul>
+  <li>install Ember:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g ember-cli
+</code></pre></div>    </div>
+  </li>
+  <li>version:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ember -v
+</code></pre></div>    </div>
+  </li>
+  <li>新项目
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ember new project_name
+</code></pre></div>    </div>
+  </li>
+</ul>
+:ET

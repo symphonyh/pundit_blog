@@ -1,0 +1,734 @@
+I"�j<p>Excel Function</p>
+
+<h2 id="-iferror">※ IFERROR()</h2>
+
+<p>举例：公式 = IFERROR(A2/B2,””)</p>
+
+<blockquote>
+  <p>如果是错误值则显示为空，否则正常显示。</p>
+</blockquote>
+
+<p><a href="https://support.office.com/zh-cn/article/excel-%E5%87%BD%E6%95%B0%EF%BC%88%E6%8C%89%E7%B1%BB%E5%88%AB%E5%88%97%E5%87%BA%EF%BC%89-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">官网参考链接:函数列表</a></p>
+
+<hr />
+<p><br /></p>
+<h2 id="-if">※ IF()</h2>
+
+<p>举例：公式 = IF(AND(A2&lt;500,B2=”未到期”),”补款”,””)</p>
+
+<blockquote>
+  <p>两个条件同时成立用AND,任一个成立用OR函数。</p>
+</blockquote>
+
+<p>嵌套应用举例：</p>
+
+<p>公式 = IF(C2 &gt; 90,”优”,IF(AND(C2&gt;79,C2&lt;90),”中”,IF(AND(C2 &gt; 59,C2 &lt; 80),”良”,IF(C2 &lt; 60,”差”))))</p>
+
+<p>客户经理分段计算奖金的例子：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>= (IF(B16&lt;=10,B16*0.04,
+IF(AND(B16&gt;10,B16&lt;=20),10*0.04+(B16-10)*0.1,
+IF(AND(B16&gt;20,B16&lt;=30),10*0.04+(20-10)*0.1+(B16-20)*0.15,
+IF(AND(B16&gt;30,B16&lt;=40),10*0.04+(20-10)*0.1+(30-20)*0.15+(B16-30)*0.2,
+IF(AND(B16&gt;40,B16&lt;=50),10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(B16-40)*0.21,
+IF(AND(B16&gt;50,B16&lt;=60),10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(B16-50)*0.22,
+IF(B16&gt;60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0.22+(B16-60)*0.23))))))))*10000
+
+</code></pre></div></div>
+
+<p>小应用：检查单元格有无空格</p>
+
+<p>公式 = IF(ISERR(FIND(“ “,B9)),”无”,”有”)</p>
+
+<blockquote>
+  <p>IF多层嵌套最多嵌套 7 次！</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+<h2 id="-rand">※ RAND()</h2>
+
+<p>举例：公式 = RAND()*(b-a)+a</p>
+
+<blockquote>
+  <p>生成 a 与 b 之间的随机实数
+延伸下，如果 0 到 100 之间的整数，INT(RAND()*100)</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+<h2 id="-subtotal">※ SUBTOTAL()</h2>
+
+<p>举例：公式 = SUBTOTAL(9,C2:C83)
+举例：公式 = SUBTOTAL(109,C2:C83)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">参数1(隐藏行参与计算)</th>
+      <th style="text-align: center">参数1(隐藏行不参与计算)</th>
+      <th style="text-align: right">函数</th>
+      <th style="text-align: left">功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">101</td>
+      <td style="text-align: right">AVERAGE</td>
+      <td style="text-align: left">平均值</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">102</td>
+      <td style="text-align: right">COUNT</td>
+      <td style="text-align: left">数值个数</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">103</td>
+      <td style="text-align: right">COUNTA</td>
+      <td style="text-align: left">非空单元个数</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">104</td>
+      <td style="text-align: right">MAX</td>
+      <td style="text-align: left">最大值</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">105</td>
+      <td style="text-align: right">MIN</td>
+      <td style="text-align: left">最小值</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">106</td>
+      <td style="text-align: right">PRODUCT</td>
+      <td style="text-align: left">括号内数据乘积</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td style="text-align: center">107</td>
+      <td style="text-align: right">STDEV</td>
+      <td style="text-align: left">标准偏差</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">108</td>
+      <td style="text-align: right">STDEVP</td>
+      <td style="text-align: left">总体标准偏差</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">109</td>
+      <td style="text-align: right">SUM</td>
+      <td style="text-align: left">求和</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">110</td>
+      <td style="text-align: right">VAR</td>
+      <td style="text-align: left">方差</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center">111</td>
+      <td style="text-align: right">VARP</td>
+      <td style="text-align: left">总体方差</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>SUBTOTAL 会忽略中间的汇总行，不会累计相加；会神奇的忽略自己求出来的结果！</p>
+</blockquote>
+
+<blockquote>
+  <p>SUBTOTAL函数第二个参数101-111所指忽略隐藏参数指的是忽略所隐藏的行，不忽略所隐藏的列，也就是说隐藏的行不参与求和。</p>
+</blockquote>
+
+<p>参考：<a href="https://www.jianshu.com/p/06c64f2f47f6?from=timeline">SUBTOTAL函数：各种简单统计，用我就够了</a></p>
+
+<hr />
+<p><br /></p>
+<h2 id="-sumif">※ SUMIF()</h2>
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" height="480" src="//player.bilibili.com/player.html?aid=8860752&amp;cid=14619324&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+<p><br />
+举例：公式 = SUMIF(A2:A5,”&gt;160000”,B2:B5)</p>
+
+<blockquote>
+  <p>第一个参数是筛选条件的范围，这里是财产价值列; 第二个参数是条件; 第三个参数是求和的区域，这里是佣金列;</p>
+</blockquote>
+
+<blockquote>
+  <p>公司的含义是：在财产价值范围里找出大于160000的佣金之和。</p>
+</blockquote>
+
+<p><a href="https://support.office.com/zh-cn/article/sumif-%e5%87%bd%e6%95%b0-169b8c99-c05c-4483-a712-1697a653039b?NS=EXCEL&amp;Version=16&amp;SysLcid=2052&amp;UiLcid=2052&amp;AppVer=ZXL160&amp;HelpId=xlmain11.chm60393&amp;ui=zh-CN&amp;rs=zh-CN&amp;ad=CN">官网参考链接</a></p>
+
+<hr />
+<p><br /></p>
+<h2 id="-sumifs">※ SUMIFS()</h2>
+
+<p>举例：公式 =SUMIFS(A2:A9, B2:B9, “&lt;&gt;香蕉”, C2:C9, “卢宁”)</p>
+
+<blockquote>
+  <p>第一个参数是求和区域的范围，这里是销售数量列; 第二个参数是条件范围，这里是销售产品列; 第三个参数是销售产品的筛选条件，可以用通配符，第四个参数是另一个条件范围，这里是人员列; 第五个参数是销售人员的筛选条件。</p>
+</blockquote>
+
+<blockquote>
+  <p>公司的含义是：计算卢宁售出的非香蕉产品的总量。</p>
+</blockquote>
+
+<blockquote>
+  <p>SUMIFS 和 SUMIF 的参数顺序有所不同。 具体而言，sum_range（也就是求和列）参数在 SUMIFS 中是第一个参数，而在 SUMIF 中，却是第三个参数。 这是使用这些函数时出现问题的一个常见原因。</p>
+</blockquote>
+
+<p><a href="https://support.office.com/zh-cn/article/sumifs-%E5%87%BD%E6%95%B0-c9e748f5-7ea7-455d-9406-611cebce642b">官网参考链接</a></p>
+
+<h2 id="-sumifs函数5个经典公式">※ Sumifs函数5个经典公式</h2>
+
+<p>Sumifs函数是工作中最常用的多条件求和函数，今天兰色分享它最常用的5个公式，其中几个公式还是有难度的哦，可能你是第一次看到。</p>
+
+<p>1、多条件（并列）求和</p>
+
+<p>要求统计公司1的人事部工资总和</p>
+
+<p>=Sumifs(D:D,A:A,”公司1”,B:B,”人事部”）</p>
+
+<p>2、 多条件（或者）求和</p>
+
+<p>要求统计公司1人事部，以及公司2财务的工资之和</p>
+
+<p>=SUM(SUMIFS(D:D,A:A,{“公司1”;”公司2”},B:B,{“人事部”;”财务部”}))</p>
+
+<p>3、按时间段求和</p>
+
+<p>要求统计2016-1-3~2016-1-4日 产品E的销量</p>
+
+<p>=SUMIFS(C:C,A:A,”&gt;=”&amp;F2,A:A,”&lt;=”&amp;F3,B:B,F4)</p>
+
+<p>4、模糊条件求和</p>
+
+<p>要求计算A列产品中包含“电视”并且B列地区为郑州的数量之和</p>
+
+<p>公式：C11
+=SUMIFS(C2:C7,A2:A7,A11&amp;”*“,B2:B7,B11)
+说明：在sumifs中可以使用通配符 *</p>
+
+<p>5、多表多条件求和</p>
+
+<p>1~5号的车辆销售明细表</p>
+
+<p>要求在汇总表中对各个车型进行汇总</p>
+
+<p>=SUMPRODUCT(SUMIFS(INDIRECT(ROW(1:5)&amp;”!c:c”),INDIRECT(ROW(1:5)&amp;”!a:a”),A2,INDIRECT(ROW(1:5)&amp;”!b:b”),B2))</p>
+
+<blockquote>
+  <p><a href="https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913993&amp;idx=3&amp;sn=9fbbdfe3b2856120cd026b50855e45b2&amp;chksm=bd500dfd8a2784ebf590f8675cb380d48c7935c9eb17f5f4434663545f60f65b0588f37c31e3&amp;mpshare=1&amp;scene=1&amp;srcid=1105zne9jwj98nRfiYq1zbBM#rd">原文参考：Sumifs函数5个经典公式，最后一个90%的人都不会！</a></p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+<h2 id="-sumproduct-实现多条件求和">※ SUMPRODUCT() 实现多条件求和</h2>
+
+<p>公式 = SUMPRODUCT((条件一)*(条件二)……,求和区域)</p>
+
+<p>举例：公式 = SUMPRODUCT((MONTH(A2:A13)=6)*(B2:B13=”财务部”),D2:D13)</p>
+<blockquote>
+  <p>统计六月份财务部发放了多少工资?第一个条件，发放工资的时间必须是六月份;
+第二个条件，发放工资的部门必须是财务部。</p>
+</blockquote>
+
+<p>举例：公式 = SUMPRODUCT((MONTH(A2:A13)=6)<em>(B2:B13={“财务部”,”市场部”})</em>D2:D13)</p>
+
+<p>举例：公式 = SUMPRODUCT((C2:C13=”bella”)*1)</p>
+<blockquote>
+  <p>bella领取了几次工资?</p>
+</blockquote>
+
+<p>举例：公式 = SUMPRODUCT((C2:C13=”bella”)*D2:D13)</p>
+<blockquote>
+  <p>bella累计领取了多少工资?</p>
+</blockquote>
+
+<p><br />
+下面这段视频讲的比较清楚了：</p>
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" height="480" src="//player.bilibili.com/player.html?aid=18916278&amp;cid=30854176&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+<hr />
+<p><br /></p>
+<h2 id="-countif">※ COUNTIF()</h2>
+
+<p>单条件统计数量</p>
+
+<p>举例：公式 = COUNTIF(A1:A10,”&gt;=5”)</p>
+
+<p>举例：公式 =  COUNTIF(A1:A10,”刘*”)</p>
+
+<h2 id="-countifs">※ COUNTIFS()</h2>
+
+<p>多条件统计数量</p>
+
+<p>举例：公式 = COUNTIFS(B2:B5,”=是”,C2:C5,”=是”)</p>
+
+<p>举例：公式 = COUNTIFS(A2:A7, “&lt;5”,B2:B7,”&lt;5/3/2011”)</p>
+
+<h2 id="-counta">※ COUNTA()</h2>
+
+<p>举例：公式 = COUNTA(A2:A7)</p>
+
+<blockquote>
+  <p>计算单元格区域 A2 到 A7 中非空<strong>单元格的个数</strong>。</p>
+</blockquote>
+
+<h2 id="-count">※ COUNT()</h2>
+
+<p>举例：公式 = COUNT(A2:A7)</p>
+
+<blockquote>
+  <p>计算单元格区域 A2 到 A7 中包含数字的<strong>单元格的个数</strong>。</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+<h2 id="-frequency">※ FREQUENCY()</h2>
+
+<p>举例：公式 = FREQUENCY( C1:C10,{80,60})</p>
+
+<blockquote>
+  <p>统计 C列成绩在60~80的人数</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+
+<hr />
+
+<h2 id="-lookup">※ LOOKUP()</h2>
+
+<p>§ 查找最后一条符合条件的记录</p>
+
+<p>公式的模式化写法为：
+<code class="highlighter-rouge">=LOOKUP(1,0/(条件区域=条件),查询区域)</code></p>
+
+<p>首先使用条件区域=条件得到一组逻辑值，然后使用0除以这些逻辑值，如果符合条件，就是0/TRUE，结果是0。
+如果不符合条件，就是0/FALSE，结果是错误值，这一步最终得到由一组错误值和0构成的内存数组。
+然后使用1作为查询值，在这个内存数组中查找小于等于1的最大值，内存数组中没有1，所以就以0进行匹配，并且返回第三参数对应位置的内容。</p>
+
+<p>§ 查询符合多个条件的记录</p>
+
+<p>公式的模式化写法为：
+<code class="highlighter-rouge">=LOOKUP(1,0/((条件区域1=条件1)*(条件区域2=条件2)),查询区域)</code></p>
+
+<p>这里的查询套路和第一个问题一致。使用两个条件判断，然后将判断之后得到的两组逻辑值中的元素对应相乘。
+如果两个条件同时符合，就是TRUE*TRUE，结果为1。</p>
+
+<p>如果有一个条件不符合或是都不符合，就是TRUE<em>FALSE或是FALSE</em>FALSE，结果是0。</p>
+
+<p>最后使用1作为查询值，在这个内存数组中查找匹配0的位置，并且返回第三参数对应位置的内容。</p>
+
+<p>§ 逆向查询</p>
+
+<p>按照以上相同的思路，最后的查询区域可以灵活写成任意一列，从右至左、自下而上查询，统统没问题。</p>
+
+<p>§ 查询最后一笔业务日期</p>
+
+<p>公式的模式化写法为：
+<code class="highlighter-rouge">=LOOKUP(1,0/(条件区域&lt;&gt;""),查询区域)</code></p>
+
+<p>本例来说，公式可以简化为：
+<code class="highlighter-rouge">=LOOKUP(1,0/B4:B11,$A4:$A11)</code></p>
+
+<p>但是只适合条件区域为数值的情况，而失去通用性了。</p>
+
+<p>§  <strong>模糊查询考核等级</strong></p>
+
+<p>这种方法可以取代IF函数完成多个区间的判断查询，前提是对照表的首列，必须是升序处理。
+如果在E列中找不到B4单元格的具体成绩79，就以小于这个成绩的最大值60进行匹配，并返回F列对应位置的内容。</p>
+
+<p>§ 提取单元格内的数字</p>
+
+<p>A2公式为
+<code class="highlighter-rouge">=-LOOKUP(1,-LEFT(A2,ROW($1:$99)))</code></p>
+
+<p>首先用LEFT函数从A2单元格左起第一个字符开始，依次返回长度为<code class="highlighter-rouge">ROW($1:$99)</code>也就是1至99的字符串，添加负号后，数值转换为负数，含有文本字符的字符串则变成错误值。
+LOOKUP函数使用1作为查询值，在由负数、0和错误值构成的数组中，忽略错误值提取最后一个等于或小于1的数值。
+最后再使用负号，将提取出的负数转为正数。</p>
+
+<blockquote>
+  <p><a href="https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&amp;mid=2666978240&amp;idx=1&amp;sn=604abff749be0b20ae93e08dfb2454b7&amp;chksm=8b43f158bc34784e975623159e95a635d4a3dd0efb23cf93980a3b4e2dd9af2da06424dc834a&amp;mpshare=1&amp;scene=1&amp;srcid=1008Dbr2K7QlzDWlNd74zLC0#rd">原文参考：</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="-vlookup-返回表中的值">※ VLOOKUP() 返回表中的<strong>值</strong></h2>
+
+<p>公式 = VLOOKUP(查找值，查找区域，返回第几列数据，精确/模糊查找）</p>
+
+<p>=VLOOKUP(A2,B5:E11,3,0)</p>
+
+<p>在B2单元格中，需要根据A2的值（联系人：表姐），在数据源区域（B5：E11）中，查找其对应的第3列的值（身份证号码），是多少，并且要求精确查找。</p>
+
+<blockquote>
+  <p>VLOOKUP函数有个必须的条件，那就是必须在表格或数值数组的首列（最左列）查找指定的数值。通俗一点，那就是只能查找第一列所对应的数值。</p>
+</blockquote>
+
+<blockquote>
+  <p>匹配条件,精确查找它的数值就是“0”，模糊查找它的数值就是“1”。通常情况下，我们都是选择的精确查找。</p>
+</blockquote>
+
+<p><strong>vlookup 查找值不在首列的解决办法</strong></p>
+
+<p>例如:在B列查找D2对应值,取A列值</p>
+
+<p>公式 =INDEX(A:A,MATCH(D2,B:B,0))</p>
+
+<blockquote>
+  <p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&amp;mid=2666979365&amp;idx=1&amp;sn=a9bb112020cc9b7aad4ff141c5f120f0&amp;chksm=8b43cabdbc3443ab7e531a0a8809314f63ae8d478c80d490cf2f1e56ca759e5d5b237db5acae&amp;mpshare=1&amp;scene=1&amp;srcid=1003MBREakC71AxdA8UvT98U#rd">VLOOKUP函数怎么使用？看完这篇就知道了~</a></p>
+</blockquote>
+
+<blockquote>
+  <p>参考:<a href="https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&amp;mid=2666972142&amp;idx=1&amp;sn=590c235993fe0c4b630d872184e3e5d6&amp;scene=21#wechat_redirect">十大Vlookup常见错误！</a></p>
+</blockquote>
+
+<blockquote>
+  <p>参考:<a href="https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&amp;mid=2666980431&amp;idx=1&amp;sn=4239fd67194f941f4487d6ab7e1c230f&amp;chksm=8b43ced7bc3447c1dbd1409c6de626f816f8d369837b06b98f57454d4f7b8c4b0f1c6336a14d&amp;mpshare=1&amp;scene=1&amp;srcid=1013YhP0XdNnt8N4NYkeNgEC#rd">7个Vlookup进阶案例详解</a></p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+
+<h2 id="-hlookup">※ HLOOKUP()</h2>
+
+<p>公式 = VLOOKUP(查找值，查找区域，返回第几行数据，精确/模糊查找）</p>
+
+<blockquote>
+  <p>参考：<a href="http://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&amp;mid=2666980301&amp;idx=1&amp;sn=b980f9c318bf3cdce85ea9d9a462e144&amp;chksm=8b43c955bc344043e965f333033d87a69012691b599c3450093855289cea8635ba7c6745fc12&amp;mpshare=1&amp;scene=1&amp;srcid=1003ZXO1eB8qDXWcFgDI5ULw#rd">HLOOKUP函数的3个应用示例</a></p>
+</blockquote>
+
+<hr />
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" height="480" src="//player.bilibili.com/player.html?aid=11713070&amp;cid=19349441&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+<p><br /></p>
+
+<hr />
+<p><br /></p>
+<h2 id="-index-返回表中的值">※ INDEX() 返回表中的值。</h2>
+
+<p>公式 = INDEX(搜索的区域，行号，列号）</p>
+
+<p>举例：公式 = INDEX(B2:D9，3，1)</p>
+<blockquote>
+  <p>公式含义： 返回B2:D9 区域第三行第一列的数据</p>
+</blockquote>
+
+<p><br />
+<strong>重点是这个，举例：公式 = INDEX(B2:D9，0，3)</strong></p>
+<blockquote>
+  <p>公式含义： 返回B2:D9 区域第三列的数据,返回值是个数组
+这个特性可以用于控件中下拉框的索引引用</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+<h2 id="-match-返回指定数值在指定区域中的位置">※ MATCH() 返回指定数值在指定区域中的<strong>位置</strong></h2>
+
+<p>举例：公式 = MATCH(100，B2：B5，0)</p>
+<blockquote>
+  <p>公式含义：查询在B2：B5区域首个等于100的数值是第几个，这里是3行;
+返回值是行还是列要看区域是行还是列。</p>
+</blockquote>
+
+<blockquote>
+  <p>第三个参数,匹配方式：0 精确查找 1 模糊查找</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-几个查找函数的通俗解释">※ 几个查找函数的通俗解释:</h2>
+
+<p>1、INDEX函数：返回表中的值。</p>
+
+<p>=INDEX（在哪儿找，第几行）</p>
+
+<p>2、MATCH函数：返回指定数值在指定区域中的位置。</p>
+
+<p>=MATCH（找谁，在哪儿找，匹配方式）</p>
+
+<p>3、VLOOKUP函数：纵向查找返回表中的值。缺点：查阅值需要位于查找区域的第一列。</p>
+
+<p>=VLOOKUP（找谁，在哪儿找，第几列，匹配方式）</p>
+
+<blockquote>
+  <p>参考</p>
+</blockquote>
+
+<p><a href="https://symphonyh.github.io/cloudblog/2018/09/29/excel-fun/">必备的Excel报表技巧：INDEX+MATCH函数</a></p>
+
+<hr />
+<p><br /></p>
+<h2 id="-offset">※ OFFSET()</h2>
+
+<p>举例：公式 = =OFFSET(C3,4,2,4,3)就是以C3为基点，向下偏移4行，向右偏移2列，新引用的行数是4行，新引用的列数是3列，最终得到对E7:G10单元格区域的引用。</p>
+
+<p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MzA5NTI5NzUyNw==&amp;mid=2666980399&amp;idx=1&amp;sn=d0f60ea4ca1582fb319ace3a826a0bd9&amp;chksm=8b43ceb7bc3447a14a2f51e88dbc8ef7b6ba4d19c4e42a05121a09429a6c5a830335aa8aa9e8&amp;scene=0#rd">大家认识非常好用的OFFSET函数</a></p>
+
+<hr />
+<p><br /></p>
+<h2 id="-indirect">※ INDIRECT()</h2>
+
+<p>INDIRECT函数的引用的两中形式:加引号，一种不加引号。</p>
+
+<p>=INDIRECT(“A1”) 文本引用——即引用A1单元格所在的文本(B2)。</p>
+
+<p>=INDIRECT(A1)   地址引用——因为A1的值为B2，B2又=11，所以返回。</p>
+
+<hr />
+<p><br /></p>
+<h2 id="-row-column">※ ROW() COLUMN()</h2>
+
+<p>= COLUMN(F7)  单元格F7占一列，返回值1;</p>
+
+<p>= ROW(E4:I7)  区域E4:I7)占4行，返回值4。</p>
+
+<hr />
+<p><br /></p>
+<h2 id="--address">※  ADDRESS()</h2>
+
+<p>= ADDRESS(2,3)  返回$c$2</p>
+
+<p>= ADDRESS(2,3,2)  返回c$2</p>
+
+<blockquote>
+  <p>第三个参数 1 绝对应用; 2  固定行号; 3 固定列号; 4 相对引用
+返回值是引用的坐标，通过参数控制相对和绝对引用</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+<h2 id="--rept">※  REPT()</h2>
+
+<p>=  REPT(“※”,B3/500)  重复显示※，B3如果=1000,就是2个。</p>
+
+<hr />
+<p><br /></p>
+<h2 id="--hyperlink">※  HYPERLINK()</h2>
+
+<p>参数说明：</p>
+
+<p>HYPERLINK参数1：文件夹的路径; HYPERLINK参数2：单元格里显示的文字内容</p>
+
+<ul>
+  <li>打开文件</li>
+</ul>
+
+<p>A1单元格，输入公式：=HYPERLINK(“C:\Documents and Settings\Administrator\桌面\hyperlink函数资料.doc”,”hyperlink函数资料”)</p>
+
+<p>意思是单击A1单元格，将打开桌面的“hyperlink函数资料”这个doc文档。</p>
+
+<blockquote>
+  <p>参数：文件夹的路径，包括文件名和扩展名</p>
+</blockquote>
+
+<ul>
+  <li>打开文件夹</li>
+</ul>
+
+<p>A1单元格，输入公式：=HYPERLINK(“C:\Documents and Settings\Administrator\桌面”,”excel论坛”)
+　　意思是，当单击A1单元格用hyperlink函数就直接打开桌面的“excel论坛”文件夹。</p>
+
+<ul>
+  <li>打开网站 =HYPERLINK(“//www.excelwm.net”,”完美论坛”)</li>
+</ul>
+
+<blockquote>
+  <p>参数：网站地址，记得一定前面一定要加<code class="highlighter-rouge">//</code></p>
+</blockquote>
+
+<ul>
+  <li>链接到工作表指定位置</li>
+</ul>
+
+<p>链接当前工作表的指定位置，点击跳转到当前工作表指定的单元格。</p>
+
+<p>比如A1单元格，输入公式：=HYPERLINK(“#B8”,”跳转到B8”)</p>
+
+<p>意思是单击A1单元格，将跳转到B8单元格。</p>
+
+<ul>
+  <li>链接到当前工作薄中其他工作表的指定位置或区域</li>
+</ul>
+
+<p>比如A1单元格输入：= HYPERLINK(“#sheet2!B8”,”跳到SHEET2工作表B8”)</p>
+
+<p>另外，假如区域定义了名称，如定义名称X=sheet2!A10:B15，则以下公式或跳转到X区域的并选定该区域：= HYPERLINK(“#X”,”跳到区域名称X”)</p>
+
+<p>等同于= HYPERLINK(“#sheet2!A10:B15”,”跳到A10:B15”)</p>
+
+<ul>
+  <li>打开工作簿</li>
+</ul>
+
+<p>同目录下的文件：=HYPERLINK(“book2.xls#sheet2!a1”，”到BOOK2中Sheet2!A1”) </p>
+
+<p>不同目录下：=HYPERLINK(“C:\My Documents\XLS\book2.xls#sheet2!a1”，”到BOOK2中Sheet2!A1”) </p>
+
+<p>参考：<a href="https://wenku.baidu.com/view/df6a40d680eb6294dd886c78.htmlf">百度文库说明文档</a></p>
+
+<hr />
+
+<h2 id="--去空格函数trim--substitute-clean">※  去空格函数TRIM()  SUBSTITUTE() CLEAN()</h2>
+
+<p><code class="highlighter-rouge">=TRIM(A2)</code></p>
+
+<blockquote>
+  <p>此方法只能删除字符串首尾的空格，而不能删除字符串中间的空格！故此方法适用于删除字符串首尾的空格</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">=SUBSTITUTE(A2," ","")</code></p>
+
+<blockquote>
+  <p>注意函数中间的英文双引号中间是一个空格符号，而左边的双引号是空白的，意思就是将A2单元格的字符串中的空格去掉
+SUBSTITUTE函数法可以删除字符串中所有的空格</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">=CLEAN(B2)</code></p>
+
+<p>B2 的内容 =CHAR(9)&amp;”Monthly report”&amp;CHAR(10)</p>
+
+<blockquote>
+  <p>用于删除文本中不能打印的字符例如：</p>
+</blockquote>
+
+<p>char(9)   水平制表符</p>
+
+<p>char(10) 换行</p>
+
+<p>char(13) 回车</p>
+
+<hr />
+
+<h2 id="-和区域名称配合动态引用位置">※ 和区域名称配合动态引用位置</h2>
+
+<p><code class="highlighter-rouge">OFFSET(Lists!$C$1,1,0,MATCH(REPT("z",255),Lists!$C:$C),1)</code></p>
+
+<p><code class="highlighter-rouge">OFFSET(Lists!$C$1,1,0,MATCH(REPT("座",255),Lists!$C:$C),1)</code></p>
+
+<p>函数的意思就移c1为参考，引用位置c1下移一行右移0列c2位置开始，到这一行的有文字单元格的结尾行c座；就是选中C2:c座的区域</p>
+
+<p>OFFSET(Lists!$C$1,1,0,MATCH(REPT(“座”,255),Lists!$C:$C),1)</p>
+
+<p>参考系:Lists!$C$1</p>
+
+<p>下移几个行 1</p>
+
+<p>右移几个行列 0</p>
+
+<p>MATCH返回C列最后一个有文字单元格行数</p>
+
+<p>选中1列即C列</p>
+
+<p>中文字符是要用“座”</p>
+
+<hr />
+
+<p>末行行号的取法</p>
+
+<p>A1:A20存放着数字、文本、错误值等，下列公式将返回:</p>
+
+<p>=LOOKUP(9E+307,A1:A20)－－－－－－－－－－返回数值</p>
+
+<p>=LOOKUP(9E+307,A1:A20,ROW(A1:A20))－－－－返回行号</p>
+
+<p>=LOOKUP(2,1/(A1:A20&lt;&gt;””),A1:A20)－－－－－返回非空单元格</p>
+
+<p><code class="highlighter-rouge">=LOOKUP(2,1/(A1:A20&lt;&gt;""),ROW(A1:A20))－－－返回行号</code></p>
+
+<p>=LOOKUP(2,1/(A1:A20&lt;&gt;0),A1:A20)－－－－－－返回非零单元格</p>
+
+<p>=LOOKUP(2,1/(A1:A20&lt;&gt;0),ROW(A1:A20))－－－返回行号</p>
+
+<p>=LOOKUP(2,1/(A1:A20=”a”),A1:A20)－－－－－返回指定文本单元格</p>
+
+<p>=LOOKUP(2,1/(A1:A20=”a”),ROW(A1:A20))－－－返回行号</p>
+
+<p>=LOOKUP(2,1/(1-ISBLANK(A1:A20)),A1:A20)－－返回非空单元格</p>
+
+<p>=LOOKUP(2,1/(1-ISBLANK(A1:A20)),ROW(A1:A20))－－返回行号</p>
+
+<p>=LOOKUP(2,1/((A1:A20&lt;&gt;0)*ISNUMBER(A1:A20)),A1:A20)－－返回不为零非空单元格</p>
+
+<p>=LOOKUP(2,1/((A1:A20&lt;&gt;0)*ISNUMBER(A1:A20)),ROW(A1:A20))－－返回行号</p>
+
+<p>=VLOOKUP(9E+307,A1:A20,1,1)－－返回最大数值</p>
+
+<p>=VLOOKUP(REPT(“龠”,255),A1:A20,1,1)－－返回最大文本</p>
+
+<p>=INDEX(A1:A20,,MATCH(“*“,A1:A20,-1))－－返回任意值</p>
+
+<p>=INDEX(A1:A20,MAX(IF(A1:A20&lt;&gt;”“,ROW(A1:A20))))返回非空单元格</p>
+
+<hr />
+<p>返回最后的“行号”:</p>
+
+<p>非空值(方法一)</p>
+
+<p><code class="highlighter-rouge">LOOKUP(2,1/(A3:A65536&lt;&gt;""),row(A3:A65536))</code></p>
+
+<p>非空值(方法二)</p>
+
+<p><code class="highlighter-rouge">LOOKUP(2,1/(1-ISBLANK(A3:A65536)),row(A3:A65536))</code></p>
+
+<p>非空值(方法三  数组公式)</p>
+
+<p><code class="highlighter-rouge">MAX((A3:A65536&lt;&gt;"")*ROW(A3:A65536))</code></p>
+
+<p>数值(方法一)</p>
+
+<p><code class="highlighter-rouge">LOOKUP(9E+307,A:A)</code></p>
+
+<p>数值(方法二)</p>
+
+<p><code class="highlighter-rouge">MATCH(9E+307,A:A)</code></p>
+
+<p>文本(方法一)</p>
+
+<p><code class="highlighter-rouge">LOOKUP("座",row(A:A))</code></p>
+
+<p>文本(方法二)</p>
+
+<p><code class="highlighter-rouge">MATCH("座",A:A)</code></p>
+
+<p>既然都知道这么多方法，为什么不试验一下呢。</p>
+
+<p>日程安排表里的尝试成功,公式-区域名称-定义为holiday 引用位置公式：</p>
+
+<p><code class="highlighter-rouge">=OFFSET($B$1,1,0,LOOKUP(2,1/(B:B&lt;&gt;""),ROW(B:B)),1)</code></p>
+
+<p><code class="highlighter-rouge">row()</code>确保返回行号 如果只是区域返回单元格值（2020/10/7）就无法满足 offset() 参数要求了;</p>
+
+<p>单元格公式：</p>
+
+<p><code class="highlighter-rouge">=IF($D$4=TRUE,($C11+$E11-1),WORKDAY(C11,E11-1,holiday))</code></p>
+
+<hr />
+
+<p><br /></p>
+<blockquote>
+  <p>参考：<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913414&amp;idx=1&amp;sn=0f1ce55dff1142a2b986e54b681d48fc&amp;chksm=bd5073b28a27faa4139587922a762b36456e28090dcbdb38950d9291301c45a104605717de4c&amp;mpshare=1&amp;scene=1&amp;srcid=1001UaMS65oAt9nhYDfS22WS#rd">Excel精英培训:最常用的30个Excel函数公式</a></p>
+</blockquote>
+
+<hr />
+:ET

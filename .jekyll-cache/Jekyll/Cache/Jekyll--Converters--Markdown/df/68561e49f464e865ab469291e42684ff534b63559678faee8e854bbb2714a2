@@ -1,0 +1,20 @@
+I"H<h3 id="brackets-常用的快捷键整理">Brackets 常用的快捷键整理：</h3>
+
+<p><code class="highlighter-rouge">Ctrl+Shift+H</code>: 可以呼出与关闭文件树</p>
+
+<p><code class="highlighter-rouge">Ctrl + E</code>:          快速预览/编辑 css样式/javascript函数/取色选择</p>
+
+<p><code class="highlighter-rouge">Ctrl + +/-</code>:       放大缩小编辑区字体大小</p>
+
+<p><code class="highlighter-rouge">Ctrl + 0</code>:          重置编辑区字体大小</p>
+
+<p><code class="highlighter-rouge">Ctrl + Alt + P</code>:  打开即时预览功能</p>
+
+<p><code class="highlighter-rouge">Ctrl + / </code>:         行注释</p>
+
+<p><code class="highlighter-rouge">Ctrl + Alt + /</code>:  块注释</p>
+
+<blockquote>
+  <p>注：css代码、html代码注释时只能使用块注释快捷键</p>
+</blockquote>
+:ET

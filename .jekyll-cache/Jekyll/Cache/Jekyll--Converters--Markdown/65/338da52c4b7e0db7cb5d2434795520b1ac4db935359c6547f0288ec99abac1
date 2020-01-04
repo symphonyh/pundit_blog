@@ -1,0 +1,64 @@
+I"1<p><code class="highlighter-rouge">erb</code>的特点是除了能用简洁直观的语法生成HTML文件，也能够嵌入 Ruby 代码。</p>
+
+<p><strong>标签</strong></p>
+
+<p>§ 1 执行 Ruby code 且在 HTML 中插入输出結果时使用<code class="highlighter-rouge">&lt;%= Ruby code... %&gt;</code>;整个<code class="highlighter-rouge">&lt;%=  %&gt;</code>被取代为code执行的结果;</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;b&gt;&lt;</span><span class="err">%=</span> <span class="err">"</span><span class="na">sarah</span><span class="err">"</span> <span class="err">%</span><span class="nt">&gt;&lt;/b&gt;</span>
+ <span class="nt">&lt;h1&gt;&lt;</span><span class="err">%=</span> <span class="err">@</span><span class="na">user</span><span class="err">.</span><span class="na">name</span> <span class="err">%</span><span class="nt">&gt;&lt;/h1&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"&lt;%= @link %&gt;"</span><span class="nt">&gt;</span>click me<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">rand</span><span class="err">(</span><span class="na">3</span><span class="err">)</span> <span class="err">%</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="highlighter-rouge">&lt;%= rand(n) %&gt;</code>随机生成 0 到 n-1 之间的随机数</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;%= rand(3) %&gt;
+输出结果可能会是 0 、 1 或 2 。
+</code></pre></div></div>
+<p>§ 2 只执行 Ruby code 但不输出结果时使用：<code class="highlighter-rouge">&lt;% Ruby code... %&gt;</code></p>
+
+<ul>
+  <li>循环
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;% @users.each do |user| %&gt;
+....
+&lt;% end %&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>条件判断
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;% if @user.weight &gt; 50 %&gt;
+...
+&lt;% else %&gt;
+...
+&lt;% end %&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>任何不需要输出的情況</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;% user = @users.first %&gt;
+&lt;%= user.name %&gt;
+</code></pre></div></div>
+<p>§ 3 使用注释时可以使用 <code class="highlighter-rouge">#</code> 符号<code class="highlighter-rouge">&lt;%# Comment... %&gt;</code></p>
+
+<p>§ 4 禁止自动转义使用<code class="highlighter-rouge">&lt;%% ... %&gt;</code>;</p>
+<blockquote>
+  <p>简单说就是照<strong>原样</strong>输出内容。原因是HTML中输入<code class="highlighter-rouge">&lt;</code>，<code class="highlighter-rouge">&gt;</code>…和保留字会让HTML误认为是标签（<code class="highlighter-rouge">&lt;h&gt;,</code><code class="highlighter-rouge">&lt;a&gt;</code>…引起混乱），因此HTML会自动把这些符号转义为实体（类似于<code class="highlighter-rouge">&amp;gt;</code>,<code class="highlighter-rouge">&amp;lt;</code>的东东），这个语法可以强制不进行转义。</p>
+</blockquote>
+
+<p>对比看下就明白了：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;%= "&lt;b&gt;haha&lt;/b&gt;" %&gt; 
+ # &amp;lt;b&amp;gt;haha&amp;lt;/b&amp;gt;
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;%%= "&lt;b&gt;haha&lt;/b&gt;" %&gt; 
+ # &lt;b&gt;haha&lt;/b&gt;
+</code></pre></div></div>
+<blockquote>
+  <p>有时会看到标签<code class="highlighter-rouge">&lt;%-</code>or<code class="highlighter-rouge">-%&gt;</code> or <code class="highlighter-rouge">&lt;%=</code>or<code class="highlighter-rouge">-%&gt;</code> or
+<code class="highlighter-rouge">&lt;%=-</code>or<code class="highlighter-rouge">%&gt;</code>,意思是忽略前面和后面的空格和换行符（<code class="highlighter-rouge">-</code>号在前就忽略前面的，在后就忽略后面的，在两端就忽略前后的的空格和换行符）, 使输出更紧凑；不过要设置<code class="highlighter-rouge">trim mode</code>。<a href="https://ruby-china.org/topics/13042">参考：ruby-china讨论帖</a></p>
+</blockquote>
+
+:ET

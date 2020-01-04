@@ -1,0 +1,22 @@
+I"R<h3 id="using-ubuntu">Using ubuntu</h3>
+<hr />
+<p><code class="highlighter-rouge">which rails</code> 查找路径;</p>
+
+<p><code class="highlighter-rouge">pwd</code> 当前目录;</p>
+
+<p><code class="highlighter-rouge">sudo su</code> :切换到管理员;</p>
+
+<p><code class="highlighter-rouge">sudo mount -t vboxsf sarah /mnt/share</code></p>
+
+<p><code class="highlighter-rouge">apt-get update</code>: 更新源;</p>
+
+<p><code class="highlighter-rouge">apt-get upgrade</code>: 更新已安装的包;</p>
+
+<p><code class="highlighter-rouge">apt-get dist-upgrade</code> :升级系统;</p>
+
+<p><code class="highlighter-rouge">apt-get clean</code>: 清理无用的包;</p>
+
+<p><code class="highlighter-rouge">apt-get autoclean</code>: 清理无用的包;</p>
+
+<p><code class="highlighter-rouge">apt-get check</code>: 检查是否有损坏的依赖</p>
+:ET

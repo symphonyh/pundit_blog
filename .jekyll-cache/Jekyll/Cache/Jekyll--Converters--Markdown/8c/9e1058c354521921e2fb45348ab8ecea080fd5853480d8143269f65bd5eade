@@ -1,0 +1,255 @@
+I"(,<p>Using Word</p>
+
+<div class="cloud-tie-wrapper">
+<iframe width="800" height="480" src="//player.bilibili.com/player.html?aid=8859100&amp;cid=14616564&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+</iframe>
+</div>
+
+<p><br /></p>
+
+<h2 id="常用快捷键">常用快捷键：</h2>
+
+<hr />
+<p><code class="highlighter-rouge">Ctrl + F4</code>  关闭当前文档</p>
+
+<p><code class="highlighter-rouge">Ctrl + D</code>  调出字体选项卡</p>
+
+<p><code class="highlighter-rouge">Alt + O + T</code> 段落选项卡</p>
+
+<p><code class="highlighter-rouge">Ctrl + C</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + V</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + X</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + A</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + C</code>  复制格式</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + V</code>  粘贴格式</p>
+
+<p><code class="highlighter-rouge">Ctrl + 1</code>          一倍行距</p>
+
+<p><code class="highlighter-rouge">Ctrl + 2 </code>         二倍行距</p>
+
+<p><code class="highlighter-rouge">Ctrl + 5</code>          1.5倍行距</p>
+
+<p><code class="highlighter-rouge">Ctrl + 0 </code>         段前加一行间距</p>
+
+<p><code class="highlighter-rouge">Ctrl + Q </code>         清除段落格式</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + N</code>  清除格式</p>
+
+<p><code class="highlighter-rouge">Ctrl + Y</code>         重复上一次操作</p>
+
+<p><code class="highlighter-rouge">F4 </code>              重复上一次操作</p>
+
+<p><code class="highlighter-rouge">Ctrl + Z </code>        撤销上一次造作</p>
+
+<p><code class="highlighter-rouge">Ctrl + H </code>        替换</p>
+
+<p><code class="highlighter-rouge">Ctrl + F</code>         查找</p>
+
+<p><code class="highlighter-rouge">Ctrl + L </code>        左对齐</p>
+
+<p><code class="highlighter-rouge">Ctrl + R</code>         右对齐</p>
+
+<p><code class="highlighter-rouge">Ctrl + E </code>        居中</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + J</code> 分散对齐</p>
+
+<p><code class="highlighter-rouge">Ctrl + U</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + I</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + B</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + T </code>       创建悬挂缩进</p>
+
+<p><code class="highlighter-rouge">Ctrl + K </code>       创建超链接</p>
+
+<blockquote>
+  <p>如果想一次性取消文档中的全部超链接，可先按 <code class="highlighter-rouge">Ctrl + A</code> 键选中整个文档，然后按 <code class="highlighter-rouge">Ctrl + Shift + F9</code>键即可。目录也失去链接了，谨慎！！！</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">Shift + F3</code>       切换大小写</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + Home </code></p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + End</code></p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + W</code>   只给字词加下划线，不给空格加</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + D</code>   给文字加双下划线</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + N </code>  应用正文样式</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + 1 </code>    应用标题1样式</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + 2</code>     应用标题2样式</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + 3</code>     应用标题3样式</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + * </code>  显示/隐藏段落标记和隐藏符号</p>
+
+<p><code class="highlighter-rouge">Ctrl + Enter </code>      插入分页符</p>
+
+<p><code class="highlighter-rouge">Shift + Enter </code>     插入换行符</p>
+<blockquote>
+  <p>注解：回车相当于另起一个段落，换行符只换行 还在同一个段落里就像HTML里 p标签和br的区别</p>
+</blockquote>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">Ctrl + N</code>          创建于当前或最近使用的文档类型相同的新文档</p>
+
+<p><code class="highlighter-rouge">Ctrl + W</code>          关闭文档 会提示保存更改</p>
+
+<p><code class="highlighter-rouge">Ctrl + O </code>         打开</p>
+
+<p><code class="highlighter-rouge">Ctrl + P </code>         打印</p>
+
+<p><code class="highlighter-rouge">Ctrl + S </code>         保存</p>
+
+<p><code class="highlighter-rouge">Ctrl + F10</code>        窗口最大化</p>
+
+<p><code class="highlighter-rouge">Ctrl + F12 </code>       显示打开对话框</p>
+
+<p><code class="highlighter-rouge">F12</code>              显示另存为对话框</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + M</code>    批注</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + F</code>    脚注</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + D</code>    尾注</p>
+
+<p><code class="highlighter-rouge">Alt + Ctrl + V</code>    选择性粘贴</p>
+
+<p><code class="highlighter-rouge">Ctrl + = </code>         下标</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + + </code> 上标</p>
+
+<p><code class="highlighter-rouge">Alt + Shift + 上下箭头</code> 上下移动选中文字,对于表格则是合并、拆分表格</p>
+
+<p><code class="highlighter-rouge">Alt + Shift + T</code> 生成时间</p>
+
+<p><code class="highlighter-rouge">Alt + Shift + 	D</code> 生成日期</p>
+
+<p><code class="highlighter-rouge">Shift+F4</code>  快速翻页浏览</p>
+
+<p><code class="highlighter-rouge">Ctrl + G</code>  跳转定位页</p>
+
+<p><code class="highlighter-rouge">Ctrl+F1</code> 隐藏选项卡 双击<code class="highlighter-rouge">开始</code>效果一样</p>
+
+<p><code class="highlighter-rouge">Ctrl + F3</code> 连续剪切</p>
+
+<p><code class="highlighter-rouge">Ctrl + Shift + F3</code> 一次性粘贴</p>
+
+<p><code class="highlighter-rouge">Ctrl + [</code>，<code class="highlighter-rouge">Ctrl + ]</code> 放大缩小字体</p>
+
+<p><code class="highlighter-rouge">Ctrl + 3</code>  微软雅黑字体</p>
+
+<p><code class="highlighter-rouge">Ctrl + 4</code>  roman字体</p>
+
+<p><code class="highlighter-rouge">Ctrl + 6</code>  宋体</p>
+
+<hr />
+
+<h2 id="为字体设置快捷键">为字体设置快捷键</h2>
+
+<p>在Word中，我们可以为字体设置快捷键，那么在选择文本之后，只需要按下快捷键就可以快速为文本应用该字体，方法为：</p>
+
+<p>※ 点击【文件】-【选项】命令，打开“Word选项”对话框，在左侧选择“自定义功能区”选项，单击“自定义”按钮。</p>
+
+<p>※ 打开“自定义键盘”对话框，在“类别”列表框中选择“字体”选项，在右侧的“字体”列表框中选择需要设置的字体，如“微软雅黑”。在“请按新快捷键”文本框中按下需要设置的快捷键，如，【Ctrl+P】键，然后单击“指定”按钮。</p>
+
+<p>※ 设置完成后，选择文档中需要设置的文本，按下刚设置的快捷键即可快速将文本文本设置为”微软雅黑“字体了。</p>
+
+<hr />
+
+<h2 id="竖向选中">竖向选中</h2>
+
+<p>快捷操作：ALT+鼠标左键</p>
+
+<p>操作说明：按ALT+鼠标左键可以对文本进行竖向选中</p>
+
+<h2 id="快速选中一句">快速选中一句</h2>
+
+<p>快捷操作：CTRL+鼠标左键选择</p>
+
+<p>操作说明：将鼠标光标位于文字前，按CTRL+鼠标左键 可以快速选中该句文字。</p>
+
+<p>重点：是以句号作为选定标准，也可以实现不连续的选择</p>
+
+<h2 id="快速选中一行">快速选中一行</h2>
+
+<p>快捷操作：光标位于被选行左侧，鼠标单击</p>
+
+<p>操作说明：将光标位于被选行的左侧，等光标变为<strong>箭头</strong>时，(左移一些)鼠标单击即可快速选中一行；鼠标双击即可快速选中一段；鼠标3击即可快速全选。</p>
+
+<hr />
+
+<h2 id="快速绘制分割线">快速绘制分割线</h2>
+
+<p>有没有想过分割线也能快速绘制呢？一个挺好玩的小技巧，在你需要绘制分割线的时候格外的方便使用。</p>
+
+<p>输入三个”-“ + “enter”键   快速绘制直线</p>
+
+<p>输入三个”*” + “enter”键   快速绘制虚线</p>
+
+<p>输入三个”~” + “enter”键   快速绘制波浪线</p>
+
+<p>输入三个”=” + “enter”键   快速绘制双直线</p>
+
+<p>输入三个”#” + “enter”键   快速绘制中间加粗的三直线</p>
+
+<hr />
+
+<h2 id="域代码的使用">域代码的使用</h2>
+
+<p>　　<code class="highlighter-rouge">Ctrl+F9</code>     快速插入域定义符<code class="highlighter-rouge">{}</code>(注意:这个花括号不能用键盘输入)</p>
+
+<p>　　<code class="highlighter-rouge">Shift+F9</code>    显示或者隐藏指定(选中)的域代码</p>
+
+<p>　　<code class="highlighter-rouge">Alt+F9 </code>     显示或者隐藏文档中所有域代码</p>
+
+<h2 id="f9----------更新单个域">　　<code class="highlighter-rouge">F9</code>          更新单个域</h2>
+
+<h2 id="shift--组合键的使用">shift  组合键的使用</h2>
+
+<p>※ 剪切/粘贴</p>
+
+<p>在Word中，如要快速剪贴和粘贴某些文本，我们最常用的方法是按【Ctrl+X】和【Ctrl+V】组合键。</p>
+
+<p>但是你知道吗？利用Shift和其他功能键组合同样能实现相同效果。</p>
+
+<p>选中某段文字后，按【Shift + Delete】组合键可将所选的文本剪切到剪贴板中，再按【Shift + Insert】组合键可将被剪切的文本粘贴至当前光标处。</p>
+
+<p>※ 代替鼠标右键</p>
+
+<p>Word中，按【Shift +F10】组合键可以代替鼠标右键。</p>
+
+<p>选择某个对象，然后按下【Shift+F10】组合键，即会在当前位置弹出执行了鼠标右键的菜单命令，此键堪称键盘侠的福音。</p>
+
+<p>※ 【Shift】 插入空行</p>
+
+<p>在Word表格中，【Shift】键还可以帮助我们快速插入空行，方法为：</p>
+
+<p>选择单元格，这里可根据需要插入的行数来选择，需要插入多少行，就选取多少行。然后按住【Shift】键，向下拖拽，即可插入空行。</p>
+
+<p>※ 一键改变大小写</p>
+
+<p>我们在制作word文档时，有时难免要输入英文。然而英文的大小写转换常是一件让我们头痛的事，难道要一个个调整么？这时，只需掌握【Shift+F3】快捷键就能提高效率了。</p>
+
+<p>首先选中需要调整的英文，按下【Shift+F3】组合键，即可将小写字母全部切换成大写字母（当然也可以将大写字母全部切换成小写字母），再按一次，可以实现“仅将每个单词的首字母大写”。</p>
+
+<p>※ 快速定位到上次编辑位置</p>
+
+<p>编辑文档时，如果文档太长，需要来回转换。这时我们可以按下【Shift+F5】组合键，在最常使用的几个编辑位置来回切换。同样地，【Shift + F5】组合键能够快速返回到最近的一个编辑点。</p>
+
+<blockquote>
+  <p>技巧提示：【Shift+F5】组合键的作用是定位到Word最后三次编辑的位置，即Word会记录下一篇文档最近三次编辑文字的位置，可以重复按下【Shift+F5】组合键，并在三次编辑位置之间循环,当然按一下【Shift+F5】组合就会定位到上一次编辑时的位置了</p>
+</blockquote>
+
+<hr />
+:ET

@@ -1,0 +1,161 @@
+I"�<h3 id="oracle-常用的命令行语句">Oracle 常用的命令行语句</h3>
+
+<p>1.1 进入SQLPlus</p>
+
+<p><code class="highlighter-rouge">sqlplus /nolog</code></p>
+
+<blockquote>
+  <p>注：<code class="highlighter-rouge">nolog</code>表示不进行登录，仅仅是进入<code class="highlighter-rouge">sqlplus</code>软件而已;</p>
+</blockquote>
+
+<hr />
+<p>1.2 以超级管理员进入</p>
+
+<p><code class="highlighter-rouge">conn /as sysdba</code></p>
+
+<blockquote>
+  <p>conn[ect] 
+注：<code class="highlighter-rouge">sqlplus / as sysdba</code>是一种简化写法，其实是省略了用户名和密码，完整的写法是 <code class="highlighter-rouge">sqlplus  sys/password  as  sysdba</code></p>
+</blockquote>
+
+<p>conn也可以用来切换用户登录：<code class="highlighter-rouge">conn scott；</code></p>
+
+<hr />
+<p>1.3 给用户授权</p>
+
+<p><code class="highlighter-rouge">grant connect,dba to nc65；</code></p>
+
+<hr />
+<p>1.4 普通用户：scott</p>
+
+<p>解锁用户：<code class="highlighter-rouge">alter user scott account unlock;</code></p>
+<blockquote>
+  <p>使用普通用户前先解锁;</p>
+</blockquote>
+
+<p>设置密码：<code class="highlighter-rouge">alter user scott identified by tiger;</code></p>
+
+<p>普通用户：scott
+密码：tiger</p>
+
+<p>以普通用户进入</p>
+
+<p>DOS:<code class="highlighter-rouge">sqlplus scott/tiger</code></p>
+
+<p>1.4.1 查询scott用户下的所有对象，使用tab表，tab表每个用户都有</p>
+
+<p><code class="highlighter-rouge">select * from tab;</code></p>
+
+<p>1.4.2 查看表结构</p>
+
+<p><code class="highlighter-rouge">desc dept;</code></p>
+
+<p>1.4.3  显示当前用户</p>
+
+<p><code class="highlighter-rouge">show user;</code></p>
+
+<p>1.4.4 <code class="highlighter-rouge">passw</code> 修改当前用户口令</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">passw[ord]</code> scott;</p>
+</blockquote>
+
+<blockquote>
+  <p>如果要想修改其它用户的密码，需要用sys/system登录</p>
+</blockquote>
+
+<p><br /></p>
+
+<p>1.4.5 <code class="highlighter-rouge">/</code> 执行上一条SQL语句</p>
+
+<p>1.4.6 设置环境</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>set linesize 长度；
+
+set pagesize 行数；
+</code></pre></div></div>
+
+<p>1.4.7 清理屏幕</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clear screen;
+
+host cls;
+</code></pre></div></div>
+<p>1.4.8 退出程序</p>
+
+<p><code class="highlighter-rouge">exit</code></p>
+
+<hr />
+<p>1.5 打开notepad编辑SQL语句</p>
+
+<p><code class="highlighter-rouge">ed a.sql</code></p>
+
+<hr />
+<p>1.6 执行和编辑指定位置的SQL脚本</p>
+
+<p><code class="highlighter-rouge">start d:\test.sql</code></p>
+
+<p><code class="highlighter-rouge">@ d:\test.sql</code></p>
+
+<hr />
+<p>1.7 spool将屏幕显示及查询结果输入到指定文本文件中</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spool d:\1.txt
+
+select * from emp;
+
+spool off
+</code></pre></div></div>
+<hr />
+
+<p>1.8 注释</p>
+
+<p>使用–符号，设置单行注释: <code class="highlighter-rouge">-- select * from emp;</code></p>
+
+<p>使用/* */符号，设置多行注释:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /*
+        select * from emp;
+    */
+</code></pre></div></div>
+<hr />
+
+<p>1.9 Oracle instance</p>
+
+<p>1.9.1 查看实例：</p>
+
+<p><code class="highlighter-rouge">show parameter service_name;</code> 查看当前实例</p>
+
+<p>或</p>
+
+<p><code class="highlighter-rouge">select name from v$database;</code></p>
+
+<p>1.9.2 切换实例：</p>
+
+<p>sqlplus /@ORACLE_SID as sysdba; 其中ORACLE_SID为具体的实例名称，比如连接到orcl实例就执行命令：</p>
+
+<p><code class="highlighter-rouge">sqlplus /@orcl as sysdba;</code></p>
+
+<p>或</p>
+
+<p><code class="highlighter-rouge">sqlplus /nolog;</code></p>
+
+<p><code class="highlighter-rouge">connect /@orcl as sysdba;</code></p>
+
+<hr />
+
+<p>参考：</p>
+
+<blockquote>
+  <p>https://blog.csdn.net/lovecuidong/article/details/87939386</p>
+</blockquote>
+
+<blockquote>
+  <p>[魔乐科技李兴华老师oracle学习笔记] https://wenku.baidu.com/view/beef43b065ce050876321398.html</p>
+</blockquote>
+
+<blockquote>
+  <p>[Oracle中表空间 表 查询 函数] https://www.cnblogs.com/liuxuelin/p/10004161.html</p>
+</blockquote>
+
+<blockquote>
+  <p>[Oracle中视图 序列 同义词 索引] https://www.cnblogs.com/liuxuelin/p/10004137.html</p>
+</blockquote>
+:ET

@@ -4,7 +4,7 @@ title: Gantt chart
 date: 2019-10-25
 comments: true
 external-url:
-categories: yonyouNC 
+categories: Office 
 ---
 
 Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；

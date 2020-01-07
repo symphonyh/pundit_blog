@@ -4,7 +4,7 @@ title: 配置安装manjaro的过程记录
 date: 2020-01-04
 comments: true
 external-url:
-categories: yonyouNC
+categories: Javascript
 ---
 
 manjaro 安装记录

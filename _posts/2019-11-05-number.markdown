@@ -4,7 +4,7 @@ title: WBS自动生成编号
 date: 2019-11-05
 comments: true
 external-url:
-categories: yonyouNC 
+categories: Office 
 ---
 
 excel名称管理器中定义A列名称`prevWBS`,名称管理器中把A2单元引用改为`=Sheet1!$A1`；生成编号复制公式即可:

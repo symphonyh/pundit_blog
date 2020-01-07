@@ -9,6 +9,8 @@ categories: yonyouNC
 
 I'm done with this ! 
 
+```
+
 计划= AND(M$5>$D9,L$5<=$E9)
 
 实际= AND(M$5>$G9,L$5<=$H9)
@@ -18,7 +20,7 @@ I'm done with this !
 完成= AND($J9>0,M$5>$G9,L$5<=($G9+INT(($H9-$G9)*$J9)))
 
 超完成= AND(M$5>IF($E9<=$G9,$G9,$E9+1),$J9>0,L$5<=($G9+INT(($H9-$G9)*$J9)))
-
+```
 ---
 
 ### 关于日历的公式：

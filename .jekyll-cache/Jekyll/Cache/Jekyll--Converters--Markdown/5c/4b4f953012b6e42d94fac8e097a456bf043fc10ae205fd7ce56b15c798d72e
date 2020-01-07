@@ -1,13 +1,17 @@
-I"E<p>Excel 高亮显示选中行列：聚光灯效果</p>
+I"]<p>Excel 高亮显示选中行列：聚光灯效果</p>
 
-<p>※ 1. 条件格式设置公式：</p>
+<ol>
+  <li>条件格式设置公式：</li>
+</ol>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=OR(CELL("row")=ROW())
 =OR(CELL("col")=COLUMN()) 
 =(CELL("row")=ROW())+(CELL("col")=COLUMN())
 </code></pre></div></div>
 
-<p>※ 2. VBA 工作表选择 Worksheet SelectionChange 加入代码</p>
+<ol>
+  <li>VBA 工作表选择 Worksheet SelectionChange 加入代码</li>
+</ol>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 On Error Resume Next
@@ -24,7 +28,9 @@ End Sub
   <p>文件保存格式为 .xlsm</p>
 </blockquote>
 
-<p>※ 3. 纯VBA 实现方式：</p>
+<ol>
+  <li>纯VBA 实现方式：</li>
+</ol>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)

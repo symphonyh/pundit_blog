@@ -1,4 +1,4 @@
-I"�<p>Excel VBA</p>
+I"�<p>Excel VBA</p>
 
 <h2 id="显示隐藏菜单-编辑栏和页签">显示隐藏菜单 编辑栏和页签</h2>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub visible()
@@ -29,13 +29,4 @@ Application.DisplayFormulaBar = False '隐藏编辑栏
   <p>还需要调整，编辑栏隐藏要执行二次，不知道什么原因?</p>
 </blockquote>
 
-<hr />
-<h2 id="worksheet_selectionchange-事件后无法使用复制粘贴问题">Worksheet_SelectionChange 事件后无法使用复制粘贴问题</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
-On Error Resume Next
-If Application.CutCopyMode = xlCopy Or Application.CutCopyMode = xlCut Then Exit Sub
-ActiveSheet.Calculate
-End Sub
-</code></pre></div></div>
 :ET

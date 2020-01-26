@@ -4,7 +4,7 @@ title: Using-npm
 date: 2018-05-11
 comments: true
 external-url:
-categories: Ember.js
+categories: Javascript
 ---
 
 - Update 更新到最新版本:

@@ -45,11 +45,6 @@ find what 栏: `\s+$`  （正则表达式,前后不要有空格）
 replace with 栏: 这行留空）
 
 
-插件快捷操作：
-
-ctrl+shift+c 取色器
-
-ctrl+shift+h 代码对齐 
 
 
 >参考：[正则表达式的教程笔记](http://www.yyyweb.com/5141.html)

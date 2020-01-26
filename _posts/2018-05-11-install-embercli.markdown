@@ -4,7 +4,7 @@ title: 安装 Ember
 date: 2018-05-11
 comments: true
 external-url:
-categories: Ember.js
+categories: Javascript
 ---
 
 - install Ember:

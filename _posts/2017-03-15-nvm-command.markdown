@@ -4,7 +4,7 @@ title: Using nvm
 date: 2017-03-15
 comments: true
 external-url:
-categories: Ember.js
+categories: Javascript
 ---
 
  nvm 安装和使用

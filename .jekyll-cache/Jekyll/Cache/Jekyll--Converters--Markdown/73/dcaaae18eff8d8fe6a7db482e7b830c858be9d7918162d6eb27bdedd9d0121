@@ -1,0 +1,352 @@
+I"�#<p>ES6 笔记</p>
+
+<h3 id="letconst-变量声明">let，const 变量声明</h3>
+
+<ul>
+  <li>let 生命变量，没有变量提升</li>
+  <li>是一个块级作用域</li>
+  <li>不允许重复声明</li>
+</ul>
+
+<p>const 一般用来声明常量，一旦被声明无法修改;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const person = {
+     name：'cloudhan'
+}
+</code></pre></div></div>
+<p>允许修改对象中属性值;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>preson.name = 'hxy';
+console.log(preson);
+</code></pre></div></div>
+<p>但不能修改对象;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>person = {
+   age:20
+}
+</code></pre></div></div>
+<p>作用：</p>
+
+<p>1、解决for循环，i只在当前作用域有效</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const arr = [];
+
+for(let i = 0; i &lt; 10; i++){
+   arr[i] = function(){
+        return i;
+    }
+}
+
+console.log(arr[5]());
+</code></pre></div></div>
+<p>2、不会污染全局变量</p>
+
+<p>默认情况下用<code class="highlighter-rouge">const</code>声明变量，只有在你知道整个变量值被修改的情况下用<code class="highlighter-rouge">let</code>。</p>
+
+<hr />
+
+<h3 id="模版字符串">模版字符串</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+`&lt;p ${id}&gt; ${name} &lt;/p&gt;`  
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="函数的参数">函数的参数</h3>
+
+<p>1、带参数默认值</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // es5的写法
+
+function add(a, b){
+   a = a || 10;
+   b = b || 20;
+   return a + b; 
+}
+console.log(add());
+
+
+//es6的写法
+
+function add(a = 10, b = 20){
+   return a + b;
+}
+console.log(add());
+
+</code></pre></div></div>
+
+<p>2、默认的表达式也可以是一个函数</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function add(a = 10, b = getval(5)){
+   return a + b;
+}
+
+function getval(val){
+   return val + 5;
+}
+
+console.log(add(10)); //返回20
+
+</code></pre></div></div>
+
+<p>3、函数的剩余参数</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// es5的写法
+
+let Book = {
+	title:'ES6教程'，
+	author:'cloudhan'
+	year:2019
+}
+
+let BookData = pick(Book,'author', 'year');
+console.log(BookData);
+
+function pick(obj) {
+	let result = Object.create(null);
+	for (let i = 1; i &lt; arguments.lenght; i++) {
+		result[arguments[i]] = obj[arguments[i]];
+	}
+	return result;
+}
+
+</code></pre></div></div>
+
+<p>es6的剩余参数 ,剩余参数由…和紧跟的一个具名参数指定 …keys;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function pick(obj,...keys){
+
+	let result = Object.create(null);
+	for (let i = 0; i &lt; keys.lenght; i++) {
+		result[keys[i]] = obj[keys[i]];
+		return result;
+	}	
+}
+
+</code></pre></div></div>
+<p>keys[]  是个真实的数组，arguments 是类数组</p>
+
+<p>4、es6扩展运算符…</p>
+
+<p>剩余运算符：把多个独立的参数合并到一个数组中;</p>
+
+<p>扩展运算符:将一个数组分割，并将各个项作为分离的参数传给函数;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const arr = [10,20,80,30,100,40];
+
+console.log(Math.max.apply(null,arr)); //ES5
+
+console.log(Math.max(...arr)); //ES6
+
+</code></pre></div></div>
+
+<h3 id="箭头函数">箭头函数</h3>
+
+<p>1、定义</p>
+
+<p>箭头函数使用=&gt;来定义匿名函数，<code class="highlighter-rouge">function（）{}</code> 等价于 <code class="highlighter-rouge">（）=&gt;{};</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let add = function (a,b) {
+	return a + b;
+}
+
+let add = (a,b) =&gt; {
+	return a + b;
+}
+
+//如果只有一个参数（）可省略；大括号如果一行可省略,返回对象加（）
+
+let add = (a,b) =&gt;a + b;
+
+let add = val =&gt; (val+5); 
+let add = val =&gt; val;
+
+let fn = () =&gt; 'heloo world'
+
+</code></pre></div></div>
+
+<p>2、闭包函数</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let fn = (function(){
+	return function(){
+		console.log('hello');
+	}
+})();
+
+
+let fn = (()=&gt;{
+	return ()=&gt;{
+		console.log('hello');
+	}
+})();
+fn();
+</code></pre></div></div>
+<p>3、箭头函数没有this指向</p>
+
+<p>ES5 中的this指向，取决于调用函数的上下文对象;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let PageHandle = {
+	id: 123,
+	init: function () {
+		document.addEvenlistener('click',function(event) {
+			this.doSomeThings(event.type);  //this丢失  指向了document 
+		}.bind(this),false)                 //通过bind解决this丢失
+	},
+	doSomeThings:function(type){
+		console.log('事件类型:${type},当前ID:${this.id}');
+	}
+}
+
+PageHandle.init();
+
+</code></pre></div></div>
+
+<p>箭头函数没有this指向，箭头函数内部this值只能通过查找上级作用域链来确定,一旦使用箭头函数，当前不存在作用域查找上一级作用域链;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let PageHandle = {
+	id: 123,
+	init: function () {
+		document.addEvenlistener('click',(event)=&gt;{
+			this.doSomeThings(event.type);  //this 在init的作用域链上指向了上层定义init的对象PageHandle
+		},false)                
+	},
+	doSomeThings:function(type){
+		console.log('事件类型:${type},当前ID:${this.id}');
+	}
+}
+</code></pre></div></div>
+
+<p>4、注意事项:</p>
+
+<ul>
+  <li>使用箭头函数 函数内部不会产生arguments</li>
+  <li>不能使用new关键字，来实例化对象 没有constraction 属性</li>
+  <li>函数也是对象，但箭头函数只是一个表达式，不是一个对象</li>
+</ul>
+
+<h3 id="解构赋值">解构赋值</h3>
+
+<ul>
+  <li>是对赋值运算符的一种扩展</li>
+  <li>针对数组和对象进行操作</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let node = {
+	type:'iden'
+	name:'foo'
+}
+
+let type = node.type;  //es5
+let name = node.name;
+
+let {type,name} = node  //es6 完全解构
+
+let obj = {
+	a:{
+		name:'cloudhan'
+	},
+	b:[],
+	c:'hello world'
+}
+let {a} = obj  //不完全解构，忽略部分属性
+
+
+let {a,...res} = obj;  //使用剩余运算符
+
+let arr = [1,2,3];   // 数组解构，甚至可以数组嵌套
+let [a,b,c] = arr;
+
+let {a,b = 30} = {a:20};  //默认值
+
+</code></pre></div></div>
+
+<h3 id="对象的扩展功能">对象的扩展功能</h3>
+
+<p>es6 直接写入变量和函数，作为对象的属性和方法;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const name = 'cloudhan',age = 20;
+const person = {
+	name,  //等价于  name:name,
+	age,   //等价于  age:age,
+	sayName(){                      //等价于 sayName: function (){}
+			console.log(this.name);
+	}
+}
+
+function fn(x,y) {
+	return {x,y};  // 等价于{x:x,y:y}
+}
+
+console.log(fn(10,20));
+
+</code></pre></div></div>
+
+<p>属性表达式的组合 方法名的组合;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> const obj = {};
+ obj.isShow = true;
+ const name = 'a';
+ obj[name+'bc'] = 123;
+
+ obj['f' + 'bc'] = function () {
+ 	console.log(this);
+  }
+
+</code></pre></div></div>
+
+<p>扩展2个方法;</p>
+
+<p>1、<code class="highlighter-rouge">is（）</code> ===  两个参数是否严格相等;</p>
+
+<p>2、<code class="highlighter-rouge">assign() </code>对象的合并,返回合并后新对象，属于浅拷贝;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let newObj = Object.assign({},{a:1},{b:2})
+
+</code></pre></div></div>
+
+<h3 id="symbol">symbol</h3>
+
+<p>原始数据类型，表示独一无二的值，最大用途是用来定义对象的私有变量;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let s1 = Symbol('s1');
+
+let obj = {};
+obj[s1] = 'cloudhan';
+   [s1] = 'cloudhan'; //简写
+
+console.log(obj[s1]) ;
+
+</code></pre></div></div>
+
+<h3 id="新数据类型-set-map">新数据类型 set map</h3>
+
+<p>set 是无重复值的有序列表;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let set = new set();
+
+set.add();
+set.delete();
+set.size();
+set.has();
+set.foreach((val,key)=&gt;{
+	console.log(val);
+	console.log(key);
+}) //键值相等
+
+let set = new Set([1,2,3,3,3,4])
+let arr = [...set]  // 集合转换为数组
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>set中对象的引用无法被释放,使用<code class="highlighter-rouge">Weakset()</code>，不能传入非对象的参数，不可迭代，没有size属性，没有forEach等方法</p>
+</blockquote>
+
+<p>map 类型是键值对的有序列表，键和值可以是任何类型;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let map = new Map();
+map.set('neme','cloudhan');
+map.get();
+</code></pre></div></div>
+:ET

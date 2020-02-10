@@ -1,4 +1,4 @@
-I"1!<h2 id="常用">常用</h2>
+I"� <h2 id="常用">常用</h2>
 
 <p><code class="highlighter-rouge">Ctrl+D</code> 选中光标所占的文本，继续操作则会选中下一个相同的文本;</p>
 
@@ -33,12 +33,6 @@
 <p>find what 栏: <code class="highlighter-rouge">\s+$</code>  （正则表达式,前后不要有空格）</p>
 
 <p>replace with 栏: 这行留空）</p>
-
-<p>插件快捷操作：</p>
-
-<p>ctrl+shift+c 取色器</p>
-
-<p>ctrl+shift+h 代码对齐</p>
 
 <blockquote>
   <p>参考：<a href="http://www.yyyweb.com/5141.html">正则表达式的教程笔记</a>

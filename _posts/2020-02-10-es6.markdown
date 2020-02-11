@@ -35,6 +35,22 @@ person = {
 ~~~
 1、解决for循环，i只在当前作用域有效
 
+es5中，变量作用域是函数，不是块级作用域{}，因此需要重新在for外层包一个函数（闭包）每次循环重新定义一个i;
+
+~~~js
+const arr = [];
+
+for(var i = 0; i < 10; i++){
+ (function(i) {
+ 	   arr[i] = function(){
+        return i;
+    };
+ })(i);
+}
+
+console.log(arr[5]());
+~~~
+es6 没有这个问题了
 ~~~js
 const arr = [];
 
@@ -170,7 +186,7 @@ let add = (a,b) => {
 	return a + b;
 }
 
-//如果只有一个参数（）可省略；大括号如果一行可省略,返回对象加（）
+//如果只有一个参数（）可省略；大括号如果一行且是return语句可省略,返回对象加（）
 let add = (a,b) =>a + b;
 let add = val => (val+5); 
 let add = val => val;

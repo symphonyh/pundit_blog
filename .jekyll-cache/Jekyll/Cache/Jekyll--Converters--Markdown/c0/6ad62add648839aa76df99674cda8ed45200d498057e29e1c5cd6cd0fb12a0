@@ -1,0 +1,103 @@
+I"�(<h2 id="js-中对象的写法">JS 中对象的写法</h2>
+<h3 id="es5-中对象">es5 中对象</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">showName</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+   <span class="p">};</span>  
+
+  <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">showAge</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+   <span class="p">};</span>  
+
+  <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">'</span><span class="s1">cloudhan</span><span class="dl">'</span><span class="p">,</span><span class="mi">18</span><span class="p">);</span>  
+
+  <span class="nx">p</span><span class="p">.</span><span class="nx">showName</span><span class="p">();</span>
+  <span class="nx">p</span><span class="p">.</span><span class="nx">showAge</span><span class="p">();</span>  
+</code></pre></div></div>
+<h3 id="es6中对象">es6中对象</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="nx">age</span><span class="p">){</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="nx">showName</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+   <span class="p">}</span>  
+
+  <span class="nx">showAge</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
+   <span class="p">}</span>  
+
+  <span class="p">}</span>  
+
+  <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">'</span><span class="s1">cloudhan</span><span class="dl">'</span><span class="p">,</span><span class="mi">18</span><span class="p">);</span>  
+
+  <span class="nx">p</span><span class="p">.</span><span class="nx">showName</span><span class="p">();</span>
+  <span class="nx">p</span><span class="p">.</span><span class="nx">showAge</span><span class="p">();</span>
+</code></pre></div></div>
+<h3 id="es5中对象的继承">es5中对象的继承</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nx">Worker</span><span class="p">(</span><span class="nx">namne</span><span class="p">,</span><span class="nx">age</span><span class="p">,</span><span class="nx">job</span><span class="p">){</span>
+    <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">name</span><span class="p">,</span><span class="nx">age</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">job</span> <span class="o">=</span> <span class="nx">job</span><span class="p">;</span>
+  <span class="p">}</span>  
+
+  <span class="nx">Woker</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+  <span class="nx">Worker</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kd">constructor</span> <span class="o">=</span> <span class="nx">Worker</span><span class="p">;</span>  
+
+  <span class="nx">Worker</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">showJob</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">job</span><span class="p">);</span>
+  <span class="p">};</span>
+</code></pre></div></div>
+<h3 id="es6中对象的继承">es6中对象的继承</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">Worker</span> <span class="kd">extends</span> <span class="nx">Person</span><span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="nx">age</span><span class="p">,</span><span class="nx">job</span><span class="p">){</span>
+    <span class="k">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="nx">age</span><span class="p">);</span>  <span class="c1">//超类</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">job</span> <span class="o">=</span> <span class="nx">job</span><span class="p">;</span>
+  <span class="p">}</span>
+
+
+<span class="nx">showJob</span><span class="p">(){</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">job</span><span class="p">);</span>
+
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">'</span><span class="s1">cloudhan</span><span class="dl">'</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="dl">'</span><span class="s1">CEO</span><span class="dl">'</span><span class="p">);</span>  
+<span class="nx">p</span><span class="p">.</span><span class="nx">showJob</span><span class="p">();</span>
+
+</code></pre></div></div>
+<h2 id="js模块的导出和引入">JS模块的导出和引入</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="p">{</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">};</span>
+
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">show</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// body...</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">person</span><span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">XX</span><span class="p">;</span>  <span class="c1">//默认成员</span>
+
+<span class="nx">mport</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">mod1</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mod1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="nx">mod1</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./mod1</span><span class="dl">'</span> <span class="c1">//import defaule</span>
+    
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mod1</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mod1</span><span class="p">);</span>
+
+<span class="k">import</span> <span class="p">{</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span> <span class="k">as</span> <span class="nx">name2</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">.mod1</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="dl">'</span><span class="s1">XXX</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// 通常引入css 图片</span>
+
+<span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">awit</span> <span class="k">import</span><span class="p">(</span><span class="dl">"</span><span class="s2">./mod1</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//异步引入，返回 Promise </span>
+</code></pre></div></div>
+:ET

@@ -2,7 +2,7 @@
 title: "Cloudhan' Tech Blog"
 author: "Cloudhan"
 description: " "
-keywords: "Ruby, Ruby on Rails, Ember.js, CSS, Javascript, jQuery, software Engineering, Ruby Programming,"
+keywords: "Ruby, Ruby on Rails, Ember.js, CSS, Javascript, software Engineering"
 biography: " "
 colophon: "© MMXV — MMXVI by Cloudhan.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/'>Github Pages</a> and created with <a href='http://jekyllrb.com/'>Jekyll</a>."
 
@@ -15,7 +15,7 @@ facebook_username:
 google-analytics:
 email: hxy@cloudhan.me 
 
-simple_search: http://baidu.com/
+simple_search: https://baidu.com/
 markdown: kramdown
 kramdown:
   input: GFM 

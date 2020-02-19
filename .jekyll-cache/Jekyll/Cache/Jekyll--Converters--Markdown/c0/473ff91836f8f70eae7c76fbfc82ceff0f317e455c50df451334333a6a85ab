@@ -1,4 +1,4 @@
-I"Hw<p>ES6 笔记</p>
+I"v}<p>ES6 笔记</p>
 
 <h2 id="letconst-变量声明">let，const 变量声明</h2>
 
@@ -25,6 +25,21 @@
 </code></pre></div></div>
 <p>1、解决for循环，i只在当前作用域有效</p>
 
+<p>es5中，变量作用域是函数，不是块级作用域{}，因此需要重新在for外层包一个函数（闭包）每次循环重新定义一个i;</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+ <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+ 	   <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
+    <span class="p">};</span>
+ <span class="p">})(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]());</span>
+</code></pre></div></div>
+<p>es6 没有这个问题了</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
 
 <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
@@ -145,7 +160,7 @@
 	<span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">//如果只有一个参数（）可省略；大括号如果一行可省略,返回对象加（）</span>
+<span class="c1">//如果只有一个参数（）可省略；大括号如果一行且是return语句可省略,返回对象加（）</span>
 <span class="kd">let</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="o">=&gt;</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="kd">let</span> <span class="nx">add</span> <span class="o">=</span> <span class="nx">val</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">val</span><span class="o">+</span><span class="mi">5</span><span class="p">);</span> 
 <span class="kd">let</span> <span class="nx">add</span> <span class="o">=</span> <span class="nx">val</span> <span class="o">=&gt;</span> <span class="nx">val</span><span class="p">;</span>

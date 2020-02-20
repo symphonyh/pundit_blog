@@ -25,8 +25,8 @@ $alt-text-color:   darken($article-bg-color, 40%);
 
 $subdued-border:   rgba($bg-color-darker, 0.5);
 
-// Import partials from `sass_dir` (defaults to `_sass`)
+// Import partials from `sass_dir` (defaults to `_sass`)// ,"syntax-highlighting"
 @import
-  "base",
-  "syntax-highlighting"
+  "base"
+ 
 ;

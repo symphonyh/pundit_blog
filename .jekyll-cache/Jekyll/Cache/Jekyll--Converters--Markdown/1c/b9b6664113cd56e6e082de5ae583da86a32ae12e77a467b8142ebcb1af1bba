@@ -1,6 +1,7 @@
-I"R	<p>I’m done with this !</p>
+I"	<p>I’m done with this !</p>
+<pre>
+<code class="excel">
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 计划= AND(M$5&gt;$D9,L$5&lt;=$E9)
 
 实际= AND(M$5&gt;$G9,L$5&lt;=$H9)
@@ -10,7 +11,9 @@
 完成= AND($J9&gt;0,M$5&gt;$G9,L$5&lt;=($G9+INT(($H9-$G9)*$J9)))
 
 超完成= AND(M$5&gt;IF($E9&lt;=$G9,$G9,$E9+1),$J9&gt;0,L$5&lt;=($G9+INT(($H9-$G9)*$J9)))
-</code></pre></div></div>
+
+</code>
+</pre>
 <hr />
 
 <h3 id="关于日历的公式">关于日历的公式：</h3>

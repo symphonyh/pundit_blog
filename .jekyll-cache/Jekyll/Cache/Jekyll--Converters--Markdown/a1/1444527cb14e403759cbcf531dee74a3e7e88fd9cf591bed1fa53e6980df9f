@@ -1,4 +1,4 @@
-I"�<h2 id="1标题">1、标题</h2>
+I"�<h2 id="1标题">1、标题</h2>
 <hr />
 
 <h1>  adcdefghijklmnopqrstuvwxyz 人生的最大幸福 </h1>
@@ -35,7 +35,31 @@ resource :session, only: [:create, :destroy]
 
 <p><code>adcdefghijklmnopqrstuvwxyz</code></p>
 
-<p><br /></p>
+<pre>
+  <code class="javascript">
+   function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i &lt; classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+  return (
+    <div>
+      <web-component>{block}</web-component>
+    </div>
+  )
+}
+export  $initHighlight;
+language: javascriptstyle: defau 
+
+  </code>
+</pre>
 
 <h2 id="4small-ornament-big-ornament">4、.small-ornament, .big-ornament<br /></h2>
 <hr />

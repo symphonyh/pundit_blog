@@ -1,4 +1,4 @@
-I"��<p><code class="highlighter-rouge">Slim</code> 是一种模板语言，它的目的是减少标记语言语法的基础标签，而又不会变得难以理解。起初，它只是一种练习，去尝试可以从标准HTML模板中移除标记标签（“&lt;”符号, “&gt;”符号, “&lt; /&gt;”关闭标签等等）。随着功能的可扩展性和语法的灵活性增强，越来越多的人对<code class="highlighter-rouge">Slim</code>产生了兴趣。</p>
+I" �<p><code class="highlighter-rouge">Slim</code> 是一种模板语言，它的目的是减少标记语言语法的基础标签，而又不会变得难以理解。起初，它只是一种练习，去尝试可以从标准HTML模板中移除标记标签（“&lt;”符号, “&gt;”符号, “&lt; /&gt;”关闭标签等等）。随着功能的可扩展性和语法的灵活性增强，越来越多的人对<code class="highlighter-rouge">Slim</code>产生了兴趣。</p>
 
 <h3 id="特征列表">特征列表…</h3>
 <p>§ <strong>优雅的语法</strong></p>
@@ -149,8 +149,7 @@ API 文档
       <span class="p">=</span> <span class="k">yield</span>
 </code></pre></div></div>
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>缩进很重要，但你可以自行选择喜欢的缩进深度。例如，你想先缩进两个空格，然后是五个，这都可以。而嵌套标记仅仅需要缩进一个空格，其余的就是出于美观。
-</code></pre></div>  </div>
+  <p>缩进很重要，但你可以自行选择喜欢的缩进深度。例如，你想先缩进两个空格，然后是五个，这都可以。而嵌套标记仅仅需要缩进一个空格，其余的就是出于美观。</p>
 </blockquote>
 
 <p>来看看<code class="highlighter-rouge">haml</code>的写法：</p>

@@ -1,4 +1,4 @@
-I"\.<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。</p>
+I"�,<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。</p>
 
 <h2 id="标题">§ 标题</h2>
 
@@ -14,8 +14,7 @@
 </ul>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>共有1~6级标题，1级标题字体最大。
-</code></pre></div>  </div>
+  <p>共有1~6级标题，1级标题字体最大。</p>
 </blockquote>
 
 <h2 id="块注释blockquote">§ 块注释（blockquote）</h2>
@@ -23,8 +22,7 @@
 <p>通过在文字开头添加<code class="highlighter-rouge">&gt;</code>表示块注释。</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>当`&gt;`和文字之间添加五个空格时，块注释的文字会有变化。
-</code></pre></div>  </div>
+  <p>当<code class="highlighter-rouge">&gt;</code>和文字之间添加五个空格时，块注释的文字会有变化。</p>
 </blockquote>
 
 <h2 id="无序列表">§ 无序列表</h2>
@@ -32,8 +30,7 @@
 <p>在文字开头添加(*, +, or -)实现无序列表。但是要注意在(*, +, and -)和文字之间需要添加空格。</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>建议：一个文档中只是用一种无序列表的表示方式
-</code></pre></div>  </div>
+  <p>建议：一个文档中只是用一种无序列表的表示方式</p>
 </blockquote>
 
 <h2 id="有序列表">§ 有序列表</h2>
@@ -104,8 +101,7 @@
 <ul>
   <li>简单文字出现一个代码框(code)。使用<code class="highlighter-rouge">&lt;blockquote&gt;</code>。
     <blockquote>
-      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 不是单引号而是左上角的ESC下面~中的"`"）
-</code></pre></div>      </div>
+      <p>不是单引号而是左上角的ESC下面~中的”`“）</p>
     </blockquote>
   </li>
   <li>大片文字需要实现代码框(pre)，使用Tab和四个空格，或者<code class="highlighter-rouge">~~~</code>包围代码。</li>
@@ -125,8 +121,7 @@
 <p>在<strong>空白行</strong>下方添加<code class="highlighter-rouge">---</code>横线。</p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 前面讲过在文字下方添加“-”，实现的2级标题
-</code></pre></div>  </div>
+  <p>前面讲过在文字下方添加“-”，实现的2级标题</p>
 </blockquote>
 
 <h2 id="注释">§ 注释</h2>
@@ -314,9 +309,15 @@ size为3：<font size="3">size为3</font><br /></p>
 <h3 id="参考"><a>参考</a><br /></h3>
 
 <blockquote>
-  <p>1、<a href="http://wowubuntu.com/markdown/">Markdown 语法说明</a>；
-2、<a href="http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml">本文转自互联网360doc</a>;
-3、<a href="https://www.jianshu.com/p/2df05f279331">Markdown插入表格语法</a></p>
+  <p>1、<a href="http://wowubuntu.com/markdown/">Markdown 语法说明</a>；</p>
+</blockquote>
+
+<blockquote>
+  <p>2、<a href="http://www.360doc.com/content/15/0216/11/8790037_448944940.shtml">本文转自互联网360doc</a>;</p>
+</blockquote>
+
+<blockquote>
+  <p>3、<a href="https://www.jianshu.com/p/2df05f279331">Markdown插入表格语法</a></p>
 </blockquote>
 
 :ET

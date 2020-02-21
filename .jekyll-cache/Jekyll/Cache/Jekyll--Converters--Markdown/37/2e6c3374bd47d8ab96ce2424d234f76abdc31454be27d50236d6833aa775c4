@@ -1,4 +1,4 @@
-I"�/<p>haml 是一种简洁优美的模板语言，主要智能用来替代基于<code class="highlighter-rouge">ruby</code>框架的模版系统，例如：替换<code class="highlighter-rouge">Ruby on Rails</code>的<code class="highlighter-rouge">erb</code>模版，可以大大缩减模板代码，减少冗余，提高可读性。并且Haml是一种完备的模板语言，没有牺牲当前模板语言的任何特性。Haml由<code class="highlighter-rouge">Hampton Catlin</code>发明并且开发了<code class="highlighter-rouge">Ruby on Rails</code>上的实现。</p>
+I"c/<p>haml 是一种简洁优美的模板语言，主要智能用来替代基于<code class="highlighter-rouge">ruby</code>框架的模版系统，例如：替换<code class="highlighter-rouge">Ruby on Rails</code>的<code class="highlighter-rouge">erb</code>模版，可以大大缩减模板代码，减少冗余，提高可读性。并且Haml是一种完备的模板语言，没有牺牲当前模板语言的任何特性。Haml由<code class="highlighter-rouge">Hampton Catlin</code>发明并且开发了<code class="highlighter-rouge">Ruby on Rails</code>上的实现。</p>
 
 <h3 id="一概述">一、概述</h3>
 
@@ -74,8 +74,7 @@
 </table>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> `tag`,`E`可以替换为html标签 `&lt;p&gt;,&lt;a&gt;,&lt;ul&gt;,&lt;li&gt;,&lt;stong&gt;,&lt;title&gt;...`
-</code></pre></div>  </div>
+  <p><code class="highlighter-rouge">tag</code>,<code class="highlighter-rouge">E</code>可以替换为html标签 <code class="highlighter-rouge">&lt;p&gt;,&lt;a&gt;,&lt;ul&gt;,&lt;li&gt;,&lt;stong&gt;,&lt;title&gt;...</code></p>
 </blockquote>
 
 <p>　
@@ -159,8 +158,7 @@
 <p><code class="highlighter-rouge">&lt;script type="text/javascript" src="javascripts/script_9"&gt;&lt;/script&gt;</code></p>
 
 <blockquote>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>常见的a标签和span标签:
-</code></pre></div>  </div>
+  <p>常见的a标签和span标签:</p>
 </blockquote>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%a(title=@title){:href =&gt; @link.href} Stuff
@@ -275,8 +273,11 @@
 <h3 id="参考">参考</h3>
 
 <blockquote>
-  <p>1、<a href="http://www.ruanyifeng.com/blog/2013/06/emmet_and_haml.html">HTML代码简写法：Emmet和Haml</a>；
- 2、<a href="https://www.sitepoint.com/an-introduction-to-haml/">An Introduction to Haml</a></p>
+  <p>1、<a href="http://www.ruanyifeng.com/blog/2013/06/emmet_and_haml.html">HTML代码简写法：Emmet和Haml</a>；</p>
+</blockquote>
+
+<blockquote>
+  <p>2、<a href="https://www.sitepoint.com/an-introduction-to-haml/">An Introduction to Haml</a></p>
 </blockquote>
 
 :ET

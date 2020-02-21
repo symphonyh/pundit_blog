@@ -29,7 +29,7 @@ haml 是一种简洁优美的模板语言，主要智能用来替代基于`ruby`
 | 9. | -# | haml注释 |
 | 10. | / | haml标签，前面加单行或多行注释，后面加关闭标签 |
 
->      `tag`,`E`可以替换为html标签 `<p>,<a>,<ul>,<li>,<stong>,<title>...`
+>`tag`,`E`可以替换为html标签 `<p>,<a>,<ul>,<li>,<stong>,<title>...`
 
 　
 2.haml 范例
@@ -113,7 +113,7 @@ to ERB:
 `<script type="text/javascript" src="javascripts/script_9"></script>`
 
 
->     常见的a标签和span标签:
+>常见的a标签和span标签:
 
 ```
 %a(title=@title){:href => @link.href} Stuff
@@ -231,6 +231,7 @@ Gemfile中添加:
 ### 参考
 
 >1、[HTML代码简写法：Emmet和Haml](http://www.ruanyifeng.com/blog/2013/06/emmet_and_haml.html)；
- 2、[An Introduction to Haml](https://www.sitepoint.com/an-introduction-to-haml/)
+
+>2、[An Introduction to Haml](https://www.sitepoint.com/an-introduction-to-haml/)
 
 

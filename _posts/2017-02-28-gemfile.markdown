@@ -21,10 +21,10 @@ categories: Rails
  end
  ```
 
- `database.yml`:
+ database.yml:
 
- ```ruby
- production:
+```ruby
+  production:
    adapter: postgresql
    encoding: unicode
- ```
+```

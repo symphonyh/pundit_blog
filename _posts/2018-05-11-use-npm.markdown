@@ -7,12 +7,13 @@ external-url:
 categories: Javascript
 ---
 
-- Update 更新到最新版本:
+### Update 更新到最新版本:
+
 ~~~
 npm install npm@latest -g
 ~~~
 
-替换npm淘宝镜像：
+### 替换npm淘宝镜像：
 
 - 得到原本的镜像地址:
 
@@ -28,8 +29,7 @@ npm get registry
 npm config set registry http://registry.npm.taobao.org/
 ~~~
 
- 
-- 换成初始的镜像：
+ - 换成初始的镜像：
 
 ~~~
 npm config set registry https://registry.npmjs.org/

@@ -12,23 +12,23 @@ rvm,git,rbenv,gem 得都是学习`rails`中常用的工具，这些最常用命�
 ### using rvm
 ---
 
+```
+/bin/bash --login
 
-`/bin/bash --login`
+rvm gemset use bloggem
 
-`rvm gemset use bloggem`
+rvm list
 
-`rvm list`
+rvm use 2.3.3
 
-`rvm use 2.3.3`
+rvm gemset list
 
-`rvm gemset list`
+rvm gemset create  railsapp
 
-`rvm gemset create  railsapp`
+rvm use 2.3.3@railsapp
 
-`rvm use 2.3.3@railsapp`
-
-`rvm gemset delete railsapp`
-
+rvm gemset delete railsapp
+```
 
 
 

@@ -10,14 +10,16 @@ categories: Rails
 
 ### gem command list
 ---
-`gem install [gemname]`
+```
+gem install [gemname]
 
-`gem install [gemname] --version=[ver]`
+gem install [gemname] --version=[ver]
 
-`gem update [gemname]`
+gem update [gemname]
 
-`gem install -v=4.2.5 rails --no-rdoc --no-ri`
+gem install -v=4.2.5 rails --no-rdoc --no-ri
 
-`gem sources -l`
+gem sources -l
 
-`gem list`
+gem list
+```

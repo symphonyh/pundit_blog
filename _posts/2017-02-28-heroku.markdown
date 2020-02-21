@@ -10,19 +10,23 @@ categories: Rails
 ### Using heroku
 ---
 
-`heroku create hello0127` ;
+```
+heroku create hello0127
+```
 >也可以在heroku web上建立新的app
 
-`git push heroku master`
+```
+git push heroku master
 
-`heroku run rake db:migrate`
+heroku run rake db:migrate
 
-`heroku apps:rename hello0127`
+heroku apps:rename hello0127
 
-`heroku hello0127`
+heroku hello0127
 
-`heroku open`
+heroku open
 
-`heroku logs --tail`
+heroku logs --tail
 
-`heroku run rails console`
+heroku run rails console
+```

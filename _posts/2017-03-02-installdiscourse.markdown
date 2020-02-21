@@ -7,7 +7,7 @@ external-url:
 categories: Javascript
 ---
 
-> 说起对ember.js的兴趣，我是从discourse 开始的。看了很多开源系统，对ember.js+rails的discourse很有感觉:功能比较完善，灵活、可配置性非常好，部署方便，瀑布流的主题布局模式也很符合未来论坛的趋势，于是在 ucloud 上租用了云主机，成功安装了discourse 的论坛系统，期间遇到一些小困难，在中文论坛版主和很多热心朋友的的指点下都克服了，这里表示特别感谢！这篇记录最早发表于discourse 中文论坛，是整理给各位想使用discourse的朋友做些参考。
+>说起对ember.js的兴趣，我是从discourse 开始的。看了很多开源系统，对ember.js+rails的discourse很有感觉:功能比较完善，灵活、可配置性非常好，部署方便，瀑布流的主题布局模式也很符合未来论坛的趋势，于是在 ucloud 上租用了云主机，成功安装了discourse 的论坛系统，期间遇到一些小困难，在中文论坛版主和很多热心朋友的的指点下都克服了，这里表示特别感谢！这篇记录最早发表于discourse 中文论坛，是整理给各位想使用discourse的朋友做些参考。
 
 
 ### 1. 环境介绍
@@ -18,7 +18,7 @@ categories: Javascript
 ### 2. 安装docker
 网上有不少安装docker的教程和文章，大多都是几年前的文章，作者写的都很认真，不过已经完全不适用了，自己也走了弯路所以建议安装docker 按照安装手册里面的[官方文档](https://docs.docker.com/engine/installation/linux/ubuntu/)。ubuntu的不同版本（12.04/14.04/15.10）略有区别，手册里也说的比较清晰，针对14.04版本，没遇到什么问题，需要命令权限的命令前加`sudo`过程如下：
 
-> 现在是`2016年2月份`，如果您看到这篇文章在一年以后，注意不要被我误导了，看看最新官方文档比较好。
+>现在是`2016年2月份`，如果您看到这篇文章在一年以后，注意不要被我误导了，看看最新官方文档比较好。
 
 （1）首先检查linux内核版本，ubuntu14.04 内核版本,内核版本要求`3.10`以上；
 
@@ -77,15 +77,15 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
 cd /var/discourse
 cp samples/standalone.yml containers/app.yml
 ```
-> 说明：
+>说明：
 
-       * 首先是创建一个目录`/var/discourse`；
+* 首先是创建一个目录`/var/discourse`；
 
-       * 克隆discourse镜像到刚创建的目录；
+* 克隆discourse镜像到刚创建的目录；
 
-       * 进入目录`/var/discourse`；
+* 进入目录`/var/discourse`；
 
-       * 复制配置文件到当前目录下的`containers/`
+* 复制配置文件到当前目录下的`containers/`
 
 ### 4. `app.yml`的配置
 说到重点了，安装discourse过程中，比较容易出错的就是配置文件内容的修改；这里把
@@ -125,8 +125,7 @@ templates:
 - `DISCOURSE_SMTP_ADDRESS:`Host是`smtp.mxchina.com`,
 
 
-
-  DISCOURSE_SMTP_USER_NAME:  这里的设置最最重要的，这个邮箱又叫notification email 被用于发送所有重要系统邮件的邮箱地址。指定的域名必须正确设置 SPF、DKIM 和反向 PTR 记录以发送邮件。一般和域名绑定在一起，比如info@weifuwu.com 或者 admin@weifuwu.com 都行，这样收到邮件的发帖人或回复人感觉比较正式，使用这个邮箱也是最频繁的。关于SPF、DKIM设置有篇文章可[参考](http://www.wendangdaquan.com/Wdshow.asp?id=98332e836f1aff00bed51e7c)
+DISCOURSE_SMTP_USER_NAME:  这里的设置最最重要的，这个邮箱又叫notification email 被用于发送所有重要系统邮件的邮箱地址。指定的域名必须正确设置 SPF、DKIM 和反向 PTR 记录以发送邮件。一般和域名绑定在一起，比如info@weifuwu.com 或者 admin@weifuwu.com 都行，这样收到邮件的发帖人或回复人感觉比较正式，使用这个邮箱也是最频繁的。关于SPF、DKIM设置有篇文章可[参考](http://www.wendangdaquan.com/Wdshow.asp?id=98332e836f1aff00bed51e7c)
 如果您使用的阿里云的企业邮箱，域名解析后可以不用设置 SPF、DKIM 了已经设置好了，注意阿里云这里设置` DISCOURSE_SMTP_ADDRESS:smtp.mxhichina.com`
 
 ### 5. 初始化
@@ -153,8 +152,8 @@ exit
 按照提示输入邮箱和密码，exit退出容器。
 
 
- 最后特别提示下：管理员邮箱，也就是用`rake admin:create` 创建的邮箱一般用于设置论坛；`DISCOURSE_SMTP_USER_NAME` 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；`DISCOURSE_DEVELOPER_EMAILS`开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。
+最后特别提示下：管理员邮箱，也就是用`rake admin:create` 创建的邮箱一般用于设置论坛；`DISCOURSE_SMTP_USER_NAME` 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；`DISCOURSE_DEVELOPER_EMAILS`开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。
 
 ### 参考
 
-> 1、[Get Docker for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/)；
+>1、[Get Docker for Ubuntu](https://docs.docker.com/engine/installation/linux/ubuntu/)；

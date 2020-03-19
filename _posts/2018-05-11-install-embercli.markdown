@@ -8,6 +8,7 @@ categories: Javascript
 ---
 
 - install Ember:
+
 ~~~
 npm install -g ember-cli
 ~~~

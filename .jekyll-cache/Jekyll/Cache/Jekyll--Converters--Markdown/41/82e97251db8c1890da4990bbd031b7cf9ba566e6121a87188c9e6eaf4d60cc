@@ -1,0 +1,20 @@
+I"U<h3 id="git-command-list">git command list</h3>
+<hr />
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:symphonyh/forum.rb.git
+
+git init
+
+git status
+
+git add .
+
+git commit -m "XXX"
+
+git push origin master
+
+git push origin gh-pages
+
+git push heroku master
+</code></pre></div></div>
+:ET

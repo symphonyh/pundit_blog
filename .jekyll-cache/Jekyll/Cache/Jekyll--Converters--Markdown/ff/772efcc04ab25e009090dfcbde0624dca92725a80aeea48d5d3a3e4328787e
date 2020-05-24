@@ -1,8 +1,11 @@
-I"ï<ul>
-  <li>install Ember:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g ember-cli
-</code></pre></div>    </div>
-  </li>
+I"ñ<ul>
+  <li>install Ember:</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g ember-cli
+</code></pre></div></div>
+
+<ul>
   <li>version:
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ember -v
 </code></pre></div>    </div>

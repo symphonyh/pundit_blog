@@ -1,4 +1,4 @@
-I"�0<blockquote>
+I"B1<blockquote>
   <p>说起对ember.js的兴趣，我是从discourse 开始的。看了很多开源系统，对ember.js+rails的discourse很有感觉:功能比较完善，灵活、可配置性非常好，部署方便，瀑布流的主题布局模式也很符合未来论坛的趋势，于是在 ucloud 上租用了云主机，成功安装了discourse 的论坛系统，期间遇到一些小困难，在中文论坛版主和很多热心朋友的的指点下都克服了，这里表示特别感谢！这篇记录最早发表于discourse 中文论坛，是整理给各位想使用discourse的朋友做些参考。</p>
 </blockquote>
 
@@ -65,14 +65,20 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
   <p>说明：</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   * 首先是创建一个目录`/var/discourse`；
-
-   * 克隆discourse镜像到刚创建的目录；
-
-   * 进入目录`/var/discourse`；
-
-   * 复制配置文件到当前目录下的`containers/`
-</code></pre></div></div>
+<ul>
+  <li>
+    <p>首先是创建一个目录<code class="highlighter-rouge">/var/discourse</code>；</p>
+  </li>
+  <li>
+    <p>克隆discourse镜像到刚创建的目录；</p>
+  </li>
+  <li>
+    <p>进入目录<code class="highlighter-rouge">/var/discourse</code>；</p>
+  </li>
+  <li>
+    <p>复制配置文件到当前目录下的<code class="highlighter-rouge">containers/</code></p>
+  </li>
+</ul>
 
 <h3 id="4-appyml的配置">4. <code class="highlighter-rouge">app.yml</code>的配置</h3>
 <p>说到重点了，安装discourse过程中，比较容易出错的就是配置文件内容的修改；这里把
@@ -106,13 +112,11 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
 <ul>
   <li><code class="highlighter-rouge">DISCOURSE_SMTP_PASSWORD: xxxxxxx</code>设置的就是邮箱密码；</li>
   <li><code class="highlighter-rouge">DISCOURSE_SMTP_PORT:</code>端口设置25，</li>
-  <li>
-    <p><code class="highlighter-rouge">DISCOURSE_SMTP_ADDRESS:</code>Host是<code class="highlighter-rouge">smtp.mxchina.com</code>,</p>
-
-    <p>DISCOURSE_SMTP_USER_NAME:  这里的设置最最重要的，这个邮箱又叫notification email 被用于发送所有重要系统邮件的邮箱地址。指定的域名必须正确设置 SPF、DKIM 和反向 PTR 记录以发送邮件。一般和域名绑定在一起，比如info@weifuwu.com 或者 admin@weifuwu.com 都行，这样收到邮件的发帖人或回复人感觉比较正式，使用这个邮箱也是最频繁的。关于SPF、DKIM设置有篇文章可<a href="http://www.wendangdaquan.com/Wdshow.asp?id=98332e836f1aff00bed51e7c">参考</a>
-如果您使用的阿里云的企业邮箱，域名解析后可以不用设置 SPF、DKIM 了已经设置好了，注意阿里云这里设置<code class="highlighter-rouge"> DISCOURSE_SMTP_ADDRESS:smtp.mxhichina.com</code></p>
-  </li>
+  <li><code class="highlighter-rouge">DISCOURSE_SMTP_ADDRESS:</code>Host是<code class="highlighter-rouge">smtp.mxchina.com</code>,</li>
 </ul>
+
+<p>DISCOURSE_SMTP_USER_NAME:  这里的设置最最重要的，这个邮箱又叫notification email 被用于发送所有重要系统邮件的邮箱地址。指定的域名必须正确设置 SPF、DKIM 和反向 PTR 记录以发送邮件。一般和域名绑定在一起，比如info@weifuwu.com 或者 admin@weifuwu.com 都行，这样收到邮件的发帖人或回复人感觉比较正式，使用这个邮箱也是最频繁的。关于SPF、DKIM设置有篇文章可<a href="http://www.wendangdaquan.com/Wdshow.asp?id=98332e836f1aff00bed51e7c">参考</a>
+如果您使用的阿里云的企业邮箱，域名解析后可以不用设置 SPF、DKIM 了已经设置好了，注意阿里云这里设置<code class="highlighter-rouge"> DISCOURSE_SMTP_ADDRESS:smtp.mxhichina.com</code></p>
 
 <h3 id="5-初始化">5. 初始化</h3>
 <p>修改完app.yml配置文件，按照<a href="https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md">安装文档</a>就可以进行初始化了，（耐心等待一段时间，我的云主机大概5分钟吧）：</p>

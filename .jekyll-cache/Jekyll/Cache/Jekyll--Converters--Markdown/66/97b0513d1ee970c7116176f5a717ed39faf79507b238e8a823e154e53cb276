@@ -1,11 +1,9 @@
-I"�<ul>
-  <li>Update 更新到最新版本:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install npm@latest -g
-</code></pre></div>    </div>
-  </li>
-</ul>
+I"�<h3 id="update-更新到最新版本">Update 更新到最新版本:</h3>
 
-<p>替换npm淘宝镜像：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install npm@latest -g
+</code></pre></div></div>
+
+<h3 id="替换npm淘宝镜像">替换npm淘宝镜像：</h3>
 
 <ul>
   <li>得到原本的镜像地址:</li>

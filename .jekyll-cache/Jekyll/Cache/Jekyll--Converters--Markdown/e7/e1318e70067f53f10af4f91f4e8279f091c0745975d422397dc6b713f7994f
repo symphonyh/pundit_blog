@@ -1,4 +1,4 @@
-I"f<p>layout: post
+I"@<p>layout: post
 title: rails-Gemfile 
 date: 2017-01-20
 comments: true
@@ -17,9 +17,9 @@ categories: Rails
  <span class="k">end</span>
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">database.yml</code>:</p>
+<p>database.yml:</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="ss">production:
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="ss">production:
    adapter: </span><span class="n">postgresql</span>
    <span class="ss">encoding: </span><span class="n">unicode</span>
 </code></pre></div></div>

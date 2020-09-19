@@ -1,29 +1,32 @@
-I"z�<p>Excel</p>
+I"��<p>Excel</p>
 
 <h2 id="1统计不重复项的个数">1、统计不重复项的个数</h2>
 
-<p>公式 =SUMPRODUCT(1/COUNTIF(B2:B81,B2:B81))</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> =SUMPRODUCT(1/COUNTIF(B2:B81,B2:B81))
+</code></pre></div></div>
+
 <blockquote>
-  <p>统计合同名称中不重复的单位数量，也就是实际合同总数量
-SUMPRODUCT参数为一个数组时不做乘积，而是求和。</p>
+  <p>统计合同名称中不重复的单位数量，也就是实际合同总数量,</p>
 </blockquote>
 
-<p>如果是多列不重复：</p>
-
-<p>公式 =SUMPRODUCT(1/COUNTIF(A2:A81,A2:A81,B2:B81,B2:B81))</p>
+<blockquote>
+  <p>SUMPRODUCT参数为一个数组时不做乘积，而是求和。</p>
+</blockquote>
 
 <hr />
-<p><br /></p>
 
 <h2 id="2排名">2、排名</h2>
 
-<p>公式 = SUMPRODUCT((D2&lt;$D$2:$D$8)*1)+1</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> = SUMPRODUCT((D2&lt;$D$2:$D$8)*1)+1
+</code></pre></div></div>
 
 <p>或</p>
 
-<p>公式 = RANK(A2,($A$2:$A$4）</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> = RANK(A2,($A$2:$A$4）
 
-<p>公式 = RANK(A2,($A$2:$A$4,$C$2:$C$4))</p>
+
+ = RANK(A2,($A$2:$A$4,$C$2:$C$4))
+</code></pre></div></div>
 
 <blockquote>
   <p>在（）中用逗号连接多个区域</p>
@@ -34,7 +37,8 @@ SUMPRODUCT参数为一个数组时不做乘积，而是求和。</p>
 
 <h2 id="3实现自动编号档筛选和隐藏时重新自动编号">3、实现自动编号，档筛选和隐藏时重新自动编号</h2>
 
-<p>公式 =SUBTOTAL(103,B$2:B2)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=SUBTOTAL(103,B$2:B2) 
+</code></pre></div></div>
 
 <hr />
 

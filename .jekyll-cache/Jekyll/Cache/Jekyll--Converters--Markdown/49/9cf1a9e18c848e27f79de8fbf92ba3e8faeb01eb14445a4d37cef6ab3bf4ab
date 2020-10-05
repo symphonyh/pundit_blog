@@ -1,4 +1,4 @@
-I"�<p>Windows</p>
+I"�<p>Windows</p>
 
 <p><code class="language-plaintext highlighter-rouge">Win + R</code>:  运行</p>
 
@@ -16,13 +16,7 @@
 
 <p>你需要在文件夹窗口中按 【Ctrl + Shift + N】 才行，在 Chrome 中是打开隐身窗口的快捷键。</p>
 
-<p><code class="language-plaintext highlighter-rouge">Shift+ 鼠标右键</code> : 增强版右键发送到</p>
-
-<p>右键发送到 是一个很常用的功能，一般情况下可以发送到：桌面快捷方式、邮件联系人、压缩文档、移动设备等等。而通过 【Shift+ 鼠标右键】 的发送到，增加了 Windows7 个人文件夹内的所有内容，包括：我的文档、我的照片、我的音乐、桌面等等</p>
-
-<p><code class="language-plaintext highlighter-rouge">Win + 空格</code> ： 闪现桌面</p>
-
-<p>效果与鼠标停留在任务栏最右端相同，松开 Win 键即恢复窗口。恩，你可以用来看看桌面背景的美女。</p>
+<p><code class="language-plaintext highlighter-rouge">Shift+ 鼠标右键</code> : 增加一个复制路径的选项</p>
 
 <p><code class="language-plaintext highlighter-rouge">Win+ 上/下/左/右</code> ： 移动当前激活窗口</p>
 
@@ -42,27 +36,27 @@
 
 <p>任务栏从左到右 1，2，3，快速切换用的。对当前窗口的作用是最小化，另外一个最小化快捷键是 <code class="language-plaintext highlighter-rouge">Win + M</code>，<code class="language-plaintext highlighter-rouge">Win + D</code>。</p>
 
+<hr />
+
+<p><code class="language-plaintext highlighter-rouge">Win + Shift + S</code> 截屏，可以任意形状</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + PrtSc</code> 活动窗口截屏</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + v</code> 呼叫剪贴板</p>
+
 <p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> <strong>快速打开 Windows 任务管理器</strong></p>
 
-<p>俗话说最好的留在最后，自从升级 Windows7 后，想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> 让我泪流满面啊……</p>
+<p>以前想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> 让我泪流满面啊……</p>
 
 <hr />
 
 <p><code class="language-plaintext highlighter-rouge">Win + R</code>运行里常用的指令：</p>
-
-<p>compmgmt.msc—计算机管理</p>
 
 <p><code class="language-plaintext highlighter-rouge">calc</code>–启动计算器</p>
 
 <p><code class="language-plaintext highlighter-rouge">cmd.exe</code>–CMD命令提示符</p>
 
 <p><code class="language-plaintext highlighter-rouge">notepad</code>–打开记事本</p>
-
-<p><code class="language-plaintext highlighter-rouge">services.msc</code>–本地服务设置</p>
-
-<p><code class="language-plaintext highlighter-rouge">ncpa.cpl</code>–打开网络连接设置</p>
-
-<p><code class="language-plaintext highlighter-rouge">control.exe /name Microsoft.NetworkAndSharingCenter</code>–打开网络和共享中心</p>
 
 <p><code class="language-plaintext highlighter-rouge">regedit</code>–打开注册表</p>
 :ET

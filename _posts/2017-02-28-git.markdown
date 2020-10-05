@@ -7,19 +7,69 @@ external-url:
 categories: Rails
 ---
 
-### git command list
----
+### git 的使用和设置
+
+1、gitconfig 设置
+
+~~~
+[user]
+        name = symphonyh
+        email = hxygsh@outlook.com
+[color]
+        ui = auto
+[credential]
+        helper = store 
+
+~~~
+
+设置git使用到的命令
+~~~
+  git config --global user.name "hxygsh@outlook.com"
+  git config --global user.name "symphonyh"
+  git config --global color.ui auto
+  git config --global credential.helper store 提交不再每次输入密码
+~~~
+
+查看设置
 
 ```
-git clone git@github.com:symphonyh/forum.rb.git
+git config --list
+```
 
-git init
+2、公匙的生成与配置
 
-git status
+- 生成公匙命令
+
+```
+ssh-keygen -t rsa -C "hxygsh@outlook.com" 
+```
+
+> 生成公匙，就是 id_rsa.pub 这个文件，里面内容要写入GitHub的 SSH 
+
+
+- 验证公匙
+
+```
+ssh -T git@github.com
+```
+
+3、克隆远程库
+
+```
+git clone https://github.com/symphonyh/blog.git
+git clone  https://github.com/symphonyh/symphonyh.github.io
+```
+
+4、日常提交操作命令
+
+```
+git init 
+
+git status 
 
 git add .
 
-git commit -m "XXX"
+git commit -m "版本摘要"
 
 git push origin master
 

@@ -1,0 +1,59 @@
+---
+layout: post
+title: WSL安装记录
+date: 2020-10-05
+comments: true
+external-url:
+categories: Office 
+---
+
+## win10 WSL 的安装解决了几个问题：
+
+- 不在每次更新系统安装虚拟机了；
+- 剪贴板和文件共享，不用再为双向粘贴，安装VM的增强工具；
+- 节省了大量硬盘空间。
+
+---
+## Install WSL
+- 启用和关闭windows功能在linux子系统划√
+- 应用商店安装 ubuntu
+- 在win10端安装 Vscode + WSL remote 插件，chinese 插件
+- 在ubuntu的Terminal 输入` code .` 就启动WSL下的Vscode了，OK！
+
+---
+## 配置目录
+
+在F盘建立工作目录 `Ubuntu-Share` ，把这个目录映射为home会比较方便，
+
+     ln -s /mnt/f/Ubuntu-Share /home/mouse
+
+注：
+WSL的home目录很深在win10的
+
+    C:\Users\Administrator\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\rootfs\home
+
+win10的C、D、E、F盘在WSL `/mnt/` 目录下
+
+---
+### WSL Install 运行环境
+
+打开ubuntu的终端 用vi 换源，执行update upgrade
+
+1、离线安装rvm
+     curl -sSL https://github.com/rvm/rvm/tarball/stable -o rvm-stable.tar.gz
+     mkdir rvm && cd rvm
+     tar --strip-components=1 -xzf ../rvm-stable.tar.gz
+     ./install --auto-dotfiles
+     source ~/.rvm/scripts/rvm
+    
+  rvm 初始化
+  解决办法很简单，在.bash_profile后追加一行代码即可：
+
+     [ -f $HOME/.profile ] && source $HOME/.profile
+
+2、安装编译环境（如果需要）
+     sudo apt install gcc
+     sudo apt install make
+     sudo apt install g++
+
+3、安装ruby，jekyll

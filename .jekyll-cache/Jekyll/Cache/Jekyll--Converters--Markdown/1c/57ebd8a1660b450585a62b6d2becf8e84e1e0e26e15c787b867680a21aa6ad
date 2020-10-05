@@ -1,68 +1,68 @@
-I"�<p>Windows</p>
+I"�<p>Windows</p>
 
-<p><code class="highlighter-rouge">Win + R</code>:  运行</p>
+<p><code class="language-plaintext highlighter-rouge">Win + R</code>:  运行</p>
 
-<p><code class="highlighter-rouge">Win + E</code>:  资源管理器</p>
+<p><code class="language-plaintext highlighter-rouge">Win + E</code>:  资源管理器</p>
 
-<p><code class="highlighter-rouge">Win + D</code>:  返回桌面</p>
+<p><code class="language-plaintext highlighter-rouge">Win + D</code>:  返回桌面</p>
 
-<p><code class="highlighter-rouge">Win + L</code>:  锁屏</p>
+<p><code class="language-plaintext highlighter-rouge">Win + L</code>:  锁屏</p>
 
-<p><code class="highlighter-rouge">Win + 数字键</code>: 数字是任务栏图标的排列顺序</p>
+<p><code class="language-plaintext highlighter-rouge">Win + 数字键</code>: 数字是任务栏图标的排列顺序</p>
 
 <hr />
 
-<p><code class="highlighter-rouge">Ctrl + Shift + N</code> : 创建一个新的文件夹</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + N</code> : 创建一个新的文件夹</p>
 
 <p>你需要在文件夹窗口中按 【Ctrl + Shift + N】 才行，在 Chrome 中是打开隐身窗口的快捷键。</p>
 
-<p><code class="highlighter-rouge">Shift+ 鼠标右键</code> : 增强版右键发送到</p>
+<p><code class="language-plaintext highlighter-rouge">Shift+ 鼠标右键</code> : 增强版右键发送到</p>
 
 <p>右键发送到 是一个很常用的功能，一般情况下可以发送到：桌面快捷方式、邮件联系人、压缩文档、移动设备等等。而通过 【Shift+ 鼠标右键】 的发送到，增加了 Windows7 个人文件夹内的所有内容，包括：我的文档、我的照片、我的音乐、桌面等等</p>
 
-<p><code class="highlighter-rouge">Win + 空格</code> ： 闪现桌面</p>
+<p><code class="language-plaintext highlighter-rouge">Win + 空格</code> ： 闪现桌面</p>
 
 <p>效果与鼠标停留在任务栏最右端相同，松开 Win 键即恢复窗口。恩，你可以用来看看桌面背景的美女。</p>
 
-<p><code class="highlighter-rouge">Win+ 上/下/左/右</code> ： 移动当前激活窗口</p>
+<p><code class="language-plaintext highlighter-rouge">Win+ 上/下/左/右</code> ： 移动当前激活窗口</p>
 
 <p>其中，【Win +左/右】 为移动窗口到屏幕两边，占半屏，【Win + 上】 为最大化当前窗口，下为恢复当前窗口</p>
 
-<p><code class="highlighter-rouge">Win + T</code> ： 显示任务栏窗口微缩图并回车切换</p>
+<p><code class="language-plaintext highlighter-rouge">Win + T</code> ： 显示任务栏窗口微缩图并回车切换</p>
 
-<p>多按几次 T 可以在不同的任务栏窗口中显示，回车则切换。很方便的快捷键。切换窗口还可以用 <code class="highlighter-rouge">Win + Tab</code>。</p>
+<p>多按几次 T 可以在不同的任务栏窗口中显示，回车则切换。很方便的快捷键。切换窗口还可以用 <code class="language-plaintext highlighter-rouge">Win + Tab</code>。</p>
 
-<p><code class="highlighter-rouge">Shift + 左键</code> ： 在任务栏对已打开的程序/文件夹再打开一次</p>
+<p><code class="language-plaintext highlighter-rouge">Shift + 左键</code> ： 在任务栏对已打开的程序/文件夹再打开一次</p>
 
 <p>话比较绕，比如你对着任务栏里的【Chrome Shift + 左键】 则会新打开一个窗口。而对着记事本按也会再打开一个记事本。</p>
 
-<p><code class="highlighter-rouge">Win + P</code> ： 在显示器与投影间相互切换</p>
+<p><code class="language-plaintext highlighter-rouge">Win + P</code> ： 在显示器与投影间相互切换</p>
 
-<p><code class="highlighter-rouge">Win + 1</code>, <code class="highlighter-rouge">Win + 2</code> ： 在任务栏中快速切换程序</p>
+<p><code class="language-plaintext highlighter-rouge">Win + 1</code>, <code class="language-plaintext highlighter-rouge">Win + 2</code> ： 在任务栏中快速切换程序</p>
 
-<p>任务栏从左到右 1，2，3，快速切换用的。对当前窗口的作用是最小化，另外一个最小化快捷键是 <code class="highlighter-rouge">Win + M</code>，<code class="highlighter-rouge">Win + D</code>。</p>
+<p>任务栏从左到右 1，2，3，快速切换用的。对当前窗口的作用是最小化，另外一个最小化快捷键是 <code class="language-plaintext highlighter-rouge">Win + M</code>，<code class="language-plaintext highlighter-rouge">Win + D</code>。</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + Esc</code> <strong>快速打开 Windows 任务管理器</strong></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> <strong>快速打开 Windows 任务管理器</strong></p>
 
-<p>俗话说最好的留在最后，自从升级 Windows7 后，想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 <code class="highlighter-rouge">Ctrl + Shift + Esc</code> 让我泪流满面啊……</p>
+<p>俗话说最好的留在最后，自从升级 Windows7 后，想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> 让我泪流满面啊……</p>
 
 <hr />
 
-<p><code class="highlighter-rouge">Win + R</code>运行里常用的指令：</p>
+<p><code class="language-plaintext highlighter-rouge">Win + R</code>运行里常用的指令：</p>
 
 <p>compmgmt.msc—计算机管理</p>
 
-<p><code class="highlighter-rouge">calc</code>–启动计算器</p>
+<p><code class="language-plaintext highlighter-rouge">calc</code>–启动计算器</p>
 
-<p><code class="highlighter-rouge">cmd.exe</code>–CMD命令提示符</p>
+<p><code class="language-plaintext highlighter-rouge">cmd.exe</code>–CMD命令提示符</p>
 
-<p><code class="highlighter-rouge">notepad</code>–打开记事本</p>
+<p><code class="language-plaintext highlighter-rouge">notepad</code>–打开记事本</p>
 
-<p><code class="highlighter-rouge">services.msc</code>–本地服务设置</p>
+<p><code class="language-plaintext highlighter-rouge">services.msc</code>–本地服务设置</p>
 
-<p><code class="highlighter-rouge">ncpa.cpl</code>–打开网络连接设置</p>
+<p><code class="language-plaintext highlighter-rouge">ncpa.cpl</code>–打开网络连接设置</p>
 
-<p><code class="highlighter-rouge">control.exe /name Microsoft.NetworkAndSharingCenter</code>–打开网络和共享中心</p>
+<p><code class="language-plaintext highlighter-rouge">control.exe /name Microsoft.NetworkAndSharingCenter</code>–打开网络和共享中心</p>
 
-<p><code class="highlighter-rouge">regedit</code>–打开注册表</p>
+<p><code class="language-plaintext highlighter-rouge">regedit</code>–打开注册表</p>
 :ET

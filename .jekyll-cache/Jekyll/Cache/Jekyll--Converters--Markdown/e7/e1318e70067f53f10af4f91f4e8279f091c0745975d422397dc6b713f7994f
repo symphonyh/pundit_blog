@@ -1,4 +1,4 @@
-I"@<p>layout: post
+I"S<p>layout: post
 title: rails-Gemfile 
 date: 2017-01-20
 comments: true
@@ -6,7 +6,7 @@ external-url:
 categories: Rails
 —</p>
 
-<p>rails项目中 <code class="highlighter-rouge">Gemfile</code>文件设置笔记:</p>
+<p>rails项目中 <code class="language-plaintext highlighter-rouge">Gemfile</code>文件设置笔记:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">gem</span> <span class="s1">'pg'</span>
  <span class="n">gem</span> <span class="s1">'rails_12factor'</span><span class="p">,</span> <span class="ss">group: :production</span>

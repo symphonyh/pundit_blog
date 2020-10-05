@@ -1,67 +1,67 @@
-I"�<p>git 经常用到的一些命令汇总.</p>
+I"�<p>git 经常用到的一些命令汇总.</p>
 <hr />
 
-<p><code class="highlighter-rouge">git init</code>:                                   将目标目录变为git可管理的仓库</p>
+<p><code class="language-plaintext highlighter-rouge">git init</code>:                                   将目标目录变为git可管理的仓库</p>
 
-<p><code class="highlighter-rouge">git add file.txt</code> :                       添加文件到暂存区</p>
+<p><code class="language-plaintext highlighter-rouge">git add file.txt</code> :                       添加文件到暂存区</p>
 
-<p><code class="highlighter-rouge">git add .</code> or <code class="highlighter-rouge">git add -A</code> :   添加所有修改到暂存区</p>
+<p><code class="language-plaintext highlighter-rouge">git add .</code> or <code class="language-plaintext highlighter-rouge">git add -A</code> :   添加所有修改到暂存区</p>
 
-<p><code class="highlighter-rouge">git add -p</code> : 交互式提交</p>
+<p><code class="language-plaintext highlighter-rouge">git add -p</code> : 交互式提交</p>
 
-<p><code class="highlighter-rouge">git commit -m "first commit"</code>:          将文件提交到仓库，双引号中为注释</p>
+<p><code class="language-plaintext highlighter-rouge">git commit -m "first commit"</code>:          将文件提交到仓库，双引号中为注释</p>
 
-<p><code class="highlighter-rouge">git status</code>:                              查看仓库状态，看是否还有文件未提交</p>
+<p><code class="language-plaintext highlighter-rouge">git status</code>:                              查看仓库状态，看是否还有文件未提交</p>
 
-<p><code class="highlighter-rouge">git blame [filename]</code>: 如果你要查看文件的每个部分是谁修改的, 那么 git blame 就是不二选择. 只要运行’git blame [filename]’, 你就会得到整个文件的每一行的详细修改信息:包括SHA串,日期和作者.</p>
+<p><code class="language-plaintext highlighter-rouge">git blame [filename]</code>: 如果你要查看文件的每个部分是谁修改的, 那么 git blame 就是不二选择. 只要运行’git blame [filename]’, 你就会得到整个文件的每一行的详细修改信息:包括SHA串,日期和作者.</p>
 
 <hr />
 
-<p><code class="highlighter-rouge">git diff file.txt </code>:                         查看file.txt文件里更改的内容</p>
+<p><code class="language-plaintext highlighter-rouge">git diff file.txt </code>:                         查看file.txt文件里更改的内容</p>
 
-<p><code class="highlighter-rouge">git diff</code>:       查看没有add的内容修改</p>
+<p><code class="language-plaintext highlighter-rouge">git diff</code>:       查看没有add的内容修改</p>
 
-<p><code class="highlighter-rouge">git diff HEAD</code>:   工作目录和上次提交的修改</p>
+<p><code class="language-plaintext highlighter-rouge">git diff HEAD</code>:   工作目录和上次提交的修改</p>
 
-<p><code class="highlighter-rouge">git diff --staged</code>:  查看已经add没有commit的修改，相对于工作区</p>
+<p><code class="language-plaintext highlighter-rouge">git diff --staged</code>:  查看已经add没有commit的修改，相对于工作区</p>
 <hr />
 
-<p><code class="highlighter-rouge">git log</code>:                                   查看历史纪录</p>
+<p><code class="language-plaintext highlighter-rouge">git log</code>:                                   查看历史纪录</p>
 
-<p><code class="highlighter-rouge">git reflog</code>:                              获取之前的提交列表</p>
+<p><code class="language-plaintext highlighter-rouge">git reflog</code>:                              获取之前的提交列表</p>
 <hr />
 
-<p><code class="highlighter-rouge">git reset --hard HEAD^</code>:     退回/找回上一个版本</p>
+<p><code class="language-plaintext highlighter-rouge">git reset --hard HEAD^</code>:     退回/找回上一个版本</p>
 
-<p><code class="highlighter-rouge">git reset --hard HEAD^^</code>:   退回/找回上上个版本</p>
+<p><code class="language-plaintext highlighter-rouge">git reset --hard HEAD^^</code>:   退回/找回上上个版本</p>
 
-<p><code class="highlighter-rouge">git reset --hard HEAD~3</code>:  会将最新的3次提交全部重置，就像没有提交过一样</p>
+<p><code class="language-plaintext highlighter-rouge">git reset --hard HEAD~3</code>:  会将最新的3次提交全部重置，就像没有提交过一样</p>
 
-<p><code class="highlighter-rouge">git reset --hard b7057a9</code>:           回到b7057a9版本</p>
+<p><code class="language-plaintext highlighter-rouge">git reset --hard b7057a9</code>:           回到b7057a9版本</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--hard</span>
 
 git clean <span class="nt">-df</span>
 </code></pre></div></div>
 <blockquote>
-  <p>使用命令组合会使工作目录和缓存区回到最近一次commit时候一摸一样的状态, <code class="highlighter-rouge">git status</code>会告诉你这是一个干净的工作目录, 又是一个新的开始了.(删除所有工作目录下面的修改, 包括新添加的文件. 假设你已经提交了一些快照了, 而且做了一些新的开发)</p>
+  <p>使用命令组合会使工作目录和缓存区回到最近一次commit时候一摸一样的状态, <code class="language-plaintext highlighter-rouge">git status</code>会告诉你这是一个干净的工作目录, 又是一个新的开始了.(删除所有工作目录下面的修改, 包括新添加的文件. 假设你已经提交了一些快照了, 而且做了一些新的开发)</p>
 </blockquote>
 <hr />
 
-<p><code class="highlighter-rouge">git checkout</code>:                    汇总显示工作区、暂存区与HEAD的差异</p>
+<p><code class="language-plaintext highlighter-rouge">git checkout</code>:                    汇总显示工作区、暂存区与HEAD的差异</p>
 
-<p><code class="highlighter-rouge">git checkout -- file.txt</code>: <br />           撤销file.txt文件在工作区所做的修改，用暂存区中文件来覆盖工作区中的文件;相当于取消自上次执行<code class="highlighter-rouge">git add</code> 以来（如果执行过）的本地修改</p>
+<p><code class="language-plaintext highlighter-rouge">git checkout -- file.txt</code>: <br />           撤销file.txt文件在工作区所做的修改，用暂存区中文件来覆盖工作区中的文件;相当于取消自上次执行<code class="language-plaintext highlighter-rouge">git add</code> 以来（如果执行过）的本地修改</p>
 
-<p><code class="highlighter-rouge">git checkout . </code>: <br />
+<p><code class="language-plaintext highlighter-rouge">git checkout . </code>: <br />
 会取消所有本地的 修改（相对于暂存区）,相当于用暂存区的所有文件直接覆盖本地文件，不给用户任何确认的机会！</p>
 
 <hr />
 
-<p><code class="highlighter-rouge">cat file.txt </code>:                               查看file.txt文件里的内容</p>
+<p><code class="language-plaintext highlighter-rouge">cat file.txt </code>:                               查看file.txt文件里的内容</p>
 
-<p><code class="highlighter-rouge">git rm file.txt</code>:                                 删除file.txt文件</p>
+<p><code class="language-plaintext highlighter-rouge">git rm file.txt</code>:                                 删除file.txt文件</p>
 
-<p><code class="highlighter-rouge">git mv b.txt c.txt </code>:             修改文件名</p>
+<p><code class="language-plaintext highlighter-rouge">git mv b.txt c.txt </code>:             修改文件名</p>
 <hr />
 
 <p>分支管理：
@@ -80,22 +80,22 @@ git branch -d XXX             删除XXX分支</p>
   <li>本地到远程：</li>
 </ul>
 
-<p><code class="highlighter-rouge">git remote add origin https://github.com/try-git/try_git.git</code>: <br /> 
+<p><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/try-git/try_git.git</code>: <br /> 
 推送本地仓库的内容至GitHub仓库</p>
 
-<p><code class="highlighter-rouge">git push -u origin master</code>:   <br />
+<p><code class="language-plaintext highlighter-rouge">git push -u origin master</code>:   <br />
     把本地仓库分支master内容推送到远程库（-u是因为远程库是空）</p>
 
-<p><code class="highlighter-rouge">git push origin master</code>:           将本地master分支的最新修改推送到GitHub上</p>
+<p><code class="language-plaintext highlighter-rouge">git push origin master</code>:           将本地master分支的最新修改推送到GitHub上</p>
 
 <ul>
   <li>远程到本地：</li>
 </ul>
 
-<p><code class="highlighter-rouge">git clone git@github.com:symphonyh/forum.rb.git</code>: <br />
+<p><code class="language-plaintext highlighter-rouge">git clone git@github.com:symphonyh/forum.rb.git</code>: <br />
  将github上的远程库克隆到本地库并且具有读写权限</p>
 
-<p><code class="highlighter-rouge">git pull origin master</code>:    把github上的更改（其他开发者）拉回到本地master</p>
+<p><code class="language-plaintext highlighter-rouge">git pull origin master</code>:    把github上的更改（其他开发者）拉回到本地master</p>
 
 <p><strong>github上的版本强行覆盖本地文件:</strong></p>
 

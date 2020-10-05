@@ -1,25 +1,25 @@
-I"[<p>Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；</p>
+I"e<p>Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；</p>
 
-<p><code class="highlighter-rouge">◆</code> 甘特图中的菱形块: 代表不需要时间的活动类似于 “获得批准”;</p>
+<p><code class="language-plaintext highlighter-rouge">◆</code> 甘特图中的菱形块: 代表不需要时间的活动类似于 “获得批准”;</p>
 
-<p><code class="highlighter-rouge">▼  ▼</code> 横道图两端的倒实心三角: 代表自己是上级任务,下面直到出现▼之前横道图是自己的下级任务 ;</p>
+<p><code class="language-plaintext highlighter-rouge">▼  ▼</code> 横道图两端的倒实心三角: 代表自己是上级任务,下面直到出现▼之前横道图是自己的下级任务 ;</p>
 
 <p>连线代表是依存关系;</p>
 
 <hr />
 
-<p>空白 <code class="highlighter-rouge">=MOD(COLUMN(),2)=0</code>
-灰列 <code class="highlighter-rouge">=MOD(COLUMN(),2)</code></p>
+<p>空白 <code class="language-plaintext highlighter-rouge">=MOD(COLUMN(),2)=0</code>
+灰列 <code class="language-plaintext highlighter-rouge">=MOD(COLUMN(),2)</code></p>
 
 <hr />
 
-<p>计划 <code class="highlighter-rouge">=AND(NOT(ISBLANK($C11)),K$8&gt;=$C11,K$8&lt;=$D11)</code></p>
+<p>计划 <code class="language-plaintext highlighter-rouge">=AND(NOT(ISBLANK($C11)),K$8&gt;=$C11,K$8&lt;=$D11)</code></p>
 
-<p>实际 <code class="highlighter-rouge">=AND(NOT(ISBLANK($F11)),K$8&gt;=$F11,K$8&lt;=($F11+$H11-1))</code></p>
+<p>实际 <code class="language-plaintext highlighter-rouge">=AND(NOT(ISBLANK($F11)),K$8&gt;=$F11,K$8&lt;=($F11+$H11-1))</code></p>
 
-<p>超实际 <code class="highlighter-rouge">=IF($F10&lt;=$D10,AND(K$7&gt;$D10,K$7&lt;=$G10),AND(K$7&gt;=$F10,K$7&lt;=$G10))</code></p>
+<p>超实际 <code class="language-plaintext highlighter-rouge">=IF($F10&lt;=$D10,AND(K$7&gt;$D10,K$7&lt;=$G10),AND(K$7&gt;=$F10,K$7&lt;=$G10))</code></p>
 
-<p>完成 <code class="highlighter-rouge">=AND($I11&gt;0,K$8&gt;=$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11)))</code></p>
+<p>完成 <code class="language-plaintext highlighter-rouge">=AND($I11&gt;0,K$8&gt;=$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11)))</code></p>
 
 <p>超完成:</p>
 
@@ -29,17 +29,17 @@
 
 <p>如果实际开始，在计划结束后面，起点就是&gt;=;</p>
 
-<p><code class="highlighter-rouge">=IF($I11=0,AND(K$8&gt;$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),       </code></p>
+<p><code class="language-plaintext highlighter-rouge">=IF($I11=0,AND(K$8&gt;$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),       </code></p>
 
-<p><code class="highlighter-rouge">  IF($F11-$D11&lt;=0,AND(K$8&gt;$D11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),</code></p>
+<p><code class="language-plaintext highlighter-rouge">  IF($F11-$D11&lt;=0,AND(K$8&gt;$D11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),</code></p>
 
-<p><code class="highlighter-rouge">    AND(K$8&gt;=$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11)))))            </code></p>
+<p><code class="language-plaintext highlighter-rouge">    AND(K$8&gt;=$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11)))))            </code></p>
 
 <hr />
 
-<p>今天 <code class="highlighter-rouge">=K$8=TODAY()</code></p>
+<p>今天 <code class="language-plaintext highlighter-rouge">=K$8=TODAY()</code></p>
 
-<p>周末 <code class="highlighter-rouge">=OR(WEEKDAY(K$8,3)=6,WEEKDAY(K$8,3)=5)</code></p>
+<p>周末 <code class="language-plaintext highlighter-rouge">=OR(WEEKDAY(K$8,3)=6,WEEKDAY(K$8,3)=5)</code></p>
 
 <hr />
 
@@ -48,7 +48,7 @@
 这是利用日期加步长计算的公式，如果计算结束日期改为开始日期+步长，这是模版里的用法，可以参考。</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">=AND($E9&lt;=K$7,ROUNDDOWN(($F9-$E9+1)*$H9,0)+$E9-1&gt;=K$7)</code></p>
+<p><code class="language-plaintext highlighter-rouge">=AND($E9&lt;=K$7,ROUNDDOWN(($F9-$E9+1)*$H9,0)+$E9-1&gt;=K$7)</code></p>
 
 <p>E 开始  F计算出的结束日期 H 完成率  K日历开始列</p>
 

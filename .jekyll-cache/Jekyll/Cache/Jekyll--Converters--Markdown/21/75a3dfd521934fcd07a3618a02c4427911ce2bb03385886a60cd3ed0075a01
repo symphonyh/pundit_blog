@@ -1,4 +1,4 @@
-I"�j<p>Excel Function</p>
+I"�l<p>Excel Function</p>
 
 <h2 id="-iferror">※ IFERROR()</h2>
 
@@ -26,7 +26,7 @@
 
 <p>客户经理分段计算奖金的例子：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>= (IF(B16&lt;=10,B16*0.04,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>= (IF(B16&lt;=10,B16*0.04,
 IF(AND(B16&gt;10,B16&lt;=20),10*0.04+(B16-10)*0.1,
 IF(AND(B16&gt;20,B16&lt;=30),10*0.04+(20-10)*0.1+(B16-20)*0.15,
 IF(AND(B16&gt;30,B16&lt;=40),10*0.04+(20-10)*0.1+(30-20)*0.15+(B16-30)*0.2,
@@ -319,7 +319,7 @@ IF(B16&gt;60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0
 <p>§ 查找最后一条符合条件的记录</p>
 
 <p>公式的模式化写法为：
-<code class="highlighter-rouge">=LOOKUP(1,0/(条件区域=条件),查询区域)</code></p>
+<code class="language-plaintext highlighter-rouge">=LOOKUP(1,0/(条件区域=条件),查询区域)</code></p>
 
 <p>首先使用条件区域=条件得到一组逻辑值，然后使用0除以这些逻辑值，如果符合条件，就是0/TRUE，结果是0。
 如果不符合条件，就是0/FALSE，结果是错误值，这一步最终得到由一组错误值和0构成的内存数组。
@@ -328,7 +328,7 @@ IF(B16&gt;60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0
 <p>§ 查询符合多个条件的记录</p>
 
 <p>公式的模式化写法为：
-<code class="highlighter-rouge">=LOOKUP(1,0/((条件区域1=条件1)*(条件区域2=条件2)),查询区域)</code></p>
+<code class="language-plaintext highlighter-rouge">=LOOKUP(1,0/((条件区域1=条件1)*(条件区域2=条件2)),查询区域)</code></p>
 
 <p>这里的查询套路和第一个问题一致。使用两个条件判断，然后将判断之后得到的两组逻辑值中的元素对应相乘。
 如果两个条件同时符合，就是TRUE*TRUE，结果为1。</p>
@@ -344,10 +344,10 @@ IF(B16&gt;60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0
 <p>§ 查询最后一笔业务日期</p>
 
 <p>公式的模式化写法为：
-<code class="highlighter-rouge">=LOOKUP(1,0/(条件区域&lt;&gt;""),查询区域)</code></p>
+<code class="language-plaintext highlighter-rouge">=LOOKUP(1,0/(条件区域&lt;&gt;""),查询区域)</code></p>
 
 <p>本例来说，公式可以简化为：
-<code class="highlighter-rouge">=LOOKUP(1,0/B4:B11,$A4:$A11)</code></p>
+<code class="language-plaintext highlighter-rouge">=LOOKUP(1,0/B4:B11,$A4:$A11)</code></p>
 
 <p>但是只适合条件区域为数值的情况，而失去通用性了。</p>
 
@@ -359,9 +359,9 @@ IF(B16&gt;60,10*0.04+(20-10)*0.1+(30-20)*0.15+(40-30)*0.2+(50-40)*0.21+(60-50)*0
 <p>§ 提取单元格内的数字</p>
 
 <p>A2公式为
-<code class="highlighter-rouge">=-LOOKUP(1,-LEFT(A2,ROW($1:$99)))</code></p>
+<code class="language-plaintext highlighter-rouge">=-LOOKUP(1,-LEFT(A2,ROW($1:$99)))</code></p>
 
-<p>首先用LEFT函数从A2单元格左起第一个字符开始，依次返回长度为<code class="highlighter-rouge">ROW($1:$99)</code>也就是1至99的字符串，添加负号后，数值转换为负数，含有文本字符的字符串则变成错误值。
+<p>首先用LEFT函数从A2单元格左起第一个字符开始，依次返回长度为<code class="language-plaintext highlighter-rouge">ROW($1:$99)</code>也就是1至99的字符串，添加负号后，数值转换为负数，含有文本字符的字符串则变成错误值。
 LOOKUP函数使用1作为查询值，在由负数、0和错误值构成的数组中，忽略错误值提取最后一个等于或小于1的数值。
 最后再使用负号，将提取出的负数转为正数。</p>
 
@@ -554,7 +554,7 @@ LOOKUP函数使用1作为查询值，在由负数、0和错误值构成的数组
 </ul>
 
 <blockquote>
-  <p>参数：网站地址，记得一定前面一定要加<code class="highlighter-rouge">//</code></p>
+  <p>参数：网站地址，记得一定前面一定要加<code class="language-plaintext highlighter-rouge">//</code></p>
 </blockquote>
 
 <ul>
@@ -591,20 +591,20 @@ LOOKUP函数使用1作为查询值，在由负数、0和错误值构成的数组
 
 <h2 id="--去空格函数trim--substitute-clean">※  去空格函数TRIM()  SUBSTITUTE() CLEAN()</h2>
 
-<p><code class="highlighter-rouge">=TRIM(A2)</code></p>
+<p><code class="language-plaintext highlighter-rouge">=TRIM(A2)</code></p>
 
 <blockquote>
   <p>此方法只能删除字符串首尾的空格，而不能删除字符串中间的空格！故此方法适用于删除字符串首尾的空格</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">=SUBSTITUTE(A2," ","")</code></p>
+<p><code class="language-plaintext highlighter-rouge">=SUBSTITUTE(A2," ","")</code></p>
 
 <blockquote>
   <p>注意函数中间的英文双引号中间是一个空格符号，而左边的双引号是空白的，意思就是将A2单元格的字符串中的空格去掉
 SUBSTITUTE函数法可以删除字符串中所有的空格</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">=CLEAN(B2)</code></p>
+<p><code class="language-plaintext highlighter-rouge">=CLEAN(B2)</code></p>
 
 <p>B2 的内容 =CHAR(9)&amp;”Monthly report”&amp;CHAR(10)</p>
 
@@ -622,9 +622,9 @@ SUBSTITUTE函数法可以删除字符串中所有的空格</p>
 
 <h2 id="-和区域名称配合动态引用位置">※ 和区域名称配合动态引用位置</h2>
 
-<p><code class="highlighter-rouge">OFFSET(Lists!$C$1,1,0,MATCH(REPT("z",255),Lists!$C:$C),1)</code></p>
+<p><code class="language-plaintext highlighter-rouge">OFFSET(Lists!$C$1,1,0,MATCH(REPT("z",255),Lists!$C:$C),1)</code></p>
 
-<p><code class="highlighter-rouge">OFFSET(Lists!$C$1,1,0,MATCH(REPT("座",255),Lists!$C:$C),1)</code></p>
+<p><code class="language-plaintext highlighter-rouge">OFFSET(Lists!$C$1,1,0,MATCH(REPT("座",255),Lists!$C:$C),1)</code></p>
 
 <p>函数的意思就移c1为参考，引用位置c1下移一行右移0列c2位置开始，到这一行的有文字单元格的结尾行c座；就是选中C2:c座的区域</p>
 
@@ -654,7 +654,7 @@ SUBSTITUTE函数法可以删除字符串中所有的空格</p>
 
 <p>=LOOKUP(2,1/(A1:A20&lt;&gt;””),A1:A20)－－－－－返回非空单元格</p>
 
-<p><code class="highlighter-rouge">=LOOKUP(2,1/(A1:A20&lt;&gt;""),ROW(A1:A20))－－－返回行号</code></p>
+<p><code class="language-plaintext highlighter-rouge">=LOOKUP(2,1/(A1:A20&lt;&gt;""),ROW(A1:A20))－－－返回行号</code></p>
 
 <p>=LOOKUP(2,1/(A1:A20&lt;&gt;0),A1:A20)－－－－－－返回非零单元格</p>
 
@@ -685,43 +685,43 @@ SUBSTITUTE函数法可以删除字符串中所有的空格</p>
 
 <p>非空值(方法一)</p>
 
-<p><code class="highlighter-rouge">LOOKUP(2,1/(A3:A65536&lt;&gt;""),row(A3:A65536))</code></p>
+<p><code class="language-plaintext highlighter-rouge">LOOKUP(2,1/(A3:A65536&lt;&gt;""),row(A3:A65536))</code></p>
 
 <p>非空值(方法二)</p>
 
-<p><code class="highlighter-rouge">LOOKUP(2,1/(1-ISBLANK(A3:A65536)),row(A3:A65536))</code></p>
+<p><code class="language-plaintext highlighter-rouge">LOOKUP(2,1/(1-ISBLANK(A3:A65536)),row(A3:A65536))</code></p>
 
 <p>非空值(方法三  数组公式)</p>
 
-<p><code class="highlighter-rouge">MAX((A3:A65536&lt;&gt;"")*ROW(A3:A65536))</code></p>
+<p><code class="language-plaintext highlighter-rouge">MAX((A3:A65536&lt;&gt;"")*ROW(A3:A65536))</code></p>
 
 <p>数值(方法一)</p>
 
-<p><code class="highlighter-rouge">LOOKUP(9E+307,A:A)</code></p>
+<p><code class="language-plaintext highlighter-rouge">LOOKUP(9E+307,A:A)</code></p>
 
 <p>数值(方法二)</p>
 
-<p><code class="highlighter-rouge">MATCH(9E+307,A:A)</code></p>
+<p><code class="language-plaintext highlighter-rouge">MATCH(9E+307,A:A)</code></p>
 
 <p>文本(方法一)</p>
 
-<p><code class="highlighter-rouge">LOOKUP("座",row(A:A))</code></p>
+<p><code class="language-plaintext highlighter-rouge">LOOKUP("座",row(A:A))</code></p>
 
 <p>文本(方法二)</p>
 
-<p><code class="highlighter-rouge">MATCH("座",A:A)</code></p>
+<p><code class="language-plaintext highlighter-rouge">MATCH("座",A:A)</code></p>
 
 <p>既然都知道这么多方法，为什么不试验一下呢。</p>
 
 <p>日程安排表里的尝试成功,公式-区域名称-定义为holiday 引用位置公式：</p>
 
-<p><code class="highlighter-rouge">=OFFSET($B$1,1,0,LOOKUP(2,1/(B:B&lt;&gt;""),ROW(B:B)),1)</code></p>
+<p><code class="language-plaintext highlighter-rouge">=OFFSET($B$1,1,0,LOOKUP(2,1/(B:B&lt;&gt;""),ROW(B:B)),1)</code></p>
 
-<p><code class="highlighter-rouge">row()</code>确保返回行号 如果只是区域返回单元格值（2020/10/7）就无法满足 offset() 参数要求了;</p>
+<p><code class="language-plaintext highlighter-rouge">row()</code>确保返回行号 如果只是区域返回单元格值（2020/10/7）就无法满足 offset() 参数要求了;</p>
 
 <p>单元格公式：</p>
 
-<p><code class="highlighter-rouge">=IF($D$4=TRUE,($C11+$E11-1),WORKDAY(C11,E11-1,holiday))</code></p>
+<p><code class="language-plaintext highlighter-rouge">=IF($D$4=TRUE,($C11+$E11-1),WORKDAY(C11,E11-1,holiday))</code></p>
 
 <hr />
 

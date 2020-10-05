@@ -1,23 +1,23 @@
-I"�<p>excel名称管理器中定义A列名称<code class="highlighter-rouge">prevWBS</code>,名称管理器中把A2单元引用改为<code class="highlighter-rouge">=Sheet1!$A1</code>；生成编号复制公式即可:</p>
+I"�<p>excel名称管理器中定义A列名称<code class="language-plaintext highlighter-rouge">prevWBS</code>,名称管理器中把A2单元引用改为<code class="language-plaintext highlighter-rouge">=Sheet1!$A1</code>；生成编号复制公式即可:</p>
 
 <p>1 2 3…</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),TEXT(VALUE(prevWBS)+1,"#"),TEXT(VALUE(LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1))+1,"#")))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),TEXT(VALUE(prevWBS)+1,"#"),TEXT(VALUE(LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1))+1,"#")))
 </code></pre></div></div>
 
 <p>1.1 …</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",1))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",2))-FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1)))+1)))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",1))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",1))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",1))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",2))-FIND("`",SUBSTITUTE(prevWBS,".","`",1))-1)))+1)))
 </code></pre></div></div>
 
 <p>1.1.1  …</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",2))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",3))-FIND("`",SUBSTITUTE(prevWBS,".","`",2))-1)))+1)))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",2))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",2))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",2))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",3))-FIND("`",SUBSTITUTE(prevWBS,".","`",2))-1)))+1)))
 </code></pre></div></div>
 
 <p>1.1.1.1 …</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",4))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",3))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",4))-FIND("`",SUBSTITUTE(prevWBS,".","`",3))-1)))+1)))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(ISERROR(VALUE(SUBSTITUTE(prevWBS,".",""))),"0.0.0.1",IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",3))),prevWBS&amp;".1",LEFT(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3)))&amp;IF(ISERROR(FIND("`",SUBSTITUTE(prevWBS,".","`",4))),VALUE(RIGHT(prevWBS,LEN(prevWBS)-FIND("`",SUBSTITUTE(prevWBS,".","`",3))))+1,VALUE(MID(prevWBS,FIND("`",SUBSTITUTE(prevWBS,".","`",3))+1,(FIND("`",SUBSTITUTE(prevWBS,".","`",4))-FIND("`",SUBSTITUTE(prevWBS,".","`",3))-1)))+1)))
 </code></pre></div></div>
 
 <hr />
@@ -73,7 +73,7 @@
   </tbody>
 </table>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(A2="","",IF(A2&gt;OFFSET(A2,-1,0,1,1),IF(OFFSET(B2,-1,0,1,1)="","1",OFFSET(B2,-1,0,1,1))&amp;REPT(".1",A2-MAX(OFFSET(A2,-1,0,1,1),1)),IF(ISERROR(FIND(".",OFFSET(B2,-1,0,1,1))),REPT("1.",A2-1)&amp;IFERROR(VALUE(OFFSET(B2,-1,0,1,1))+1,"1"),IF(A2=1,"",IFERROR(LEFT(OFFSET(B2,-1,0,1,1),FIND("^",SUBSTITUTE(OFFSET(B2,-1,0,1,1),".","^",A2-1))),""))&amp;VALUE(TRIM(MID(SUBSTITUTE(OFFSET(B2,-1,0,1,1),".",REPT(" ",LEN(OFFSET(B2,-1,0,1,1)))),(A2-1)*LEN(OFFSET(B2,-1,0,1,1))+1,LEN(OFFSET(B2,-1,0,1,1)))))+1)))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=IF(A2="","",IF(A2&gt;OFFSET(A2,-1,0,1,1),IF(OFFSET(B2,-1,0,1,1)="","1",OFFSET(B2,-1,0,1,1))&amp;REPT(".1",A2-MAX(OFFSET(A2,-1,0,1,1),1)),IF(ISERROR(FIND(".",OFFSET(B2,-1,0,1,1))),REPT("1.",A2-1)&amp;IFERROR(VALUE(OFFSET(B2,-1,0,1,1))+1,"1"),IF(A2=1,"",IFERROR(LEFT(OFFSET(B2,-1,0,1,1),FIND("^",SUBSTITUTE(OFFSET(B2,-1,0,1,1),".","^",A2-1))),""))&amp;VALUE(TRIM(MID(SUBSTITUTE(OFFSET(B2,-1,0,1,1),".",REPT(" ",LEN(OFFSET(B2,-1,0,1,1)))),(A2-1)*LEN(OFFSET(B2,-1,0,1,1))+1,LEN(OFFSET(B2,-1,0,1,1)))))+1)))
 </code></pre></div></div>
 
 <blockquote>

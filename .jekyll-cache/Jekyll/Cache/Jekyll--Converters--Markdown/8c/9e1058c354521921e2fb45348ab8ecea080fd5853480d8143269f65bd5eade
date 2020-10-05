@@ -1,4 +1,4 @@
-I"(,<p>Using Word</p>
+I"�1<p>Using Word</p>
 
 <div class="cloud-tie-wrapper">
 <iframe width="800" height="480" src="//player.bilibili.com/player.html?aid=8859100&amp;cid=14616564&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
@@ -10,148 +10,148 @@
 <h2 id="常用快捷键">常用快捷键：</h2>
 
 <hr />
-<p><code class="highlighter-rouge">Ctrl + F4</code>  关闭当前文档</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + F4</code>  关闭当前文档</p>
 
-<p><code class="highlighter-rouge">Ctrl + D</code>  调出字体选项卡</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + D</code>  调出字体选项卡</p>
 
-<p><code class="highlighter-rouge">Alt + O + T</code> 段落选项卡</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + O + T</code> 段落选项卡</p>
 
-<p><code class="highlighter-rouge">Ctrl + C</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + C</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + V</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + V</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + X</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + X</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + A</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + A</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + C</code>  复制格式</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + C</code>  复制格式</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + V</code>  粘贴格式</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + V</code>  粘贴格式</p>
 
-<p><code class="highlighter-rouge">Ctrl + 1</code>          一倍行距</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 1</code>          一倍行距</p>
 
-<p><code class="highlighter-rouge">Ctrl + 2 </code>         二倍行距</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 2 </code>         二倍行距</p>
 
-<p><code class="highlighter-rouge">Ctrl + 5</code>          1.5倍行距</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 5</code>          1.5倍行距</p>
 
-<p><code class="highlighter-rouge">Ctrl + 0 </code>         段前加一行间距</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 0 </code>         段前加一行间距</p>
 
-<p><code class="highlighter-rouge">Ctrl + Q </code>         清除段落格式</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Q </code>         清除段落格式</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + N</code>  清除格式</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + N</code>  清除格式</p>
 
-<p><code class="highlighter-rouge">Ctrl + Y</code>         重复上一次操作</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Y</code>         重复上一次操作</p>
 
-<p><code class="highlighter-rouge">F4 </code>              重复上一次操作</p>
+<p><code class="language-plaintext highlighter-rouge">F4 </code>              重复上一次操作</p>
 
-<p><code class="highlighter-rouge">Ctrl + Z </code>        撤销上一次造作</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Z </code>        撤销上一次造作</p>
 
-<p><code class="highlighter-rouge">Ctrl + H </code>        替换</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + H </code>        替换</p>
 
-<p><code class="highlighter-rouge">Ctrl + F</code>         查找</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + F</code>         查找</p>
 
-<p><code class="highlighter-rouge">Ctrl + L </code>        左对齐</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + L </code>        左对齐</p>
 
-<p><code class="highlighter-rouge">Ctrl + R</code>         右对齐</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + R</code>         右对齐</p>
 
-<p><code class="highlighter-rouge">Ctrl + E </code>        居中</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + E </code>        居中</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + J</code> 分散对齐</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + J</code> 分散对齐</p>
 
-<p><code class="highlighter-rouge">Ctrl + U</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + U</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + I</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + I</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + B</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + B</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + T </code>       创建悬挂缩进</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + T </code>       创建悬挂缩进</p>
 
-<p><code class="highlighter-rouge">Ctrl + K </code>       创建超链接</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + K </code>       创建超链接</p>
 
 <blockquote>
-  <p>如果想一次性取消文档中的全部超链接，可先按 <code class="highlighter-rouge">Ctrl + A</code> 键选中整个文档，然后按 <code class="highlighter-rouge">Ctrl + Shift + F9</code>键即可。目录也失去链接了，谨慎！！！</p>
+  <p>如果想一次性取消文档中的全部超链接，可先按 <code class="language-plaintext highlighter-rouge">Ctrl + A</code> 键选中整个文档，然后按 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + F9</code>键即可。目录也失去链接了，谨慎！！！</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">Shift + F3</code>       切换大小写</p>
+<p><code class="language-plaintext highlighter-rouge">Shift + F3</code>       切换大小写</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + Home </code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Home </code></p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + End</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + End</code></p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + W</code>   只给字词加下划线，不给空格加</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + W</code>   只给字词加下划线，不给空格加</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + D</code>   给文字加双下划线</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + D</code>   给文字加双下划线</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + N </code>  应用正文样式</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + N </code>  应用正文样式</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + 1 </code>    应用标题1样式</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + 1 </code>    应用标题1样式</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + 2</code>     应用标题2样式</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + 2</code>     应用标题2样式</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + 3</code>     应用标题3样式</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + 3</code>     应用标题3样式</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + * </code>  显示/隐藏段落标记和隐藏符号</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + * </code>  显示/隐藏段落标记和隐藏符号</p>
 
-<p><code class="highlighter-rouge">Ctrl + Enter </code>      插入分页符</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Enter </code>      插入分页符</p>
 
-<p><code class="highlighter-rouge">Shift + Enter </code>     插入换行符</p>
+<p><code class="language-plaintext highlighter-rouge">Shift + Enter </code>     插入换行符</p>
 <blockquote>
   <p>注解：回车相当于另起一个段落，换行符只换行 还在同一个段落里就像HTML里 p标签和br的区别</p>
 </blockquote>
 
 <p><br /></p>
 
-<p><code class="highlighter-rouge">Ctrl + N</code>          创建于当前或最近使用的文档类型相同的新文档</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + N</code>          创建于当前或最近使用的文档类型相同的新文档</p>
 
-<p><code class="highlighter-rouge">Ctrl + W</code>          关闭文档 会提示保存更改</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + W</code>          关闭文档 会提示保存更改</p>
 
-<p><code class="highlighter-rouge">Ctrl + O </code>         打开</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + O </code>         打开</p>
 
-<p><code class="highlighter-rouge">Ctrl + P </code>         打印</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + P </code>         打印</p>
 
-<p><code class="highlighter-rouge">Ctrl + S </code>         保存</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + S </code>         保存</p>
 
-<p><code class="highlighter-rouge">Ctrl + F10</code>        窗口最大化</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + F10</code>        窗口最大化</p>
 
-<p><code class="highlighter-rouge">Ctrl + F12 </code>       显示打开对话框</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + F12 </code>       显示打开对话框</p>
 
-<p><code class="highlighter-rouge">F12</code>              显示另存为对话框</p>
+<p><code class="language-plaintext highlighter-rouge">F12</code>              显示另存为对话框</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + M</code>    批注</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + M</code>    批注</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + F</code>    脚注</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + F</code>    脚注</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + D</code>    尾注</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + D</code>    尾注</p>
 
-<p><code class="highlighter-rouge">Alt + Ctrl + V</code>    选择性粘贴</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Ctrl + V</code>    选择性粘贴</p>
 
-<p><code class="highlighter-rouge">Ctrl + = </code>         下标</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + = </code>         下标</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + + </code> 上标</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + + </code> 上标</p>
 
-<p><code class="highlighter-rouge">Alt + Shift + 上下箭头</code> 上下移动选中文字,对于表格则是合并、拆分表格</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Shift + 上下箭头</code> 上下移动选中文字,对于表格则是合并、拆分表格</p>
 
-<p><code class="highlighter-rouge">Alt + Shift + T</code> 生成时间</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Shift + T</code> 生成时间</p>
 
-<p><code class="highlighter-rouge">Alt + Shift + 	D</code> 生成日期</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + Shift + 	D</code> 生成日期</p>
 
-<p><code class="highlighter-rouge">Shift+F4</code>  快速翻页浏览</p>
+<p><code class="language-plaintext highlighter-rouge">Shift+F4</code>  快速翻页浏览</p>
 
-<p><code class="highlighter-rouge">Ctrl + G</code>  跳转定位页</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + G</code>  跳转定位页</p>
 
-<p><code class="highlighter-rouge">Ctrl+F1</code> 隐藏选项卡 双击<code class="highlighter-rouge">开始</code>效果一样</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+F1</code> 隐藏选项卡 双击<code class="language-plaintext highlighter-rouge">开始</code>效果一样</p>
 
-<p><code class="highlighter-rouge">Ctrl + F3</code> 连续剪切</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + F3</code> 连续剪切</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + F3</code> 一次性粘贴</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + F3</code> 一次性粘贴</p>
 
-<p><code class="highlighter-rouge">Ctrl + [</code>，<code class="highlighter-rouge">Ctrl + ]</code> 放大缩小字体</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + [</code>，<code class="language-plaintext highlighter-rouge">Ctrl + ]</code> 放大缩小字体</p>
 
-<p><code class="highlighter-rouge">Ctrl + 3</code>  微软雅黑字体</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 3</code>  微软雅黑字体</p>
 
-<p><code class="highlighter-rouge">Ctrl + 4</code>  roman字体</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 4</code>  roman字体</p>
 
-<p><code class="highlighter-rouge">Ctrl + 6</code>  宋体</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 6</code>  宋体</p>
 
 <hr />
 
@@ -207,13 +207,13 @@
 
 <h2 id="域代码的使用">域代码的使用</h2>
 
-<p>　　<code class="highlighter-rouge">Ctrl+F9</code>     快速插入域定义符<code class="highlighter-rouge">{}</code>(注意:这个花括号不能用键盘输入)</p>
+<p>　　<code class="language-plaintext highlighter-rouge">Ctrl+F9</code>     快速插入域定义符<code class="language-plaintext highlighter-rouge">{}</code>(注意:这个花括号不能用键盘输入)</p>
 
-<p>　　<code class="highlighter-rouge">Shift+F9</code>    显示或者隐藏指定(选中)的域代码</p>
+<p>　　<code class="language-plaintext highlighter-rouge">Shift+F9</code>    显示或者隐藏指定(选中)的域代码</p>
 
-<p>　　<code class="highlighter-rouge">Alt+F9 </code>     显示或者隐藏文档中所有域代码</p>
+<p>　　<code class="language-plaintext highlighter-rouge">Alt+F9 </code>     显示或者隐藏文档中所有域代码</p>
 
-<h2 id="f9----------更新单个域">　　<code class="highlighter-rouge">F9</code>          更新单个域</h2>
+<h2 id="f9----------更新单个域">　　<code class="language-plaintext highlighter-rouge">F9</code>          更新单个域</h2>
 
 <h2 id="shift--组合键的使用">shift  组合键的使用</h2>
 

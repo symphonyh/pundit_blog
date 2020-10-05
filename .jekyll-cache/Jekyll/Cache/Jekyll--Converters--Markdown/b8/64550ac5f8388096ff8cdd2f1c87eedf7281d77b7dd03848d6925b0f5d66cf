@@ -1,4 +1,4 @@
-I"?<table>
+I"e<table>
   <thead>
     <tr>
       <th style="text-align: left">快捷键</th>
@@ -7,7 +7,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><code class="highlighter-rouge">tab</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">tab</code></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>
@@ -63,7 +63,7 @@
       <td style="text-align: left">开启工具选项视窗</td>
     </tr>
     <tr>
-      <td style="text-align: left"><code class="highlighter-rouge">shell</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">shell</code></td>
       <td style="text-align: left"> </td>
     </tr>
     <tr>

@@ -1,4 +1,4 @@
-I"Z<p>Everything CommonTools</p>
+I"<p>Everything CommonTools</p>
 
 <p>语法：</p>
 
@@ -19,25 +19,25 @@
       <td style="text-align: left">文件(夹)名中既含li又含chao</td>
     </tr>
     <tr>
-      <td style="text-align: left"><code class="highlighter-rouge">| </code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">| </code></td>
       <td style="text-align: left">或</td>
-      <td style="text-align: left">1.txt<code class="highlighter-rouge">|</code>2.txt</td>
+      <td style="text-align: left">1.txt<code class="language-plaintext highlighter-rouge">|</code>2.txt</td>
       <td style="text-align: left">文件名含1或2的txt文件</td>
     </tr>
     <tr>
-      <td style="text-align: left"><code class="highlighter-rouge">！</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">！</code></td>
       <td style="text-align: left">非</td>
       <td style="text-align: left">*.txt !b</td>
       <td style="text-align: left">文件名不含b的txt文件</td>
     </tr>
     <tr>
-      <td style="text-align: left"><code class="highlighter-rouge">&lt; &gt;</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">&lt; &gt;</code></td>
       <td style="text-align: left">提高优先级,类似于数学的()</td>
-      <td style="text-align: left">file:&lt;1 <code class="highlighter-rouge">|</code> 2 &gt;</td>
+      <td style="text-align: left">file:&lt;1 <code class="language-plaintext highlighter-rouge">|</code> 2 &gt;</td>
       <td style="text-align: left">文件名含1或2的文件(夹)</td>
     </tr>
     <tr>
-      <td style="text-align: left"><code class="highlighter-rouge">""</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">""</code></td>
       <td style="text-align: left">特殊字符串</td>
       <td style="text-align: left">“foo bar”</td>
       <td style="text-align: left">如果没有引号会认为是逻辑与</td>
@@ -48,11 +48,11 @@
 <hr />
 <p>通配符：</p>
 
-<p><code class="highlighter-rouge">* </code>匹配0-∞个任意字符</p>
+<p><code class="language-plaintext highlighter-rouge">* </code>匹配0-∞个任意字符</p>
 
 <p>例如：a*.txt 匹配形如”ab.txt” “abbb.txt”</p>
 
-<p><code class="highlighter-rouge">?</code> 匹配1个任意字符</p>
+<p><code class="language-plaintext highlighter-rouge">?</code> 匹配1个任意字符</p>
 
 <p>例如：a??.txt 匹配形如”abc.txt” “aaa.txt”</p>
 
@@ -60,51 +60,51 @@
 
 <p>修饰符：</p>
 
-<p><code class="highlighter-rouge">case:</code> 匹配大小写</p>
+<p><code class="language-plaintext highlighter-rouge">case:</code> 匹配大小写</p>
 
-<p><code class="highlighter-rouge">file:</code>只匹配文件</p>
+<p><code class="language-plaintext highlighter-rouge">file:</code>只匹配文件</p>
 
-<p><code class="highlighter-rouge">folder:</code>只匹配文件夹</p>
+<p><code class="language-plaintext highlighter-rouge">folder:</code>只匹配文件夹</p>
 
-<p><code class="highlighter-rouge">path:</code>匹配路径和文件名</p>
+<p><code class="language-plaintext highlighter-rouge">path:</code>匹配路径和文件名</p>
 
-<p><code class="highlighter-rouge">regex:</code>正则表达式</p>
+<p><code class="language-plaintext highlighter-rouge">regex:</code>正则表达式</p>
 
-<p><code class="highlighter-rouge">ww: wholeword:</code>全字匹配</p>
+<p><code class="language-plaintext highlighter-rouge">ww: wholeword:</code>全字匹配</p>
 
 <hr />
 
 <p>函数：</p>
 
-<p><code class="highlighter-rouge">dc:&lt;date&gt;</code> 搜索特定创建日期的目标</p>
+<p><code class="language-plaintext highlighter-rouge">dc:&lt;date&gt;</code> 搜索特定创建日期的目标</p>
 
 <p>例如：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> *.txt dc:lastyear 去年创建的txt文件
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> *.txt dc:lastyear 去年创建的txt文件
  *.txt dc:2010-2012
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">dm:&lt;date&gt;</code>搜索特定修改日期的目标</p>
+<p><code class="language-plaintext highlighter-rouge">dm:&lt;date&gt;</code>搜索特定修改日期的目标</p>
 
-<p><code class="highlighter-rouge">dupe:</code> 搜索重复目标</p>
+<p><code class="language-plaintext highlighter-rouge">dupe:</code> 搜索重复目标</p>
 
 <p>例如：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dupe:text
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dupe:text
  dupe:!text
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">empty:</code> 搜索空文件夹</p>
+<p><code class="language-plaintext highlighter-rouge">empty:</code> 搜索空文件夹</p>
 
-<p><code class="highlighter-rouge">ext:&lt;list&gt;</code> 搜索指定后缀的目标 用分号分隔</p>
+<p><code class="language-plaintext highlighter-rouge">ext:&lt;list&gt;</code> 搜索指定后缀的目标 用分号分隔</p>
 
 <p>例如：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> file:&lt;ext:bmp;txt&gt; bmp和txt文件
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> file:&lt;ext:bmp;txt&gt; bmp和txt文件
 </code></pre></div></div>
 
 <blockquote>
-  <p>函数允许使用 <code class="highlighter-rouge">= &lt; &gt; !</code>逻辑符号</p>
+  <p>函数允许使用 <code class="language-plaintext highlighter-rouge">= &lt; &gt; !</code>逻辑符号</p>
 </blockquote>
 
 <hr />

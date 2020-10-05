@@ -1,4 +1,4 @@
-I"�<p>manjaro 安装记录</p>
+I"Q<p>manjaro 安装记录</p>
 
 <blockquote>
   <p>pacman 命令行参考 <a href="https://blog.csdn.net/nangy2514/article/details/93194184#4__49">pacman 命令汇总贴 </a></p>
@@ -8,63 +8,63 @@
 
 <h3 id="1选择国内源">1、选择国内源</h3>
 
-<p><code class="highlighter-rouge">sudo pacman-mirrors -i -c China -m rank </code></p>
+<p><code class="language-plaintext highlighter-rouge">sudo pacman-mirrors -i -c China -m rank </code></p>
 
 <p>修改pacman.conf</p>
 
-<p><code class="highlighter-rouge">sudo mousepad /etc/pacman.conf </code></p>
+<p><code class="language-plaintext highlighter-rouge">sudo mousepad /etc/pacman.conf </code></p>
 
 <p>更新系统</p>
 
-<p><code class="highlighter-rouge">sudo pacman -Syu</code></p>
+<p><code class="language-plaintext highlighter-rouge">sudo pacman -Syu</code></p>
 
 <p>安装 archlinuxcn-keyring 包导入GPG key</p>
 
-<p><code class="highlighter-rouge">sudo pacman -S archlinuxcn-keyring </code></p>
+<p><code class="language-plaintext highlighter-rouge">sudo pacman -S archlinuxcn-keyring </code></p>
 
 <h3 id="2安装输入法">2、安装输入法：</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S fcitx-im
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S fcitx-im
 sudo pacman -S fcitx-configtool
 sudo pacman -S fcitx-sogoupinyin
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">sudo mousepad  ~/.xprofile</code>复制下面内容到文件</p>
+<p><code class="language-plaintext highlighter-rouge">sudo mousepad  ~/.xprofile</code>复制下面内容到文件</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export GTK_IM_MODULE=fcitx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 </code></pre></div></div>
 
 <h3 id="3安装中文字体调整终端显示">3、安装中文字体，调整终端显示</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S wqy-microhei
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S wqy-microhei
 sudo pacman -S wqy-bitmapfont
 </code></pre></div></div>
 
 <p>安装monaco终端字体</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install-font-archlinux.sh https://github.com/todylu/monaco.ttf/blob/master/monaco.ttf?raw=true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install-font-archlinux.sh https://github.com/todylu/monaco.ttf/blob/master/monaco.ttf?raw=true
 </code></pre></div></div>
 
 <h3 id="4配置git">4、配置git</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git -v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git -v
 gem -v
 </code></pre></div></div>
 <p>配置github的密匙，在github网页SSH添加密匙 .pub</p>
 
-<p><code class="highlighter-rouge">ssh-keygen -t rsa -C "hxygsh@outlook.com"</code></p>
+<p><code class="language-plaintext highlighter-rouge">ssh-keygen -t rsa -C "hxygsh@outlook.com"</code></p>
 
 <h3 id="5安装ruby">5、安装ruby</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S ruby ruby-docs rubygems
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S ruby ruby-docs rubygems
 ruby -v
 </code></pre></div></div>
 
 <h3 id="6gem-更换源">6、gem 更换源</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources -l
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem sources -l
 gem sources --remove https://rubygems.org/
 gem sources -a https://gems.ruby-china.com
 gem sources -l
@@ -72,40 +72,40 @@ gem sources -l
 
 <h3 id="7克隆博客">7、克隆博客</h3>
 
-<p><code class="highlighter-rouge">git clone git@github.com:symphonyh/symphonyh.github.io.git</code></p>
+<p><code class="language-plaintext highlighter-rouge">git clone git@github.com:symphonyh/symphonyh.github.io.git</code></p>
 
-<p><code class="highlighter-rouge">git clone git@github.com:symphonyh/symphonyh.github.io.git</code></p>
+<p><code class="language-plaintext highlighter-rouge">git clone git@github.com:symphonyh/symphonyh.github.io.git</code></p>
 
 <h3 id="8安装jekyll">8、安装jekyll</h3>
 
-<p><code class="highlighter-rouge">gem install jekyll 4.0.0</code></p>
+<p><code class="language-plaintext highlighter-rouge">gem install jekyll 4.0.0</code></p>
 
 <p>配置环境变量（重要）</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>查看路径
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>查看路径
 which jekyll
 gem environment
 echo $PATH
 </code></pre></div></div>
-<p><code class="highlighter-rouge">export PATH="/home/cloudha/.gem/ruby/2.6.0/bin:$PATH" </code>  路径放到<code class="highlighter-rouge">.profile</code>文件中</p>
+<p><code class="language-plaintext highlighter-rouge">export PATH="/home/cloudha/.gem/ruby/2.6.0/bin:$PATH" </code>  路径放到<code class="language-plaintext highlighter-rouge">.profile</code>文件中</p>
 
 <blockquote>
   <p><a href="https://blog.csdn.net/qq_34879948/article/details/91129769">百度了半天还是参考的这个帖子弄明白了https://blog.csdn.net/qq_34879948/article/details/91129769</a></p>
 </blockquote>
 
-<p><code class="highlighter-rouge">jekyll -v</code></p>
+<p><code class="language-plaintext highlighter-rouge">jekyll -v</code></p>
 
-<p><code class="highlighter-rouge">gem list jekyll</code></p>
+<p><code class="language-plaintext highlighter-rouge">gem list jekyll</code></p>
 
-<p>blog 运行jekyll 需要执行<code class="highlighter-rouge">bundle install</code></p>
+<p>blog 运行jekyll 需要执行<code class="language-plaintext highlighter-rouge">bundle install</code></p>
 
-<p><code class="highlighter-rouge">gem install bundle</code></p>
+<p><code class="language-plaintext highlighter-rouge">gem install bundle</code></p>
 
 <hr />
 
 <h3 id="9共享文件夹一致没解决重装增强模块也没用待解决">9、共享文件夹一致没解决，重装增强模块也没用，待解决</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su
 mkdir sarah
 sudo mkdir sarah
 ls

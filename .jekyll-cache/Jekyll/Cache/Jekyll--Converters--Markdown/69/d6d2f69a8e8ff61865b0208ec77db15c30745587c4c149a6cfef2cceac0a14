@@ -1,9 +1,9 @@
-I"�<p>rvm,git,rbenv,gem 得都是学习<code class="highlighter-rouge">rails</code>中常用的工具，这些最常用命令行语句做个记录备查。</p>
+I"<p>rvm,git,rbenv,gem 得都是学习<code class="language-plaintext highlighter-rouge">rails</code>中常用的工具，这些最常用命令行语句做个记录备查。</p>
 
 <h3 id="using-rvm">using rvm</h3>
 <hr />
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash --login
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash --login
 
 rvm gemset use bloggem
 

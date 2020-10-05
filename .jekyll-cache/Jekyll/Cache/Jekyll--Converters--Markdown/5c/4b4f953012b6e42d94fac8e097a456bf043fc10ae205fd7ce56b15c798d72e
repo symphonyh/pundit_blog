@@ -1,10 +1,10 @@
-I"]<p>Excel 高亮显示选中行列：聚光灯效果</p>
+I"�<p>Excel 高亮显示选中行列：聚光灯效果</p>
 
 <ol>
   <li>条件格式设置公式：</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=OR(CELL("row")=ROW())
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=OR(CELL("row")=ROW())
 =OR(CELL("col")=COLUMN()) 
 =(CELL("row")=ROW())+(CELL("col")=COLUMN())
 </code></pre></div></div>
@@ -13,7 +13,7 @@
   <li>VBA 工作表选择 Worksheet SelectionChange 加入代码</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 On Error Resume Next
 If Application.CutCopyMode = xlCopy Or Application.CutCopyMode = xlCut Then Exit Sub
 ActiveSheet.Calculate
@@ -32,7 +32,7 @@ End Sub
   <li>纯VBA 实现方式：</li>
 </ol>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 With Target
      .Parent.Cells.Interior.ColorIndex = xlNone

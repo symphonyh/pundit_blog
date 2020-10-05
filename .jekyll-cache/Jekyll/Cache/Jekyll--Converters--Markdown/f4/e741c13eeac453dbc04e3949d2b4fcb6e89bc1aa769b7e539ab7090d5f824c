@@ -1,15 +1,15 @@
-I"�,<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。</p>
+I"Z/<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式,更加便于书写和阅读。</p>
 
 <h2 id="标题">§ 标题</h2>
 
-<p>在<code class="highlighter-rouge">Markdown</code>当中设置标题，有两种方式：</p>
+<p>在<code class="language-plaintext highlighter-rouge">Markdown</code>当中设置标题，有两种方式：</p>
 
 <ul>
   <li>
-    <p>通过在文字下方添加<code class="highlighter-rouge">=</code>和<code class="highlighter-rouge">-</code>，他们分别表示一级标题二级标题。</p>
+    <p>通过在文字下方添加<code class="language-plaintext highlighter-rouge">=</code>和<code class="language-plaintext highlighter-rouge">-</code>，他们分别表示一级标题二级标题。</p>
   </li>
   <li>
-    <p>在文字开头加上 <code class="highlighter-rouge">#</code>，通过<code class="highlighter-rouge">#</code>数量表示几级标题。</p>
+    <p>在文字开头加上 <code class="language-plaintext highlighter-rouge">#</code>，通过<code class="language-plaintext highlighter-rouge">#</code>数量表示几级标题。</p>
   </li>
 </ul>
 
@@ -19,10 +19,10 @@
 
 <h2 id="块注释blockquote">§ 块注释（blockquote）</h2>
 
-<p>通过在文字开头添加<code class="highlighter-rouge">&gt;</code>表示块注释。</p>
+<p>通过在文字开头添加<code class="language-plaintext highlighter-rouge">&gt;</code>表示块注释。</p>
 
 <blockquote>
-  <p>当<code class="highlighter-rouge">&gt;</code>和文字之间添加五个空格时，块注释的文字会有变化。</p>
+  <p>当<code class="language-plaintext highlighter-rouge">&gt;</code>和文字之间添加五个空格时，块注释的文字会有变化。</p>
 </blockquote>
 
 <h2 id="无序列表">§ 无序列表</h2>
@@ -43,7 +43,7 @@
 
 <ul>
   <li>
-    <p>内联方式：<code class="highlighter-rouge">This is an [example link](http://example.com/).</code></p>
+    <p>内联方式：<code class="language-plaintext highlighter-rouge">This is an [example link](http://example.com/).</code></p>
   </li>
   <li>
     <p>引用方式：</p>
@@ -52,7 +52,7 @@
 
 <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].  
 
    [1]: http://google.com/        "Google" 
    [2]: http://search.yahoo.com/  "Yahoo Search" 
@@ -63,7 +63,7 @@
   <li>链接跳转:</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://cloudhan.me"  target="_blank"&gt;跳到自己博客列表&lt;/a&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://cloudhan.me"  target="_blank"&gt;跳到自己博客列表&lt;/a&gt;
 
 跳到自己博客列表：&lt;a href="https://cloudhan.me" target="_blank"&gt;cloudhan&lt;/a&gt;
 </code></pre></div></div>
@@ -74,14 +74,14 @@
 
 <ul>
   <li>
-    <p>内联方式：<code class="highlighter-rouge">![alt text](/path/to/img.jpg "Title")</code></p>
+    <p>内联方式：<code class="language-plaintext highlighter-rouge">![alt text](/path/to/img.jpg "Title")</code></p>
   </li>
   <li>
     <p>引用方式：</p>
   </li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![alt text][id]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![alt text][id]
 
 [id]: /path/to/img.jpg "Title"
 
@@ -90,7 +90,7 @@
   <li>html的处理方式：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/bella.jpg" alt="Het meisje met de parel" width="400px" height="200px" style="margin:0"&gt; 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/bella.jpg" alt="Het meisje met de parel" width="400px" height="200px" style="margin:0"&gt; 
 
 &lt;div align=center&gt;&lt;img width = '150' height ='150' src ="https://tse2-mm.cn.bing.net/th?id=OIP.rF3VYN1CRvtyWBPU0I7kyQDMEy&amp;p=0&amp;pid=1.1"/&gt;&lt;/div&gt;
 </code></pre></div></div>
@@ -99,17 +99,17 @@
 
 <p>实现方式有两种：</p>
 <ul>
-  <li>简单文字出现一个代码框(code)。使用<code class="highlighter-rouge">&lt;blockquote&gt;</code>。
+  <li>简单文字出现一个代码框(code)。使用<code class="language-plaintext highlighter-rouge">&lt;blockquote&gt;</code>。
     <blockquote>
       <p>不是单引号而是左上角的ESC下面~中的”`“）</p>
     </blockquote>
   </li>
-  <li>大片文字需要实现代码框(pre)，使用Tab和四个空格，或者<code class="highlighter-rouge">~~~</code>包围代码。</li>
+  <li>大片文字需要实现代码框(pre)，使用Tab和四个空格，或者<code class="language-plaintext highlighter-rouge">~~~</code>包围代码。</li>
 </ul>
 
 <h2 id="脚注footnote">§ 脚注(footnote)</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello[^1]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hello[^1]
 ...
 
 [^1]: 这是一个注解。
@@ -118,7 +118,7 @@
 
 <h2 id="下划线">§ 下划线</h2>
 
-<p>在<strong>空白行</strong>下方添加<code class="highlighter-rouge">---</code>横线。</p>
+<p>在<strong>空白行</strong>下方添加<code class="language-plaintext highlighter-rouge">---</code>横线。</p>
 
 <blockquote>
   <p>前面讲过在文字下方添加“-”，实现的2级标题</p>
@@ -126,21 +126,21 @@
 
 <h2 id="注释">§ 注释</h2>
 
-<p>HTML 以 <code class="highlighter-rouge">&lt;!-- , --&gt; </code>的闭包定义注释（支持跨行），不在正文中显示。Markdown 沿用 HTML Comment 注释格式：</p>
+<p>HTML 以 <code class="language-plaintext highlighter-rouge">&lt;!-- , --&gt; </code>的闭包定义注释（支持跨行），不在正文中显示。Markdown 沿用 HTML Comment 注释格式：</p>
 
-<p><code class="highlighter-rouge">&lt;!-- This text will not appear in the browser window. --&gt; </code></p>
+<p><code class="language-plaintext highlighter-rouge">&lt;!-- This text will not appear in the browser window. --&gt; </code></p>
 
 <h2 id="关于字体">§ 关于字体</h2>
 
-<p><em>斜体</em>:将需要设置为斜体的文字两端使用1个<code class="highlighter-rouge">*</code>或者<code class="highlighter-rouge">_</code>夹起来</p>
+<p><em>斜体</em>:将需要设置为斜体的文字两端使用1个<code class="language-plaintext highlighter-rouge">*</code>或者<code class="language-plaintext highlighter-rouge">_</code>夹起来</p>
 
-<p><strong>粗体</strong>:将需要设置为斜体的文字两端使用2个<code class="highlighter-rouge">*</code>或者<code class="highlighter-rouge">_</code>夹起来</p>
+<p><strong>粗体</strong>:将需要设置为斜体的文字两端使用2个<code class="language-plaintext highlighter-rouge">*</code>或者<code class="language-plaintext highlighter-rouge">_</code>夹起来</p>
 
 <ul>
   <li>字体颜色：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>浅红色文字：&lt;font color="#dd0000"&gt;浅红色文字：&lt;/font&gt;&lt;br /&gt; 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>浅红色文字：&lt;font color="#dd0000"&gt;浅红色文字：&lt;/font&gt;&lt;br /&gt; 
 
 深红色文字：&lt;font color="#bd4147"&gt;深红色文字&lt;/font&gt;&lt;br /&gt; 
 
@@ -150,7 +150,7 @@
 
 <ul>
   <li>字体大小：
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>size为1：&lt;font size="1"&gt;size为1&lt;/font&gt;&lt;br /&gt; 
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>size为1：&lt;font size="1"&gt;size为1&lt;/font&gt;&lt;br /&gt; 
 size为2：&lt;font size="2"&gt;size为2&lt;/font&gt;&lt;br /&gt; 
 size为3：&lt;font size="3"&gt;size为3&lt;/font&gt;&lt;br /&gt; 
 </code></pre></div>    </div>
@@ -168,7 +168,7 @@ size为3：<font size="3">size为3</font><br /></p>
   <li>字体背景颜色：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#FF00FF"&gt;背景色的设置是按照十六进制颜色值：#7FFFD4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#FF00FF"&gt;背景色的设置是按照十六进制颜色值：#7FFFD4&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#FF83FA"&gt;背景色的设置是按照十六进制颜色值：#FF83FA&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#D1EEEE"&gt;背景色的设置是按照十六进制颜色值：#D1EEEE&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td bgcolor="#C0FF3E"&gt;背景色的设置是按照十六进制颜色值：#C0FF3E&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -190,21 +190,21 @@ size为3：<font size="3">size为3</font><br /></p>
   <li>文字居中：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;center&gt;Hello&lt;/center&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;center&gt;Hello&lt;/center&gt;
 </code></pre></div></div>
 
 <ul>
   <li>文字左对齐：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p align="left"&gt;Hello&lt;/p&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p align="left"&gt;Hello&lt;/p&gt;
 </code></pre></div></div>
 
 <ul>
   <li>使用常用字体：</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;font face="黑体"&gt;我是黑体字&lt;/font&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;font face="黑体"&gt;我是黑体字&lt;/font&gt;
 &lt;font face="微软雅黑"&gt;我是微软雅黑&lt;/font&gt;
 &lt;font face="STCAIYUN"&gt;我是华文彩云&lt;/font&gt;
 </code></pre></div></div>
@@ -213,14 +213,14 @@ size为3：<font size="3">size为3</font><br /></p>
 
 <h2 id="表格">§ 表格</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| 左对齐标题 | 右对齐标题 | 居中对齐标题 |
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| 左对齐标题 | 右对齐标题 | 居中对齐标题 |
 | :------| ------: | :------: |
 | 短文本 | 中等文本 | 稍微长一点的文本 |
 | 稍微长一点的文本 | 短文本 | 中等文本 |
 </code></pre></div></div>
 
 <blockquote>
-  <p>注：对齐方式书写要求是<code class="highlighter-rouge">:</code>要和<code class="highlighter-rouge">-</code>相邻，与<code class="highlighter-rouge">|</code> 之间有空格。</p>
+  <p>注：对齐方式书写要求是<code class="language-plaintext highlighter-rouge">:</code>要和<code class="language-plaintext highlighter-rouge">-</code>相邻，与<code class="language-plaintext highlighter-rouge">|</code> 之间有空格。</p>
 </blockquote>
 
 <p>页面效果：</p>
@@ -251,7 +251,7 @@ size为3：<font size="3">size为3</font><br /></p>
 
 <h2 id="插入音频">§ 插入音频</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;audio id="audio" controls="" preload="none"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;audio id="audio" controls="" preload="none"&gt;
   &lt;source id="mp3" src="http://music.163.com/song/media/outer/url?id=562598065.mp3"&gt;
 &lt;/audio&gt;
 </code></pre></div></div>
@@ -266,7 +266,7 @@ size为3：<font size="3">size为3</font><br /></p>
 
 <!--- 第一种方式：-->
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;iframe 
     width="800" 
     height="450" 
     src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__"

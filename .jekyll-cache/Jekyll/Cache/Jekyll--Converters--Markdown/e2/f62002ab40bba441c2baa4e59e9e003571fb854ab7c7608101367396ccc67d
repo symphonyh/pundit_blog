@@ -1,10 +1,10 @@
-I"$'<p>Excel</p>
+I"�)<p>Excel</p>
 
 <p>1、抖动文档窗口，其他打开文档自动退到任务栏，只留下当前文档窗口；</p>
 
 <p>2、要形成条件反射的快捷键</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+A 全选
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+A 全选
 
 Ctrl+Z 撤销
 
@@ -76,17 +76,17 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>5、快速跳转/选择单元格</p>
 
-<p><code class="highlighter-rouge">Ctrl+箭头</code> 快速移动到数据箭头方向区域的边缘。此处箭头指的是键盘上的四个方向键→↓←↑中的任何一个;</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+箭头</code> 快速移动到数据箭头方向区域的边缘。此处箭头指的是键盘上的四个方向键→↓←↑中的任何一个;</p>
 
-<p><code class="highlighter-rouge">Ctrl+Shift+箭头</code> 快速选中前单元格到箭头方向边缘的区域;</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+Shift+箭头</code> 快速选中前单元格到箭头方向边缘的区域;</p>
 
-<p><code class="highlighter-rouge">Ctrl+Home</code> 移动到工作表的最左上角，一般是单元格A1;</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+Home</code> 移动到工作表的最左上角，一般是单元格A1;</p>
 
-<p><code class="highlighter-rouge">Ctrl+Shift+Home</code> 快速选中当前单元格到工作表最左上角的所有单元格;</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+Shift+Home</code> 快速选中当前单元格到工作表最左上角的所有单元格;</p>
 
-<p><code class="highlighter-rouge">Ctrl+End </code>移动到工作表的最右下角;</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+End </code>移动到工作表的最右下角;</p>
 
-<p><code class="highlighter-rouge">Ctrl+Shift+End</code> 快速选中当前单元格到工作表最右小角的所有单元格。</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+Shift+End</code> 快速选中当前单元格到工作表最右小角的所有单元格。</p>
 
 <blockquote>
   <p>注：以上快捷键，看似很难操作，实际是有一定规律的;
@@ -98,57 +98,57 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>6、增加/删除行或列</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift +  =</code> 快速增加或删除一行/列</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift +  =</code> 快速增加或删除一行/列</p>
 
-<p><code class="highlighter-rouge">Ctrl + - </code>    快速删除一行/列</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + - </code>    快速删除一行/列</p>
 
 <p>7、 切换工作表</p>
 
-<p><code class="highlighter-rouge">Ctrl + PgDn</code>   切换到右边的工作表，</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + PgDn</code>   切换到右边的工作表，</p>
 
-<p><code class="highlighter-rouge">Ctrl + PgUp</code>   切换回左边。</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + PgUp</code>   切换回左边。</p>
 
 <p>8、特殊符号</p>
 
-<p><code class="highlighter-rouge">alt + 41420</code>  √ </p>
+<p><code class="language-plaintext highlighter-rouge">alt + 41420</code>  √ </p>
 
-<p><code class="highlighter-rouge">alt + 41409</code>  ×</p>
+<p><code class="language-plaintext highlighter-rouge">alt + 41409</code>  ×</p>
 
 <p>9、隐藏行列</p>
 
-<p><code class="highlighter-rouge">Ctrl + 9</code> 隐藏行</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 9</code> 隐藏行</p>
 
-<p><code class="highlighter-rouge">CTRL+SHIFT+(</code> 取消隐藏行</p>
+<p><code class="language-plaintext highlighter-rouge">CTRL+SHIFT+(</code> 取消隐藏行</p>
 
-<p><code class="highlighter-rouge">Ctrl + 0</code> 隐藏列</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 0</code> 隐藏列</p>
 
-<p><code class="highlighter-rouge">CTRL+SHIFT+)</code> 取消隐藏列</p>
+<p><code class="language-plaintext highlighter-rouge">CTRL+SHIFT+)</code> 取消隐藏列</p>
 
 <p>10、 跳过隐藏区域，选择显示区域</p>
 
-<p><code class="highlighter-rouge">alt + ；</code> 跳过隐藏区域，选择显示区域</p>
+<p><code class="language-plaintext highlighter-rouge">alt + ；</code> 跳过隐藏区域，选择显示区域</p>
 
 <p>11、快速填充</p>
 
-<p><code class="highlighter-rouge">Ctrl + D</code>  向下填充</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + D</code>  向下填充</p>
 
-<p><code class="highlighter-rouge">Ctrl + R</code>  向右填充</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + R</code>  向右填充</p>
 
 <p>12、数字格式切换</p>
 
-<p><code class="highlighter-rouge">Ctrl+shift+4</code>  $</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+shift+4</code>  $</p>
 
-<p><code class="highlighter-rouge">Ctrl+shift+5</code>  %</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+shift+5</code>  %</p>
 
-<p><code class="highlighter-rouge">Ctrl+shift+1</code>  两位小数位，使用千位分隔符且负数用负号（-）表示</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+shift+1</code>  两位小数位，使用千位分隔符且负数用负号（-）表示</p>
 
-<p><code class="highlighter-rouge">Ctrl+shift+3</code>  日期</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+shift+3</code>  日期</p>
 
 <hr />
 
 <p>13、shift交换列 移动的单元格</p>
 
-<p><code class="highlighter-rouge">shift</code> 真的可以交换</p>
+<p><code class="language-plaintext highlighter-rouge">shift</code> 真的可以交换</p>
 
 <blockquote>
   <p>技巧是选中列（不是选中所有非空单元格），按住shift 变为十字星，移动到指定位置，待出现列标记后放手即可。</p>
@@ -165,7 +165,7 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>15、把所有网络线全部去掉</p>
 
-<p>按<code class="highlighter-rouge">Ctrl + Shift + -</code>  删除</p>
+<p>按<code class="language-plaintext highlighter-rouge">Ctrl + Shift + -</code>  删除</p>
 
 <p>16、万元显示</p>
 
@@ -181,13 +181,13 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>18、Excel精英培训</p>
 
-<p><code class="highlighter-rouge">Ctrl+Q</code> 调用快速分析界面</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+Q</code> 调用快速分析界面</p>
 
 <blockquote>
   <p>参考：<a href="http://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913403&amp;idx=1&amp;sn=532639b3d9b4661d0b9fb160cea24bd0&amp;chksm=bd50724f8a27fb59d49fbed4970a792436ac706a1e89b169172e5b61224a6d7512329bca6813&amp;mpshare=1&amp;scene=1&amp;srcid=0929vkR6RLs3Ueq5ytZJEUJt#rd">Excel精英培训:你会用 Ctrl + Q 键吗？</a></p>
 </blockquote>
 
-<p><code class="highlighter-rouge">Ctrl+T</code> 插入超级表格</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl+T</code> 插入超级表格</p>
 
 <blockquote>
   <p>参考1：<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDYyNzAzNQ==&amp;mid=2652913125&amp;idx=1&amp;sn=eca7ed59ff07ef2c6db3293e4eca7f34&amp;chksm=bd5071518a27f847d4aad4a143ab90bf0847515d67b0718d684998cda1a9cccb3d977edd02a0&amp;mpshare=1&amp;scene=1&amp;srcid=0929ZeUX2z0N4cPyme5nUCIt#rd">Excel精英培训:你会用 Ctrl + T 键吗？</a></p>
@@ -197,11 +197,11 @@ Ctrl+'   快速复制上一单元格内容
   <p>参考2：<a href="https://baijiahao.baidu.com/s?id=1583845550341122501&amp;wfr=spider&amp;for=pc">Excel操作之SuperStar-超级表中表</a></p>
 </blockquote>
 
-<p><code class="highlighter-rouge">Ctrl + \</code> 一键找不同</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + \</code> 一键找不同</p>
 
-<p><code class="highlighter-rouge">Alt + F1</code> 一键插入图表</p>
+<p><code class="language-plaintext highlighter-rouge">Alt + F1</code> 一键插入图表</p>
 
-<p><code class="highlighter-rouge">Ctrl + E</code> 快速拆分  bella1.62 =&gt; bella   1.62</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + E</code> 快速拆分  bella1.62 =&gt; bella   1.62</p>
 
 <blockquote>
   <p>具体使用在<a href="https://symphonyh.github.io/cloudblog/2018/09/30/excel-option/">这里</a>有详细介绍</p>
@@ -225,7 +225,7 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>※ 删除空行</p>
 
-<p>高手：<strong>选取列</strong> - <code class="highlighter-rouge">ctrl+G</code>定位 - 定位条件:空值 - 删除</p>
+<p>高手：<strong>选取列</strong> - <code class="language-plaintext highlighter-rouge">ctrl+G</code>定位 - 定位条件:空值 - 删除</p>
 <blockquote>
   <p>慎用：空格单元的行也会删除</p>
 </blockquote>
@@ -240,7 +240,7 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>※ 删除值，留下公式</p>
 
-<p>高手：选取表格 - <code class="highlighter-rouge">Ctrl+G</code>定位 常量 - 删除</p>
+<p>高手：选取表格 - <code class="language-plaintext highlighter-rouge">Ctrl+G</code>定位 常量 - 删除</p>
 
 <p>※ 输入大写金额</p>
 
@@ -248,7 +248,7 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>※ 输入身份证号码（数字文本）</p>
 
-<p>高手：先输入英文状态下的单引号<code class="highlighter-rouge">'</code></p>
+<p>高手：先输入英文状态下的单引号<code class="language-plaintext highlighter-rouge">'</code></p>
 
 <p>※ 公式转数值</p>
 
@@ -272,9 +272,9 @@ Ctrl+'   快速复制上一单元格内容
 
 <p>※   一键选中所有非空单元格</p>
 
-<p>按<code class="highlighter-rouge">Ctrl + Shift + *</code></p>
+<p>按<code class="language-plaintext highlighter-rouge">Ctrl + Shift + *</code></p>
 
-<p>按<code class="highlighter-rouge">Ctrl + Shift + -</code>  删除多有网格线</p>
+<p>按<code class="language-plaintext highlighter-rouge">Ctrl + Shift + -</code>  删除多有网格线</p>
 
 <hr />
 

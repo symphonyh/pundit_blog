@@ -1,13 +1,13 @@
-I"<h3 id="using-heroku">Using heroku</h3>
+I"4<h3 id="using-heroku">Using heroku</h3>
 <hr />
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>heroku create hello0127
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>heroku create hello0127
 </code></pre></div></div>
 <blockquote>
   <p>也可以在heroku web上建立新的app</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push heroku master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push heroku master
 
 heroku run rake db:migrate
 

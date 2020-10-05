@@ -1,4 +1,4 @@
-I"B1<blockquote>
+I"�2<blockquote>
   <p>说起对ember.js的兴趣，我是从discourse 开始的。看了很多开源系统，对ember.js+rails的discourse很有感觉:功能比较完善，灵活、可配置性非常好，部署方便，瀑布流的主题布局模式也很符合未来论坛的趋势，于是在 ucloud 上租用了云主机，成功安装了discourse 的论坛系统，期间遇到一些小困难，在中文论坛版主和很多热心朋友的的指点下都克服了，这里表示特别感谢！这篇记录最早发表于discourse 中文论坛，是整理给各位想使用discourse的朋友做些参考。</p>
 </blockquote>
 
@@ -8,13 +8,13 @@
 安装云主机碰到的<strong>一个问题</strong>是安装完ubuntu系统后外网防火墙80端口的绑定，要使用外网IP打开主机的网站，需要绑定外网IP地址，绑定时开始没有绑定外网防火墙80端口，造成浏览器输入外网IP地址，是无法打开的。</p>
 
 <h3 id="2-安装docker">2. 安装docker</h3>
-<p>网上有不少安装docker的教程和文章，大多都是几年前的文章，作者写的都很认真，不过已经完全不适用了，自己也走了弯路所以建议安装docker 按照安装手册里面的<a href="https://docs.docker.com/engine/installation/linux/ubuntu/">官方文档</a>。ubuntu的不同版本（12.04/14.04/15.10）略有区别，手册里也说的比较清晰，针对14.04版本，没遇到什么问题，需要命令权限的命令前加<code class="highlighter-rouge">sudo</code>过程如下：</p>
+<p>网上有不少安装docker的教程和文章，大多都是几年前的文章，作者写的都很认真，不过已经完全不适用了，自己也走了弯路所以建议安装docker 按照安装手册里面的<a href="https://docs.docker.com/engine/installation/linux/ubuntu/">官方文档</a>。ubuntu的不同版本（12.04/14.04/15.10）略有区别，手册里也说的比较清晰，针对14.04版本，没遇到什么问题，需要命令权限的命令前加<code class="language-plaintext highlighter-rouge">sudo</code>过程如下：</p>
 
 <blockquote>
-  <p>现在是<code class="highlighter-rouge">2016年2月份</code>，如果您看到这篇文章在一年以后，注意不要被我误导了，看看最新官方文档比较好。</p>
+  <p>现在是<code class="language-plaintext highlighter-rouge">2016年2月份</code>，如果您看到这篇文章在一年以后，注意不要被我误导了，看看最新官方文档比较好。</p>
 </blockquote>
 
-<p>（1）首先检查linux内核版本，ubuntu14.04 内核版本,内核版本要求<code class="highlighter-rouge">3.10</code>以上；</p>
+<p>（1）首先检查linux内核版本，ubuntu14.04 内核版本,内核版本要求<code class="language-plaintext highlighter-rouge">3.10</code>以上；</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo uname</span> <span class="nt">-r</span>
 </code></pre></div></div>
@@ -22,13 +22,13 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>apt-get update
 <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>apt-transport-https ca-certificates
 </code></pre></div></div>
-<p>（3）追加新的Key；注意是<code class="highlighter-rouge">apt-key</code>不是<code class="highlighter-rouge">apt-get</code></p>
+<p>（3）追加新的Key；注意是<code class="language-plaintext highlighter-rouge">apt-key</code>不是<code class="language-plaintext highlighter-rouge">apt-get</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-key adv <span class="nt">--keyserver</span> hkp://p80.pool.sks-keyservers.net:80 <span class="nt">--recv-keys</span> 58118E89F3A912897C070ADBF76221572C52609D
 </code></pre></div></div>
 <p>（3）添加deb包安装源；</p>
 
-<p>使用管理员权限打开（没有的话新创建这个文件）<code class="highlighter-rouge">/etc/apt/sources.list.d/docker.list</code>，添加下面内容到文件里；不同的ubuntu版本添加源有所不同，注意参照<a href="https://docs.docker.com/engine/installation/linux/ubuntu/">官方文档</a>;</p>
+<p>使用管理员权限打开（没有的话新创建这个文件）<code class="language-plaintext highlighter-rouge">/etc/apt/sources.list.d/docker.list</code>，添加下面内容到文件里；不同的ubuntu版本添加源有所不同，注意参照<a href="https://docs.docker.com/engine/installation/linux/ubuntu/">官方文档</a>;</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb https://apt.dockerproject.org/repo ubuntu-trusty main
 
 </code></pre></div></div>
@@ -42,10 +42,10 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>apt-get update
 <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>linux-image-extra-<span class="si">$(</span><span class="nb">uname</span> <span class="nt">-r</span><span class="si">)</span>
 </code></pre></div></div>
-<p>（6）安装<code class="highlighter-rouge">apparmor</code>Linux系统安全应用程序 参考：<a href="http://baike.baidu.com/link?url=N5VZhSjbjC_jX0V-Ce5WMjW4d8uETrkP1x7dqTDUywSN_BzMZhySe9U8LVoQ6JRoMtObWH-nNl85mWuZYIxDS_">Apparmor</a></p>
+<p>（6）安装<code class="language-plaintext highlighter-rouge">apparmor</code>Linux系统安全应用程序 参考：<a href="http://baike.baidu.com/link?url=N5VZhSjbjC_jX0V-Ce5WMjW4d8uETrkP1x7dqTDUywSN_BzMZhySe9U8LVoQ6JRoMtObWH-nNl85mWuZYIxDS_">Apparmor</a></p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>apparmor
 </code></pre></div></div>
-<p>（7）可以安装<code class="highlighter-rouge">docker</code>了!</p>
+<p>（7）可以安装<code class="language-plaintext highlighter-rouge">docker</code>了!</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get update
 <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>docker-engine
 </code></pre></div></div>
@@ -67,20 +67,20 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
 
 <ul>
   <li>
-    <p>首先是创建一个目录<code class="highlighter-rouge">/var/discourse</code>；</p>
+    <p>首先是创建一个目录<code class="language-plaintext highlighter-rouge">/var/discourse</code>；</p>
   </li>
   <li>
     <p>克隆discourse镜像到刚创建的目录；</p>
   </li>
   <li>
-    <p>进入目录<code class="highlighter-rouge">/var/discourse</code>；</p>
+    <p>进入目录<code class="language-plaintext highlighter-rouge">/var/discourse</code>；</p>
   </li>
   <li>
-    <p>复制配置文件到当前目录下的<code class="highlighter-rouge">containers/</code></p>
+    <p>复制配置文件到当前目录下的<code class="language-plaintext highlighter-rouge">containers/</code></p>
   </li>
 </ul>
 
-<h3 id="4-appyml的配置">4. <code class="highlighter-rouge">app.yml</code>的配置</h3>
+<h3 id="4-appyml的配置">4. <code class="language-plaintext highlighter-rouge">app.yml</code>的配置</h3>
 <p>说到重点了，安装discourse过程中，比较容易出错的就是配置文件内容的修改；这里把
 要修改的部分分别说明一下：</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>templates:
@@ -90,7 +90,7 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
   - <span class="s2">"templates/web.template.yml"</span>
   - <span class="s2">"templates/web.china.template.yml"</span>
 </code></pre></div></div>
-<p>配置文件的这个部分，需要添加<code class="highlighter-rouge">- "templates/web.china.template.yml"</code>;否则在<code class="highlighter-rouge">./launcher bootstrap app</code>初始化时会报错<code class="highlighter-rouge">RuntimeError: ...</code>，原因得问GWF。</p>
+<p>配置文件的这个部分，需要添加<code class="language-plaintext highlighter-rouge">- "templates/web.china.template.yml"</code>;否则在<code class="language-plaintext highlighter-rouge">./launcher bootstrap app</code>初始化时会报错<code class="language-plaintext highlighter-rouge">RuntimeError: ...</code>，原因得问GWF。</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">## on initial signup example'user1@example.com,user2@example.com'</span>
   DISCOURSE_DEVELOPER_EMAILS: <span class="s1">'henry@outlook.com'</span>
 </code></pre></div></div>
@@ -110,13 +110,13 @@ git clone https://github.com/discourse/discourse_docker.git /var/discourse
 </code></pre></div></div>
 <p>重点是在邮箱设置，我申请的阿里云邮箱</p>
 <ul>
-  <li><code class="highlighter-rouge">DISCOURSE_SMTP_PASSWORD: xxxxxxx</code>设置的就是邮箱密码；</li>
-  <li><code class="highlighter-rouge">DISCOURSE_SMTP_PORT:</code>端口设置25，</li>
-  <li><code class="highlighter-rouge">DISCOURSE_SMTP_ADDRESS:</code>Host是<code class="highlighter-rouge">smtp.mxchina.com</code>,</li>
+  <li><code class="language-plaintext highlighter-rouge">DISCOURSE_SMTP_PASSWORD: xxxxxxx</code>设置的就是邮箱密码；</li>
+  <li><code class="language-plaintext highlighter-rouge">DISCOURSE_SMTP_PORT:</code>端口设置25，</li>
+  <li><code class="language-plaintext highlighter-rouge">DISCOURSE_SMTP_ADDRESS:</code>Host是<code class="language-plaintext highlighter-rouge">smtp.mxchina.com</code>,</li>
 </ul>
 
 <p>DISCOURSE_SMTP_USER_NAME:  这里的设置最最重要的，这个邮箱又叫notification email 被用于发送所有重要系统邮件的邮箱地址。指定的域名必须正确设置 SPF、DKIM 和反向 PTR 记录以发送邮件。一般和域名绑定在一起，比如info@weifuwu.com 或者 admin@weifuwu.com 都行，这样收到邮件的发帖人或回复人感觉比较正式，使用这个邮箱也是最频繁的。关于SPF、DKIM设置有篇文章可<a href="http://www.wendangdaquan.com/Wdshow.asp?id=98332e836f1aff00bed51e7c">参考</a>
-如果您使用的阿里云的企业邮箱，域名解析后可以不用设置 SPF、DKIM 了已经设置好了，注意阿里云这里设置<code class="highlighter-rouge"> DISCOURSE_SMTP_ADDRESS:smtp.mxhichina.com</code></p>
+如果您使用的阿里云的企业邮箱，域名解析后可以不用设置 SPF、DKIM 了已经设置好了，注意阿里云这里设置<code class="language-plaintext highlighter-rouge"> DISCOURSE_SMTP_ADDRESS:smtp.mxhichina.com</code></p>
 
 <h3 id="5-初始化">5. 初始化</h3>
 <p>修改完app.yml配置文件，按照<a href="https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md">安装文档</a>就可以进行初始化了，（耐心等待一段时间，我的云主机大概5分钟吧）：</p>
@@ -137,7 +137,7 @@ rake admin:create
 </code></pre></div></div>
 <p>按照提示输入邮箱和密码，exit退出容器。</p>
 
-<p>最后特别提示下：管理员邮箱，也就是用<code class="highlighter-rouge">rake admin:create</code> 创建的邮箱一般用于设置论坛；<code class="highlighter-rouge">DISCOURSE_SMTP_USER_NAME</code> 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；<code class="highlighter-rouge">DISCOURSE_DEVELOPER_EMAILS</code>开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。</p>
+<p>最后特别提示下：管理员邮箱，也就是用<code class="language-plaintext highlighter-rouge">rake admin:create</code> 创建的邮箱一般用于设置论坛；<code class="language-plaintext highlighter-rouge">DISCOURSE_SMTP_USER_NAME</code> 邮箱用于论坛接收、发送信息给（创建主题、发帖、回复等等）使用者；<code class="language-plaintext highlighter-rouge">DISCOURSE_DEVELOPER_EMAILS</code>开发者邮箱用于论坛给开发运营论坛的人的官方邮件；三个邮箱作用不同，可以设置三个不同邮箱，也可以相同。</p>
 
 <h3 id="参考">参考</h3>
 

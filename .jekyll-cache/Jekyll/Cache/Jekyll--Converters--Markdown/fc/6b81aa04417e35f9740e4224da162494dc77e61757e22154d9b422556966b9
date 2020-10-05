@@ -1,7 +1,7 @@
-I"�<p>Excel VBA</p>
+I"<p>Excel VBA</p>
 
 <h2 id="显示隐藏菜单-编辑栏和页签">显示隐藏菜单 编辑栏和页签</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub visible()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub visible()
 'Application.DisplayFormulaBar = True '显示编辑栏
 ActiveWindow.DisplayHeadings = True   '隐藏行列标题
 ActiveWindow.DisplayWorkbookTabs = True '显示工作表标签栏
@@ -9,7 +9,7 @@ Application.DisplayFullScreen = False '把所有的菜单显示
 End Sub
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub hidden()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub hidden()
 'Application.DisplayFormulaBar = False '隐藏编辑栏
 ActiveWindow.DisplayHeadings = False   '隐藏行列标题
 ActiveWindow.DisplayWorkbookTabs = False '隐藏工作表标签栏
@@ -17,7 +17,7 @@ Application.DisplayFullScreen = True '把所有的菜单都隐藏
 End Sub
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ActiveWindow.DisplayGridlines = False                    '隐藏网格
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ActiveWindow.DisplayGridlines = False                    '隐藏网格
 ActiveWindow.DisplayHeadings = False                   '隐藏行列标题
 ActiveWindow.DisplayWorkbookTabs = False           '隐藏工作表标签
 ActiveWindow.DisplayHorizontalScrollBar = False    '隐藏水平滚动条

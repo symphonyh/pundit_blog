@@ -1,14 +1,14 @@
-I"�<h3 id="sqlite3的基本命令">sqlite3的基本命令</h3>
+I"<h3 id="sqlite3的基本命令">sqlite3的基本命令</h3>
 
 <ol>
   <li>
-    <p>进入命令环境：<code class="highlighter-rouge">sqlite3</code></p>
+    <p>进入命令环境：<code class="language-plaintext highlighter-rouge">sqlite3</code></p>
   </li>
   <li>
-    <p>命令行帮助：<code class="highlighter-rouge">.help</code></p>
+    <p>命令行帮助：<code class="language-plaintext highlighter-rouge">.help</code></p>
   </li>
   <li>
-    <p>退出命令行环境：<code class="highlighter-rouge">.quit</code> /<code class="highlighter-rouge">.exit</code></p>
+    <p>退出命令行环境：<code class="language-plaintext highlighter-rouge">.quit</code> /<code class="language-plaintext highlighter-rouge">.exit</code></p>
   </li>
 </ol>
 
@@ -16,48 +16,28 @@
 
 <ol>
   <li>
-    <p>创建一个新的数据库：<code class="highlighter-rouge">sqlite3 dbname.db</code></p>
+    <p>创建一个新的数据库：<code class="language-plaintext highlighter-rouge">sqlite3 dbname.db</code></p>
   </li>
   <li>
-    <p>打开一个已存在的数据库： <code class="highlighter-rouge">sqlite3 已存在的文件名</code></p>
+    <p>打开一个已存在的数据库： <code class="language-plaintext highlighter-rouge">sqlite3 已存在的文件名</code></p>
   </li>
   <li>
-    <p>导入SQL语句集：<code class="highlighter-rouge">.read</code> 数据文件</p>
+    <p>导入SQL语句集：<code class="language-plaintext highlighter-rouge">.read</code> 数据文件</p>
   </li>
   <li>
-    <p>列出数据表：<code class="highlighter-rouge">.tables</code></p>
+    <p>列出数据表：<code class="language-plaintext highlighter-rouge">.tables</code></p>
   </li>
   <li>
-    <p>显示数据库的结构： <code class="highlighter-rouge">.schema</code></p>
+    <p>显示数据库的结构： <code class="language-plaintext highlighter-rouge">.schema</code></p>
   </li>
   <li>
-    <p>显示数据表结构：<code class="highlighter-rouge">.schema 表名</code></p>
+    <p>显示数据表结构：<code class="language-plaintext highlighter-rouge">.schema 表名</code></p>
   </li>
   <li>
-    <p>导出数据表的内容：<code class="highlighter-rouge"> .dump 表名</code></p>
+    <p>导出数据表的内容：<code class="language-plaintext highlighter-rouge"> .dump 表名</code></p>
   </li>
   <li>
-    <p>设置导出目标：<code class="highlighter-rouge">.output 文件名/output stdout（终端）</code></p>
-  </li>
-</ol>
-
-<hr />
-
-<ol>
-  <li>
-    <p>设置分隔符：<code class="highlighter-rouge">.separetor 分隔符(:/,/;...)</code></p>
-  </li>
-  <li>
-    <p>设置显示模式：<code class="highlighter-rouge">.mode list/column</code></p>
-  </li>
-  <li>
-    <p>显示标题栏：<code class="highlighter-rouge">.headers on</code></p>
-  </li>
-  <li>
-    <p>设置列显示宽度：<code class="highlighter-rouge">.width w1,w2,w3,…</code></p>
-  </li>
-  <li>
-    <p>当前显示格式：<code class="highlighter-rouge">.show</code></p>
+    <p>设置导出目标：<code class="language-plaintext highlighter-rouge">.output 文件名/output stdout（终端）</code></p>
   </li>
 </ol>
 
@@ -65,40 +45,60 @@
 
 <ol>
   <li>
-    <p>创建表：<code class="highlighter-rouge">CREATE TABLE 表名</code></p>
+    <p>设置分隔符：<code class="language-plaintext highlighter-rouge">.separetor 分隔符(:/,/;...)</code></p>
   </li>
   <li>
-    <p>删除表：<code class="highlighter-rouge">DROP TABLE  表名</code></p>
+    <p>设置显示模式：<code class="language-plaintext highlighter-rouge">.mode list/column</code></p>
   </li>
   <li>
-    <p>修改表：<code class="highlighter-rouge">ALTER TABLE </code></p>
+    <p>显示标题栏：<code class="language-plaintext highlighter-rouge">.headers on</code></p>
+  </li>
+  <li>
+    <p>设置列显示宽度：<code class="language-plaintext highlighter-rouge">.width w1,w2,w3,…</code></p>
+  </li>
+  <li>
+    <p>当前显示格式：<code class="language-plaintext highlighter-rouge">.show</code></p>
+  </li>
+</ol>
+
+<hr />
+
+<ol>
+  <li>
+    <p>创建表：<code class="language-plaintext highlighter-rouge">CREATE TABLE 表名</code></p>
+  </li>
+  <li>
+    <p>删除表：<code class="language-plaintext highlighter-rouge">DROP TABLE  表名</code></p>
+  </li>
+  <li>
+    <p>修改表：<code class="language-plaintext highlighter-rouge">ALTER TABLE </code></p>
 
     <ul>
       <li>
-        <p>改表名: <code class="highlighter-rouge">ALTER TABLE  旧表名 RENAME TO 新表名</code></p>
+        <p>改表名: <code class="language-plaintext highlighter-rouge">ALTER TABLE  旧表名 RENAME TO 新表名</code></p>
       </li>
       <li>
-        <p>增加列：<code class="highlighter-rouge">ALTER TABLE  表名 ADD COLUMN 列名  数据类型 限定</code></p>
+        <p>增加列：<code class="language-plaintext highlighter-rouge">ALTER TABLE  表名 ADD COLUMN 列名  数据类型 限定</code></p>
       </li>
     </ul>
   </li>
   <li>
-    <p>插入数据：<code class="highlighter-rouge">INSERT INTO 表（列…) VALUES (值…)</code></p>
+    <p>插入数据：<code class="language-plaintext highlighter-rouge">INSERT INTO 表（列…) VALUES (值…)</code></p>
   </li>
   <li>
-    <p>修改数据：<code class="highlighter-rouge">UPDATE 表 SET 列=‘新值’[ WHILE 条件语句]</code></p>
+    <p>修改数据：<code class="language-plaintext highlighter-rouge">UPDATE 表 SET 列=‘新值’[ WHILE 条件语句]</code></p>
   </li>
   <li>
-    <p>删除数据：<code class="highlighter-rouge">DELETE FROM 表 [WHERE 条件语句]</code></p>
+    <p>删除数据：<code class="language-plaintext highlighter-rouge">DELETE FROM 表 [WHERE 条件语句]</code></p>
   </li>
   <li>
-    <p>查询数据：<code class="highlighter-rouge">SELECT 列… FROM 表</code></p>
+    <p>查询数据：<code class="language-plaintext highlighter-rouge">SELECT 列… FROM 表</code></p>
   </li>
   <li>
-    <p>查询数据,限制返回数量: <code class="highlighter-rouge">SELECT 列… FROM 表 LIMIT 数量 OFFSET 位置</code></p>
+    <p>查询数据,限制返回数量: <code class="language-plaintext highlighter-rouge">SELECT 列… FROM 表 LIMIT 数量 OFFSET 位置</code></p>
   </li>
   <li>
-    <p>排序  <code class="highlighter-rouge">ORDER BY 列 ASC（DESC）</code></p>
+    <p>排序  <code class="language-plaintext highlighter-rouge">ORDER BY 列 ASC（DESC）</code></p>
   </li>
 </ol>
 

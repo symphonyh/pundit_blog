@@ -1,7 +1,7 @@
-I"_<h3 id="using-ubuntu">Using ubuntu</h3>
+I"r<h3 id="using-ubuntu">Using ubuntu</h3>
 <hr />
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which rails          \\查找路径;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which rails          \\查找路径;
 
 pwd                     \\当前目录;
 

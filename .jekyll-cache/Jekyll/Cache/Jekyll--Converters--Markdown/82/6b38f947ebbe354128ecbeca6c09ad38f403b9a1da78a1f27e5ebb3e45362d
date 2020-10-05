@@ -1,8 +1,8 @@
-I"�<p>SQL In Excel</p>
+I"�<p>SQL In Excel</p>
 
 <h2 id="excel-中正确使用sql的姿势">Excel 中正确使用SQL的姿势</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub DoSql_Execute1()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub DoSql_Execute1()
     Dim cnn As Object, rst As Object
     Dim Mypath As String, Str_cnn As String, Sql As String
     Dim i As Long
@@ -61,7 +61,7 @@ End Sub
 
 <h2 id="ado常用连接字符串">ADO常用连接字符串</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❈　 Access数据库
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❈　 Access数据库
 
 没有密码保护的Access数据库
 
@@ -103,7 +103,7 @@ Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=’Excel 12.0; HDR=yes;IME
 
 <h2 id="测试链接是否成功">测试链接是否成功</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub test()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub test()
     Dim cnn As Object
     Set cnn = CreateObject("adodb.connection")
     cnn.Open "provider=microsoft.ace.oledb.12.0;extended properties=excel 12.0;data source=" &amp; ThisWorkbook.FullName

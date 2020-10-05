@@ -1,4 +1,4 @@
-I"²
+I"Å
 <hr />
 <p>layout: post
 title: Using gem 
@@ -10,7 +10,7 @@ categories: Rails
 
 <h3 id="gem-command-list">gem command list</h3>
 <hr />
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install [gemname]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install [gemname]
 
 gem install [gemname] --version=[ver]
 

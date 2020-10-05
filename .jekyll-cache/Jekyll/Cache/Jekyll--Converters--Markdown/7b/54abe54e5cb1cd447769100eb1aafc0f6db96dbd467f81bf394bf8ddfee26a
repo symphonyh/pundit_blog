@@ -1,4 +1,4 @@
-I"=q<p>using Word</p>
+I"[t<p>using Word</p>
 
 <h2 id="1标尺的使用">1、标尺的使用</h2>
 
@@ -67,22 +67,22 @@
 
 <h2 id="3页码的分开设置">3、页码的分开设置</h2>
 
-<p><code class="highlighter-rouge">分节符</code>的好处就是可以让文章有不同的页码格式和页眉页脚，比如有的文章，分为封面、目录、正文、附录、引用文献。封面不需要页码，目录、正文、附录、文献的页码不是连续的，而且需要用不同的格式等，这样的时候就可以通过使用分节符达到你所想要的效果了。</p>
+<p><code class="language-plaintext highlighter-rouge">分节符</code>的好处就是可以让文章有不同的页码格式和页眉页脚，比如有的文章，分为封面、目录、正文、附录、引用文献。封面不需要页码，目录、正文、附录、文献的页码不是连续的，而且需要用不同的格式等，这样的时候就可以通过使用分节符达到你所想要的效果了。</p>
 
 <p>Word共支持4种分节符，分别是下一页、连续、奇数页和偶数页，它们之间的区别：</p>
 
-<p><code class="highlighter-rouge">下一页</code>:是指插入一个分节符后，新节从下一页开始。</p>
+<p><code class="language-plaintext highlighter-rouge">下一页</code>:是指插入一个分节符后，新节从下一页开始。</p>
 
-<p><code class="highlighter-rouge">连续</code>:是指插入一个分节符后，新节从同一页开始。</p>
+<p><code class="language-plaintext highlighter-rouge">连续</code>:是指插入一个分节符后，新节从同一页开始。</p>
 
-<p><code class="highlighter-rouge">奇数页或偶数页</code>:是指插入一个分节符后，新节从下一个奇数页或偶数页开始。</p>
+<p><code class="language-plaintext highlighter-rouge">奇数页或偶数页</code>:是指插入一个分节符后，新节从下一个奇数页或偶数页开始。</p>
 
 <blockquote>
   <p>分节符的另一个作用是插入不同版式的页；</p>
 </blockquote>
 
 <blockquote>
-  <p>注意：封面不需要设置页码，在设置<code class="highlighter-rouge">首页不同</code>,删除页码前需要把其他节的<code class="highlighter-rouge">首页不同</code>勾选去掉</p>
+  <p>注意：封面不需要设置页码，在设置<code class="language-plaintext highlighter-rouge">首页不同</code>,删除页码前需要把其他节的<code class="language-plaintext highlighter-rouge">首页不同</code>勾选去掉</p>
 </blockquote>
 
 <blockquote>
@@ -93,7 +93,7 @@
 
 <h2 id="4题注的使用">4、题注的使用</h2>
 
-<p>插入题注，交叉引用，这个看视频就可以了,需要注意的是图片的排版，<code class="highlighter-rouge">嵌入型</code>要改为<code class="highlighter-rouge">上下型环绕</code></p>
+<p>插入题注，交叉引用，这个看视频就可以了,需要注意的是图片的排版，<code class="language-plaintext highlighter-rouge">嵌入型</code>要改为<code class="language-plaintext highlighter-rouge">上下型环绕</code></p>
 
 <blockquote>
   <p>参考：<a href="https://www.bilibili.com/video/av21659530">毕业论文word排版技巧-题注—阳先生在美国</a></p>
@@ -103,11 +103,11 @@
 
 <h2 id="5报表的调整">5、报表的调整</h2>
 
-<p><code class="highlighter-rouge">shift+ 表格线</code> 手动，标尺 都不是最佳办法,报表的布局调整，可以自适应窗口和内容，千万别在手动折腾了,</p>
+<p><code class="language-plaintext highlighter-rouge">shift+ 表格线</code> 手动，标尺 都不是最佳办法,报表的布局调整，可以自适应窗口和内容，千万别在手动折腾了,</p>
 
-<p><code class="highlighter-rouge">ALT</code> 键可以实现<strong>矩形选择文本</strong>，在表格里可以实现精确宽高，</p>
+<p><code class="language-plaintext highlighter-rouge">ALT</code> 键可以实现<strong>矩形选择文本</strong>，在表格里可以实现精确宽高，</p>
 
-<p><code class="highlighter-rouge">标尺</code>可以精准移动表格位置。</p>
+<p><code class="language-plaintext highlighter-rouge">标尺</code>可以精准移动表格位置。</p>
 
 <blockquote>
   <p>参考：<a href="https://www.bilibili.com/video/av30287216">word表格调整技巧视频</a></p>
@@ -117,12 +117,12 @@
 
 <h2 id="6多级符号的使用">6、多级符号的使用</h2>
 
-<p>选中编号之后会出现修改多级列表的窗口，选择一级，将<code class="highlighter-rouge">链接的样式</code>改为标题一，下面的标题符号修改为第一章，在编号样式的下拉框中选择简体一。</p>
+<p>选中编号之后会出现修改多级列表的窗口，选择一级，将<code class="language-plaintext highlighter-rouge">链接的样式</code>改为标题一，下面的标题符号修改为第一章，在编号样式的下拉框中选择简体一。</p>
 
 <p>修改二级标题，点击级别2，将标题链接到标题二，标题编号
-会出现一.1的现象，则选中<code class="highlighter-rouge">正规形式编号</code>就变成了1.1的编号格式，三、四、五等级别同二级标题设置一样。点击确定之后标题级别就设置好了</p>
+会出现一.1的现象，则选中<code class="language-plaintext highlighter-rouge">正规形式编号</code>就变成了1.1的编号格式，三、四、五等级别同二级标题设置一样。点击确定之后标题级别就设置好了</p>
 
-<p><code class="highlighter-rouge">重新开始列表的间隔</code> 选项的含义：在其后重新开始编号</p>
+<p><code class="language-plaintext highlighter-rouge">重新开始列表的间隔</code> 选项的含义：在其后重新开始编号</p>
 
 <blockquote>
   <p>参考：<a href="https://www.bilibili.com/video/av5029214">WORD快速排版-多级列表，实现智能编号</a></p>
@@ -140,7 +140,7 @@
 
 <p>尾注的方式简单记录下：</p>
 
-<p><code class="highlighter-rouge">^e</code> 尾注标记 替换为<code class="highlighter-rouge">[^&amp;]</code>，就是加上<code class="highlighter-rouge">[ ]</code></p>
+<p><code class="language-plaintext highlighter-rouge">^e</code> 尾注标记 替换为<code class="language-plaintext highlighter-rouge">[^&amp;]</code>，就是加上<code class="language-plaintext highlighter-rouge">[ ]</code></p>
 
 <p>（1）定义样式刷新改变论文的文献引用中尾注上标的样式；</p>
 
@@ -164,7 +164,7 @@
 
 <h2 id="8编号的段落第二行行首不顶格">8、编号的段落第二行行首不顶格</h2>
 
-<p>自动编号后，有时会发现第二行的文本自动顶格排版了，看起来不太美观规律。这时我们可以选择文本，右键—选择<code class="highlighter-rouge">调整列表缩进</code>命令，在打开对话框中将<code class="highlighter-rouge">文本缩进</code>值设置为<code class="highlighter-rouge">0.74</code>即可。</p>
+<p>自动编号后，有时会发现第二行的文本自动顶格排版了，看起来不太美观规律。这时我们可以选择文本，右键—选择<code class="language-plaintext highlighter-rouge">调整列表缩进</code>命令，在打开对话框中将<code class="language-plaintext highlighter-rouge">文本缩进</code>值设置为<code class="language-plaintext highlighter-rouge">0.74</code>即可。</p>
 
 <hr />
 
@@ -252,7 +252,7 @@
 </blockquote>
 
 <blockquote>
-  <p>页眉有一条横线，一般去不掉，可以使用清除格式去掉，也可通过边框底纹的设置加上其他线条。<code class="highlighter-rouge">Ctrl+Shift+N</code></p>
+  <p>页眉有一条横线，一般去不掉，可以使用清除格式去掉，也可通过边框底纹的设置加上其他线条。<code class="language-plaintext highlighter-rouge">Ctrl+Shift+N</code></p>
 </blockquote>
 
 <blockquote>
@@ -276,7 +276,7 @@
 <p>AVERAGE(b2:d2)</p>
 
 <blockquote>
-  <p>数字变动后，<code class="highlighter-rouge">F9</code> 或右键选更新域 会自动更新求和结果</p>
+  <p>数字变动后，<code class="language-plaintext highlighter-rouge">F9</code> 或右键选更新域 会自动更新求和结果</p>
 </blockquote>
 
 <blockquote>
@@ -287,25 +287,25 @@
 
 <h2 id="14自定义宽度绘制表格">14、自定义宽度绘制表格</h2>
 
-<p>+—–+—–+——+——-+ 按<code class="highlighter-rouge">Enter</code> 即可出现表格</p>
+<p>+—–+—–+——+——-+ 按<code class="language-plaintext highlighter-rouge">Enter</code> 即可出现表格</p>
 
-<p><code class="highlighter-rouge">TAB</code> 增加表格行，可增加多行;</p>
+<p><code class="language-plaintext highlighter-rouge">TAB</code> 增加表格行，可增加多行;</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + Enter</code>  拆分表格</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + Enter</code>  拆分表格</p>
 
 <hr />
 
 <h2 id="15根据文字颜色替换">15、根据文字颜色替换</h2>
 
-<p><code class="highlighter-rouge">Ctrl + H</code> 可以根据字体颜色 查找替换,^g 可以批量替换图片，可以替换成标题1;</p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + H</code> 可以根据字体颜色 查找替换,^g 可以批量替换图片，可以替换成标题1;</p>
 
 <hr />
 
 <h2 id="16中英文分离">16、中英文分离</h2>
 
-<p>中英文分离出来，要用到提取中文的通配符：<code class="highlighter-rouge">[一-龥]</code>（表示所有中文）。</p>
+<p>中英文分离出来，要用到提取中文的通配符：<code class="language-plaintext highlighter-rouge">[一-龥]</code>（表示所有中文）。</p>
 
-<p>按Ctrl+H打开相应对话框，之后在查找中输入<code class="highlighter-rouge">[一-龥]*[。？]</code>，之后选择全部查找并且复制出来即可</p>
+<p>按Ctrl+H打开相应对话框，之后在查找中输入<code class="language-plaintext highlighter-rouge">[一-龥]*[。？]</code>，之后选择全部查找并且复制出来即可</p>
 
 <blockquote>
   <p>注意勾选通配符选项</p>
@@ -428,7 +428,7 @@
 
 <h2 id="20vba实现定义所有图片大小">20、vba实现定义所有图片大小</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub setpicsize() '设置图片尺寸
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sub setpicsize() '设置图片尺寸
 
 Dim n '图片个数
 
@@ -493,7 +493,7 @@ End Sub
 
 <p>※  查看Word字体格式</p>
 
-<p>首先选中文本，之后点击开始——样式——样式检测器——显示格式，另外也可以使用快捷<code class="highlighter-rouge">Shift+F1</code>查看。</p>
+<p>首先选中文本，之后点击开始——样式——样式检测器——显示格式，另外也可以使用快捷<code class="language-plaintext highlighter-rouge">Shift+F1</code>查看。</p>
 
 <p>※  简繁转换</p>
 
@@ -501,19 +501,19 @@ End Sub
 
 <p>※  英文大小写转换</p>
 
-<p>字体选项卡 选<code class="highlighter-rouge">Aa</code></p>
+<p>字体选项卡 选<code class="language-plaintext highlighter-rouge">Aa</code></p>
 
 <p>※  会计数字转换</p>
 
-<p>除了用输入法 <code class="highlighter-rouge">v</code>，还可以使用点击插入- 符号-编号，之后进入相应的对话框，然后输入相应的数字即可将小写数字转换为大写。</p>
+<p>除了用输入法 <code class="language-plaintext highlighter-rouge">v</code>，还可以使用点击插入- 符号-编号，之后进入相应的对话框，然后输入相应的数字即可将小写数字转换为大写。</p>
 
 <p>※ 输入带圈的数字</p>
 
 <p>输入数字，然后选中，之后按带圈字符即可。</p>
 
-<p>※ 域页码的使用 <code class="highlighter-rouge">Ctrl+F9</code>插入域定义符，选中域代码用<code class="highlighter-rouge">Shift+F9</code>值和域代码切换</p>
+<p>※ 域页码的使用 <code class="language-plaintext highlighter-rouge">Ctrl+F9</code>插入域定义符，选中域代码用<code class="language-plaintext highlighter-rouge">Shift+F9</code>值和域代码切换</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 { =2*{ page-1 } }
 { =2*{ page } }
 { NumPages } 共多少页
@@ -522,12 +522,12 @@ End Sub
 </code></pre></div></div>
 
 <blockquote>
-  <p>注意:这个花括号不能用键盘输入，使用<code class="highlighter-rouge">Ctrl+F9</code>，书写时距离<code class="highlighter-rouge">{}</code>内留一个空格，表达式前用<code class="highlighter-rouge">=</code></p>
+  <p>注意:这个花括号不能用键盘输入，使用<code class="language-plaintext highlighter-rouge">Ctrl+F9</code>，书写时距离<code class="language-plaintext highlighter-rouge">{}</code>内留一个空格，表达式前用<code class="language-plaintext highlighter-rouge">=</code></p>
 </blockquote>
 
 <p>※ 一键清除文本格式</p>
 
-<p><code class="highlighter-rouge">Ctrl + Shift + N</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + Shift + N</code></p>
 
 <p>※ 文字转换为表格</p>
 
@@ -555,7 +555,7 @@ End Sub
 
 <p>※ Word转PPT</p>
 
-<p>设置 大标题 小标题  修改文件扩展名 <code class="highlighter-rouge">docx</code> to <code class="highlighter-rouge">pptx</code></p>
+<p>设置 大标题 小标题  修改文件扩展名 <code class="language-plaintext highlighter-rouge">docx</code> to <code class="language-plaintext highlighter-rouge">pptx</code></p>
 
 <p>※ 表格小数点对其</p>
 
@@ -584,7 +584,7 @@ End Sub
 
 <p>将Excel数据复制到Word中，你发现超出边缘了，更可怕的是更改Excel的数据，Word的数据不会自动更新需要手动修改，这时你会怎么处理？</p>
 
-<p>利用选择性粘贴<code class="highlighter-rouge">Ctrl+Alt+v</code>，在相应的对话框中选择粘贴链接并选中Microsoft Excel工作表对象即可。</p>
+<p>利用选择性粘贴<code class="language-plaintext highlighter-rouge">Ctrl+Alt+v</code>，在相应的对话框中选择粘贴链接并选中Microsoft Excel工作表对象即可。</p>
 
 <p>※ 利用文本框实现图像精准定位</p>
 

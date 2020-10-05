@@ -1,4 +1,4 @@
-I"�<p>PL/SQL（procedure Language/SQL）是Oracle对sql语言的过程化扩展，对SQL命令语言中增加了过程处理语句（如分支，循环等），使SQL语言具有过程处理能力;</p>
+I"k<p>PL/SQL（procedure Language/SQL）是Oracle对sql语言的过程化扩展，对SQL命令语言中增加了过程处理语句（如分支，循环等），使SQL语言具有过程处理能力;</p>
 
 <p>PLSQL是sql的扩展，操作oracle数据库效率最高，一般通过PLSQL实现简单的处理业务，再通过程序接口调用;是学习存储过程，存储函数，触发器三大数据库对象的重要基础。</p>
 
@@ -6,7 +6,7 @@
 
 <p>语法格式：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [DECLARE   
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  [DECLARE   
      --声明变量 
      ] 
   BEGIN 
@@ -20,7 +20,7 @@
 
 <p>1、基本变量类型</p>
 
-<p>1.1 <code class="highlighter-rouge">DECLARE</code>：定义基本变量</p>
+<p>1.1 <code class="language-plaintext highlighter-rouge">DECLARE</code>：定义基本变量</p>
 
 <p>类型：char,varchar2,date,number,boolean,long</p>
 
@@ -32,33 +32,33 @@
 
 <p>1.2.2 从数据库表中得到数据并赋值给变量,查询结果只能是一行记录，且得到的字段个数要和变量个数相同，一一对应;</p>
 
-<p><code class="highlighter-rouge">select 字段1,字段2,... into 变量名1,变量名2,... from t_account where id=1;</code></p>
+<p><code class="language-plaintext highlighter-rouge">select 字段1,字段2,... into 变量名1,变量名2,... from t_account where id=1;</code></p>
 
 <p>1.2.3 记录型变量的赋值取值,记录型变量的赋值,同上也只能返回一行记录;</p>
 
-<p><code class="highlighter-rouge">select * into v_account from t_account</code></p>
+<p><code class="language-plaintext highlighter-rouge">select * into v_account from t_account</code></p>
 
 <blockquote>
   <p>记录型变量的取值,通过’.’加字段名形式获取每一个字段的值</p>
 </blockquote>
 
-<p><code class="highlighter-rouge">v_account.usenum</code></p>
+<p><code class="language-plaintext highlighter-rouge">v_account.usenum</code></p>
 
 <p>1.3 输出语句：</p>
 
-<p><code class="highlighter-rouge">DBMS_OUTPUT.PUT_LINE(...);</code></p>
+<p><code class="language-plaintext highlighter-rouge">DBMS_OUTPUT.PUT_LINE(...);</code></p>
 
 <p>2、引用型变量和记录型变量</p>
 
 <p>2.1 引用型变量</p>
 
-<p><code class="highlighter-rouge">my_name emp.ename%type;</code></p>
+<p><code class="language-plaintext highlighter-rouge">my_name emp.ename%type;</code></p>
 
 <p>表示my_name这个变量的类型是引用emp这个表的ename列的类型</p>
 
 <p>2.1记录型变量</p>
 
-<p><code class="highlighter-rouge">emp_rec emp%rowtype;</code></p>
+<p><code class="language-plaintext highlighter-rouge">emp_rec emp%rowtype;</code></p>
 
 <p>emp_rec相当于一个数组，存的类型是一条记录中的类型，打印某一列的时候，直接用emp_rec.列名即可</p>
 
@@ -66,20 +66,20 @@
 
 <p>IF语句的3种形式</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if 条件 then 语句1；
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if 条件 then 语句1；
 
 语句2；
 
 end if；
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if 条件 then 语句序列1：
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if 条件 then 语句序列1：
 
 else 语句序列2；
 
 end if;
 </code></pre></div></div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if 条件 then 语句；
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if 条件 then 语句；
 
 elsif 语句 then 语句；
 
@@ -92,7 +92,7 @@ end if；
 
 <p>4.1 无条件循环</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loop 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>loop 
   --循环语句  
   exit when 循环停止条件;        //停止循环, exit;可直接停止循环
 end loop;
@@ -100,14 +100,14 @@ end loop;
 </code></pre></div></div>
 <p>4.2条件循环</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while 条件 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while 条件 
 loop
 ...
 end loop;
 </code></pre></div></div>
 <p>4.3for循环</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for 变量  in 起始值..终止值 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for 变量  in 起始值..终止值 
 loop 
    
 end loop;
@@ -122,15 +122,15 @@ end loop;
 
 <p>光标的语法：CURSOR 光标名[(参数名 数据类型[,参数名 数据类型]…)] IS SELECT 语句;</p>
 
-<p>例如 ：<code class="highlighter-rouge">cursor c1 is select ename from emp;</code></p>
+<p>例如 ：<code class="language-plaintext highlighter-rouge">cursor c1 is select ename from emp;</code></p>
 
-<p>打开光标：<code class="highlighter-rouge"> open c1;</code> （打开光标执行查询）</p>
+<p>打开光标：<code class="language-plaintext highlighter-rouge"> open c1;</code> （打开光标执行查询）</p>
 
-<p>关闭光标: <code class="highlighter-rouge">close c1; </code>（关闭游标释放资源）</p>
+<p>关闭光标: <code class="language-plaintext highlighter-rouge">close c1; </code>（关闭游标释放资源）</p>
 
-<p>取一行光标的值： <code class="highlighter-rouge">fetch c1 into pename;</code> （取一行到变量中）</p>
+<p>取一行光标的值： <code class="language-plaintext highlighter-rouge">fetch c1 into pename;</code> （取一行到变量中）</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> open  游标名称                             //开启游标，
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> open  游标名称                             //开启游标，
     loop 
         fetch  游标名称  into  变量           //获取游标结果集中的下一个值
         exit   when   游标名称%notfound     //没有下一个值则跳出循环
@@ -148,7 +148,7 @@ close  游标名称                            //结束游标
 
 <p>异常是程序设计语言提供的一种功能，用来增强程序的健壮性和容错性;</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exception
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exception
     when 异常类型1 then 处理语句
     when 异常类型1 then 处理语句
 
@@ -193,7 +193,7 @@ close  游标名称                            //结束游标
 
 <h3 id="示例代码统计每年员工的入职人数">示例代码:统计每年员工的入职人数</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DECLARE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DECLARE
 
 定义每年员工入职人数
 pcount NUMBER := 0;

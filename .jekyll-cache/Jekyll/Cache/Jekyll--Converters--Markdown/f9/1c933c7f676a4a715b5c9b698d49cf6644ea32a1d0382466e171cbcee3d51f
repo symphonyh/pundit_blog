@@ -1,10 +1,10 @@
-I"�<p>Excel 自定义格式代码的结构，常规情况下分为四部分，中间用英文的分号;分隔，每一段的意思是：</p>
+I"�<p>Excel 自定义格式代码的结构，常规情况下分为四部分，中间用英文的分号;分隔，每一段的意思是：</p>
 
-<p><code class="highlighter-rouge">正数格式;负数格式;零格式;文本格式</code></p>
+<p><code class="language-plaintext highlighter-rouge">正数格式;负数格式;零格式;文本格式</code></p>
 
 <p>如果使用条件判断，每一段的意思是：</p>
 
-<p><code class="highlighter-rouge">[条件1]指定格式;[条件2]指定格式;除此之外的格式</code></p>
+<p><code class="language-plaintext highlighter-rouge">[条件1]指定格式;[条件2]指定格式;除此之外的格式</code></p>
 
 <hr />
 
@@ -12,33 +12,33 @@
 
 <p>输入1就是男，输入0就是女，1和0总有说不完的故事,自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">[=1]男;[=0]女</code></p>
+<p><code class="language-plaintext highlighter-rouge">[=1]男;[=0]女</code></p>
 
 <h3 id="-判断成绩是否及格">※ 判断成绩是否及格</h3>
 
 <p>规则为大于80优秀，大于60及格，否则不及格,自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">[&gt;80]0 优秀;[&gt;60]0 及格;0 不及格</code></p>
+<p><code class="language-plaintext highlighter-rouge">[&gt;80]0 优秀;[&gt;60]0 及格;0 不及格</code></p>
 
 <h3 id="-判断业绩上升还是下降">※ 判断业绩上升还是下降</h3>
 
 <p>上升显示蓝色向上的箭头，下降显示红色向下的箭头,自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">[蓝色]↑0.0%;[红色]↓0.0%;0.0%</code></p>
+<p><code class="language-plaintext highlighter-rouge">[蓝色]↑0.0%;[红色]↓0.0%;0.0%</code></p>
 
 <h3 id="-按万元显示金额">※ 按万元显示金额</h3>
 
-<p><code class="highlighter-rouge">0!.0,万</code></p>
+<p><code class="language-plaintext highlighter-rouge">0!.0,万</code></p>
 
 <p>如果要按百万元显示金额，自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">0.00,,</code></p>
+<p><code class="language-plaintext highlighter-rouge">0.00,,</code></p>
 
 <h3 id="-批量添加公司前缀">※ 批量添加公司前缀</h3>
 
 <p>只要输入部门，就会自动加上公司名称,自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">要显示的前缀@</code></p>
+<p><code class="language-plaintext highlighter-rouge">要显示的前缀@</code></p>
 
 <blockquote>
   <p>@就是在单元格中输入的文本内容。</p>
@@ -48,18 +48,18 @@
 
 <p>自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">G/通用格式万元</code></p>
+<p><code class="language-plaintext highlighter-rouge">G/通用格式万元</code></p>
 
 <h3 id="-日期星期同时显示">※ 日期、星期同时显示</h3>
 
-<p><code class="highlighter-rouge">yyyy/m/d  aaaa</code></p>
+<p><code class="language-plaintext highlighter-rouge">yyyy/m/d  aaaa</code></p>
 
 <h3 id="-快速输入工号">※ 快速输入工号</h3>
 
 <p>如果要在单元格中输入五位工号，不足五位的就用0补齐，要怎么实现呢？
 自定义格式代码为：</p>
 
-<p><code class="highlighter-rouge">00000</code></p>
+<p><code class="language-plaintext highlighter-rouge">00000</code></p>
 
 <h3 id="-仿真密码保护">※ 仿真密码保护</h3>
 
@@ -67,9 +67,9 @@
 
 <p>自定义格式代码为两个星号</p>
 
-<p><code class="highlighter-rouge">**</code></p>
+<p><code class="language-plaintext highlighter-rouge">**</code></p>
 
 <p>最后，有些英文在在自定义格式中有特殊意义，可以在操作时将这些英文加上一对单引号。</p>
 
-<p>例如在数值后显示单位 <code class="highlighter-rouge">KW/H</code>，这个H在自定义格式中就是小时的意思，咱们只要使用 <code class="highlighter-rouge">0"KW/H"</code> 就可以了，这里的<code class="highlighter-rouge">0</code> 也有特殊含义，表示单元格中原有的任意数值。</p>
+<p>例如在数值后显示单位 <code class="language-plaintext highlighter-rouge">KW/H</code>，这个H在自定义格式中就是小时的意思，咱们只要使用 <code class="language-plaintext highlighter-rouge">0"KW/H"</code> 就可以了，这里的<code class="language-plaintext highlighter-rouge">0</code> 也有特殊含义，表示单元格中原有的任意数值。</p>
 :ET

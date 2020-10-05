@@ -1,8 +1,8 @@
-I"��<p>Excel</p>
+I"��<p>Excel</p>
 
 <h2 id="1统计不重复项的个数">1、统计不重复项的个数</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> =SUMPRODUCT(1/COUNTIF(B2:B81,B2:B81))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> =SUMPRODUCT(1/COUNTIF(B2:B81,B2:B81))
 </code></pre></div></div>
 
 <blockquote>
@@ -17,12 +17,12 @@
 
 <h2 id="2排名">2、排名</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> = SUMPRODUCT((D2&lt;$D$2:$D$8)*1)+1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> = SUMPRODUCT((D2&lt;$D$2:$D$8)*1)+1
 </code></pre></div></div>
 
 <p>或</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> = RANK(A2,($A$2:$A$4）
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> = RANK(A2,($A$2:$A$4）
 
 
  = RANK(A2,($A$2:$A$4,$C$2:$C$4))
@@ -37,7 +37,7 @@
 
 <h2 id="3实现自动编号档筛选和隐藏时重新自动编号">3、实现自动编号，档筛选和隐藏时重新自动编号</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=SUBTOTAL(103,B$2:B2) 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=SUBTOTAL(103,B$2:B2) 
 </code></pre></div></div>
 
 <hr />
@@ -79,7 +79,7 @@
 </table>
 
 <blockquote>
-  <p>条件放在不同行是或<code class="highlighter-rouge">OR</code>的关系，同一行是与<code class="highlighter-rouge">AND</code>的关系;</p>
+  <p>条件放在不同行是或<code class="language-plaintext highlighter-rouge">OR</code>的关系，同一行是与<code class="language-plaintext highlighter-rouge">AND</code>的关系;</p>
 </blockquote>
 
 <p><br /></p>
@@ -118,25 +118,25 @@
 
 <h2 id="7如何同时显示日期和星期">7、如何同时显示日期和星期？</h2>
 
-<p>自定义格式:  <code class="highlighter-rouge">yyyy-y-d aaaa</code></p>
+<p>自定义格式:  <code class="language-plaintext highlighter-rouge">yyyy-y-d aaaa</code></p>
 
 <hr />
 <p><br /></p>
 
 <h2 id="8自动生成报表目录并添加超链接">8、自动生成报表目录并添加超链接</h2>
 
-<p>※ step1：<code class="highlighter-rouge">Ctrl + F3</code>在弹了的窗口中输入名称<code class="highlighter-rouge">getsh</code>, 在引用位置输入公式：</p>
+<p>※ step1：<code class="language-plaintext highlighter-rouge">Ctrl + F3</code>在弹了的窗口中输入名称<code class="language-plaintext highlighter-rouge">getsh</code>, 在引用位置输入公式：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>引用位置 = MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&amp;T(NOW())
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>引用位置 = MID(GET.WORKBOOK(1),FIND("]",GET.WORKBOOK(1))+1,99)&amp;T(NOW())
 </code></pre></div></div>
 
 <p>※ step2：在单元格输入公式并下拉即可生成工作表的目录。</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>公式 = IFERROR(HYPERLINK("#"&amp;INDEX(getsh,ROW(A2))&amp;"!a1",INDEX(getsh,ROW(A2))),"")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>公式 = IFERROR(HYPERLINK("#"&amp;INDEX(getsh,ROW(A2))&amp;"!a1",INDEX(getsh,ROW(A2))),"")
 </code></pre></div></div>
 
 <blockquote>
-  <p>注意：这里的名称用的是<code class="highlighter-rouge">getsh</code>，公式都是在目录页输入的</p>
+  <p>注意：这里的名称用的是<code class="language-plaintext highlighter-rouge">getsh</code>，公式都是在目录页输入的</p>
 </blockquote>
 
 <hr />
@@ -149,7 +149,7 @@
 
 <p>类似的还可以：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>公式 =A1&lt;&gt;""
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>公式 =A1&lt;&gt;""
 公式 =AND($C3="女"，YEAR($D3)&gt;1980)
 </code></pre></div></div>
 
@@ -185,7 +185,7 @@
 
 <hr />
 <p><br /></p>
-<h2 id="11一个关键字查找筛选对应的多行数据-indexsmallif-万金油函数">11、一个关键字查找筛选对应的多行数据 <code class="highlighter-rouge">INDEX+SMALL+IF</code> 万金油函数</h2>
+<h2 id="11一个关键字查找筛选对应的多行数据-indexsmallif-万金油函数">11、一个关键字查找筛选对应的多行数据 <code class="language-plaintext highlighter-rouge">INDEX+SMALL+IF</code> 万金油函数</h2>
 
 <div class="cloud-tie-wrapper">
 <iframe width="800" height="480" src="//player.bilibili.com/player.html?aid=8160452&amp;cid=13420534&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -197,7 +197,7 @@
 <p>=INDEX(C:C,<font color="#DC143C">SMALL(</font><font color="#6495ED">IF(B$2:B$17=G$1,<font color="#DAA520">ROW($2:$17)</font>,999)</font>,<font color="#DC143C">ROW(A1))</font>)</p>
 
 <blockquote>
-  <p><a href="https://pan.baidu.com/s/1ZXNePGwH7nrOhNkD-c--9A">点击下载示例文件，   提取码<code class="highlighter-rouge">6w1q</code> </a></p>
+  <p><a href="https://pan.baidu.com/s/1ZXNePGwH7nrOhNkD-c--9A">点击下载示例文件，   提取码<code class="language-plaintext highlighter-rouge">6w1q</code> </a></p>
 </blockquote>
 
 <blockquote>
@@ -241,13 +241,13 @@
 <p><br /></p>
 <h2 id="14当数字变-e--一个让它现原形">14、当数字变 E+ , 一个？让它现原形！</h2>
 
-<p><code class="highlighter-rouge">Ctrl + 1 </code>设置单元格格式 - 自定义 - 输入数字 <code class="highlighter-rouge">0 </code></p>
+<p><code class="language-plaintext highlighter-rouge">Ctrl + 1 </code>设置单元格格式 - 自定义 - 输入数字 <code class="language-plaintext highlighter-rouge">0 </code></p>
 
 <blockquote>
-  <p>如果输入 <code class="highlighter-rouge">0000000</code> 当0的个数大于整数位，会用0在数字前补齐</p>
+  <p>如果输入 <code class="language-plaintext highlighter-rouge">0000000</code> 当0的个数大于整数位，会用0在数字前补齐</p>
 </blockquote>
 
-<p>还可以输入<code class="highlighter-rouge">？</code>和<code class="highlighter-rouge">#</code> 达到同样效果，区别是：</p>
+<p>还可以输入<code class="language-plaintext highlighter-rouge">？</code>和<code class="language-plaintext highlighter-rouge">#</code> 达到同样效果，区别是：</p>
 
 <ul>
   <li>
@@ -261,7 +261,7 @@
   </li>
 </ul>
 
-<p><strong>设置</strong> <code class="highlighter-rouge">e/mm/dd</code>  <strong>日期对齐</strong></p>
+<p><strong>设置</strong> <code class="language-plaintext highlighter-rouge">e/mm/dd</code>  <strong>日期对齐</strong></p>
 
 <hr />
 <p><br /></p>
@@ -424,13 +424,13 @@
 <p><br /></p>
 <h2 id="24显示公式部分计算结果">24、显示公式部分计算结果</h2>
 
-<p>选取公式中的要显示的部分表达式，按<code class="highlighter-rouge">F9</code></p>
+<p>选取公式中的要显示的部分表达式，按<code class="language-plaintext highlighter-rouge">F9</code></p>
 
 <hr />
 <p><br /></p>
 <h2 id="25选择性粘贴的计算把所有数据进行计算">25、选择性粘贴的计算（把所有数据进行计算）</h2>
 
-<p>按<code class="highlighter-rouge">Ctrl + Alt + v</code>  选择性粘贴</p>
+<p>按<code class="language-plaintext highlighter-rouge">Ctrl + Alt + v</code>  选择性粘贴</p>
 
 <p>常用的把财务数据转为万元版</p>
 
@@ -438,18 +438,18 @@
 
 <p>※ step2：选择数据区域全部数据</p>
 
-<p>※ step3：选择性粘贴，选 <code class="highlighter-rouge">除</code> 确定即可。</p>
+<p>※ step3：选择性粘贴，选 <code class="language-plaintext highlighter-rouge">除</code> 确定即可。</p>
 
 <p>用【万】显示金额数另一种方法：</p>
 
-<p>同样选中更改区域，在字体选项卡下的自定义，输入代码：<code class="highlighter-rouge">0!.0,万</code>，然后确定即可</p>
+<p>同样选中更改区域，在字体选项卡下的自定义，输入代码：<code class="language-plaintext highlighter-rouge">0!.0,万</code>，然后确定即可</p>
 
-<p>※ 显示万的自定义代码：<code class="highlighter-rouge">0!.0,万</code></p>
+<p>※ 显示万的自定义代码：<code class="language-plaintext highlighter-rouge">0!.0,万</code></p>
 
-<p>※ 百万元显示金额自定义格式代码为：<code class="highlighter-rouge">0.00,,</code></p>
+<p>※ 百万元显示金额自定义格式代码为：<code class="language-plaintext highlighter-rouge">0.00,,</code></p>
 
 <blockquote>
-  <p>如果改为 <code class="highlighter-rouge">*1 </code>的话，可以把文本格式的数字全部变为数值！</p>
+  <p>如果改为 <code class="language-plaintext highlighter-rouge">*1 </code>的话，可以把文本格式的数字全部变为数值！</p>
 </blockquote>
 
 <hr />
@@ -458,14 +458,14 @@
 
 <p>※ step1：条件格式设置公式： =OR(CELL(“row”)=ROW())</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                     =OR(CELL("col")=COLUMN())
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                     =OR(CELL("col")=COLUMN())
 
                      =(CELL("row")=ROW())+(CELL("col")=COLUMN())
 </code></pre></div></div>
 
 <p>※ step2：VBA 工作表选择 Worksheet SelectionChange 加入代码</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 ActiveSheet.Calculate
 End Sub
@@ -484,7 +484,7 @@ End Sub
   <p>以上步骤完成之后，聚光灯效果已经实现了，但可能会出现无法将单个或多个单元格复制粘贴数据,解决办法就是:</p>
 </blockquote>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 On Error Resume Next
 If Application.CutCopyMode = xlCopy Or Application.CutCopyMode = xlCut Then Exit Sub
 ActiveSheet.Calculate
@@ -493,7 +493,7 @@ End Sub
 
 <p>纯VBA 实现方式：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)
 With Target
      .Parent.Cells.Interior.ColorIndex = xlNone
@@ -543,7 +543,7 @@ End Sub
 
 <p>※ 自带页签目录的使用</p>
 
-<p>鼠标放在excel 标签最前面 有两个方向箭头 <code class="highlighter-rouge">Ctrl+鼠标左键</code> 会调到第一个和最后一个表页，放在第一个箭头 点<code class="highlighter-rouge">右键</code> 打开工作表目录</p>
+<p>鼠标放在excel 标签最前面 有两个方向箭头 <code class="language-plaintext highlighter-rouge">Ctrl+鼠标左键</code> 会调到第一个和最后一个表页，放在第一个箭头 点<code class="language-plaintext highlighter-rouge">右键</code> 打开工作表目录</p>
 
 <hr />
 
@@ -563,7 +563,7 @@ End Sub
 
 <h2 id="29隐藏部分数据便于截图">29、隐藏部分数据，便于截图</h2>
 
-<p>单元格式，自定义，设置一个格式<code class="highlighter-rouge">;;;</code> 再截图就可以了。</p>
+<p>单元格式，自定义，设置一个格式<code class="language-plaintext highlighter-rouge">;;;</code> 再截图就可以了。</p>
 
 <hr />
 
@@ -696,7 +696,7 @@ ROW()为选中的所有列进行操作，返回该列所在的行号；</p>
 
 <p>在图表中，我们还可以突出显示最大值和最小值，如下图，我们对表格数据进行整理，建两列辅助列，分别输入公式：</p>
 
-<p><code class="highlighter-rouge">=IF(B2=MAX($B$2:$B$11),B2,NA())和=IF(B2=MIN($B$2:$B$11),B2,NA())</code>，下拉填充。插入折线图，选中图形，点击鼠标右键选择“更改系列图表类型”，在组合里把最大值和最小值的图形更改为带数据标记的折线图，分别选中最大值和最小值系列，鼠标右键选择“添加数据标签”和“设置数据标签格式”，勾选“系列名称”。</p>
+<p><code class="language-plaintext highlighter-rouge">=IF(B2=MAX($B$2:$B$11),B2,NA())和=IF(B2=MIN($B$2:$B$11),B2,NA())</code>，下拉填充。插入折线图，选中图形，点击鼠标右键选择“更改系列图表类型”，在组合里把最大值和最小值的图形更改为带数据标记的折线图，分别选中最大值和最小值系列，鼠标右键选择“添加数据标签”和“设置数据标签格式”，勾选“系列名称”。</p>
 
 <hr />
 
@@ -706,7 +706,7 @@ ROW()为选中的所有列进行操作，返回该列所在的行号；</p>
 
 <p>这里我们需要对数据进行处理，添加两列辅助列，分别输入公式：</p>
 
-<p><code class="highlighter-rouge">=IF(B2&gt;AVERAGE($B$2:$B$11),B2,NA())=IF(B2&lt;AVERAGE($B$2:$B$11),B2,NA())</code></p>
+<p><code class="language-plaintext highlighter-rouge">=IF(B2&gt;AVERAGE($B$2:$B$11),B2,NA())=IF(B2&lt;AVERAGE($B$2:$B$11),B2,NA())</code></p>
 
 <p>下拉填充。选中C列和D列数据，插入柱形图。</p>
 
@@ -718,7 +718,7 @@ ROW()为选中的所有列进行操作，返回该列所在的行号；</p>
 
 <h2 id="39选择性粘贴实现行列转换">39、选择性粘贴实现行列转换</h2>
 
-<p>复制后，<code class="highlighter-rouge">Ctrl+Alt+v</code>打开选择性粘贴界面里面有 <code class="highlighter-rouge">转置</code> 选项</p>
+<p>复制后，<code class="language-plaintext highlighter-rouge">Ctrl+Alt+v</code>打开选择性粘贴界面里面有 <code class="language-plaintext highlighter-rouge">转置</code> 选项</p>
 
 <hr />
 
@@ -806,7 +806,7 @@ ROW()为选中的所有列进行操作，返回该列所在的行号；</p>
 
 <p>选中B:D列数据 - 条件格式 - 新建规则，在弹出的【新建格式规则】窗口中进行如下设置：</p>
 
-<p>公式框中输入公式 <code class="highlighter-rouge">=$B3=TRUE</code> （注意$不可少）</p>
+<p>公式框中输入公式 <code class="language-plaintext highlighter-rouge">=$B3=TRUE</code> （注意$不可少）</p>
 
 <p>点格式按钮，设置填充和字体颜色,本步设置完成后， B列方框画勾的行颜色发生了改变</p>
 
@@ -816,7 +816,7 @@ ROW()为选中的所有列进行操作，返回该列所在的行号；</p>
 
 <p>step5： 设置总成本计算公式</p>
 
-<p>在D7单元格中设置公式: <code class="highlighter-rouge">=SUMPRODUCT(B3:B6*D3:D6)</code>
+<p>在D7单元格中设置公式: <code class="language-plaintext highlighter-rouge">=SUMPRODUCT(B3:B6*D3:D6)</code>
 完工！</p>
 
 <p>原文参考：<a href="https://mp.weixin.qq.com/s?

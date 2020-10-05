@@ -1,6 +1,6 @@
-I"�*<p>NC是大型的企业管理软件，能够灵活的适配各类业务场景，为企业快速搭建信息化平台。这里是NC65的安装配置的详细介绍和资源下载链接,是自己搭建本地环境的过程实录。文档对安装配置细节做了详细的记录，并且增加了演示数据导入和破解<code class="highlighter-rouge">license</code>授权的方法，请不要作为商业用途。参考视频为:</p>
+I"�.<p>NC是大型的企业管理软件，能够灵活的适配各类业务场景，为企业快速搭建信息化平台。这里是NC65的安装配置的详细介绍和资源下载链接,是自己搭建本地环境的过程实录。文档对安装配置细节做了详细的记录，并且增加了演示数据导入和破解<code class="language-plaintext highlighter-rouge">license</code>授权的方法，请不要作为商业用途。参考视频为:</p>
 
-<p><code class="highlighter-rouge">https://edu.51cto.com/course/15660.html</code></p>
+<p><code class="language-plaintext highlighter-rouge">https://edu.51cto.com/course/15660.html</code></p>
 
 <hr />
 
@@ -10,13 +10,13 @@
 
 <p>1.1 Oracle官网 下载</p>
 
-<p><code class="highlighter-rouge">https://www.oracle.com/technetwork/cn/database/database10g/downloads/index.html</code></p>
+<p><code class="language-plaintext highlighter-rouge">https://www.oracle.com/technetwork/cn/database/database10g/downloads/index.html</code></p>
 
 <p>登录账号:</p>
 
-<p><code class="highlighter-rouge">hxy@cloudhan.me</code></p>
+<p><code class="language-plaintext highlighter-rouge">hxy@cloudhan.me</code></p>
 
-<p><code class="highlighter-rouge">Symphonyh7-</code></p>
+<p><code class="language-plaintext highlighter-rouge">Symphonyh7-</code></p>
 
 <blockquote>
   <p>注意2个压缩包需要解压到同一文件夹里</p>
@@ -24,8 +24,8 @@
 
 <p>1.2 百度网盘下载</p>
 
-<p>链接：<code class="highlighter-rouge">https://pan.baidu.com/s/1sUtye1VvwY5xvWgHyJ8xmQ </code>
-提取码：<code class="highlighter-rouge">06ud</code></p>
+<p>链接：<code class="language-plaintext highlighter-rouge">https://pan.baidu.com/s/1sUtye1VvwY5xvWgHyJ8xmQ </code>
+提取码：<code class="language-plaintext highlighter-rouge">06ud</code></p>
 
 <blockquote>
   <p>这是已经解压缩好的文件，可以直接安装</p>
@@ -35,25 +35,25 @@
 
 <ul>
   <li>
-    <p>双击：<code class="highlighter-rouge">setup</code></p>
+    <p>双击：<code class="language-plaintext highlighter-rouge">setup</code></p>
   </li>
   <li>
-    <p>选择：<code class="highlighter-rouge">创建和配置数据库</code></p>
+    <p>选择：<code class="language-plaintext highlighter-rouge">创建和配置数据库</code></p>
   </li>
   <li>
-    <p>选择：<code class="highlighter-rouge">桌面类</code></p>
+    <p>选择：<code class="language-plaintext highlighter-rouge">桌面类</code></p>
   </li>
   <li>
-    <p>路径选择：<code class="highlighter-rouge">C盘默认路径</code></p>
+    <p>路径选择：<code class="language-plaintext highlighter-rouge">C盘默认路径</code></p>
   </li>
   <li>
-    <p>数据库版本：<code class="highlighter-rouge">企业版/标准版</code></p>
+    <p>数据库版本：<code class="language-plaintext highlighter-rouge">企业版/标准版</code></p>
   </li>
   <li>
-    <p>全局数据库名称：<code class="highlighter-rouge">orcl</code></p>
+    <p>全局数据库名称：<code class="language-plaintext highlighter-rouge">orcl</code></p>
   </li>
   <li>
-    <p>管理员口令：<code class="highlighter-rouge">Hxyufida-</code></p>
+    <p>管理员口令：<code class="language-plaintext highlighter-rouge">Hxyufida-</code></p>
   </li>
 </ul>
 
@@ -63,15 +63,15 @@
   <li>设置数据库管理员密码：</li>
 </ul>
 
-<p><code class="highlighter-rouge">SYSTEM:</code> <code class="highlighter-rouge">Hxyufida7-</code></p>
+<p><code class="language-plaintext highlighter-rouge">SYSTEM:</code> <code class="language-plaintext highlighter-rouge">Hxyufida7-</code></p>
 
-<p><code class="highlighter-rouge">SYS:</code> <code class="highlighter-rouge">Hxyufida7-</code></p>
+<p><code class="language-plaintext highlighter-rouge">SYS:</code> <code class="language-plaintext highlighter-rouge">Hxyufida7-</code></p>
 
 <ul>
-  <li>输入数据库管理工具OEM网址: <code class="highlighter-rouge">https://localhost:1158/em</code></li>
+  <li>输入数据库管理工具OEM网址: <code class="language-plaintext highlighter-rouge">https://localhost:1158/em</code></li>
 </ul>
 
-<p>用<code class="highlighter-rouge">SYSTEM</code>登录，选服务器-用户设置 <code class="highlighter-rouge">SCOTT</code>用户</p>
+<p>用<code class="language-plaintext highlighter-rouge">SYSTEM</code>登录，选服务器-用户设置 <code class="language-plaintext highlighter-rouge">SCOTT</code>用户</p>
 
 <p>密码：tiger，设置”未锁定”</p>
 
@@ -85,10 +85,10 @@
 
 <p>NC65程序下载链接:</p>
 
-<p>NC65代码链接：<code class="highlighter-rouge">https://pan.baidu.com/s/1BokM-dQskgLZPB62kw7rjg</code> 
-提取码：<code class="highlighter-rouge">ruv3</code></p>
+<p>NC65代码链接：<code class="language-plaintext highlighter-rouge">https://pan.baidu.com/s/1BokM-dQskgLZPB62kw7rjg</code> 
+提取码：<code class="language-plaintext highlighter-rouge">ruv3</code></p>
 
-<p><code class="highlighter-rouge">setup.bat</code> 开始安装;</p>
+<p><code class="language-plaintext highlighter-rouge">setup.bat</code> 开始安装;</p>
 
 <p>模块全选;</p>
 
@@ -104,18 +104,18 @@
 
 <h3 id="3创建表空间及给用户授权">3、创建表空间及给用户授权</h3>
 
-<p>进入应用程序开发<code class="highlighter-rouge">SQL Plus</code></p>
+<p>进入应用程序开发<code class="language-plaintext highlighter-rouge">SQL Plus</code></p>
 
 <p>进入CMD：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlplus /nolog
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sqlplus /nolog
 
 conn /as sysdba
 
 </code></pre></div></div>
 
 <p>3.1 创建表空间</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLESPACE NNC_DATA01 DATAFILE 'C:\ORADATA\NNC_data01.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLESPACE NNC_DATA01 DATAFILE 'C:\ORADATA\NNC_data01.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K;
 
 CREATE TABLESPACE NNC_INDEX01 DATAFILE 'C:\ORADATA\nnc_index01.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 128K;
 
@@ -130,12 +130,12 @@ CREATE TABLESPACE NNC_DATA03 DATAFILE 'C:\ORADATA\NNC_data03.dbf' SIZE 500M AUTO
 CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AUTOEXTEND ON NEXT 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 128K;
 </code></pre></div></div>
 
-<p>3.2 创建用户<code class="highlighter-rouge">nc65</code></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create user nc65 identified by nc65 default tablespace NNC_DATA01 temporary tablespace temp;
+<p>3.2 创建用户<code class="language-plaintext highlighter-rouge">nc65</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create user nc65 identified by nc65 default tablespace NNC_DATA01 temporary tablespace temp;
 </code></pre></div></div>
 
 <p>3.3 给用户授权</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grant connect,dba to nc65；
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grant connect,dba to nc65；
 </code></pre></div></div>
 
 <hr />
@@ -146,10 +146,10 @@ CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AU
 
 <p>4.1 配置服务器信息：</p>
 
-<p>登录IP地址:<code class="highlighter-rouge">127.0.0.1</code> , 端口号:<code class="highlighter-rouge">8080</code></p>
+<p>登录IP地址:<code class="language-plaintext highlighter-rouge">127.0.0.1</code> , 端口号:<code class="language-plaintext highlighter-rouge">8080</code></p>
 
 <blockquote>
-  <p><code class="highlighter-rouge">ipconfig</code> 命令获取本机地址</p>
+  <p><code class="language-plaintext highlighter-rouge">ipconfig</code> 命令获取本机地址</p>
 </blockquote>
 
 <p><img src="/image/nc1.png" alt="nc1" width="800px" height="420px" style="margin:0" /></p>
@@ -205,17 +205,17 @@ CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AU
 <p>4.5 uclient 登录NC</p>
 
 <p>uclient官网下载地址：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://cdn.yonyoucloud.com/pro/uclient/uclients/2.0.0-build_201904031420_Windows/UClient.exe
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://cdn.yonyoucloud.com/pro/uclient/uclients/2.0.0-build_201904031420_Windows/UClient.exe
 </code></pre></div></div>
 
-<p>其他版本：<code class="highlighter-rouge">http://uclient.yonyou.com/</code></p>
+<p>其他版本：<code class="language-plaintext highlighter-rouge">http://uclient.yonyou.com/</code></p>
 
-<p>打开uclient 添加：<code class="highlighter-rouge">http://127.0.0.1:8080</code></p>
+<p>打开uclient 添加：<code class="language-plaintext highlighter-rouge">http://127.0.0.1:8080</code></p>
 
-<p>以超级管理员 <code class="highlighter-rouge">root / super</code> 登录 进入系统管理 密码都是：<code class="highlighter-rouge">123456a@</code></p>
+<p>以超级管理员 <code class="language-plaintext highlighter-rouge">root / super</code> 登录 进入系统管理 密码都是：<code class="language-plaintext highlighter-rouge">123456a@</code></p>
 
 <blockquote>
-  <p><code class="highlighter-rouge">root</code> 首次登录时可以设置密码，初始密码为空，本次安装不知道root密码，用super登录修改root密码。</p>
+  <p><code class="language-plaintext highlighter-rouge">root</code> 首次登录时可以设置密码，初始密码为空，本次安装不知道root密码，用super登录修改root密码。</p>
 </blockquote>
 
 <hr />
@@ -246,31 +246,31 @@ CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AU
 
 <h3 id="5导入备份dmp文件">5、导入备份dmp文件</h3>
 
-<p>演示数据下载链接：<code class="highlighter-rouge">https://pan.baidu.com/s/1MZNdf-IUbt2DXn7EEn9I5Q </code>
-提取码：<code class="highlighter-rouge">mv2s</code></p>
+<p>演示数据下载链接：<code class="language-plaintext highlighter-rouge">https://pan.baidu.com/s/1MZNdf-IUbt2DXn7EEn9I5Q </code>
+提取码：<code class="language-plaintext highlighter-rouge">mv2s</code></p>
 
 <p>5.1 普通导入  (OK)</p>
 
 <p>DOS:
-<code class="highlighter-rouge">imp nc65/nc65@orcl file=D:\NC65_install\ncdata\NCV65DEMO.dmp fromuser=NC65USER touser=nc65 log=D:\NC65_install\ncdata\NCV65DEMO.log</code></p>
+<code class="language-plaintext highlighter-rouge">imp nc65/nc65@orcl file=D:\NC65_install\ncdata\NCV65DEMO.dmp fromuser=NC65USER touser=nc65 log=D:\NC65_install\ncdata\NCV65DEMO.log</code></p>
 
 <blockquote>
-  <p>注意目录是我放NC代码的位置，演示数据用户是<code class="highlighter-rouge">NC65USER</code></p>
+  <p>注意目录是我放NC代码的位置，演示数据用户是<code class="language-plaintext highlighter-rouge">NC65USER</code></p>
 </blockquote>
 
 <p>5.2 数据泵方式导入（没测试）</p>
 
-<p><code class="highlighter-rouge">sqlplus /nolog</code></p>
+<p><code class="language-plaintext highlighter-rouge">sqlplus /nolog</code></p>
 
-<p><code class="highlighter-rouge">conn /as sysdba</code></p>
+<p><code class="language-plaintext highlighter-rouge">conn /as sysdba</code></p>
 
 <p>SQL:</p>
 
-<p><code class="highlighter-rouge">create or replace directory  dmpdata as 'D:\NC65_install\ncdata';</code></p>
+<p><code class="language-plaintext highlighter-rouge">create or replace directory  dmpdata as 'D:\NC65_install\ncdata';</code></p>
 
 <p>DOS:</p>
 
-<p><code class="highlighter-rouge">impdp nc65/nc65@orcl directory=dmpdata dumpfile=NCV65DEMO.dmp logfile=NCV65DEMO.log schemas=NC65USER</code></p>
+<p><code class="language-plaintext highlighter-rouge">impdp nc65/nc65@orcl directory=dmpdata dumpfile=NCV65DEMO.dmp logfile=NCV65DEMO.log schemas=NC65USER</code></p>
 
 <blockquote>
   <p>把DMP文件放到数据库的dpdump文件夹下可以不指定文件目录（D:\app\Administrator\admin\orcl\dpdump文件夹下）</p>
@@ -280,24 +280,24 @@ CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AU
 
 <h3 id="6建立一个账套">6、建立一个账套</h3>
 
-<p>以<code class="highlighter-rouge">root</code>进入系统管理，新建一个演示系统，就看到演示数据了。</p>
+<p>以<code class="language-plaintext highlighter-rouge">root</code>进入系统管理，新建一个演示系统，就看到演示数据了。</p>
 
 <hr />
 
 <h3 id="7和谐nc65的方法">7、和谐NC65的方法</h3>
 
-<p>NC破解程序链接：<code class="highlighter-rouge">https://pan.baidu.com/s/1GPQNngzj8xwBBPi-kwhgww</code> 
-提取码：<code class="highlighter-rouge">przu</code></p>
+<p>NC破解程序链接：<code class="language-plaintext highlighter-rouge">https://pan.baidu.com/s/1GPQNngzj8xwBBPi-kwhgww</code> 
+提取码：<code class="language-plaintext highlighter-rouge">przu</code></p>
 
 <p>7.1 生成硬件锁</p>
 
-<p>nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁，输入产品号<code class="highlighter-rouge">3H000000</code>，选中一个网卡点确定，bin目录会产生一个<code class="highlighter-rouge">hardkey.req</code>文件;</p>
+<p>nchome/bin运行sysConfig.bat，出现配置界面，点license生成硬件锁，输入产品号<code class="language-plaintext highlighter-rouge">3H000000</code>，选中一个网卡点确定，bin目录会产生一个<code class="language-plaintext highlighter-rouge">hardkey.req</code>文件;</p>
 
 <p><img src="/image/license1.png" alt="license1" width="800px" height="420px" style="margin:0" /></p>
 
 <p>7.2 生成license</p>
 
-<p>运行nc63kg.exe(先装java)，将NC65new.txt内容打开复制替换原有的”支持代码自定义”内容，选择上一步生成的<code class="highlighter-rouge">hardkey.req</code>文件，点生成license;</p>
+<p>运行nc63kg.exe(先装java)，将NC65new.txt内容打开复制替换原有的”支持代码自定义”内容，选择上一步生成的<code class="language-plaintext highlighter-rouge">hardkey.req</code>文件，点生成license;</p>
 
 <p><img src="/image/license2.png" alt="license2" width="800px" height="420px" style="margin:0" /></p>
 
@@ -316,10 +316,10 @@ CREATE TABLESPACE NNC_INDEX03 DATAFILE 'C:\ORADATA\nnc_index03.dbf' SIZE 500M AU
 <p>8、Sql Developer</p>
 
 <p>Oracle自带的Sql Developer对JDK版本要求1.5-1.6，NC65的JDK是1.7不匹配，而且总是闪退，各种不好用。
-建议替换这个版本的<code class="highlighter-rouge">ver:18.2.0.183.1748-x64</code> Oracle数据库管理工具(含JDK1.8)</p>
+建议替换这个版本的<code class="language-plaintext highlighter-rouge">ver:18.2.0.183.1748-x64</code> Oracle数据库管理工具(含JDK1.8)</p>
 
-<p>下载链接：<code class="highlighter-rouge">https://pan.baidu.com/s/1I9367BzAJTQsF-bMP0KTAw</code> 
-提取码：<code class="highlighter-rouge">inz8</code></p>
+<p>下载链接：<code class="language-plaintext highlighter-rouge">https://pan.baidu.com/s/1I9367BzAJTQsF-bMP0KTAw</code> 
+提取码：<code class="language-plaintext highlighter-rouge">inz8</code></p>
 
 <p>Ok! 恭喜您,到目前为止，您可以无限制的使用NC65和Oracle数据库了!</p>
 :ET

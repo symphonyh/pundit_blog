@@ -1,4 +1,4 @@
-I"v}<p>ES6 笔记</p>
+I"~<p>ES6 笔记</p>
 
 <h2 id="letconst-变量声明">let，const 变量声明</h2>
 
@@ -53,7 +53,7 @@
 
 <p>2、不会污染全局变量</p>
 
-<p>默认情况下用<code class="highlighter-rouge">const</code>声明变量，只有在你知道整个变量值被修改的情况下用<code class="highlighter-rouge">let</code>。</p>
+<p>默认情况下用<code class="language-plaintext highlighter-rouge">const</code>声明变量，只有在你知道整个变量值被修改的情况下用<code class="language-plaintext highlighter-rouge">let</code>。</p>
 
 <h2 id="模版字符串">模版字符串</h2>
 
@@ -150,7 +150,7 @@
 
 <p>1、定义</p>
 
-<p>箭头函数使用=&gt;来定义匿名函数，<code class="highlighter-rouge">function（）{}</code> 等价于 <code class="highlighter-rouge">（）=&gt;{};</code></p>
+<p>箭头函数使用=&gt;来定义匿名函数，<code class="language-plaintext highlighter-rouge">function（）{}</code> 等价于 <code class="language-plaintext highlighter-rouge">（）=&gt;{};</code></p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
@@ -287,7 +287,7 @@
 
 <p>属性表达式的组合 方法名的组合;</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> const obj = {};
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> const obj = {};
  obj.isShow = true;
  const name = 'a';
  obj[name+'bc'] = 123;
@@ -300,9 +300,9 @@
 
 <p>扩展2个方法;</p>
 
-<p>1、<code class="highlighter-rouge">is（）</code> ===  两个参数是否严格相等;</p>
+<p>1、<code class="language-plaintext highlighter-rouge">is（）</code> ===  两个参数是否严格相等;</p>
 
-<p>2、<code class="highlighter-rouge">assign() </code>对象的合并,返回合并后新对象，属于浅拷贝;</p>
+<p>2、<code class="language-plaintext highlighter-rouge">assign() </code>对象的合并,返回合并后新对象，属于浅拷贝;</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},{</span><span class="na">a</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="na">b</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span>
 
@@ -343,7 +343,7 @@
 </code></pre></div></div>
 
 <blockquote>
-  <p>set中对象的引用无法被释放,使用<code class="highlighter-rouge">Weakset()</code>，不能传入非对象的参数，不可迭代，没有size属性，没有forEach等方法</p>
+  <p>set中对象的引用无法被释放,使用<code class="language-plaintext highlighter-rouge">Weakset()</code>，不能传入非对象的参数，不可迭代，没有size属性，没有forEach等方法</p>
 </blockquote>
 
 <p>2、map 类型是键值对的有序列表，键和值可以是任何类型;</p>

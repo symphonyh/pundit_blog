@@ -1,4 +1,4 @@
-I"�<p>git 经常用到的一些命令汇总.</p>
+I"�<p>git 经常用到的一些命令汇总.</p>
 <hr />
 
 <p><code class="language-plaintext highlighter-rouge">git init</code>:                                   将目标目录变为git可管理的仓库</p>
@@ -92,7 +92,7 @@ git branch -d XXX             删除XXX分支</p>
   <li>远程到本地：</li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">git clone git@github.com:symphonyh/forum.rb.git</code>: <br />
+<p><code class="language-plaintext highlighter-rouge">git clone  https://github.com/symphonyh/symphonyh.github.io</code>: <br />
  将github上的远程库克隆到本地库并且具有读写权限</p>
 
 <p><code class="language-plaintext highlighter-rouge">git pull origin master</code>:    把github上的更改（其他开发者）拉回到本地master</p>

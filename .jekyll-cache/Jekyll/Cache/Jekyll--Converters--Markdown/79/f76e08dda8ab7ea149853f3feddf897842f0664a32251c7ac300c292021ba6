@@ -1,0 +1,39 @@
+I"�<p>rvm,git,rbenv,gem 得都是学习<code class="language-plaintext highlighter-rouge">rails</code>中常用的工具，这些最常用命令行语句做个记录备查。</p>
+
+<h3 id="using-rvm">using rvm</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash --login
+
+rvm gemset use bloggem
+
+rvm list
+
+rvm use 2.3.3
+
+rvm gemset list
+
+rvm gemset create  railsapp
+
+rvm use 2.3.3@railsapp
+
+rvm gemset delete railsapp
+</code></pre></div></div>
+
+<hr />
+<p>离线安装rvm</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     curl -sSL https://github.com/rvm/rvm/tarball/stable -o rvm-stable.tar.gz
+     mkdir rvm &amp;&amp; cd rvm
+     tar --strip-components=1 -xzf ../rvm-stable.tar.gz
+     ./install --auto-dotfiles
+     source ~/.rvm/scripts/rvm
+</code></pre></div></div>
+<p>rvm 初始化</p>
+
+<p>在<code class="language-plaintext highlighter-rouge">.bash_profile</code>后追加一行代码即可：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     [ -f $HOME/.profile ] &amp;&amp; source $HOME/.profile
+</code></pre></div></div>
+
+:ET

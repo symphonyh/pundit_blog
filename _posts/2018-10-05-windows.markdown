@@ -21,46 +21,44 @@ Windows
 
 ---
 
-`Ctrl + Shift + N` : 创建一个新的文件夹
+1、`Ctrl + Shift + N` : 创建一个新的文件夹
 
-你需要在文件夹窗口中按 【Ctrl + Shift + N】 才行，在 Chrome 中是打开隐身窗口的快捷键。
+> 你需要在文件夹窗口中按 `Ctrl + Shift + N`】` 才行，在 Chrome 中是打开隐身窗口的快捷键。
 
-`Shift+ 鼠标右键` : 增加一个复制路径的选项
+2、`Shift+ 鼠标右键` : 增加一个复制路径的选项
 
-`Win+ 上/下/左/右` ： 移动当前激活窗口
+3、`Win+ 上/下/左/右` ： 移动当前激活窗口
 
-其中，【Win +左/右】 为移动窗口到屏幕两边，占半屏，【Win + 上】 为最大化当前窗口，下为恢复当前窗口
+>其中，【Win +左/右】 为移动窗口到屏幕两边，占半屏，【Win + 上】 为最大化当前窗口，下为恢复当前窗口
 
-`Win + T` ： 显示任务栏窗口微缩图并回车切换
+4、`Win + T` ： 显示任务栏窗口微缩图并回车切换
 
-多按几次 T 可以在不同的任务栏窗口中显示，回车则切换。很方便的快捷键。切换窗口还可以用 `Win + Tab`。
+>多按几次 T 可以在不同的任务栏窗口中显示，回车则切换。很方便的快捷键。切换窗口还可以用 `Win + Tab`。
 
-`Shift + 左键` ： 在任务栏对已打开的程序/文件夹再打开一次
+5、`Shift + 左键` ： 在任务栏对已打开的程序/文件夹再打开一次
 
-话比较绕，比如你对着任务栏里的【Chrome Shift + 左键】 则会新打开一个窗口。而对着记事本按也会再打开一个记事本。
+>话比较绕，比如你对着任务栏里的【Chrome Shift + 左键】 则会新打开一个窗口。而对着记事本按也会再打开一个记事本。
 
 
-`Win + P` ： 在显示器与投影间相互切换
+6、`Win + 1`, `Win + 2` ： 在任务栏中快速切换程序
 
-`Win + 1`, `Win + 2` ： 在任务栏中快速切换程序
-
-任务栏从左到右 1，2，3，快速切换用的。对当前窗口的作用是最小化，另外一个最小化快捷键是 `Win + M`，`Win + D`。
+>任务栏从左到右 1，2，3，快速切换用的。对当前窗口的作用是最小化，另外一个最小化快捷键是 `Win + M`，`Win + D`。
 
 ---
 
-`Win + Shift + S` 截屏，可以任意形状
+7、`Win + Shift + S` 截屏，可以任意形状
 
-`Win + PrtSc` 活动窗口截屏
+8、`Win + PrtSc` 活动窗口截屏
 
-`Win + v` 呼叫剪贴板
+9、`Win + v` 呼叫剪贴板
 
-`Ctrl + Shift + Esc` **快速打开 Windows 任务管理器**
+10、`Ctrl + Shift + Esc` **快速打开 Windows 任务管理器**
 
-以前想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 `Ctrl + Shift + Esc` 让我泪流满面啊......
+>以前想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 `Ctrl + Shift + Esc` 让我泪流满面啊......
 
 ---
 
-`Win + R`运行里常用的指令：
+Win10**运行**里常用的指令：
 
 `calc`--启动计算器
 
@@ -70,7 +68,10 @@ Windows
 
 `regedit`--打开注册表
 
+`winver`--  显示windows版本
+
 ---
+Terminal 操作
 
 `Ctrl + R` Terminal中搜索历史命令 
 
@@ -83,27 +84,14 @@ Windows
 ```
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    //"$schema": "https://aka.ms/terminal-profiles-schema",
     
     "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
     "initialPosition": "300,160",
     "initialCols" : 80,
     "initialRows" : 20,
-    "fontFace" : "monaco",
-    "fontSize" : 10,   
-    // You can add more global application settings here.
-    // To learn more about global settings, visit https://aka.ms/terminal-global-settings
-
-    // If enabled, selections are automatically copied to your clipboard.
     "copyOnSelect": true,
-
-    // If enabled, formatted data is also copied to your clipboard
     "copyFormatting": false,
 
-    // A profile specifies a command to execute paired with information about how it should look and feel.
-    // Each one of them will appear in the 'New Tab' dropdown,
-    //   and can be invoked from the commandline with `wt.exe -p xxx`
-    // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
     "profiles":
     {
         "defaults":
@@ -140,13 +128,15 @@ Windows
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
+                "source": "Windows.Terminal.Wsl",
+                "fontFace" : "Monaco",
+                "fontSize" : 10,
+                "startingDirectory": "F:/Ubuntu-Share", 
+                "acrylicOpacity": 0.9
             }
         ]
     },
 
-    // Add custom color schemes to this array.
-    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [
         {
         "name": "mouse",
@@ -169,27 +159,6 @@ Windows
         "white": "#eceff4",
         "yellow": "#ebcb8b"
         }
-    ],
-
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
-    "actions":
-    [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
-        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-        { "command": "paste", "keys": "ctrl+v" },
-
-        // Press Ctrl+Shift+F to open the search box
-        { "command": "find", "keys": "ctrl+shift+f" },
-
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
     ]
 }
 

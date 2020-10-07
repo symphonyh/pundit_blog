@@ -1,0 +1,169 @@
+I"�<p>Windows</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + R</code>:  运行</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + E</code>:  资源管理器</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + D</code>:  返回桌面</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + L</code>:  锁屏</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win + 数字键</code>: 数字是任务栏图标的排列顺序</p>
+
+<hr />
+
+<p>1、<code class="language-plaintext highlighter-rouge">Ctrl + Shift + N</code> : 创建一个新的文件夹</p>
+
+<blockquote>
+  <p>你需要在文件夹窗口中按 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + N</code>】` 才行，在 Chrome 中是打开隐身窗口的快捷键。</p>
+</blockquote>
+
+<p>2、<code class="language-plaintext highlighter-rouge">Shift+ 鼠标右键</code> : 增加一个复制路径的选项</p>
+
+<p>3、<code class="language-plaintext highlighter-rouge">Win+ 上/下/左/右</code> ： 移动当前激活窗口</p>
+
+<blockquote>
+  <p>其中，【Win +左/右】 为移动窗口到屏幕两边，占半屏，【Win + 上】 为最大化当前窗口，下为恢复当前窗口</p>
+</blockquote>
+
+<p>4、<code class="language-plaintext highlighter-rouge">Win + T</code> ： 显示任务栏窗口微缩图并回车切换</p>
+
+<blockquote>
+  <p>多按几次 T 可以在不同的任务栏窗口中显示，回车则切换。很方便的快捷键。切换窗口还可以用 <code class="language-plaintext highlighter-rouge">Win + Tab</code>。</p>
+</blockquote>
+
+<p>5、<code class="language-plaintext highlighter-rouge">Shift + 左键</code> ： 在任务栏对已打开的程序/文件夹再打开一次</p>
+
+<blockquote>
+  <p>话比较绕，比如你对着任务栏里的【Chrome Shift + 左键】 则会新打开一个窗口。而对着记事本按也会再打开一个记事本。</p>
+</blockquote>
+
+<p>6、<code class="language-plaintext highlighter-rouge">Win + 1</code>, <code class="language-plaintext highlighter-rouge">Win + 2</code> ： 在任务栏中快速切换程序</p>
+
+<blockquote>
+  <p>任务栏从左到右 1，2，3，快速切换用的。对当前窗口的作用是最小化，另外一个最小化快捷键是 <code class="language-plaintext highlighter-rouge">Win + M</code>，<code class="language-plaintext highlighter-rouge">Win + D</code>。</p>
+</blockquote>
+
+<hr />
+
+<p>7、<code class="language-plaintext highlighter-rouge">Win + Shift + S</code> 截屏，可以任意形状</p>
+
+<p>8、<code class="language-plaintext highlighter-rouge">Win + PrtSc</code> 活动窗口截屏</p>
+
+<p>9、<code class="language-plaintext highlighter-rouge">Win + v</code> 呼叫剪贴板</p>
+
+<p>10、<code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> <strong>快速打开 Windows 任务管理器</strong></p>
+
+<blockquote>
+  <p>以前想调用任务管理器，需要先 【Ctrl + Alt + Del】 标准快捷键，再点击任务管理器，并且屏幕还会被锁定。而今天才知道的 <code class="language-plaintext highlighter-rouge">Ctrl + Shift + Esc</code> 让我泪流满面啊……</p>
+</blockquote>
+
+<hr />
+
+<p>Win10<strong>运行</strong>里常用的指令：</p>
+
+<p><code class="language-plaintext highlighter-rouge">calc</code>–启动计算器</p>
+
+<p><code class="language-plaintext highlighter-rouge">cmd.exe</code>–CMD命令提示符</p>
+
+<p><code class="language-plaintext highlighter-rouge">notepad</code>–打开记事本</p>
+
+<p><code class="language-plaintext highlighter-rouge">regedit</code>–打开注册表</p>
+
+<p><code class="language-plaintext highlighter-rouge">winver</code>–  显示windows版本</p>
+
+<hr />
+<p>Terminal 操作</p>
+
+<p><code class="language-plaintext highlighter-rouge">Ctrl + R</code> Terminal中搜索历史命令</p>
+
+<p><code class="language-plaintext highlighter-rouge">Ctrl + ,</code> Terminal打开设置文件</p>
+
+<hr />
+
+<h3 id="记录下terminal的目前的设置">记录下Terminal的目前的设置</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    
+    "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+    "initialPosition": "300,160",
+    "initialCols" : 80,
+    "initialRows" : 20,
+    "copyOnSelect": true,
+    "copyFormatting": false,
+
+    "profiles":
+    {
+        "defaults":
+        {
+      
+          
+            "colorScheme": "mouse"
+
+            // Put settings here that you want to apply to all profiles.
+        },
+        "list":
+        [
+            {
+                // Make changes here to the powershell.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile.
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "命令提示符",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl",
+                "fontFace" : "Monaco",
+                "fontSize" : 10,
+                "startingDirectory": "F:/Ubuntu-Share", 
+                "acrylicOpacity": 0.9
+            }
+        ]
+    },
+
+    "schemes": [
+        {
+        "name": "mouse",
+        "background": "#2e3440",
+        "foreground": "#eceff4",
+        "brightBlack": "#2e3440",
+        "brightBlue": "#5e81ac",
+        "brightCyan": "#8fbcbb",
+        "brightGreen": "#a3be8c",
+        "brightPurple": "#b48ead",
+        "brightRed": "#bf616a",
+        "brightWhite": "#eceff4",
+        "brightYellow": "#ebcb8b",
+        "black": "#2e3440",
+        "blue": "#5e81ac",
+        "cyan": "#8fbcbb",
+        "green": "#a3be8c",
+        "purple": "#b48ead",
+        "red": "#bf616a",
+        "white": "#eceff4",
+        "yellow": "#ebcb8b"
+        }
+    ]
+}
+
+// https://blog.csdn.net/BobYuan888/article/details/100626886   参考文章
+
+</code></pre></div></div>
+:ET

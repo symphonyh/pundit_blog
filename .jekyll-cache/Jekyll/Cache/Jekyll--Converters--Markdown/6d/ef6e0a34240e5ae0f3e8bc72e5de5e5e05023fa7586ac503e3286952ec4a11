@@ -1,4 +1,4 @@
-I"�<h2 id="win10-wsl-的安装解决了几个问题">win10 WSL 的安装解决了几个问题：</h2>
+I"�	<h2 id="win10-wsl-的安装解决了几个问题">win10 WSL 的安装解决了几个问题：</h2>
 
 <ul>
   <li>不在每次更新系统安装虚拟机了；</li>
@@ -36,23 +36,23 @@ WSL的home目录很深在win10的</p>
 
 <p>打开ubuntu的终端 用vi 换源，执行update upgrade</p>
 
-<p>1、离线安装rvm
-     curl -sSL https://github.com/rvm/rvm/tarball/stable -o rvm-stable.tar.gz
+<p>1、离线安装rvm</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     curl -sSL https://github.com/rvm/rvm/tarball/stable -o rvm-stable.tar.gz
      mkdir rvm &amp;&amp; cd rvm
-     tar –strip-components=1 -xzf ../rvm-stable.tar.gz
-     ./install –auto-dotfiles
-     source ~/.rvm/scripts/rvm</p>
-
-<p>rvm 初始化
-  解决办法很简单，在.bash_profile后追加一行代码即可：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> [ -f $HOME/.profile ] &amp;&amp; source $HOME/.profile
+     tar --strip-components=1 -xzf ../rvm-stable.tar.gz
+     ./install --auto-dotfiles
+     source ~/.rvm/scripts/rvm
 </code></pre></div></div>
+<p>rvm 初始化,  在.bash_profile后追加一行代码即可：</p>
 
-<p>2、安装编译环境（如果需要）
-     sudo apt install gcc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     [ -f $HOME/.profile ] &amp;&amp; source $HOME/.profile
+</code></pre></div></div>
+<p>2、安装编译环境（如果需要）</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     sudo apt install gcc
      sudo apt install make
-     sudo apt install g++</p>
+     sudo apt install g++
+</code></pre></div></div>
 
 <p>3、安装ruby，jekyll</p>
 :ET

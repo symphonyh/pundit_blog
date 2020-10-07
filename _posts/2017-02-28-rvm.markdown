@@ -30,7 +30,23 @@ rvm use 2.3.3@railsapp
 rvm gemset delete railsapp
 ```
 
+---
+离线安装rvm
 
+```
+     curl -sSL https://github.com/rvm/rvm/tarball/stable -o rvm-stable.tar.gz
+     mkdir rvm && cd rvm
+     tar --strip-components=1 -xzf ../rvm-stable.tar.gz
+     ./install --auto-dotfiles
+     source ~/.rvm/scripts/rvm
+```    
+rvm 初始化
+
+在`.bash_profile`后追加一行代码即可：
+
+```
+     [ -f $HOME/.profile ] && source $HOME/.profile
+```
 
 
 

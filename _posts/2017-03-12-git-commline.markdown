@@ -96,7 +96,7 @@ git branch -d XXX             删除XXX分支
 
 - 远程到本地：
 
-`git clone git@github.com:symphonyh/forum.rb.git`: <br />
+`git clone  https://github.com/symphonyh/symphonyh.github.io`: <br />
  将github上的远程库克隆到本地库并且具有读写权限
 
 `git pull origin master`:    把github上的更改（其他开发者）拉回到本地master

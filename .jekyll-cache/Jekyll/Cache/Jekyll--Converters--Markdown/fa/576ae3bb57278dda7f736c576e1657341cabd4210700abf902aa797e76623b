@@ -1,4 +1,4 @@
-I"N<p>Windows</p>
+I"�<p>Windows</p>
 
 <p><code class="language-plaintext highlighter-rouge">Win + R</code>:  运行</p>
 
@@ -23,8 +23,18 @@
 <p>3、<code class="language-plaintext highlighter-rouge">Win+ 上/下/左/右</code> ： 移动当前激活窗口</p>
 
 <blockquote>
-  <p>其中，【Win +左/右】 为移动窗口到屏幕两边，占半屏，【Win + 上】 为最大化当前窗口，下为恢复当前窗口</p>
+  <p>其中，[Win +左/右] 为移动窗口到屏幕两边，占半屏，[Win + 上] 为最大化当前窗口，下为隐藏当前窗口；左上左下右上右下为1/4大小窗口。</p>
 </blockquote>
+
+<p>3.1、虚拟桌面</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win-Ctrl-D</code>：创建新的虚拟桌面</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win-Ctrl-F4</code>：删除当前虚拟桌面</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win-Ctrl-←</code>：切换到相邻左侧的虚拟桌面</p>
+
+<p><code class="language-plaintext highlighter-rouge">Win-Ctrl-→</code>：切换到相邻右侧的虚拟桌面</p>
 
 <p>4、<code class="language-plaintext highlighter-rouge">Win + T</code> ： 显示任务栏窗口微缩图并回车切换</p>
 
@@ -60,7 +70,7 @@
 
 <hr />
 
-<p>Win10<strong>运行</strong>里常用的指令：</p>
+<p>11、Win10<strong>运行</strong>里常用的指令：</p>
 
 <p><code class="language-plaintext highlighter-rouge">calc</code>–启动计算器</p>
 
@@ -73,7 +83,7 @@
 <p><code class="language-plaintext highlighter-rouge">winver</code>–  显示windows版本</p>
 
 <hr />
-<p>Terminal 操作</p>
+<p>12、Terminal 操作</p>
 
 <p><code class="language-plaintext highlighter-rouge">Ctrl + R</code> Terminal中搜索历史命令</p>
 
@@ -85,7 +95,7 @@
 
 <hr />
 
-<p>输入法的操作</p>
+<p>13、输入法的操作</p>
 
 <p><code class="language-plaintext highlighter-rouge">Ctrl + 空格</code>，<code class="language-plaintext highlighter-rouge">SHIFT</code> 切换英/中</p>
 
@@ -93,6 +103,14 @@
 <blockquote>
   <p>微软拼音输入法状态会让WITE游戏无法使用鼠标和键盘！</p>
 </blockquote>
+
+<hr />
+<p>14、开启卓越性能模式</p>
+
+<p><code class="language-plaintext highlighter-rouge">windows powershell</code> 输入如下命令代码：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+</code></pre></div></div>
 
 <hr />
 

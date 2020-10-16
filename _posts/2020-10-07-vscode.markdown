@@ -7,6 +7,33 @@ external-url:
 categories: Office 
 ---
 
-先学习下，还没太多想法！
+
+
+
+向上或向下移动一行:   `Alt+Up 或 Alt+Down`
+
+向上或向下复制一行:   `Shift+Alt+Up` 或 `Shift+Alt+Down`
+
+在当前行下方插入一行:   `Ctrl+Enter`
+
+在当前行上方插入一行:   `Ctrl+Shift+Enter`
+
+选择从光标到行尾的内容:   `Shift+End`
+
+选择从光标到行首的内容： `Shift+Home`
+
+删除光标右侧的所有内容(当前行):   `Ctrl+Delete`
+
+下一个匹配的也被选中:   `Ctrl+D`
+
+同时选中所有匹配编辑(与当前行或选定内容匹配):  `Ctrl+Shift+L`
+
+`Alt+鼠标左键`，添加多光标输入
+
+快速选多行    `Shift+Alit+鼠标左键拖动`
+
+---
+
+[参考：多行编辑](https://www.cnblogs.com/cyh1282656849/p/12288669.html)
 
 [参考：CSDN 入门教程](https://blog.csdn.net/weixin_45601379/article/details/100550421)

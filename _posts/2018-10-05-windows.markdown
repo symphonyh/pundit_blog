@@ -69,7 +69,7 @@ Windows
 
 ---
 
-Win10**运行**里常用的指令：
+11、Win10**运行**里常用的指令：
 
 `calc`--启动计算器
 
@@ -82,7 +82,7 @@ Win10**运行**里常用的指令：
 `winver`--  显示windows版本
 
 ---
-Terminal 操作
+12、Terminal 操作
 
 `Ctrl + R` Terminal中搜索历史命令 
 
@@ -94,12 +94,20 @@ Terminal 操作
 
 ---
 
-输入法的操作
+13、输入法的操作
 
 `Ctrl + 空格`，`SHIFT` 切换英/中 
 
 `win + 空格`  切换 ENG 美式键盘和微软输入法
 >微软拼音输入法状态会让WITE游戏无法使用鼠标和键盘！
+
+
+---
+14、开启卓越性能模式
+
+`windows powershell` 输入如下命令代码：
+
+    powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 
 ---
 

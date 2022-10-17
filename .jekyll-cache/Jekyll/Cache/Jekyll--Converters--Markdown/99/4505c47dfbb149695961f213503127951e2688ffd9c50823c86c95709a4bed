@@ -1,4 +1,4 @@
-I"=<p>Rails常用的命令汇总：</p>
+I"	<p>Rails常用的命令汇总：</p>
 
 <p>1、rails new</p>
 
@@ -49,7 +49,7 @@
 
 <p>6、rails runner</p>
 
-<p><code class="language-plaintext highlighter-rouge"> rails r "p Message.last"</code></p>
+<p>` rails r “p Message.last”`</p>
 
 <hr />
 

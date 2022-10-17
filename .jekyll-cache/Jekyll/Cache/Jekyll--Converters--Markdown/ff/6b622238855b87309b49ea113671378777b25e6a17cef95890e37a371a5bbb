@@ -1,4 +1,4 @@
-I"e<p>Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；</p>
+I"�<p>Excel 条件格式 设置甘特图，公式终于弄明白了，记录下；</p>
 
 <p><code class="language-plaintext highlighter-rouge">◆</code> 甘特图中的菱形块: 代表不需要时间的活动类似于 “获得批准”;</p>
 
@@ -31,9 +31,9 @@
 
 <p><code class="language-plaintext highlighter-rouge">=IF($I11=0,AND(K$8&gt;$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),       </code></p>
 
-<p><code class="language-plaintext highlighter-rouge">  IF($F11-$D11&lt;=0,AND(K$8&gt;$D11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),</code></p>
+<p>`  IF($F11-$D11&lt;=0,AND(K$8&gt;$D11,K$8&lt;=($F11+INT(($G11-$F11)*$I11))),`</p>
 
-<p><code class="language-plaintext highlighter-rouge">    AND(K$8&gt;=$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11)))))            </code></p>
+<p>`    AND(K$8&gt;=$F11,K$8&lt;=($F11+INT(($G11-$F11)*$I11)))))            `</p>
 
 <hr />
 

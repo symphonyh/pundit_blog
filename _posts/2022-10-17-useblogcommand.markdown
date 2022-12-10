@@ -43,7 +43,6 @@ sudo apt-get autoremove             删除系统不再使用的孤立软件
 ~~~
 
 ---
----
 
 设置git命令
 ~~~
@@ -78,5 +77,13 @@ git clone https://github.com/symphonyh/blog.git
 git clone  https://github.com/symphonyh/symphonyh.github.io
 ~~~
 
+---
 
+token 验证：
 
+~~~
+git remote set-url origin  https:// token @github.com/symphonyh/symphonyh.github.io.git
+
+git remote set-url origin  https:// token @github.com/symphonyh/blog.git
+~~~
+*需要将token替换为实际值*
